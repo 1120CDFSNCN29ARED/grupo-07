@@ -28,3 +28,8 @@ Personas que necesitan cambiar estilo de alimentación por enfermedades como hip
 - Florencia Parra
 - Lucía Pitrelli
 - Matias Llopis
+
+## Canales de comunicación
+
+- https://trello.com/b/94ar6mBq/equipo-7 (trello)
+- Discord
