@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <img src="/" alt="Logo" class="logo" />
+      <nav>
+        <img src="" alt="cruz de cierre" />
+        <ul>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="register">Registro</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <ul>
+          <img src="" alt="Mi cuenta" />
+          <li><a href="#" class="mi-cuenta">Mi cuenta</a></li>
+          <img src="" alt="corzaon" class="corazon" />
+          <li>
+            <a href="#"><img src="" alt="carrito" /></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="barra-de-navegacion">
+        <input type="text" placeholder="Buscar" />
+        <img src="" alt="Lupa" class="lupa" />
+      </div>
+    </header>
+
+    <main>
+      <section class="productos">
+        <h2>Productos</h2>
+        <article>
+          <img src="" alt="producto1" />
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
+            deleniti.
+          </p>
+          <button><a href="#"></a>producto1</button>
+        </article>
+        <article>
+          <img src="" alt="producto2" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            libero.
+          </p>
+          <button><a href="#">Producto2</a></button>
+        </article>
+        <article>
+          <img src="" alt="producto3" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
+            deserunt?
+          </p>
+          <button><a href="#">producto3</a></button>
+        </article>
+        <article class="listado-productos">
+          <img src="" alt="imagen de productos" />
+          <div class="descripcion producto">
+            <p class="descripcion producto">
+              Lorem ipsum dolor sit, amet consectetur adipisicing.
+            </p>
+            <button><a href="#"></a>Productos</button>
+          </div>
+        </article>
+      </section>
+
+      <!--Carrousel sacado de w3school-->
+      <section class="carrousel-conteiner">
+        <div class="slide efecto">
+          <img src="" alt="foto1" />
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="slide efecto">
+          <img src="" alt="foto2" />
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        </div>
+        <div class="slide efecto">
+          <img src="" alt="foto3" />
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        </div>
+
+        <a class="boton-image-previa" onclick="plussSlide(-1)"
+          ><img src="" alt="previa"
+        /></a>
+        <a class="boton-imagen-sig" onclick="plussSlide(1)"
+          ><img src="sigiente" alt=""
+        /></a>
+
+        <div>
+          <span class="dot" onclick="currentSlide1"></span>
+          <span class="dot" onclick="currentSlide2"></span>
+          <span class="dot" onclick="currentSlide3"></span>
+        </div>
+      </section>
+
+      <section class="quienes-somos">
+        <h2>Quienes somos</h2>
+        <h4>Nuestra misión</h4>
+        <p>
+          Ofrecer alimentos saludables y nutritivos que ayuden a mejorar la
+          alimentación y a conectarnos con la naturaleza desde un nuevo lugar.
+          Ofrecemos un servicio que permitirá conocer alternativas para tus
+          comidas y conseguirlas de una forma simple, segura y rápida.
+        </p>
+        <h4>Dedicado a</h4>
+        <p>
+          Personas que necesitan alimentos saludables para mejorar su calidad de
+          vida o tener un estilo de vida saludable. Personas veganas,
+          vegetarianas, celíacos, intolerantes a la lactosa, intolerantes al
+          gluten, entre otros. Personas que practican deportes y necesitan un
+          complemento nutricional. Personas que necesitan cambiar estilo de
+          alimentación por enfermedades como hipertensión, obesidad y diabetes
+        </p>
+      </section>
+
+      <section class="noticias">
+        <h3>Noticias</h3>
+        <img src="" alt="noticias" class="imgagen-noticias" />
+        <article class="contenedor-noticias">
+          <p>
+            Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
+            de crédito.
+          </p>
+        </article>
+      </section>
+
+      <section class="sucursales">
+        <h2>Sucursales</h2>
+        <article>
+          <img src="" alt="sucursale1" class="sucursal1" />
+          <p>Cosme 1380.</p>
+          <p>Tel. 1385782</p>
+        </article>
+        <article>
+          <img src="" alt="sucursal2" class="sucursal2" />
+          <p>Fulanito 125</p>
+          <p>Tel. 4892471</p>
+        </article>
+        <article>
+          <img src="" alt="sucursal3" class="sucursal1" />
+          <p>Calle Falsa 123</p>
+          <p>Tel. 9876424</p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section class="resenias">
+        <h4>Reseñas</h4>
+        <div class="resenia efecto">
+          <p>'Increíble calidad. Se lo recomendé a todos mis amigos'</p>
+          <p>Pablo Marmol</p>
+        </div>
+        <div class="resenia efecto">
+          <p>
+            'No puedo esperar a volver. Son la mejor comida vegana en la ciudad'
+          </p>
+          <p>Pier Nodoyuna</p>
+        </div>
+        <div class="resenia efecto">
+          <p>'Buenísima opción para un goloso de profesión'</p>
+          <p>Yogi</p>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <h4>Contacto</h4>
+        <img src="" alt="logo whatsapp" class="wtp-logo" />
+        <p>137894785</p>
+        <img src="" alt="logo correo" class="mail-logo" />
+        <p>huerto.market@todobien.com</p>
+      </section>
+
+      <section class="registro">
+        <h4>Registrate</h4>
+        <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
+        <button>Registrate</button>
+      </section>
+
+      <section class="redes">
+        <img src="" alt="clave" />
+        <img src="" alt="fiscal" />
+        <h3>Seguinos</h3>
+        <a href="#"><img src="" alt="Instagram" class="red-logo" /></a>
+        <a href="#"><img src="" alt="twitter" class="red-logo" /></a>
+        <a href="#"><img src="" alt="facebook" class="red-logo" /></a>
+        <a href="#"><img src="" alt="google" class="red-logo" /></a>
+      </section>
+    </footer>
+  </body>
+</html>
