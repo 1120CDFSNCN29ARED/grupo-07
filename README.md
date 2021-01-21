@@ -2,18 +2,18 @@
 
 ## Tema
 
-Vemta de productos alimenticios saludables.
+Venta de productos alimenticios saludables, empresa minorista.
 
 ## Misión
 
-Ofrecer alimentos saludables y nutritivos que ayuden a mejorar la alimentacion y a conectarnos con la naturaleza. Ofrecemos un servicio que permitirá conocer alternativas para tus comidas y seguirlas de una forma simple, segura y rápida.
+Nuestra empresa ofrece alimentos saludables y nutritivos que ayuden a mejorar la alimentacion y a conectarnos con la naturaleza. Además, brindamos un servicio que permitirá conocer alternativas para tus comidas y seguirlas de una forma simple, segura y rápida.
 
 ## Público objetivo
 
-Personas que necesitan alimentos saludables para mejorar su calidad de vida o tener un estilo de vida saludable.
-Personas veganas, vegetarianas, celíacos, intolerantes a la lactosa, intolerantes al gluten, entre otros.
-Personas que practican deportes y necesitan un complemento nutricional.
-Personas que necesitan cambiar estilo de alimentación por enfermedades como hipertensión, obesidad y diabetes.
+- Personas que necesitan alimentos saludables para mejorar su calidad de vida o tener un estilo de vida saludable.
+- Personas veganas, vegetarianas, celíacos, intolerantes a la lactosa, intolerantes al gluten, entre otros.
+- Personas que practican deportes y necesitan un complemento nutricional.
+- Personas que necesitan cambiar estilo de alimentación por enfermedades tales como hipertensión, obesidad y diabetes.
 
 ## Páginas de inspiración
 
