@@ -3,7 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>carrito de productos</title>
+
+    <!--Poppins Regular 400-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="/css/productCart.css">
+
 </head>
 
 <body>
@@ -11,30 +22,38 @@
         <div>
             <img src="/img/logotipo-op-1.png" alt="Logo de Huerto Market">
         </div>
-        <div class="form">
+        <nav class="form">
             <input class="input" placeholder="Buscar productos">
             <button class="submit"><i class="fa fa-search"></i></button>
+        </nav>
+           
+        <div id="encabezado">
+          <h3> <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA</h3>
+    
+          <h3> <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS</h3>
+  
+          <h3>  <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE</h3>
+        </div>
 
-        <h1> <!--icono mano--> AYUDA</h1>
-
-        <h1> <!--icono camion--> ENVÍOS</h1>
-
-        <h1>  <!--icono telefono--> ATENCIÓN AL CLIENTE</h1>
     </header>
    
     <main>
-        <section>
 
+        <section>
+            
             <h1> Miel Beepure</h1>
 
             <div>
                 <img src="/img/miel-beepure.png" alt=" Miel Beepure" >
+
+                <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Seguir comprando</a>
+                <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Actualizar carrito</a>
+
             </div>
         </section>
     </main>
 
 
-    
 
     <footer>
         <section class="resenias">
