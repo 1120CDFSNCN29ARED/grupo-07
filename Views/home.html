@@ -3,14 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Huerto Market</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
   </head>
   <body>
     <header>
-      <img src="/img/logotipo-op-1.png" alt="Logo" class="logo" />
-      <nav>
-        <img src="" alt="cruz de cierre" />
-        <ul>
+      <a href="/"
+        ><img src="/img/logotipo-op-1.png" alt="Logo" class="logo"
+      /></a>
+      <nav id="menu">
+        <img src="" alt="cruz de cierre" class="icon close" />
+        <ul class="menu-list">
           <li><a href="/productDetail">Productos</a></li>
           <li><a href="#">Sucursales</a></li>
           <li><a href="#">Nosotros</a></li>
@@ -18,52 +35,54 @@
           <li><a href="register">Registro</a></li>
           <li><a href="#">FAQ</a></li>
         </ul>
-        <ul>
-          <img src="" alt="Mi cuenta" />
-          <li><a href="#" class="mi-cuenta">Mi cuenta</a></li>
-          <img src="" alt="corzaon" class="corazon" />
+        <ul class="menu-list">
+          <img src="" alt="Mi cuenta" class="icon cart" />
+          <li><a href="#" class="account">Mi cuenta</a></li>
+          <img src="" alt="corzaon" class="icon like" />
           <li>
-            <a href="/productCart"><img src="" alt="carrito" /></a>
+            <a href="/productCart"
+              ><img src="" alt="carrito" class="icon cart"
+            /></a>
           </li>
         </ul>
       </nav>
-      <div class="barra-de-navegacion">
-        <input type="text" placeholder="Buscar" />
-        <img src="" alt="Lupa" class="lupa" />
+      <div class="search">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos" />
+        </div>
+        <button class="submit"><i class="fa fa-search"></i></button>
       </div>
     </header>
 
     <main>
-      <section class="productos">
+      <section class="products">
         <h2>Productos</h2>
-        <article>
-          <img src="" alt="producto1" />
+        <article class="product-article">
+          <img src="/img/miel-beepure.png" alt="miel-beepure" />
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas,
-            deleniti.
+            Miel Líquida, Beepure. Ideal para completar tus desayunos.
           </p>
-          <button><a href="#"></a>producto1</button>
+          <button><a href="/productDetail">Comprar</a></button>
         </article>
-        <article>
+        <article class="product-article">
           <img src="" alt="producto2" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
             libero.
           </p>
-          <button><a href="#">Producto2</a></button>
+          <button><a href="#">Comprar</a></button>
         </article>
-        <article>
+        <article class="product-article">
           <img src="" alt="producto3" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint,
             deserunt?
           </p>
-          <button><a href="#">producto3</a></button>
-        </article>
-        <article class="listado-productos">
+          <button><a href="#">Comprar</a></button>
+        </article>product-article">
           <img src="" alt="imagen de productos" />
           <div class="descripcion producto">
-            <p class="descripcion producto">
+            <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing.
             </p>
             <button><a href="#"></a>Productos</button>
@@ -90,7 +109,7 @@
           ><img src="" alt="previa"
         /></a>
         <a class="boton-imagen-sig" onclick="plussSlide(1)"
-          ><img src="sigiente" alt=""
+          ><img src="" alt="sigiente"
         /></a>
 
         <div>
@@ -102,6 +121,7 @@
 
       <section class="quienes-somos">
         <h2>Quienes somos</h2>
+        <article class="us-article">
         <h4>Nuestra misión</h4>
         <p>
           Ofrecer alimentos saludables y nutritivos que ayuden a mejorar la
@@ -109,6 +129,8 @@
           Ofrecemos un servicio que permitirá conocer alternativas para tus
           comidas y conseguirlas de una forma simple, segura y rápida.
         </p>
+      </article>
+      <article class="us-article">
         <h4>Dedicado a</h4>
         <p>
           Personas que necesitan alimentos saludables para mejorar su calidad de
@@ -118,12 +140,13 @@
           complemento nutricional. Personas que necesitan cambiar estilo de
           alimentación por enfermedades como hipertensión, obesidad y diabetes
         </p>
+      </article>
       </section>
 
       <section class="noticias">
         <h3>Noticias</h3>
         <img src="" alt="noticias" class="imgagen-noticias" />
-        <article class="contenedor-noticias">
+        <article class="news-article">
           <p>
             Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
             de crédito.
@@ -133,17 +156,17 @@
 
       <section class="sucursales">
         <h2>Sucursales</h2>
-        <article>
+        <article class="sucursal-article">
           <img src="" alt="sucursale1" class="sucursal1" />
           <p>Cosme 1380.</p>
           <p>Tel. 1385782</p>
         </article>
-        <article>
+        <article class="sucursal-article">
           <img src="" alt="sucursal2" class="sucursal2" />
           <p>Fulanito 125</p>
           <p>Tel. 4892471</p>
         </article>
-        <article>
+        <article class="sucursal-article">
           <img src="" alt="sucursal3" class="sucursal1" />
           <p>Calle Falsa 123</p>
           <p>Tel. 9876424</p>
@@ -181,7 +204,7 @@
       <section class="registro">
         <h4>Registrate</h4>
         <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
-        <button>Registrate</button>
+        <button><a href="register">Registrate</a> </button>
       </section>
 
       <section class="redes">
