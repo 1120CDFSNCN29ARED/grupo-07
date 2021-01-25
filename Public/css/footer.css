@@ -1,0 +1,27 @@
+footer {
+  background-color: #939597;
+}
+
+.resenias {
+  background-color: #939597;
+  text-align: center;
+  padding: 20px;
+}
+
+.contacto {
+  background-color: #926aa6;
+  padding: 15px;
+  padding-right: 40px;
+  text-align: right;
+}
+
+.registro {
+  background-color: #a0daa9;
+  padding: 20px;
+  text-align: center;
+}
+
+.redes {
+  background-color: #ec9f00;
+  padding: 10px;
+}
