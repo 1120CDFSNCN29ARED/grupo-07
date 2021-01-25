@@ -9,6 +9,21 @@ h2 {
   text-align: center;
 }
 
+.product-article {
+  padding: 10px;
+  border: 1px solid #0c5d5e;
+  margin: 10px;
+  text-align: center;
+}
+
+.product-article img {
+  width: 100%;
+  text-align: center;
+}
+
+.slide img {
+  width: 100%;
+}
 .noticias h3 {
   font-family: "Yusei Magic", sans-serif;
 }
