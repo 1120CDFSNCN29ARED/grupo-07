@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrito de productos</title>
+    <title>Carrito de productos</title>
 
     <!--Poppins Regular 400-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     
-    <!--Bootstrap Icons-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <!--Fonts awesome-->
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
+    
     <link rel="stylesheet" href="/css/productCart.css">
 
 </head>
@@ -29,28 +29,73 @@
            
         <div id="encabezado">
           <h3> <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA</h3>
-    
           <h3> <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS</h3>
-  
           <h3>  <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE</h3>
         </div>
-
     </header>
    
     <main>
-
+       <section>
+         <h1>Tu pedido</h1>
+      </section>
         <section>
-            
-            <h1> Miel Beepure</h1>
+          <i class="fas fa-arrow-circle-left"></i> <button>Seguir comprando</button>
+          <i class="fas fa-undo-alt"></i> <button>Actualizar carrito</button>
+        </section>
+        <section>
+          <h1>Productos</h1>
+          <h1>Precio</h1>
+          <h1>Cantidad</h1>
+          <h1>Total</h1>
+        </section>
 
             <div>
                 <img src="/img/miel-beepure.png" alt=" Miel Beepure" >
-
-                <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Seguir comprando</a>
-                <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Actualizar carrito</a>
-
+                <p>Miel líquida, Beepure. 500gr </p>
+                <p>$560</p>
+                <button>-</button>
+                <button>+</button>
+                <p>$560</p>
             </div>
-        </section>
+            <div>
+              <img src="/img/mantequilla-de-coco.png" alt=" Mantequilla de coco">
+              <p>Mantequilla de Coco, Byour. 185gr </p>
+              <p>$400</p>
+              <button>-</button>
+              <button>+</button>
+              <p>$400</p>
+            </div>
+            <div>
+              <img src="/img/mermelada-beepure.png" alt="Mermelada" >
+              <p>Mermelada de frutos del bosque, Beepure. 450gr </p>
+              <p>$600</p>
+              <button>-</button>
+              <button>+</button>
+              <p>$600</p>
+            </div>
+            <img src="/img/veggie-burger-delitas.png" alt="Burger veggie" >
+            <p>Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr </p>
+            <p>$300</p>
+            <button>-</button>
+            <button>+</button>
+            <p>$300</p>
+          </div>
+
+          <section>
+            <h1>Resumen de compra</h1>
+            <p>Subtotal</p>
+            <p>Costo del envío</p>
+            <p>TOTAL</p>
+            <button>FINALIZAR COMPRA</button>
+            <br>
+            <br>
+            <i class="fas fa-tags"></i><p>Cupón</p>
+            <p>Codigo del cupon</p>
+            <button>APLICAR CUPON</button>
+            <br>
+            <br>
+            <i class="fas fa-credit-card"></i> <a href="#">BENEFICIOS BANCARIOS</a>
+          </section>
     </main>
 
 
