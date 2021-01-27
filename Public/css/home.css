@@ -1,17 +1,22 @@
 main {
   background-color: #fef9ec;
+  font-size: 20px;
 }
 h2 {
   font-family: "Yusei Magic", sans-serif;
+  margin: 0px;
 }
 
 .products h2 {
   text-align: center;
+  padding: 20px;
+  font-size: 40px;
+  color: #0c5d5e;
 }
 
 .product-article {
   padding: 10px;
-  border: 1px solid #0c5d5e;
+  border: 2px solid #0c5d5e;
   margin: 10px;
   text-align: center;
 }
@@ -21,8 +26,97 @@ h2 {
   text-align: center;
 }
 
+.product-article p {
+  padding: 15px;
+}
+
+.product-article button {
+  background-color: #ec9f00;
+  padding: 5px;
+}
+
+.product-article button a {
+  color: #0c5d5e;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-section img {
+  width: 90%;
+  border: 2px solid #0c5d5e;
+}
+
+.descripcion-producto {
+  background-color: rgba(12, 93, 94, 0.4);
+  padding: 15px;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  z-index: 10;
+  position: absolute;
+  bottom: 30%;
+  left: 15%;
+}
+
+.descripcion-producto p {
+  color: #fef9ec;
+}
+
+.descripcion-producto button {
+  background-color: #ec9f00;
+  padding: 5px;
+}
+
+.descripcion-producto button a {
+  color: #0c5d5e;
+  font-weight: 500;
+}
+.carrousel-conteiner {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
 .slide img {
   width: 100%;
+}
+
+.pre .sig {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.sig {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slide p {
+  color: #0c5d5e;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 .noticias h3 {
   font-family: "Yusei Magic", sans-serif;

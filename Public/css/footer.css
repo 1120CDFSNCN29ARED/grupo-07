@@ -1,18 +1,38 @@
 footer {
   background-color: #939597;
+  font-size: 16px;
+}
+
+h4 {
+  margin: 0px;
+  padding: 10px;
 }
 
 .resenias {
   background-color: #939597;
   text-align: center;
   padding: 20px;
+  color: #fef9ec;
 }
 
 .contacto {
   background-color: #926aa6;
   padding: 15px;
   padding-right: 40px;
-  text-align: right;
+  text-align: center;
+  color: #fef9ec;
+  padding-bottom: 25px;
+}
+
+.contacto p {
+  padding: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 0px;
+}
+
+.contacto i {
+  margin-right: 5px;
+  font-size: 20px;
 }
 
 .registro {
@@ -21,7 +41,24 @@ footer {
   text-align: center;
 }
 
+.registro button {
+  background-color: #ec9f00;
+  padding: 5px;
+  box-shadow: 2px 2px 5px #0c5d5e;
+  border-radius: 10%;
+}
+
+.registro button a {
+  color: #0c5d5e;
+}
+
 .redes {
   background-color: #ec9f00;
   padding: 10px;
+}
+
+.redes i {
+  color: #0c5d5e;
+  padding: 10px;
+  font-size: 30px;
 }
