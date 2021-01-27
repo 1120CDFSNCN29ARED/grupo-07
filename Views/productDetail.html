@@ -21,22 +21,31 @@
   
 </head>
 <body>
- 
-    <header>
-        <div>
-          <a href="/" ><img src="/img/logotipo-op-1.png"  width="140" height="140" alt="Logo"/></a>
-        </div>
-        <div class="form">
-            <input class="input" placeholder="Buscar productos">
-            <button class="submit"><i class="fa fa-search"></i></button>
-    
-            <h3> <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA</h3>
-            <h3> <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS</h3>
-            <h3>  <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE</h3>
-            </div>
+     <header class="header">      
+              <nav>
+                 <div>
+                 <button id="menu-button" ><i class="fas fa-bars burger" ></i></button>
+                 <input class="input" placeholder="Buscar productos">
+                 <button class="submit"><i class="fa fa-search"></i></button>
+                 </div>
+                 <div >
+                 <i class="fas fa-user"></i><a href="/register">Crea tu cuenta</a>
+                 <a href="/login">Ingresá </a> 
+                 </div>
+             </nav>
+           
+             <div class="logo">
+               <img src="/img/logotipo-op-1.png" width="130" height="130" alt="Logo de Huerto Market" >
+             </div>
+           </header>
+               <div id="encabezado">
+               <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA
+               <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS 
+               <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
+               </div>
     </header>
     
-    <main>
+    <main class="detalle">
         <section>
 
             <h2> Miel líquida, Beepure</h2>
@@ -48,7 +57,7 @@
 
                 <button>-</button>
                 <button>+</button>
-                </div>
+             </div>
             <div> 
               <button>Agregar al carrito </button>
             </div>
@@ -56,30 +65,23 @@
           <div>
               <h3>Descripción</h3>
               <p>Miel líquida multifloral envasada de forma especial después de ser extraída de colmenares seleccionados sin distorsionar sus cualidades ni sabores mediante procesos industriales. Miel liquida, cristalina de fácil disolución ideal para el uso cotidiano.</p>
+               <p>Valor Energético: 64 kcal; Carbohidratos: 16 g; Porción: 20 g (1 cucharada sopera).</p> 
           </div>
-
-          <div>
-              <h4>Valor nutricional</h4>
-              <p>
-                Valor Energético: 64 kcal; Carbohidratos: 16 g; Porción: 20 g (1 cucharada sopera).
-              </p>
-          </div>
-        
         </section>
     </main>
 
     <footer>
-        <section class="resenias">
+        <section class="envios">
           <h3>Envíos</h3>
           <p>Realizamos envíos sin cargo por toda la cuidad</p>
         </section>
   
         <section class="contacto">
           <h3>Contacto</h3>
-          <img src="" alt="logo whatsapp" class="wtp-logo" />
-          <p>137894785</p>
-          <img src="" alt="logo correo" class="mail-logo" />
-          <p>huerto.market@todobien.com</p>
+         
+          <i class="fab fa-whatsapp"></i><p>137894785</p>
+         
+          <i class="fas fa-envelope"><p>huerto.market@todobien.com</p>
         </section>
   
         <section class="registro">
