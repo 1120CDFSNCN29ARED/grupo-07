@@ -1,3 +1,72 @@
+
+.header{
+    background-color: #F7EBD4;
+    padding: 10px; 
+    text-align: center;
+}
+
+#logo{
+    padding: 20px;
+}
+.input{
+    text-align: right;
+    outline-style: solid;
+}
+#menu-button{
+    text-align: left;
+    background-color:#0A3409;
+    color:white;
+    padding: 10px;
+    }
+
 #encabezado {
-color:aquamarine;
+color:#0A3409;
+background-color: #559E54;
+text-align: center;
+font-size: 20px;
+font-family: 'Poppins', sans-serif;
+padding: 14px;
+}
+
+#texto{
+    font-family: 'Poppins', sans-serif;
+    text-align: left; 
+    font-size: 14px;
+    color: black;
+    background-color:#F7EBD4;
+}
+
+#titulo{
+    text-align: left;
+    padding: 0px;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 24px;
+    color:#FBA90A;
+}
+
+h2,h3{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    text-align: left;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+/*footer*/
+.contacto{
+background-color: #FBA90A;
+}
+.envios{
+background-color: #559E54;
+}
+
+.registro{
+background-color:#F7EBD4;
+}
+
+.redes{
+background-color:#0A3409 ;
 }

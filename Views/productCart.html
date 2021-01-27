@@ -7,51 +7,60 @@
 
     <!--Poppins Regular 400-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+   
+    <!--Yusei Magic Regular 400-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     
     <!--Fonts awesome-->
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
     
+    <!--vincular html con css-->
     <link rel="stylesheet" href="/css/productCart.css">
 
   <body>
-    <header>
-        <div>
-            <img src="/img/logotipo-op-1.png" alt="Logo de Huerto Market">
-        </div>
-        <nav class="form">
-            <input class="input" placeholder="Buscar productos">
-            <button class="submit"><i class="fa fa-search"></i></button>
-        </nav>
-           
-        <div id="encabezado">
-          <h3> <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA</h3>
-          <h3> <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS</h3>
-          <h3>  <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE</h3>
-        </div>
+    <header class="header">      
+       <nav>
+          <div>
+          <button id="menu-button" ><i class="fas fa-bars burger" ></i></button>
+          <input class="input" placeholder="Buscar productos">
+          <button class="submit"><i class="fa fa-search"></i></button>
+          </div>
+          <div >
+          <i class="fas fa-user"></i><a href="/register">Crea tu cuenta</a>
+          <a href="/login">Ingresá </a> 
+          </div>
+      </nav>
+    
+      <div class="logo">
+        <img src="/img/logotipo-op-1.png" width="130" height="130" alt="Logo de Huerto Market" >
+      </div>
     </header>
+        <div id="encabezado">
+        <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA
+        <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS 
+        <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
+        </div>
+    
    
     <main>
-       <section>
-         <h1>Tu pedido</h1>
+       <section id="titulo">
+        <h1>Tu pedido</h1>
+        <h1>Te estás llevando 4 productos</h1>
       </section>
         <section>
           <i class="fas fa-arrow-circle-left"></i> <button>Seguir comprando</button>
-          <i class="fas fa-undo-alt"></i> <button>Actualizar carrito</button>
         </section>
         <section>
-          <h1>Productos</h1>
-          <h1>Precio</h1>
-          <h1>Cantidad</h1>
-          <h1>Total</h1>
+          <h2>Productos</h2>
+          <h2>Precio</h2>
+          <h2>Cantidad</h2>
+          <h2>Total</h2>
         </section>
 
             <div>
-                <img src="/img/miel-beepure.png" alt=" Miel Beepure" >
+              <i class="fas fa-trash-alt"></i> <img src="/img/miel-beepure.png" width="120" height="120" alt=" Miel Beepure" >
                 <p>Miel líquida, Beepure. 500gr </p>
                 <p>$560</p>
                 <button>-</button>
@@ -59,7 +68,7 @@
                 <p>$560</p>
             </div>
             <div>
-              <img src="/img/mantequilla-de-coco.png" alt=" Mantequilla de coco">
+              <i class="fas fa-trash-alt"></i><img src="/img/mantequilla-de-coco.png" width="120" height="120" alt=" Mantequilla de coco">
               <p>Mantequilla de Coco, Byour. 185gr </p>
               <p>$400</p>
               <button>-</button>
@@ -67,50 +76,54 @@
               <p>$400</p>
             </div>
             <div>
-              <img src="/img/mermelada-beepure.png" alt="Mermelada" >
+              <i class="fas fa-trash-alt"></i><img src="/img/mermelada-beepure.png" width="120" height="120" alt="Mermelada" >
               <p>Mermelada de frutos del bosque, Beepure. 450gr </p>
               <p>$600</p>
               <button>-</button>
               <button>+</button>
               <p>$600</p>
             </div>
-            <img src="/img/veggie-burger-delitas.png" alt="Burger veggie" >
+            <i class="fas fa-trash-alt"></i><img src="/img/veggie-burger-delitas.png" width="120" height="120" alt="Burger veggie" >
             <p>Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr </p>
             <p>$300</p>
             <button>-</button>
             <button>+</button>
             <p>$300</p>
           </div>
+          <section> <i class="fas fa-undo-alt"></i> <button>Actualizar carrito</button></section>
 
           <section>
-            <h1>Resumen de compra</h1>
+            <h2>Resumen de compra</h2>
             <p>Subtotal</p>
             <p>Costo del envío</p>
             <p>TOTAL</p>
             <button>FINALIZAR COMPRA</button>
             <br>
             <br>
-            <i class="fas fa-tags"></i><p>Cupón</p>
-            <p>Codigo del cupon</p>
+            
+            <i class="fas fa-tags"></i> <label for="codigo"><p>Cupón</p></label>
+            <input type="codigo" name="codigo" id="codigo" required />
             <button>APLICAR CUPON</button>
             <br>
             <br>
             <i class="fas fa-credit-card"></i> <a href="#">BENEFICIOS BANCARIOS</a>
+            <br>
+            <br>
           </section>
     </main>
 
     <footer>
-      <section class="resenias">
+      <section class="envios">
         <h3>Envíos</h3>
         <p>Realizamos envíos sin cargo por toda la cuidad</p>
       </section>
 
       <section class="contacto">
         <h3>Contacto</h3>
-        <img src="" alt="logo whatsapp" class="wtp-logo" />
-        <p>137894785</p>
-        <img src="" alt="logo correo" class="mail-logo" />
-        <p>huerto.market@todobien.com</p>
+     
+        <i class="fab fa-whatsapp"></i><p>137894785</p>
+        
+        <i class="fas fa-envelope"></i><p>huerto.market@todobien.com</p>
       </section>
 
       <section class="registro">
@@ -122,6 +135,7 @@
       <section class="redes">
         <img src="" alt="clave" />
         <img src="" alt="fiscal" />
+        <br>
         <h3>Seguinos</h3>
         <a href="#"><img src="" alt="Instagram" class="red-logo" /></a>
         <a href="#"><img src="" alt="twitter" class="red-logo" /></a>
