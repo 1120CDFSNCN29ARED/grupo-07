@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Huerto Market</title>
 
-    <!--Poppins Regular 400-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
 
-    <!--Yusei Magic Regular 400-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
       rel="stylesheet"
     />
-
-    <!--Fonts awesome-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
     <link
       rel="stylesheet"
       href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
@@ -30,32 +30,39 @@
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
   <body>
-    <!--<header>
-      <a href="/"><img src="" alt="Logo" class="logo" /></a>
-      <nav>
-        <img src="" alt="cruz de cierre" />
-        <ul>
-          <li><a href="#">Productos</a></li>
+    <header>
+      <div class="header-logo">
+        <a href="/"
+          ><img src="/img/logotipo-op-1.png" alt="Logo" class="logo"
+        /></a>
+      </div>
+      <nav id="menu">
+        <button><i class="fas fa-times"></i></button>
+        <ul class="menu-list">
+          <li><a href="/productDetail">Productos</a></li>
+
           <li><a href="#">Sucursales</a></li>
           <li><a href="#">Nosotros</a></li>
           <li><a href="#">Contacto</a></li>
-          <li><a href="/register">Registro</a></li>
+          <li><a href="register">Registro</a></li>
           <li><a href="#">FAQ</a></li>
         </ul>
-        <ul>
-          <img src="" alt="Mi cuenta" />
-          <li><a href="#" class="mi-cuenta">Mi cuenta</a></li>
-          <img src="" alt="corzaon" class="corazon" />
+        <ul class="menu-list">
+          <i class="fas fa-user"></i>
+          <li><a href="#" class="account">Mi cuenta</a></li>
+          <button type="submit"><i class="far fa-heart"></i></button>
           <li>
-            <a href="/productCart"><img src="" alt="carrito" /></a>
+            <a href="/productCart"><i class="fas fa-shopping-cart"></i> /></a>
           </li>
         </ul>
       </nav>
-      <div class="barra-de-navegacion">
-        <input type="text" placeholder="Buscar" />
-        <img src="" alt="Lupa" class="lupa" />
+      <div class="search">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos" />
+        </div>
+        <button class="submit"><i class="fa fa-search"></i></button>
       </div>
-    </header>-->
+    </header>
 
     <main>
       <form action="">
@@ -92,32 +99,30 @@
 
     <!--<footer>
       <section class="resenias">
-        <h3>Envíos</h3>
+        <h4>Envíos</h4>
         <p>Realizamos envíos sin cargo por toda la cuidad</p>
       </section>
 
       <section class="contacto">
-        <h3>Contacto</h3>
-        <img src="" alt="logo whatsapp" class="wtp-logo" />
-        <p>137894785</p>
-        <img src="" alt="logo correo" class="mail-logo" />
-        <p>huerto.market@todobien.com</p>
+        <h4>Contacto</h4>
+        <p><i class="fab fa-whatsapp"></i>137894785</p>
+        <p><i class="fas fa-paper-plane"></i>huerto.market@todobien.com</p>
       </section>
 
       <section class="registro">
-        <h3>Registrate</h3>
+        <h4>Registrate</h4>
         <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
-        <button><a href="/register">Registrate</a></button>
+        <button><a href="register">Registrate</a></button>
       </section>
 
       <section class="redes">
         <img src="" alt="clave" />
         <img src="" alt="fiscal" />
-        <h3>Seguinos</h3>
-        <a href="#"><img src="" alt="Instagram" class="red-logo" /></a>
-        <a href="#"><img src="" alt="twitter" class="red-logo" /></a>
-        <a href="#"><img src="" alt="facebook" class="red-logo" /></a>
-        <a href="#"><img src="" alt="google" class="red-logo" /></a>
+        <h4>Seguinos</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
       </section>
     </footer>-->
   </body>

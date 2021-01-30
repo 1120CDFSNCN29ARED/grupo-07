@@ -33,6 +33,11 @@ h2 {
 .product-article button {
   background-color: #ec9f00;
   padding: 5px;
+  border-radius: 10%;
+}
+
+.product-article button:hover {
+  box-shadow: 2px 2px 5px #0c5d5e;
 }
 
 .product-article button a {
@@ -71,6 +76,11 @@ h2 {
 .descripcion-producto button {
   background-color: #ec9f00;
   padding: 5px;
+  border-radius: 10%;
+}
+
+.descripcion-producto button:hover {
+  box-shadow: 2px 2px 5px #0c5d5e;
 }
 
 .descripcion-producto button a {
@@ -118,10 +128,75 @@ h2 {
   width: 100%;
   text-align: center;
 }
-.noticias h3 {
-  font-family: "Yusei Magic", sans-serif;
+
+.quienes-somos {
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
 }
 
+.quienes-somos h2 {
+  color: #ec9f00;
+}
+
+.quienes-somos h4 {
+  font-family: "Yusei Magic", sans-serif;
+  padding: 10px;
+  margin: 10px;
+  color: #ec9f00;
+  text-decoration: #0c5d5e underline;
+  font-size: 20px;
+}
+
+.noticias {
+  text-align: center;
+}
+.noticias h3 {
+  font-family: "Yusei Magic", sans-serif;
+  padding: 20px;
+  color: #0c5d5e;
+}
+
+.news-container {
+  position: relative;
+}
+.noticias img {
+  width: 300px;
+}
+
+.news-img {
+  position: absolute;
+  top: -20px;
+  left: 100px;
+  z-index: 10;
+}
+.news-article {
+  background-color: #a0daa9;
+  padding: 200px 20px 20px 100px;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.news-article p {
+  color: #0c5d5e;
+}
+
+.sucursales {
+  margin: 10px;
+  padding: 10px;
+}
 .sucursales h2 {
   text-align: center;
+}
+
+.sucursal-article {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sucursal-article2 {
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
 }

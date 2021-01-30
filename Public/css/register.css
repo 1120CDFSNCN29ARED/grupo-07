@@ -10,7 +10,10 @@ form {
 }
 
 main {
-  font-size: 18px;
-  color: black;
-  font-family: "Poppins", sans-serif;
+  background-color: #fef9ec;
+  font-size: 15px;
+}
+h2 {
+  font-family: "Yusei Magic", sans-serif;
+  margin: 0px;
 }
