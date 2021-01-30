@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #ec9f00;
+  background-color: #fccb1a;
 }
 
 .header-logo {
@@ -32,4 +32,20 @@ nav li {
 }
 nav a {
   text-decoration: none;
+}
+
+#encabezado {
+  color: #0a3409;
+  background-color: #559e54;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  padding: 14px;
+}
+
+#menu-button {
+  text-align: left;
+  background-color: #0a3409;
+  color: white;
+  padding: 10px;
 }

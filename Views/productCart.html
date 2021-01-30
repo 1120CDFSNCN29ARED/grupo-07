@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrito de productos</title>
 
     <!--Poppins Regular 400-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
-   
-    <!--Yusei Magic Regular 400-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
-    
-    <!--Fonts awesome-->
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css ">
-    
-    <!--vincular html con css-->
-    <link rel="stylesheet" href="/css/productCart.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 
+    <!--Yusei Magic Regular 400-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Fonts awesome-->
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
+    />
+
+    <!--vincular html con css-->
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/productCart.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
   <body>
-    <header class="header">      
+    <!--<header class="header">      
        <nav>
           <div>
           <button id="menu-button" ><i class="fas fa-bars burger" ></i></button>
@@ -38,85 +49,111 @@
       </div>
     </header>
         <div id="encabezado">
-        <!--icono mano--> <i class="fas fa-hand-paper"> </i>AYUDA
-        <!--icono camion--> <i class="fas fa-truck"> </i>ENVÍOS 
-        <!--icono telefono--> <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
-        </div>
-    
-   
+       <i class="fas fa-hand-paper"> </i>AYUDA
+        <i class="fas fa-truck"> </i>ENVÍOS 
+         <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
+        </div>-->
+
     <main>
-       <section id="titulo">
+      <section id="titulo">
         <h1>Tu pedido</h1>
         <h1>Te estás llevando 4 productos</h1>
       </section>
-        <section>
-          <i class="fas fa-arrow-circle-left"></i> <button>Seguir comprando</button>
-        </section>
-        <section>
-          <h2>Productos</h2>
-          <h2>Precio</h2>
-          <h2>Cantidad</h2>
-          <h2>Total</h2>
-        </section>
+      <section>
+        <i class="fas fa-arrow-circle-left"></i>
+        <button>Seguir comprando</button>
+      </section>
+      <section>
+        <h2>Productos</h2>
+        <h2>Precio</h2>
+        <h2>Cantidad</h2>
+        <h2>Total</h2>
+      </section>
 
-            <div>
-              <i class="fas fa-trash-alt"></i> <img src="/img/miel-beepure.png" width="120" height="120" alt=" Miel Beepure" >
-                <p>Miel líquida, Beepure. 500gr </p>
-                <p>$560</p>
-                <button>-</button>
-                <button>+</button>
-                <p>$560</p>
-            </div>
-            <div>
-              <i class="fas fa-trash-alt"></i><img src="/img/mantequilla-de-coco.png" width="120" height="120" alt=" Mantequilla de coco">
-              <p>Mantequilla de Coco, Byour. 185gr </p>
-              <p>$400</p>
-              <button>-</button>
-              <button>+</button>
-              <p>$400</p>
-            </div>
-            <div>
-              <i class="fas fa-trash-alt"></i><img src="/img/mermelada-beepure.png" width="120" height="120" alt="Mermelada" >
-              <p>Mermelada de frutos del bosque, Beepure. 450gr </p>
-              <p>$600</p>
-              <button>-</button>
-              <button>+</button>
-              <p>$600</p>
-            </div>
-            <i class="fas fa-trash-alt"></i><img src="/img/veggie-burger-delitas.png" width="120" height="120" alt="Burger veggie" >
-            <p>Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr </p>
-            <p>$300</p>
-            <button>-</button>
-            <button>+</button>
-            <p>$300</p>
-          </div>
-          <section> <i class="fas fa-undo-alt"></i> <button>Actualizar carrito</button></section>
+      <div>
+        <i class="fas fa-trash-alt"></i>
+        <img
+          src="/img/miel-beepure.png"
+          width="120"
+          height="120"
+          alt=" Miel Beepure"
+        />
+        <p>Miel líquida, Beepure. 500gr</p>
+        <p>$560</p>
+        <button>-</button>
+        <button>+</button>
+        <p>$560</p>
+      </div>
+      <div>
+        <i class="fas fa-trash-alt"></i
+        ><img
+          src="/img/mantequilla-de-coco.png"
+          width="120"
+          height="120"
+          alt=" Mantequilla de coco"
+        />
+        <p>Mantequilla de Coco, Byour. 185gr</p>
+        <p>$400</p>
+        <button>-</button>
+        <button>+</button>
+        <p>$400</p>
+      </div>
+      <div>
+        <i class="fas fa-trash-alt"></i
+        ><img
+          src="/img/mermelada-beepure.png"
+          width="120"
+          height="120"
+          alt="Mermelada"
+        />
+        <p>Mermelada de frutos del bosque, Beepure. 450gr</p>
+        <p>$600</p>
+        <button>-</button>
+        <button>+</button>
+        <p>$600</p>
+      </div>
+      <div>
+        <i class="fas fa-trash-alt"></i
+        ><img
+          src="/img/veggie-burger-delitas.png"
+          width="120"
+          height="120"
+          alt="Burger veggie"
+        />
+        <p>Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr</p>
+        <p>$300</p>
+        <button>-</button>
+        <button>+</button>
+        <p>$300</p>
+      </div>
+      <section>
+        <i class="fas fa-undo-alt"></i> <button>Actualizar carrito</button>
+      </section>
 
-          <section>
-            <h2>Resumen de compra</h2>
-            <p>Subtotal</p>
-            <p>Costo del envío</p>
-            <p>TOTAL</p>
-            <button>FINALIZAR COMPRA</button>
-            <br>
-            <br>
-            
-            <i class="fas fa-tags"></i> <label for="codigo"><p>Cupón</p></label>
-            <input type="codigo" name="codigo" id="codigo" required />
-            <button>APLICAR CUPON</button>
-            <br>
-            <br>
-            <i class="fas fa-credit-card"></i> <a href="#">BENEFICIOS BANCARIOS</a>
-            <br>
-            <br>
-          </section>
-    </main>
-
-    <footer>
+      <section>
+        <h2>Resumen de compra</h2>
+        <p>Subtotal</p>
+        <p>Costo del envío</p>
+        <p>TOTAL</p>
+        <div class="compra">
+          <button>FINALIZAR COMPRA</button>
+        </div>
+      </section>
+      <section class="cupon">
+        <i class="fas fa-tags"></i> <label for="codigo"><p>Cupón</p></label>
+        <input type="codigo" name="codigo" id="codigo" required />
+        <button>APLICAR CUPON</button>
+      </section>
+      <section>
+        <i class="fas fa-credit-card"></i> <a href="#">BENEFICIOS BANCARIOS</a>
+      </section>
       <section class="envios">
         <h3>Envíos</h3>
         <p>Realizamos envíos sin cargo por toda la cuidad</p>
       </section>
+    </main>
+
+    <!--<footer>
 
       <section class="contacto">
         <h3>Contacto</h3>
@@ -142,6 +179,6 @@
         <a href="#"><img src="" alt="facebook" class="red-logo" /></a>
         <a href="#"><img src="" alt="google" class="red-logo" /></a>
       </section>
-    </footer>
+    </footer>-->
   </body>
 </html>
