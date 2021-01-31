@@ -14,6 +14,7 @@ header {
 
 .header-logo {
   text-align: center;
+  position: relative;
 }
 
 .logo {
@@ -22,16 +23,81 @@ header {
 }
 
 .header-logo img {
-  width: 45%;
+  width: 200px;
+  height: 150px;
   text-align: center;
+  margin-top: 60px;
 }
 
+.account-container {
+  position: absolute;
+  top: 30px;
+  left: 90px;
+  font-size: 16px;
+}
+
+.cart-container {
+  position: absolute;
+  top: 27px;
+  right: 30px;
+  font-size: 18px;
+}
+
+.cart-container i,
+.account-container a,
+.account-container i {
+  color: #0a3409;
+}
+
+.cart-container .heart,
+.menu-list .close,
+.search .lupa {
+  background-color: #fccb1a;
+  color: #0a3409;
+  border: none;
+}
+
+.search {
+  display: flex;
+  margin: 10px;
+  padding: 5px;
+}
+.search-bar {
+  flex-grow: 0.9;
+}
+
+.search input {
+  font-size: 14px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search .lupa {
+  padding: 5px;
+}
+/*BARRA DE NAVEGACION*/
+
+.menu-list {
+  display: none;
+}
 nav li {
   list-style-type: none;
-  color: #363945;
 }
 nav a {
   text-decoration: none;
+  color: #0a3409;
+}
+
+#menu-button {
+  text-align: left;
+  background-color: #0a3409;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
 }
 
 #encabezado {
@@ -41,11 +107,4 @@ nav a {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   padding: 14px;
-}
-
-#menu-button {
-  text-align: left;
-  background-color: #0a3409;
-  color: white;
-  padding: 10px;
 }

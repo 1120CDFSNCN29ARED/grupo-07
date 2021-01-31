@@ -30,21 +30,6 @@ h2 {
   padding: 15px;
 }
 
-.product-article button {
-  background-color: #ec9f00;
-  padding: 5px;
-  border-radius: 10%;
-}
-
-.product-article button:hover {
-  box-shadow: 2px 2px 5px #0c5d5e;
-}
-
-.product-article button a {
-  color: #0c5d5e;
-  font-weight: 500;
-}
-
 .container {
   position: relative;
   text-align: center;
@@ -73,20 +58,6 @@ h2 {
   color: #fef9ec;
 }
 
-.descripcion-producto button {
-  background-color: #ec9f00;
-  padding: 5px;
-  border-radius: 10%;
-}
-
-.descripcion-producto button:hover {
-  box-shadow: 2px 2px 5px #0c5d5e;
-}
-
-.descripcion-producto button a {
-  color: #0c5d5e;
-  font-weight: 500;
-}
 .carrousel-conteiner {
   max-width: 100%;
   position: relative;
