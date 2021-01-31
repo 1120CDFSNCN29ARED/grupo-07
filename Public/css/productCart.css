@@ -7,8 +7,6 @@
 }
 
 #titulo {
-  text-align: left;
-  padding: 0px;
   font-family: "Yusei Magic", sans-serif;
   font-size: 18px;
   color: #fba90a;
@@ -23,6 +21,7 @@ h3 {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   text-align: left;
+  font-weight: bold;
 }
 
 p {
@@ -30,19 +29,64 @@ p {
   font-size: 14px;
 }
 
+.contenedor-titulo {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.contenedor-subtitulos {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+.contenedor-articulo {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.contenedor-compra {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.envios {
+  text-align: center;
+  width: 45%;
+  border: 2px solid #0c5d5e;
+  padding: 20px;
+  margin: auto;
+  bottom: 30%;
+  left: 15%;
+}
+
+/*BOTONES*/
 .compra button {
   background-color: #ec9f00;
-  padding: 15px;
-  box-shadow: 2px 2px 5px black;
-  border-radius: 50%;
+  padding: 16px;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
   color: #0c5d5e;
+  font-weight: bold;
+  border-radius: 10%;
 }
 
 .cupon button {
-  background-color: #fccb1a;
+  background-color: #0c5d5e;
   padding: 5px;
-  box-shadow: 2px 2px 5px black;
-  color: black;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
+  color: white;
 }
 
 .actualizar button {
@@ -66,4 +110,10 @@ p {
   text-align: center;
   margin: 10x;
   font-size: 14px;
+}
+
+.finalizar-compra {
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

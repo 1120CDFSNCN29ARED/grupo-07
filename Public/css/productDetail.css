@@ -35,12 +35,22 @@ p {
 .articulo {
   width: "360";
   height: "360";
-  padding: 10px;
   border: 2px solid #0c5d5e;
-  margin: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
   text-align: center;
 }
+.envios {
+  text-align: center;
+  width: 45%;
+  border: 2px solid #0c5d5e;
+  padding: 15px;
+  margin: auto;
+  bottom: 30%;
+  left: 15%;
+}
 
+/*BOTONES*/
 .compra button {
   padding: 3px;
   text-align: center;
@@ -58,7 +68,7 @@ p {
 .carrito button {
   background-color: #0c5d5e;
   padding: 10px;
-  box-shadow: 2px 2px 5px rgb(102, 66, 0);
+  box-shadow: 2px 2px 5px black(102, 66, 0);
   color: white;
   text-align: center;
 }

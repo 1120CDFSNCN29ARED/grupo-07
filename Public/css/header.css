@@ -19,7 +19,7 @@ header {
 
 .logo {
   border-radius: 50%;
-  padding: 20px;
+  padding: 15px;
 }
 
 .header-logo img {
@@ -102,7 +102,7 @@ nav a {
 
 #encabezado {
   color: #0a3409;
-  background-color: #559e54;
+  background-color: #a0daa9;
   text-align: center;
   font-size: 14px;
   font-family: "Poppins", sans-serif;
