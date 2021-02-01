@@ -12,13 +12,13 @@ h2 {
 .products h2 {
   text-align: center;
   padding: 20px;
-  font-size: 24px;
   color: #0c5d5e;
 }
 
 .product-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .product-article {
@@ -137,6 +137,11 @@ h2 {
 }
 
 /*SECCION QUIENES SOMOS*/
+
+.us-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .quienes-somos {
   text-align: center;
   padding: 20px;
@@ -277,5 +282,54 @@ h2 {
 
   .sucursal-image {
     text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    font-size: 18px;
+  }
+
+  .product-article img {
+    height: 300px;
+  }
+
+  .descripcion-producto {
+    padding: 60px;
+  }
+
+  .descripcion-producto p {
+    padding: 30px;
+  }
+
+  .slide1 p,
+  .slide p {
+    left: 490px;
+  }
+
+  .dot-container {
+    left: 45%;
+  }
+
+  .quienes-somos {
+    width: 48%;
+    order: 2;
+  }
+
+  .noticias {
+    width: 50%;
+  }
+
+  .news-article {
+    margin-left: 80px;
+    margin-right: 90px;
+  }
+
+  .news-img {
+    left: 130px;
+  }
+
+  .noticias img {
+    width: 50%;
   }
 }
