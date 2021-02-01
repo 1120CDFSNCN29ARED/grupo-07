@@ -3,7 +3,7 @@
   min-height: 500px;
   height: auto;
   font-size: 14px;
-  margin: 2% auto;
+  margin: auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
   padding: 2%;
   position: relative;
@@ -38,4 +38,15 @@ h2 {
 
 .checkbox-label {
   display: inline;
+}
+
+@media (min-width: 760px) {
+  .form-menu {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .form-menu {
+    width: 50%;
+  }
 }
