@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
+    />
+
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/productos.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <a href="/"
+          ><img src="/img/Huerto-market.png" alt="Logo" class="logo"
+        /></a>
+        <div class="account-container">
+          <i class="fas fa-user"></i>
+          <a href="/logIn" class="account">Mi cuenta</a>
+        </div>
+        <div class="cart-container">
+          <button type="submit" class="heart">
+            <i class="far fa-heart"></i>
+          </button>
+
+          <a href="/productCart" class="cart"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+        </div>
+      </div>
+      <nav id="menu">
+        <ul class="menu-list">
+          <button class="close"><i class="fas fa-times"></i></button>
+          <li><a href="/productDetail">Productos</a></li>
+          <li><a href="#">Sucursales</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="register">Registro</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </nav>
+      <div>
+        <button id="menu-button"><i class="fas fa-bars burger"></i></button>
+      </div>
+      <div class="search">
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar productos" />
+        </div>
+        <button class="submit lupa"><i class="fa fa-search"></i></button>
+      </div>
+      <div id="encabezado">
+        <i class="fas fa-hand-paper"> </i>AYUDA
+        <i class="fas fa-truck"> </i>ENVÍOS
+        <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
+      </div>
+    </header>
+    <main>
+      <section><h1>Productos</h1></section>
+
+      <article class="product-article">
+        <img src="img/icecream.jpg" width="120" height="120" alt="ice-cream" />
+        <p>Helados hechos con jugos naturales, Guapaletas.</p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$260</strong></p>
+        <i class="fas fa-heart"></i>
+      </article>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <article class="product-article">
+        <img src="/img/muffins.jpeg" width="120" height="120" alt="muffins" />
+        <p>Muffins con avena y frutas.</p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$160</strong></p>
+        <i class="fas fa-heart"></i>
+      </article>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/miel-beepure.png"
+          width="120"
+          height="120"
+          alt=" Miel Beepure"
+        />
+        <p>Miel líquida, Beepure. 500gr</p>
+        <p>$560</p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$360</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/mantequilla-de-coco.png"
+          width="120"
+          height="120"
+          alt=" Mantequilla de coco"
+        />
+        <p>Mantequilla de Coco, Byour. 185gr</p>
+
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$400</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/mermelada-beepure.png"
+          width="120"
+          height="120"
+          alt="Mermelada"
+        />
+        <p>Mermelada de frutos del bosque, Beepure. 450gr</p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$245</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/veggie-burger-delitas.png"
+          width="120"
+          height="120"
+          alt="Burger veggie"
+        />
+        <p>Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr</p>
+
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$300</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/aceite-coco.png"
+          width="120"
+          height="120"
+          alt="Aceite de Coco"
+        />
+        <p></p>
+
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$380</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/fideos-garbanzo.png"
+          width="120"
+          height="120"
+          alt="Fideos de garbanzo"
+        />
+        <p></p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$120</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/jugo-naranja.png"
+          width="120"
+          height="120"
+          alt="Jugo de naranja"
+        />
+        <p>
+          Jugo de Naranja y Durazno con Semillas de Chia, 250 cc. Chia graal
+        </p>
+
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$80</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/leche-almendras.png"
+          width="120"
+          height="120"
+          alt="Leche de almendras"
+        />
+        <p></p>
+
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$160</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/pepas.png"
+          width="120"
+          height="120"
+          alt="Pepas organicas"
+        />
+        <p>Pepas Organicas Grun, 160g.</p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$60</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/barrita-arroz.png"
+          width="120"
+          height="120"
+          alt="Barritas de arroz"
+        />
+        <p></p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$40</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+
+      <section><h1>Los más vendidos</h1></section>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/jugo-kale.png"
+          width="120"
+          height="120"
+          alt="Jugo de kale"
+        />
+        <p></p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$150</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+      <div class="contenedor-articulo">
+        <img
+          src="/img/spirulina.png"
+          width="120"
+          height="120"
+          alt="Spirulina"
+        />
+        <p></p>
+        <div class="contar">
+          <button>-</button>
+          <button>+</button>
+        </div>
+        <p><strong>$460</strong></p>
+        <i class="fas fa-heart"></i>
+      </div>
+      <div class="carrito">
+        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      </div>
+    </main>
+    <footer>
+      <section class="resenias">
+        <h4>Reseñas</h4>
+        <div class="resenia efecto">
+          <p>'Increíble calidad. Se lo recomendé a todos mis amigos'</p>
+          <p>Pablo Marmol</p>
+        </div>
+        <div class="resenia efecto">
+          <p>
+            'No puedo esperar a volver. Son la mejor comida vegana en la ciudad'
+          </p>
+          <p>Pier Nodoyuna</p>
+        </div>
+        <div class="resenia efecto">
+          <p>'Buenísima opción para un goloso de profesión'</p>
+          <p>Yogi</p>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <h4>Contacto</h4>
+        <p><i class="fab fa-whatsapp"></i>137894785</p>
+        <p><i class="fas fa-paper-plane"></i>huerto.market@todobien.com</p>
+      </section>
+
+      <section class="registro">
+        <h4>Registrate</h4>
+        <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
+        <button class="search-btn"><a href="register">Registrate</a></button>
+      </section>
+
+      <section class="redes">
+        <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
+        <div class="redes-container">
+          <h4>Seguinos</h4>
+          <div class="redes-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
