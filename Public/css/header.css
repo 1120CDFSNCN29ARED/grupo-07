@@ -1,3 +1,5 @@
+/*ESTILOS GENERALES*/
+
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -11,6 +13,12 @@ body {
 header {
   background-color: #fccb1a;
 }
+
+main {
+  background-color: #fef9ec;
+}
+
+/*HEADER*/
 
 .header-logo {
   text-align: center;
@@ -95,9 +103,10 @@ nav a {
   background-color: #0a3409;
   color: white;
   padding: 10px;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 15px;
+  z-index: 10;
 }
 
 #encabezado {

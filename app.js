@@ -8,7 +8,7 @@ const staticFolder = path.resolve(__dirname, "./public");
 app.use(express.static(staticFolder));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./Views/home.html"));
+  res.sendFile(path.resolve(__dirname, "./Views/index.html"));
 });
 
 app.get("/register", (req, res) => {

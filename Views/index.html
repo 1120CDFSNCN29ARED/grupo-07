@@ -105,7 +105,7 @@
 
       <!--Carrousel sacado de w3school-->
       <section class="carrousel-conteiner">
-        <div class="slide efecto">
+        <div class="slide1 efecto">
           <img src="/img\sliced-fruits-banner.jpg" alt="foto1" />
           <p>Colores deliciosos</p>
         </div>
@@ -118,14 +118,14 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
         </div>
 
-        <a class="prev" onclick="plussSlide(-1)"
+        <a class="pre" onclick="plussSlide(-1)"
           ><i class="fas fa-angle-left"></i
         ></a>
         <a class="sig" onclick="plussSlide(1)"
           ><i class="fas fa-angle-right"></i
         ></a>
 
-        <div>
+        <div class="dot-container">
           <span class="dot" onclick="currentSlide1"
             ><i class="far fa-circle"></i
           ></span>
@@ -181,18 +181,26 @@
         <h2>Sucursales</h2>
         <article class="sucursal-article">
           <img src="/img/sucursal.png" alt="sucursale1" class="sucursal1" />
+          <div class="sucursal-item">
           <p>Cosme 1380.</p>
           <p>Tel. 1385782</p>
+        </div>
         </article>
-        <article class="sucursal-article2">
-          <img src="/img/sucursal.png" alt="sucursal2" class="sucursal2" />
+        <article class="sucursal-article">
+          <div class="sucursal-item">
           <p>Fulanito 125</p>
           <p>Tel. 4892471</p>
+        </div>
+        <div class="sucursal-image">
+          <img src="/img/sucursal.png" alt="sucursal2" class="sucursal2" />
+        </div>
         </article>
         <article class="sucursal-article">
           <img src="/img/sucursal.png" alt="sucursal3" class="sucursal1" />
+          <div class="sucursal-item">
           <p>Calle Falsa 123</p>
           <p>Tel. 9876424</p>
+        </div>
         </article>
       </section>
     </main>
@@ -232,10 +240,12 @@
         <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
         <div class="redes-container">
         <h4>Seguinos</h4>
+        <div class="redes-icons">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-google"></i></a>
+      </div>
       </div>
       </section>
     </footer>
