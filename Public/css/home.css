@@ -16,6 +16,11 @@ h2 {
   color: #0c5d5e;
 }
 
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .product-article {
   padding: 10px;
   border: 2px solid #0c5d5e;
@@ -165,7 +170,7 @@ h2 {
   position: relative;
 }
 .noticias img {
-  width: 300px;
+  width: 65%;
 }
 
 .news-img {
@@ -210,4 +215,67 @@ h2 {
 .sucursal-item {
   padding: 10px;
   margin: auto;
+}
+
+@media (min-width: 760px) {
+  .product-article {
+    width: 30%;
+  }
+
+  .product-article img {
+    height: 140px;
+  }
+
+  .container {
+    width: 70%;
+  }
+
+  .slide img,
+  .slide1 img {
+    height: 385px;
+  }
+
+  .slide1 p,
+  .slide p {
+    font-size: 50px;
+    top: 130px;
+    left: 215px;
+  }
+
+  .pre,
+  .sig {
+    top: 50%;
+  }
+
+  .news-article {
+    margin-left: 181px;
+    margin-right: 181px;
+  }
+  .news-img {
+    left: 215px;
+  }
+
+  .noticias img {
+    width: 40%;
+  }
+
+  .sucursal-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sucursales h2 {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .sucursal-article {
+    width: 33%;
+    display: initial;
+    text-align: center;
+  }
+
+  .sucursal-image {
+    text-align: center;
+  }
 }
