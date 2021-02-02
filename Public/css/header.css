@@ -102,7 +102,7 @@ nav a {
   text-align: left;
   background-color: #0a3409;
   color: white;
-  padding: 10px;
+  padding: 13px;
   position: fixed;
   top: 20px;
   left: 15px;
@@ -116,4 +116,5 @@ nav a {
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   padding: 14px;
+  text-indent: 20px;
 }
