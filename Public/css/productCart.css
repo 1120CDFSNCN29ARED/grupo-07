@@ -96,6 +96,8 @@ p {
 .contenedor-compra {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  line-height: 40px;
   padding: 10px;
 }
 
@@ -195,6 +197,9 @@ button i {
     bottom: 127px;
     right: 130px;
   }
+  .contenedor-compra {
+    margin-left: 150px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -214,8 +219,10 @@ button i {
 
   .contenedor-compra {
     text-align: left;
+    margin-left: 40px;
   }
   .compra {
     width: 50%;
+    margin-left: 50px;
   }
 }

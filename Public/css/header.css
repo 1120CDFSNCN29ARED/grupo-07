@@ -148,7 +148,7 @@ nav a {
   color: #0a3409;
   background-color: #a0daa9;
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   padding: 14px;
   text-indent: 20px;
 }
@@ -192,7 +192,7 @@ nav a {
 
   .header-title p {
     position: absolute;
-    top: 290px;
+    top: 340px;
     left: 100px;
     font-size: 30px;
     color: #ec9f00;
@@ -202,6 +202,11 @@ nav a {
     padding-right: 5px;
     padding-left: 10px;
   }
+  #encabezado {
+    font-size: 14px;
+    padding: 16px;
+    margin-top: -10px;
+  }
 }
 @media (min-width: 1200px) {
   .search {
@@ -210,5 +215,19 @@ nav a {
   .logo-log {
     text-align: left;
     margin-left: 85px;
+  }
+  #encabezado {
+    font-size: 18px;
+    padding: 18px;
+    margin-top: -10px;
+  }
+
+  .header-title p {
+    top: 300px;
+    margin: 40px;
+  }
+  .header-title h2 {
+    top: 140px;
+    margin: 50px;
   }
 }

@@ -20,14 +20,13 @@ Nuestra empresa ofrece alimentos saludables y nutritivos que ayudan a mejorar la
 ## Páginas de inspiración
 
 - https://benitos.co.uk/
-  Elegimos éste sitio web por el diseño atractivo debido a la distribución de la información y el contenido visual. Permite construir una primera impresión de los prodcutos y servicios que ofrece.
-
 - https://www.fitmarket.com.ar/
-  Nos ayudó a tener una idea de los productos que se pueden vender como tambien el estilo de vida que brinda.
-
 - https://uiwimarket.com/
 - https://www.zizzi.co.uk/
 - https://greeneat.com.ar/
+
+  La elección de estos sitios web fueron por el diseño atractivo debido a la distribución de la información y el contenido visual, como las animaciones. Las cuales permiten construir una primera impresión con los clientes sobre de los prodcutos y servicios que ofrece.
+  Además, fitmarket y uiwimarket nos ayudaron para plantear los productos que se podrían vender como tambien los estilos.
 
 ## Integrantes del proyecto
 
