@@ -25,29 +25,30 @@
     />
 
     <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/products.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" href="/css/footer.css" />
   </head>
   <body>
+ 
     <header>
       <div class="header-logo">
-        <a href="/" ><img src="/img/Huerto-market.png" alt="Logo" class="logo"/></a>
+        <a href="/"
+          ><img src="/img/Huerto-market.png" alt="Logo" class="logo"
+        /></a>
         <div class="account-container">
-          <i class="fas fa-user"></i>
-          <a href="/logIn" class="account">Mi cuenta</a>
-        </div>
-        <div class="cart-container">
-          <button type="submit" class="heart">
-            <i class="far fa-heart"></i>
-          </button>
+        <i class="fas fa-user"></i>
+        <a href="/logIn" class="account">Mi cuenta</a>
+      </div>
+      <div class="cart-container">
+        <button type="submit" class="heart"><i class="far fa-heart"></i></button>
 
-          <a href="/productCart" class="cart"
-            ><i class="fas fa-shopping-cart"></i></a>
-        </div>
+        <a href="/productCart" class="cart"><i class="fas fa-shopping-cart"></i></a>
+      </div>
       </div>
       <nav id="menu">
         <ul class="menu-list">
-          <button class="close"><i class="fas fa-times"></i></button>
+         <button class="close"><i class="fas fa-times"></i></button>
           <li><a href="/productDetail">Productos</a></li>
           <li><a href="#">Sucursales</a></li>
           <li><a href="#">Nosotros</a></li>
@@ -65,242 +66,161 @@
         </div>
         <button class="submit lupa"><i class="fa fa-search"></i></button>
       </div>
+      <div class="header-image">
+        <img src="/img/healthy-lunch-banner.jpg" alt="imagen de header">
+        <div class="header-title">
+          <h2>HUERTO MARKET</h2>
+          <p>Comer rico hace bien</p>
+        </div>
+      </div>
       <div id="encabezado">
         <i class="fas fa-hand-paper"> </i>AYUDA
         <i class="fas fa-truck"> </i>ENVÍOS
         <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
       </div>
     </header>
-    <main>
-      <section><h1>Productos</h1></section>
+       <main>
 
-      <section class= "contenedor-productos">
-        
-        <article class="contenedor-articulo">
-          <div class="producto">
-            <img src="img/icecream.jpg" width="160" height="160" alt="ice-cream" />
-        <p>Helados de jugos, Guapaletas.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$260</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-        <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-        </div>
-      </article>
-
-      <article class="contenedor-articulo">
-        <div class="producto">
-          <img src="/img/muffins.jpeg" width="160" height="160" alt="muffins" />
-        <p>Muffins de avena y frutas.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$160</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-          <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-        </div>
-      </article>
-
-<article class="contenedor-articulo">
-  <div class="producto">
-<img  src="/img/miel-beepure.png" width="160" height="160" alt="Miel Beepure"/>
-        <p>Miel líquida, Beepure. 500gr</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$360</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-  </div>  
-</article>
       
-<article class="contenedor-articulo">
-  <div class="producto">
-    <img src="/img/mantequilla-de-coco.png" width="160" height="160" alt=" Mantequilla de coco"/>
-        <p>Manteca de Coco, Byour. 185gr</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$400</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+      <section class="products">
+        <h2>Productos</h2>
+        <div class="product-container">
+        <article class="product-article">
+          <img src="/img/miel-beepure.png" alt="miel-beepure" />
+          <div class="favoritos">
+            <i class="fas fa-heart"></i>
+          </div>
+          <p>Miel Líquida, Beepure. 500gr.</p>
+          <p class="price">$360</p>
+          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+        </article>
+        <article class="product-article">
+          <img src="img/icecream.jpg" alt="ice-cream" />
+          <div class="favoritos">
+            <i class="fas fa-heart"></i>
+          </div>
+          <p>
+            Helados de jugo. Guapaletas.
+          </p>
+          <p class="price">$260</p>
+          <button class="search-btn"><a href="#">Comprar</a></button>
+        </article>
+        <article class="product-article">
+          <img src="/img/muffins.jpeg" alt="muffins" />
+          <div class="favoritos">
+            <i class="fas fa-heart"></i>
+          </div>
+          <p>Muffins con avena y frutas.</p>
+          <p class="price">$160</p>
+          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+        </article>
+        <article class="product-article">
+          <img src="/img/mantequilla-de-coco.png" alt="manteca de coco" />
+          <div class="favoritos">
+            <i class="fas fa-heart"></i>
+          </div>
+          <p>Manteca de coco Byour. 185gr.</p>
+          <p class="price">$400</p>
+          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+        </article>
+          <article class="product-article">
+            <img src="img/mermelada-beepure.png" alt="mermelada" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>
+            Mermelada frutos del bosque., Beepure. 450gr.
+            </p>
+            <p class="price">$245</p>
+            <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+            </article>
+            <article class="product-article">
+              <img src="img/veggie-burger-delitas.png" alt="burger" />
+              <div class="favoritos">
+                <i class="fas fa-heart"></i>
+              </div>
+              <p>
+              Hamburguesa de lentejas y arroz, Delitas. 600gr.
+              </p>
+              <p class="price">$300</p>
+              <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+              </article>
+              <article class="product-article">
+                <img src="img/aceite-coco.png" alt="aceite de coco" />
+                <div class="favoritos">
+                  <i class="fas fa-heart"></i>
+                </div>
+                <p>
+                  Aceite neutro de coco, Chiagraal. 180gr.
+                </p>
+                <p class="price">$380</p>
+                <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+                </article>
+                <article class="product-article">
+                  <img src="img/fideos-garbanzo.png" alt="fideos-garbanzo" />
+                  <div class="favoritos">
+                    <i class="fas fa-heart"></i>
+                  </div>
+                  <p>
+                  Pasta de garbanzos, Legume. 284gr
+                  </p>
+                  <p class="price">$120</p>
+                  <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+                  </article>
+                  <article class="product-article">
+                    <img src="img/leche-almendras.png" alt="leche almendras" />
+                    <div class="favoritos">
+                      <i class="fas fa-heart"></i>
+                    </div>
+                    <p>
+                    Leceh de almendras cremosa, Amande. 1lt.
+                    </p>
+                    <p class="price">$160</p>
+                    <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+                    </article>
       </div>
-  </div>   
-</article>
-     
-<article class="contenedor-articulo">
-  <div class="producto">
-     <img src="/img/mermelada-beepure.png" width="160" height="160" alt="Mermelada"/>
-        <p>Mermelada frutos del bosque, Beepure. 450gr</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$245</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-  </div>
-</article>
-      
-<article class="contenedor-articulo">
-<div class="producto">
- <img src="/img/veggie-burger-delitas.png" width="160" height="160" alt="Burger veggie"/>
-        <p>Hamburguesa de lentejas y arroz, Delitas. 600gr</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$300</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-</div>
-</article>
-      
-<article class="contenedor-articulo">
-   <div class="producto">
-<img src="/img/aceite-coco.png" width="160" height="160" alt="Aceite de Coco"/>
-        <p>Aceite de coco neutro, Chiagraal. 180gr.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$380</p>
-        <div class="favoritos">
-           <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-   </div>
-</article>
-     
-<article class="contenedor-articulo">
-  <div class="producto">
-        <img  src="/img/fideos-garbanzo.png" width="160" height="160" alt="Fideos de garbanzo"/>
-        <p>Pasta de garbanzos, Legume. 284gr.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$120</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-  </div>
-</article>
-     
-<!--<article class="contenedor-articulo">
-  <div class="producto">
-<img src="/img/jugo-naranja.png" width="160" height="160" alt="Jugo de naranja"/>
-        <p> Jugo de Naranja y Durazno, Chiagraal. 250 cc.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p><strong>$80</strong></p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-  </div>
-</article>-->
-
- <article class="contenedor-articulo">
-   <div class="producto">
-<img src="/img/leche-almendras.png"  width="160" height="160" alt="Leche de almendras"/>
-        <p>Leche de almedras cremosa, Amande.1L</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$160</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-      <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-   </div>
- </article>
-      </section>
       
 
-      <section><h1>Los más vendidos</h1></section>
-      <section class ="contenedor-masVendidos">
-        <article class="contenedor-articuloA" >
-        <img src="/img/pepas.png" width="340" height="240" alt="Pepas organicas"/>
+      <section><h3>Los más vendidos</h3>
+      <article class ="contenedor-masVendidos">
+        <img src="/img/pepas.png" alt="Pepas organicas"/>
+
        <div class="contenedor-texto">
         <p>Pepas Organicas, Grun. 160g.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p>$120</p>
-        <div class="favoritos">
-               <i class="fas fa-heart"></i>
-        </div>
-              <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
+        <p class="price">$120</p>
+        <button class="search-btn"><a href="/productDetail">Comprar</a></button>
       </div>
-      </div>
+
+
+
       </article>
 
  
     
- <article class="contenedor-articuloB">
-        <img src="/img/barrita-arroz.png" width="340" height="240" alt="Barritas de arroz"/>
+ <article class="contenedor-masVendidos">
+        <img src="/img/barrita-arroz.png" alt="Barritas de arroz" class="imagen"/>
+
         <div class="contenedor-texto">
           <p>Barritas de arroz con sabor a coco. Crowie.</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
+
+        <p class="price">$25</p>
+        <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+
         </div>
-        <p>$25</p>
-        <div class="favoritos">
-          <i class="fas fa-heart"></i>
-        </div>
-              <div class="carrito">
-        <button><i class="fas fa-shopping-cart"></i>Agregar al carrito</button>
-      </div>
-        </div>
+      
+
+
  </article>
       </section>
-     
+    </section>
 
   <footer>
+    <section class="resenias envio">
+      <h4>Promociones</h4>
+      <p>
+        Contamos con promociones para tus pagos con tarjeta de crédito y mercado pago. No olvides en consultarnos.
+      </p>
+    </section>
       <section class="contacto">
         <h4>Contacto</h4>
         <p><i class="fab fa-whatsapp"></i>137894785</p>

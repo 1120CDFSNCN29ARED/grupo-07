@@ -1,12 +1,12 @@
 .form-menu {
   width: 100%;
-  min-height: 500px;
   height: auto;
   font-size: 14px;
   margin: auto;
   box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
   padding: 2%;
   position: relative;
+  padding-top: 40px;
 }
 
 h2 {
@@ -15,12 +15,25 @@ h2 {
   text-align: center;
   color: #fba90a;
 }
+.log-title {
+  color: #0c5d5e;
+}
+.user {
+  text-align: center;
+  font-size: 30px;
+  background-color: #fba90a;
+  border-radius: 50%;
+  color: #0c5d5e;
+  margin-left: 75px;
+  margin-right: 75px;
+}
 
 .register-text {
   text-align: center;
 }
 
-.form-item {
+.form-item,
+.log-item {
   padding: 10px;
 }
 
@@ -32,6 +45,15 @@ h2 {
   width: 100%;
 }
 
+.log-item .form-input {
+  display: inline;
+  width: initial;
+}
+
+.log-item {
+  text-align: center;
+}
+
 .btn-container {
   text-align: center;
 }
@@ -40,9 +62,29 @@ h2 {
   display: inline;
 }
 
+.forget-pass {
+  text-align: center;
+  padding: 20px;
+}
+
+.forget-pass a {
+  color: #0c5d5e;
+}
+
 @media (min-width: 760px) {
   .form-menu {
     width: 60%;
+  }
+  .user {
+    margin-right: 25%;
+    margin-left: 25%;
+  }
+
+  .forget-pass {
+    border-bottom: 1px solid #0c5d5e;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1200px) {

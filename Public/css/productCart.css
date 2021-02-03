@@ -30,8 +30,6 @@ p {
 }
 
 .contenedor-titulo {
-  display: flex;
-  align-items: flex-start;
   padding-top: 60px;
   padding-bottom: 30px;
   padding-left: 10px;
@@ -46,14 +44,53 @@ p {
   padding-right: 10px;
   padding-left: 10px;
   text-align: center;
+  display: none;
+}
+.contenedor-subtitulos .productos {
+  flex-grow: 0.3;
+}
+
+.contenedor-subtitulos .total {
+  text-align: right;
+}
+
+.product-item {
+  margin-left: 10px;
+}
+
+.product-description {
+  margin-bottom: 10px;
+}
+
+.product-price {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contar input {
+  width: 30px;
+  height: 30px;
+}
+
+.product-total {
+  text-align: right;
+  padding-top: 10px;
+  font-weight: 700;
+  color: #0c5d5e;
+}
+
+.product-total i {
+  position: absolute;
+  bottom: 130px;
+  right: 265px;
 }
 .contenedor-articulo {
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
-  padding-bottom: 60px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding: 30px;
+  margin: 15px;
+  border-bottom: #0c5d5e solid 1px;
+  position: relative;
 }
 
 .contenedor-compra {
@@ -62,58 +99,123 @@ p {
   padding: 10px;
 }
 
-.envios {
-  text-align: center;
-  width: 45%;
-  border: 2px solid #0c5d5e;
-  padding: 20px;
-  margin: auto;
-  bottom: 30%;
-  left: 15%;
+.contenedor-compra h2 {
+  color: #ec9f00;
+  border-bottom: #0c5d5e solid 3px;
+  margin-bottom: 10px;
+}
+
+.total-compra {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cupon,
+.banco {
+  padding: 10px;
+}
+
+.banco a {
+  text-decoration: none;
+  color: #0c5d5e;
+}
+
+.cupon i,
+.banco i {
+  color: #0a3409;
 }
 
 /*BOTONES*/
-.compra button {
-  background-color: #ec9f00;
-  padding: 16px;
-  box-shadow: 2px 2px 5px black(102, 66, 0);
+.compra .search-btn {
   color: #0c5d5e;
-  font-weight: bold;
-  border-radius: 10%;
+  padding: 16px;
+  font-weight: 700;
 }
-
-.cupon button {
-  background-color: #0c5d5e;
-  padding: 5px;
-  box-shadow: 2px 2px 5px black(102, 66, 0);
-  color: white;
-}
-
-.actualizar button {
-  background-color: #0c5d5e;
-  padding: 8px;
-  box-shadow: 2px 2px 5px black(102, 66, 0);
-  color: white;
-  text-align: center;
-}
-
+.cupon button,
+.actualizar button,
 .volver button {
   background-color: #0c5d5e;
   padding: 8px;
   box-shadow: 2px 2px 5px black(102, 66, 0);
   color: white;
+}
+
+.cupon button {
+  padding: 5px;
+}
+
+.volver,
+.actualizar,
+.compra {
   text-align: center;
+}
+
+button i {
+  padding-right: 5px;
 }
 
 .contar button {
   padding: 3px;
   text-align: center;
   margin: 10x;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .finalizar-compra {
   font-weight: bold;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+@media (min-width: 760px) {
+  .contenedor-subtitulos {
+    display: flex;
+  }
+
+  .product-item {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  .product-description {
+    width: 60%;
+    padding: 10px;
+  }
+
+  .product-price,
+  .contar {
+    width: 50%;
+  }
+
+  .total-price {
+    display: none;
+  }
+
+  .product-total i {
+    bottom: 127px;
+    right: 130px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    display: flex;
+  }
+
+  .product-price {
+    width: 33%;
+  }
+
+  .cupon button:hover,
+  .actualizar button:hover,
+  .volver button:hover {
+    box-shadow: 2px 2px 5px #ec9f00;
+  }
+
+  .contenedor-compra {
+    text-align: left;
+  }
+  .compra {
+    width: 50%;
+  }
 }

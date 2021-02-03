@@ -25,7 +25,6 @@
       href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
     />
 
-    <!--vincular html con css-->
     <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/productCart.css" />
     <link rel="stylesheet" href="/css/footer.css" />
@@ -70,17 +69,25 @@
         </div>
         <button class="submit lupa"><i class="fa fa-search"></i></button>
       </div>
+      <div class="header-image">
+        <img src="/img/healthy-lunch-banner.jpg" alt="imagen de header" />
+        <div class="header-title">
+          <h2>HUERTO MARKET</h2>
+          <p>Comer rico hace bien</p>
+        </div>
+      </div>
       <div id="encabezado">
         <i class="fas fa-hand-paper"> </i>AYUDA
         <i class="fas fa-truck"> </i>ENVÍOS
         <i class="fas fa-phone-alt"></i> ATENCIÓN AL CLIENTE
       </div>
     </header>
+
     <main>
       <section id="titulo">
         <div class="contenedor-titulo">
           <h1><strong>TU PEDIDO:</strong></h1>
-          <h1>Te estás llevando 4 productos.</h1>
+          <h3>Te estás llevando 4 productos.</h3>
         </div>
       </section>
       <section class="volver">
@@ -88,101 +95,143 @@
           <i class="fas fa-arrow-circle-left"></i>Seguir comprando
         </button>
       </section>
-      <section class="contenedor-subtitulos">
-        <h2>Productos</h2>
-        <h2>Precio</h2>
-        <h2>Cantidad</h2>
-        <h2>Total</h2>
-      </section>
+      <div class="container">
+        <div class="product-container">
+          <section class="contenedor-subtitulos">
+            <h2 class="productos">Productos</h2>
+            <h2 class="precio">Precio</h2>
+            <h2 class="cantidad">Cantidad</h2>
+            <h2 class="total">Total</h2>
+          </section>
 
-      <div class="contenedor-articulo">
-        <img
-          src="/img/miel-beepure.png"
-          width="120"
-          height="120"
-          alt=" Miel Beepure"
-        />
-        <p>Miel líquida, Beepure. 500gr</p>
-        <p>$560</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p><strong>$560</strong></p>
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <div class="contenedor-articulo">
-        <img
-          src="/img/mantequilla-de-coco.png"
-          width="120"
-          height="120"
-          alt=" Mantequilla de coco"
-        />
-        <p>Mantequilla de Coco, Byour. 185gr</p>
-        <p>$400</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p><strong>$400</strong></p>
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <div class="contenedor-articulo">
-        <img
-          src="/img/mermelada-beepure.png"
-          width="120"
-          height="120"
-          alt="Mermelada"
-        />
-        <p>Mermelada de frutos del bosque, Beepure. 450gr</p>
-        <p>$600</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p><strong>$600</strong></p>
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <div class="contenedor-articulo">
-        <img
-          src="/img/veggie-burger-delitas.png"
-          width="120"
-          height="120"
-          alt="Burger veggie"
-        />
-        <p>Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr</p>
-        <p>$300</p>
-        <div class="contar">
-          <button>-</button>
-          <button>+</button>
-        </div>
-        <p><strong>$300</strong></p>
-        <i class="fas fa-trash-alt"></i>
-      </div>
-      <section class="actualizar">
-        <button><i class="fas fa-undo-alt"></i>Actualizar carrito</button>
-      </section>
+          <section class="product-list">
+            <article class="contenedor-articulo">
+              <img
+                src="/img/miel-beepure.png"
+                width="120"
+                height="120"
+                alt=" Miel Beepure"
+              />
+              <div class="product-item">
+                <p class="product-description">Miel líquida, Beepure. 500gr</p>
 
-      <section class="finalizar-compra">
-        <div class="contenedor-compra">
-          <h2>Resumen de compra</h2>
-          <p>Subtotal</p>
-          <p>Costo del envío</p>
-          <p>TOTAL</p>
-        </div>
+                <p class="product-price">$560</p>
+                <div class="contar">
+                  <button class="plus">-</button>
+                  <input type="number" name="cantidad" id="cantidad" />
+                  <button class="less">+</button>
+                </div>
+                <div class="product-total">
+                  <p class="total-price">TOTAL</p>
+                  <p>$560</p>
+                  <i class="fas fa-trash-alt"></i>
+                </div>
+              </div>
+            </article>
+            <article class="contenedor-articulo">
+              <img
+                src="/img/mantequilla-de-coco.png"
+                width="120"
+                height="120"
+                alt="Mantequilla de coco"
+              />
+              <div class="product-item">
+                <p class="product-description">
+                  Mantequilla de Coco, Byour. 185gr
+                </p>
 
+                <p class="product-price">$400</p>
+                <div class="contar">
+                  <button class="plus">-</button>
+                  <input type="number" name="cantidad" id="cantidad" />
+                  <button class="less">+</button>
+                </div>
+                <div class="product-total">
+                  <p class="total-price">TOTAL</p>
+                  <p>$400</p>
+                  <i class="fas fa-trash-alt"></i>
+                </div>
+              </div>
+            </article>
+            <article class="contenedor-articulo">
+              <img
+                src="/img/mermelada-beepure.png"
+                width="120"
+                height="120"
+                alt=" Mermelada"
+              />
+              <div class="product-item">
+                <p class="product-description">
+                  Mermelada de frutos del bosque, Beepure. 450gr
+                </p>
+
+                <p class="product-price">$600</p>
+                <div class="contar">
+                  <button class="plus">-</button>
+                  <input type="number" name="cantidad" id="cantidad" />
+                  <button class="less">+</button>
+                </div>
+                <div class="product-total">
+                  <p class="total-price">TOTAL</p>
+                  <p>$600</p>
+                  <i class="fas fa-trash-alt"></i>
+                </div>
+              </div>
+            </article>
+            <article class="contenedor-articulo">
+              <img
+                src="/img/veggie-burger-delitas.png"
+                width="120"
+                height="120"
+                alt=" Miel Beepure"
+              />
+              <div class="product-item">
+                <p class="product-description">
+                  Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr
+                </p>
+
+                <p class="product-price">$300</p>
+                <div class="contar">
+                  <button class="plus">-</button>
+                  <input type="number" name="cantidad" id="cantidad" />
+                  <button class="less">+</button>
+                </div>
+                <div class="product-total">
+                  <p class="total-price">TOTAL</p>
+                  <p>$300</p>
+                  <i class="fas fa-trash-alt"></i>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section class="actualizar">
+            <button><i class="fas fa-undo-alt"></i>Actualizar carrito</button>
+          </section>
+        </div>
         <div class="compra">
-          <button>FINALIZAR COMPRA</button>
+          <section class="finalizar-compra">
+            <div class="contenedor-compra">
+              <h2>Resumen de compra</h2>
+              <p>Subtotal</p>
+              <p>Costo del envío</p>
+              <p class="total-compra">TOTAL</p>
+            </div>
+
+            <div class="compra">
+              <button class="search-btn">FINALIZAR COMPRA</button>
+            </div>
+          </section>
+          <section class="cupon">
+            <i class="fas fa-tags"></i> <label for="codigo"></label>
+            <input type="codigo" name="codigo" id="codigo" required />
+            <button>Aplicar cupón</button>
+          </section>
+          <section class="banco">
+            <i class="fas fa-credit-card"></i>
+            <a href="#">Beneficios Bancarios</a>
+          </section>
         </div>
-      </section>
-      <section class="cupon">
-        <i class="fas fa-tags"></i> <label for="codigo"></label>
-        <input type="codigo" name="codigo" id="codigo" required />
-        <button>Aplicar cupón</button>
-      </section>
-      <section>
-        <i class="fas fa-credit-card"></i> <a href="#">Beneficios Bancarios</a>
-      </section>
+      </div>
     </main>
     <footer>
       <section class="resenias envio">

@@ -14,27 +14,36 @@ header {
   background-color: #fccb1a;
 }
 
-main {
+main,
+.header-log {
   background-color: #fef9ec;
 }
 
 /*HEADER*/
 
-.header-logo {
+.header-logo,
+.logo-log {
   text-align: center;
   position: relative;
 }
 
-.logo {
-  border-radius: 50%;
-  padding: 15px;
-}
-
-.header-logo img {
+.header-logo img,
+.logo-log img {
   width: 200px;
   height: 150px;
   text-align: center;
   margin-top: 60px;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.logo-log img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.logo-log h1 {
+  margin: 0px;
 }
 
 .account-container {
@@ -131,6 +140,10 @@ nav a {
   display: none;
 }
 
+.header-title {
+  display: none;
+}
+
 #encabezado {
   color: #0a3409;
   background-color: #a0daa9;
@@ -163,6 +176,10 @@ nav a {
     height: 425px;
   }
 
+  .header-title {
+    display: initial;
+  }
+
   .header-title h2 {
     font-family: "Yusei Magic", sans-serif;
     font-size: 60px;
@@ -189,5 +206,9 @@ nav a {
 @media (min-width: 1200px) {
   .search {
     right: 80px;
+  }
+  .logo-log {
+    text-align: left;
+    margin-left: 85px;
   }
 }
