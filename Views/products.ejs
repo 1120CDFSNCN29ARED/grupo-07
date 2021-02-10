@@ -1,33 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Productos</title>
+<%- include("./partials/head.ejs") %> 
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
-    />
-
-    <link rel="stylesheet" href="/css/header.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/products.css">
-    <link rel="stylesheet" href="/css/footer.css" />
+
   </head>
   <body>
  
@@ -167,37 +145,6 @@
       </section>
     </section>
 
-  <footer>
-    <section class="resenias envio">
-      <h4>Promociones</h4>
-      <p>
-        Contamos con promociones para tus pagos con tarjeta de crédito y mercado pago. No olvides en consultarnos.
-      </p>
-    </section>
-      <section class="contacto">
-        <h4>Contacto</h4>
-        <p><i class="fab fa-whatsapp"></i>137894785</p>
-        <p><i class="fas fa-paper-plane"></i>huerto.market@todobien.com</p>
-      </section>
-
-      <section class="registro">
-        <h4>Registrate</h4>
-        <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
-        <button class="search-btn"><a href="register">Registrate</a></button>
-      </section>
-
-      <section class="redes">
-        <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
-        <div class="redes-container">
-          <h4>Seguinos</h4>
-          <div class="redes-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-google"></i></a>
-          </div>
-        </div>
-      </section>
-    </footer>
+<%- include ("./partials/footer.ejs") %> 
   </body>
 </html>

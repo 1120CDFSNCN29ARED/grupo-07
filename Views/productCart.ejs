@@ -1,33 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito de productos</title>
-
-    <!--Poppins Regular 400-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--Yusei Magic Regular 400-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
-      rel="stylesheet"
-    />
-
-    <!--Fonts awesome-->
-    <link
-      rel="stylesheet"
-      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
-    />
-
-    <link rel="stylesheet" href="/css/header.css" />
+    <%- include("./partials/head.ejs") %>
     <link rel="stylesheet" href="/css/productCart.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
   </head>
   <body>
     <%- include ("./partials/header.ejs") %>
@@ -184,35 +159,6 @@
         </div>
       </div>
     </main>
-    <footer>
-      <section class="resenias envio">
-        <h4><i class="fas fa-truck"></i>Envíos</h4>
-        <p>
-          Realizamos envíos sin cargo por compras superiores a $2500,en CABA y
-          GBA. El costo del envío es de $500 en todo el país.
-        </p>
-      </section>
-
-      <section class="contacto">
-        <h4>Contacto</h4>
-        <p><i class="fab fa-whatsapp"></i>137894785</p>
-        <p><i class="fas fa-paper-plane"></i>huerto.market@todobien.com</p>
-      </section>
-
-      <section class="registro">
-        <h4>Registrate</h4>
-        <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
-        <button class="search-btn"><a href="register">Registrate</a></button>
-      </section>
-
-      <section class="redes">
-        <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
-        <h4>Seguinos</h4>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-google"></i></a>
-      </section>
-    </footer>
+    <%- include("./partials/footer.ejs") %>
   </body>
 </html>
