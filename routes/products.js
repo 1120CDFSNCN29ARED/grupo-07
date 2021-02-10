@@ -4,7 +4,7 @@ const products =require("../controllers/products");
 
 routes.get("/", products.list);
 
-routes.get("/productDetail/:id", products.detail);
+routes.get("/productDetail/:id?", products.detail);
 
 routes.get("/productCart", products.cart);
 
