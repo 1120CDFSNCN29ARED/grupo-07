@@ -71,6 +71,11 @@ h2 {
   color: #0c5d5e;
 }
 
+/* PRODUCT CHARGE */
+.check {
+  display: inline-flex;
+}
+
 @media (min-width: 760px) {
   .form-menu {
     width: 60%;

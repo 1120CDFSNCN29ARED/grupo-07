@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/register.css" />
+  </head>
+  <body>
+    <main>
+      <h2 class="title">Agregar o modificar productos</h2>
+      <form action="/products" method="GET" class="form-menu">
+        <div class="form-item">
+          <label for="name" class="fomr-label">Nombre del producto</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="picture" class="form-label">Foto</label>
+          <input
+            type="file"
+            name="picture"
+            id="picture"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="price">Precio</label>
+          <input
+            type="text"
+            name="price"
+            id="price"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="brand" class="form-label">Marca</label>
+          <input type="text" name="brand" id="brand" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="description" class="form-label">Descripción</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            class="form-input description"
+          />
+        </div>
+        <div class="form-item">
+          <p class="form-label">Categorías</p>
+          <div class="check">
+            <input
+              type="checkbox"
+              name="tacc"
+              id="tacc"
+              class="form-input checkbox"
+            />
+            <label for="tacc">Sin tacc</label>
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              name="sodio"
+              id="sodio"
+              class="form-input checkbox"
+            />
+            <label for="sodio" class="form-label">Bajo en sodio</label>
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              name="vegan"
+              id="vegan"
+              class="form-input checkbox"
+            />
+            <label for="vegan" class="form-label">Apto vegano</label>
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              name="vegetariano"
+              id="vegetariano"
+              class="form-input checkbox"
+            />
+            <label for="vegetariano" class="form-label">Vegetariano</label>
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              name="postre"
+              id="postre"
+              class="form-input checkbox"
+            />
+            <label for="postre" class="form-label">Postre</label>
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              name="galleta"
+              id="galleta"
+              class="form-input checkbox"
+            />
+            <label for="galleta" class="form-label">Galleta</label>
+          </div>
+        </div>
+        <button type="submit" class="serch-btn">Guardar</button>
+      </form>
+    </main>
+  </body>
+</html>

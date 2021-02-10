@@ -1,6 +1,9 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const productsRoutes = require("./routes/products");
+
+
 
 app.listen(3000, console.log("Escuchando en el puerto 3000"));
 
@@ -12,21 +15,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/register", (req, res) => {
+  
   res.sendFile(path.resolve(__dirname, "./Views/register.html"));
-});
 
-app.get("/productDetail", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./Views/productDetail.html"));
-});
-
-app.get("/productCart", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./Views/productCart.html"));
 });
 
 app.get("/logIn", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./Views/logIn.html"));
 });
 
-app.get("/products", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./Views/products.html"));
-});
+app.use("/products", productsRoutes);
