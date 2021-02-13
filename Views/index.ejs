@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huerto Market</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css " />
+
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/home.css" />
+  <link rel="stylesheet" href="/css/footer.css" />
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+    <main>
+      <section class="products">
+        <h2>Productos</h2>
+        <div class="product-container">
+          <article class="product-article">
+            <img src="/img/miel-beepure.png" alt="miel-beepure" />
+            <p>Miel Líquida, Beepure. Ideal para completar tus desayunos.</p>
+            <button class="search-btn"><a href="/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="img/icecream.jpg" alt="ice-cream" />
+            <p>
+              Helados hechos con jugos naturales. La mejor forma de combatir el
+              verano.
+            </p>
+            <button class="search-btn"><a href="./productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="/img/muffins.jpeg" alt="muffins" />
+            <p>Muffins con avena y frutas. Especial para los golosos.</p>
+            <button class="search-btn"><a href="./productDetail">Comprar</a></button>
+          </article>
+        </div>
+        <article class="product-section">
+          <div class="container">
+            <img src="/img/pollo.jpeg" alt="imagen de productos" />
+            <div class="descripcion-producto">
+              <p>Investigá más sobre nuestros productos aquí</p>
+              <button class="search-btn"><a href="/products">Productos</a></button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!--Carrousel sacado de w3school-->
+      <section class="carrousel-conteiner">
+        <div class="slide1 efecto">
+          <img src="/img\sliced-fruits-banner.jpg" alt="foto1" />
+          <p>Colores deliciosos</p>
+        </div>
+        <div class="slide efecto">
+          <img src="/img/healthy-lunch-banner.jpg" alt="foto2" />
+          <p>Sentirse bien incluye comer saludable</p>
+        </div>
+        <div class="slide efecto">
+          <img src="" alt="foto3" />
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        </div>
+
+        <a class="pre" onclick="plussSlide(-1)"><i class="fas fa-angle-left"></i></a>
+        <a class="sig" onclick="plussSlide(1)"><i class="fas fa-angle-right"></i></a>
+
+        <div class="dot-container">
+          <span class="dot" onclick="currentSlide1"><i class="far fa-circle"></i></span>
+          <span class="dot" onclick="currentSlide2"><i class="far fa-circle"></i></span>
+          <span class="dot" onclick="currentSlide3"><i class="far fa-circle"></i></span>
+        </div>
+      </section>
+
+      <div class="us-container">
+        <section class="quienes-somos">
+          <h2>Quienes somos</h2>
+          <article class="us-article">
+            <h4>Nuestra misión</h4>
+            <p>
+              Ofrecer alimentos saludables y nutritivos que ayuden a mejorar la
+              alimentación y a conectarnos con la naturaleza desde un nuevo lugar.
+              Ofrecemos un servicio que permitirá conocer alternativas para tus
+              comidas y conseguirlas de una forma simple, segura y rápida.
+            </p>
+          </article>
+          <article class="us-article">
+            <h4>Dedicado a</h4>
+            <p>
+              Personas que necesitan alimentos saludables para mejorar su calidad
+              de vida o tener un estilo de vida saludable. Personas veganas,
+              vegetarianas, celíacos, intolerantes a la lactosa, intolerantes al
+              gluten, entre otros. Personas que practican deportes y necesitan un
+              complemento nutricional. Personas que necesitan cambiar estilo de
+              alimentación por enfermedades como hipertensión, obesidad y diabetes
+            </p>
+          </article>
+        </section>
+
+        <section class="noticias">
+          <h3>Noticias</h3>
+          <div class="news-container">
+            <div class="news img">
+              <img src="/img/credit-card.jpg" alt="noticias" class="news-img" />
+            </div>
+            <article class="news-article">
+              <p>
+                Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
+                de crédito.
+              </p>
+          </div>
+          </article>
+        </section>
+      </div>
+
+      <section class="sucursales">
+        <h2>Sucursales</h2>
+        <div class="sucursal-container">
+          <article class="sucursal-article">
+            <img src="/img/sucursal.png" alt="sucursale1" class="sucursal1" />
+            <div class="sucursal-item">
+              <p>Cosme 1380.</p>
+              <p>Tel. 1385782</p>
+            </div>
+          </article>
+          <article class="sucursal-article">
+            <div class="sucursal-item">
+              <p>Fulanito 125</p>
+              <p>Tel. 4892471</p>
+            </div>
+            <div class="sucursal-image">
+              <img src="/img/sucursal.png" alt="sucursal2" class="sucursal2" />
+            </div>
+          </article>
+          <article class="sucursal-article">
+            <img src="/img/sucursal.png" alt="sucursal3" class="sucursal1" />
+            <div class="sucursal-item">
+              <p>Calle Falsa 123</p>
+              <p>Tel. 9876424</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>

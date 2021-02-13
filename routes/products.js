@@ -8,7 +8,7 @@ routes.get("/productDetail/:id?", products.detail);
 
 routes.get("/productCart", products.cart);
 
-routes.get("/productsCharge", products.charge);
+routes.get("/productsCharge", products.add);
 
 
 

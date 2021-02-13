@@ -11,8 +11,8 @@ const products = {
     cart: (req, res) => {
       res.render("productCart")
     },
-    charge: (req, res) => {
-      res.render("productsCharge")
+    add: (req, res) => {
+      res.render("productsAdd")
     }
       }
 
