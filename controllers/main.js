@@ -5,10 +5,10 @@ const main = {
     res.render("index");
   },
   register: (req, res) => {
-    res.render("/register");
+    res.render("register");
   },
   login: (req, res) => {
-    res.render("/logIn");
+    res.render("logIn");
   },
 };
 
