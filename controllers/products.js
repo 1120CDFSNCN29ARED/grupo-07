@@ -5,8 +5,8 @@ const products = {
       res.render("products")
     },
     detail: (req, res) => {
-        let detalle = productDetail.find(el => el.id === req.params.id)
-        res.render(detalle)},
+        // let detalle = productDetail.find(el => el.id === req.params.id)
+        res.render("productDetail")},
     cart: (req, res) => {
       res.render("productCart")
     },

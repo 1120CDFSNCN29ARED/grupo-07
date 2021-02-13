@@ -1,150 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-<%- include("./partials/head.ejs") %> 
+
+<head>
+  <%- include("./partials/head.ejs") %>
 
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/products.css">
 
-  </head>
-  <body>
- 
- <%- include("./partials/header.ejs") %>
-       <main>
+</head>
 
-      
+<body>
+
+  <%- include("./partials/header.ejs") %>
+    <main>
+
+
       <section class="products">
         <h2>Productos</h2>
         <div class="product-container">
-        <article class="product-article">
-          <img src="/img/miel-beepure.png" alt="miel-beepure" />
-          <div class="favoritos">
-            <i class="fas fa-heart"></i>
-          </div>
-          <p>Miel Líquida, Beepure. 500gr.</p>
-          <p class="price">$360</p>
-          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-        </article>
-        <article class="product-article">
-          <img src="img/icecream.jpg" alt="ice-cream" />
-          <div class="favoritos">
-            <i class="fas fa-heart"></i>
-          </div>
-          <p>
-            Helados de jugo. Guapaletas.
-          </p>
-          <p class="price">$260</p>
-          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-        </article>
-        <article class="product-article">
-          <img src="/img/muffins.jpeg" alt="muffins" />
-          <div class="favoritos">
-            <i class="fas fa-heart"></i>
-          </div>
-          <p>Muffins con avena y frutas.</p>
-          <p class="price">$160</p>
-          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-        </article>
-        <article class="product-article">
-          <img src="/img/mantequilla-de-coco.png" alt="manteca de coco" />
-          <div class="favoritos">
-            <i class="fas fa-heart"></i>
-          </div>
-          <p>Manteca de coco Byour. 185gr.</p>
-          <p class="price">$400</p>
-          <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-        </article>
+          <article class="product-article">
+            <img src="/img/miel-beepure.png" alt="miel-beepure" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>Miel Líquida, Beepure. 500gr.</p>
+            <p class="price">$360</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="img/icecream.jpg" alt="ice-cream" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>
+              Helados de jugo. Guapaletas.
+            </p>
+            <p class="price">$260</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="/img/muffins.jpeg" alt="muffins" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>Muffins con avena y frutas.</p>
+            <p class="price">$160</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="/img/mantequilla-de-coco.png" alt="manteca de coco" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>Manteca de coco Byour. 185gr.</p>
+            <p class="price">$400</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
           <article class="product-article">
             <img src="img/mermelada-beepure.png" alt="mermelada" />
             <div class="favoritos">
               <i class="fas fa-heart"></i>
             </div>
             <p>
-            Mermelada frutos del bosque., Beepure. 450gr.
+              Mermelada frutos del bosque., Beepure. 450gr.
             </p>
             <p class="price">$245</p>
-            <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-            </article>
-            <article class="product-article">
-              <img src="img/veggie-burger-delitas.png" alt="burger" />
-              <div class="favoritos">
-                <i class="fas fa-heart"></i>
-              </div>
-              <p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="img/veggie-burger-delitas.png" alt="burger" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>
               Hamburguesa de lentejas y arroz, Delitas. 600gr.
-              </p>
-              <p class="price">$300</p>
-              <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/aceite-coco.png" alt="aceite de coco" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p>
-                  Aceite neutro de coco, Chiagraal. 180gr.
-                </p>
-                <p class="price">$380</p>
-                <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-                </article>
-                <article class="product-article">
-                  <img src="img/fideos-garbanzo.png" alt="fideos-garbanzo" />
-                  <div class="favoritos">
-                    <i class="fas fa-heart"></i>
-                  </div>
-                  <p>
-                  Pasta de garbanzos, Legume. 284gr
-                  </p>
-                  <p class="price">$120</p>
-                  <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-                  </article>
-                  <article class="product-article">
-                    <img src="img/leche-almendras.png" alt="leche almendras" />
-                    <div class="favoritos">
-                      <i class="fas fa-heart"></i>
-                    </div>
-                    <p>
-                    Leceh de almendras cremosa, Amande. 1lt.
-                    </p>
-                    <p class="price">$160</p>
-                    <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-                    </article>
-      </div>
-      
-
-      <section><h3>Los más vendidos</h3>
-      <article class ="contenedor-masVendidos">
-        <img src="/img/pepas.png" alt="Pepas organicas"/>
-
-       <div class="contenedor-texto">
-        <p>Pepas Organicas, Grun. 160g.</p>
-        <p class="price">$120</p>
-        <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-      </div>
-
-
-
-      </article>
-
- 
-    
- <article class="contenedor-masVendidos">
-        <img src="/img/barrita-arroz.png" alt="Barritas de arroz" class="imagen"/>
-
-        <div class="contenedor-texto">
-          <p>Barritas de arroz con sabor a coco. Crowie.</p>
-
-        <p class="price">$25</p>
-        <button class="search-btn"><a href="/productDetail">Comprar</a></button>
-
+            </p>
+            <p class="price">$300</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="img/aceite-coco.png" alt="aceite de coco" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>
+              Aceite neutro de coco, Chiagraal. 180gr.
+            </p>
+            <p class="price">$380</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="img/fideos-garbanzo.png" alt="fideos-garbanzo" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>
+              Pasta de garbanzos, Legume. 284gr
+            </p>
+            <p class="price">$120</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
+          <article class="product-article">
+            <img src="img/leche-almendras.png" alt="leche almendras" />
+            <div class="favoritos">
+              <i class="fas fa-heart"></i>
+            </div>
+            <p>
+              Leceh de almendras cremosa, Amande. 1lt.
+            </p>
+            <p class="price">$160</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </article>
         </div>
-      
 
 
- </article>
+        <section>
+          <h3>Los más vendidos</h3>
+          <article class="contenedor-masVendidos">
+            <img src="/img/pepas.png" alt="Pepas organicas" />
+
+            <div class="contenedor-texto">
+              <p>Pepas Organicas, Grun. 160g.</p>
+              <p class="price">$120</p>
+              <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+            </div>
+
+
+
+          </article>
+
+
+
+          <article class="contenedor-masVendidos">
+            <img src="/img/barrita-arroz.png" alt="Barritas de arroz" class="imagen" />
+
+            <div class="contenedor-texto">
+              <p>Barritas de arroz con sabor a coco. Crowie.</p>
+
+              <p class="price">$25</p>
+              <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+
+            </div>
+
+
+
+          </article>
+        </section>
       </section>
-    </section>
 
-<%- include ("./partials/footer.ejs") %> 
-  </body>
+      <%- include ("./partials/footer.ejs") %>
+</body>
+
 </html>
