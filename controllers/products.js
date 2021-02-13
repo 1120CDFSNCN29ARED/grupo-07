@@ -1,5 +1,4 @@
-const path = require("path")
-
+const path = require("path");
 
 const products = {
     list : (req, res) => {

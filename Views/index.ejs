@@ -2,20 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Huerto Market</title>
+  <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/home.css" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css " />
-
-  <link rel="stylesheet" href="/css/header.css" />
-  <link rel="stylesheet" href="/css/home.css" />
-  <link rel="stylesheet" href="/css/footer.css" />
 </head>
 
 <body>
@@ -35,12 +24,12 @@
               Helados hechos con jugos naturales. La mejor forma de combatir el
               verano.
             </p>
-            <button class="search-btn"><a href="./productDetail">Comprar</a></button>
+            <button class="search-btn"><a href="#">Comprar</a></button>
           </article>
           <article class="product-article">
             <img src="/img/muffins.jpeg" alt="muffins" />
             <p>Muffins con avena y frutas. Especial para los golosos.</p>
-            <button class="search-btn"><a href="./productDetail">Comprar</a></button>
+            <button class="search-btn"><a href="#">Comprar</a></button>
           </article>
         </div>
         <article class="product-section">
@@ -79,8 +68,9 @@
         </div>
       </section>
 
-      <div class="us-container">
-        <section class="quienes-somos">
+
+      <section class="quienes-somos">
+        <div class="us-container">
           <h2>Quienes somos</h2>
           <article class="us-article">
             <h4>Nuestra misión</h4>
@@ -102,22 +92,22 @@
               alimentación por enfermedades como hipertensión, obesidad y diabetes
             </p>
           </article>
-        </section>
+      </section>
 
-        <section class="noticias">
-          <h3>Noticias</h3>
-          <div class="news-container">
-            <div class="news img">
-              <img src="/img/credit-card.jpg" alt="noticias" class="news-img" />
-            </div>
-            <article class="news-article">
-              <p>
-                Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
-                de crédito.
-              </p>
+      <section class="noticias">
+        <h3>Noticias</h3>
+        <div class="news-container">
+          <div class="news img">
+            <img src="/img/credit-card.jpg" alt="noticias" class="news-img" />
           </div>
-          </article>
-        </section>
+          <article class="news-article">
+            <p>
+              Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
+              de crédito.
+            </p>
+        </div>
+        </article>
+      </section>
       </div>
 
       <section class="sucursales">
@@ -150,7 +140,48 @@
       </section>
     </main>
 
-    <%- include("./partials/footer.ejs") %>
+    <footer>
+      <section class="resenias">
+        <h4>Reseñas</h4>
+        <div class="resenia efecto">
+          <p>'Increíble calidad. Se lo recomendé a todos mis amigos'</p>
+          <p>Pablo Marmol</p>
+        </div>
+        <div class="resenia efecto hide">
+          <p> 'No puedo esperar a volver. Son la mejor comida vegana en la ciudad'</p>
+          <p>Pier Nodoyuna</p>
+        </div>
+        <div class="resenia efecto hide">
+          <p>'Buenísima opción para un goloso de profesión'</p>
+          <p>Yogi</p>
+        </div>
+      </section>
+
+      <section class="contacto">
+        <h4>Contacto</h4>
+        <p><i class="fab fa-whatsapp"></i>137894785</p>
+        <p><i class="fas fa-paper-plane"></i>huerto.market@todobien.com</p>
+      </section>
+
+      <section class="registro">
+        <h4>Registrate</h4>
+        <p>Para formar parte de nuestra comunidad. Completá el formulario</p>
+        <button class="search-btn"><a href="register">Registrate</a></button>
+      </section>
+
+      <section class="redes">
+        <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
+        <div class="redes-container">
+          <h4>Seguinos</h4>
+          <div class="redes-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+      </section>
+    </footer>
 </body>
 
 </html>
