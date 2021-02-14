@@ -1,0 +1,134 @@
+main {
+  background-color: #fef9ec;
+}
+
+.titulo-main h1 {
+  text-align: center;
+  padding: 30px;
+  margin-top: 20px;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 24px;
+  color: #fba90a;
+}
+
+.agregar button {
+  background-color: #ec9f00;
+  color: #0c5d5e;
+  border-bottom: #0c5d5e solid 3px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 5px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.contenedor-productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: #0c5d5e solid 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.producto img {
+  margin: 10px;
+  margin-top: 20px;
+  margin-left: 15px;
+  align-items: center;
+}
+
+.detalle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+.detalle h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.detalle p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.modificar button {
+  background-color: #0c5d5e;
+  padding: 5px;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
+  color: white;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media (min-width: 760px) {
+  .titulo-main h1 {
+    font-size: 28px;
+  }
+
+  .contenedor-productos {
+    border-right: #0c5d5e solid 1px;
+    border-left: #0c5d5e solid 1px;
+    border-top: #0c5d5e solid 1px;
+    border-bottom: #0c5d5e solid 1px;
+    width: 85%;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .modificar button {
+    margin: 15px;
+  }
+  .detalle {
+    display: block;
+  }
+
+  .producto img {
+    margin-left: 25px;
+  }
+  .agregar button {
+    margin-left: 70px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lista-productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .contenedor-productos {
+    width: 48%;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  .modificar button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 5px;
+  }
+
+  .detalle {
+    width: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+}

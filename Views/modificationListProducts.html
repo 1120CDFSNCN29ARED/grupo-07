@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huerto Market</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
+    />
+<link rel="stylesheet" href="/css/modificationListProducts.css" />
+
+  </head>
+  <body>
+<%- include ("./partials/header.ejs") %>
+  <main>
+      <div class="titulo-main">
+          <h1>Productos</h1>
+      </div>
+  <div class="agregar">
+      <button><i class="fas fa-check-circle"></i></i>Agregar producto</button>
+  </div>
+  
+        <section class="lista-productos">
+            <article class="contenedor-productos" >
+                <div class="producto">
+              <img
+                src="/img/miel-beepure.png"
+                width="160"
+                height="160"
+                alt=" Miel Beepure"
+              />
+              </div>
+              <div class="detalle">
+            <h2>Nombre</h2>
+            <p> Miel líquida Multifloral</p> 
+             <h2>Precio</h2>
+             <p>$560</p>
+                <h2>Descripción</h2>
+                <p>Miel líquida, Beepure. 500gr</p>
+                <h2>Categorías</h2>
+                <p>gluten free, vegano, embasados, untables </p>
+              </div>
+                <div class="modificar">
+      <button><i class="fas fa-clipboard-list"></i>Modificar</button>
+      <button><i class="fas fa-times-circle"></i>Eliminar</button>
+  </div>
+            </article>
+
+            <article class="contenedor-productos" >
+                <div class="producto">
+              <img
+                src="/img/mantequilla-de-coco.png"
+                width="160"
+                height="160"
+                alt="Mantequilla de coco"
+              />
+              </div>
+              <div class="detalle">
+            <h2>Nombre</h2>
+            <p> Manteca de Coco</p> 
+             <h2>Precio</h2>
+             <p>$400</p>
+                <h2>Descripción</h2>
+                <p>Manteca de Coco, Byour. 185gr</p>
+                <h2>Categorías</h2>
+                <p>gluten free, vegano, embasados, untables</p>
+              </div>
+    <div class="modificar">
+      <button><i class="fas fa-clipboard-list"></i>Modificar</button>
+      <button><i class="fas fa-times-circle"></i>Eliminar</button>
+  </div>
+            </article>
+            <article class="contenedor-productos" >
+                <div class="producto">
+              <img
+                src="/img/mermelada-beepure.png"
+                width="160"
+                height="160"
+                alt=" Mermelada"
+              />
+              </div>   
+              <div class="detalle">
+            <h2>Nombre</h2>
+            <p> Mermelada de frutos del bosque</p> 
+             <h2>Precio</h2>
+             <p>$600</p>
+                <h2>Descripción</h2>
+                <p>Mermelada de frutos del bosque, Beepure. 450gr</p>
+                <h2>Categorías</h2>
+                <p>gluten free, vegano, embasados, untables</p>
+              </div>
+              <div class="modificar">
+      <button><i class="fas fa-clipboard-list"></i>Modificar</button>
+      <button><i class="fas fa-times-circle"></i>Eliminar</button>
+  </div>
+            </article>
+            <article class="contenedor-productos" >
+              <div class="producto">
+            <img src="img/icecream.jpg"  width="160" height="160"alt="ice-cream" />
+            </div>
+              <div class="detalle">
+            <h2>Nombre</h2>
+            <p>Helados de jugo de frutas, 5u. Guapaletas.  </p> 
+             <h2>Precio</h2>
+             <p>$260</p>
+                <h2>Descripción</h2>
+                <p>Helados de jugo. Guapaletas.</p>
+                <h2>Categorías</h2>
+                <p>gluten free, vegano</p>
+              </div>
+              <div class="modificar">
+      <button><i class="fas fa-clipboard-list"></i>Modificar</button>
+      <button><i class="fas fa-times-circle"></i>Eliminar</button>
+  </div>
+  </main>
+  <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
