@@ -15,6 +15,7 @@ main {
   background-color: #ec9f00;
   color: #0c5d5e;
   border-bottom: #0c5d5e solid 3px;
+  border-radius: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -50,6 +51,7 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: bold;
+  color: #0c5d5e;
   text-align: center;
   margin-right: 10px;
   margin-left: 10px;
@@ -62,6 +64,7 @@ main {
   margin-right: 10px;
   margin-left: 10px;
 }
+
 .modificar button {
   background-color: #0c5d5e;
   padding: 5px;
@@ -76,7 +79,7 @@ main {
 
 @media (min-width: 760px) {
   .titulo-main h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .contenedor-productos {
@@ -91,9 +94,11 @@ main {
     margin-top: 10px;
     margin-bottom: 30px;
   }
+
   .modificar button {
     margin: 15px;
   }
+
   .detalle {
     display: block;
   }
@@ -101,6 +106,7 @@ main {
   .producto img {
     margin-left: 25px;
   }
+
   .agregar button {
     margin-left: 70px;
     padding: 8px;
@@ -113,6 +119,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+
   .contenedor-productos {
     width: 48%;
     margin-left: 15px;

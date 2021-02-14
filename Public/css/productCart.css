@@ -206,7 +206,7 @@ button i {
 
   .product-total i {
     bottom: 127px;
-    right: 130px;
+    right: 110px;
   }
   .contenedor-compra {
     margin-left: 150px;
@@ -241,5 +241,8 @@ button i {
   }
   .total-compra {
     width: 50%;
+  }
+  .product-total i {
+    right: 105px;
   }
 }
