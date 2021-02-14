@@ -11,7 +11,8 @@
 
 h2 {
   font-family: "Yusei Magic", sans-serif;
-  margin: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   text-align: center;
   color: #fba90a;
 }
@@ -76,6 +77,47 @@ h2 {
   display: inline-flex;
 }
 
+/*USER PROFILE*/
+.titulo-principal h1 {
+  background-color: #ec9f00;
+  opacity: 0.5;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modificar-datos button {
+  background-color: #ec9f00;
+  color: #0c5d5e;
+  border-bottom: #0c5d5e solid 3px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 5px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+.pedidos {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+
+.categorias {
+  border-top: #fba90a 0.5px solid;
+  border-bottom: #fba90a 0.5px solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.categorias p {
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 @media (min-width: 760px) {
   .form-menu {
     width: 60%;
@@ -91,9 +133,20 @@ h2 {
     margin-right: 25%;
     margin-bottom: 10px;
   }
+
+  /*USER PROFILE*/
+  .categorias p {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
 }
 @media (min-width: 1200px) {
   .form-menu {
     width: 50%;
+  }
+
+  /*USER PROFILE*/
+  .categorias p {
+    margin-left: 150px;
   }
 }

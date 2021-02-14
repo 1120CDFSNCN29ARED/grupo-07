@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huerto Market</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css "
+    />
+
+    <link rel="stylesheet" href="/css/register.css" />
+
+<body>
+<%- include ("./partials/header.ejs") %>
+<main>
+  <section>
+    <div class="titulo-principal">
+      <h1>Mi Perfil</h1>
+    </div> 
+  </section>
+  </div>
+
+  <form action="/" method="GET" class="form-menu">
+    <div>
+      <h2>Datos de registración</h2>
+    </div>   
+          <div class="form-item">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" name="email" id="email" required class="form-input" />
+        </div>
+    <div>
+      <h2>Datos del usuario</h2>
+    </div>  
+        <div class="form-item">
+          <label class="form-label" for="name">Nombre:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Apellido:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="fomr-label">Calle y n°:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Piso y depto:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Entre calles:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Localidad:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">CP:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Telefono:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Fecha de nacimiento:</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="modificar-datos">
+          <button>Modificar datos</button>
+        </div>
+ </form>
+
+ <section class="pedidos">
+     <div class="ultimos-pedidos">
+       <h2>Ultimos pedidos:</h2>
+     </div>
+     <div class="categorias">
+      <p>Fecha del pedido:</p>
+      <p>Cantidad de productos:</p>
+      <p>Total pedido:</p>
+      <p>Forma de pago:</p>
+     </div>
+ </section>
+</main>
+ <%- include("./partials/footer.ejs") %>
+  </body>
+</html>
