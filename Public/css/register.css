@@ -9,7 +9,7 @@
   padding-top: 40px;
 }
 
-h2 {
+.title {
   font-family: "Yusei Magic", sans-serif;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -75,10 +75,16 @@ h2 {
 /* PRODUCT CHARGE */
 .check {
   display: inline-flex;
+  width: 49%;
+}
+
+.check .form-input {
+  width: 10%;
+  margin-right: 5px;
 }
 
 /*USER PROFILE*/
-.titulo-principal h1 {
+.titulo-principal .h1 {
   background-color: #ec9f00;
   opacity: 0.5;
   font-size: 28px;
@@ -111,7 +117,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-.categorias p {
+.categorias .p {
   padding: 10px;
   margin-left: 20px;
   margin-top: 20px;
@@ -135,7 +141,7 @@ h2 {
   }
 
   /*USER PROFILE*/
-  .categorias p {
+  .categorias .p {
     margin-left: 60px;
     margin-right: 60px;
   }
@@ -145,8 +151,12 @@ h2 {
     width: 50%;
   }
 
+  .check {
+    width: 30%;
+  }
+
   /*USER PROFILE*/
-  .categorias p {
+  .categorias .p {
     margin-left: 150px;
   }
 }
