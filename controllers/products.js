@@ -12,7 +12,10 @@ const products = {
     },
     add: (req, res) => {
       res.render("productsAdd")
-    }
+    },
+    modification: (req, res) => {
+      res.render("modificationListProducts")
+    },
       }
 
 

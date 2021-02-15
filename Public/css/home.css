@@ -1,15 +1,15 @@
-main {
+.main-container {
   background-color: #fef9ec;
   font-size: 14px;
 }
-h2 {
+.h2 {
   font-family: "Yusei Magic", sans-serif;
   margin: 0px;
 }
 
 /*SECCION PRODUCTOS*/
 
-.products h2 {
+.products .h2 {
   text-align: center;
   padding: 20px;
   color: #0c5d5e;
@@ -33,7 +33,7 @@ h2 {
   text-align: center;
 }
 
-.product-article p {
+.product-article .p {
   padding: 15px;
 }
 
@@ -61,7 +61,7 @@ h2 {
   left: 15%;
 }
 
-.descripcion-producto p {
+.descripcion-producto .p {
   color: #fef9ec;
 }
 
@@ -148,11 +148,11 @@ h2 {
   margin: 10px;
 }
 
-.quienes-somos h2 {
+.quienes-somos .h2 {
   color: #ec9f00;
 }
 
-.quienes-somos h4 {
+.quienes-somos .h4 {
   font-family: "Yusei Magic", sans-serif;
   padding: 10px;
   margin: 10px;
@@ -165,7 +165,7 @@ h2 {
 .noticias {
   text-align: center;
 }
-.noticias h3 {
+.noticias .h3 {
   font-family: "Yusei Magic", sans-serif;
   padding: 20px;
   color: #0c5d5e;
@@ -191,7 +191,7 @@ h2 {
   margin-left: 40px;
 }
 
-.news-article p {
+.news-article .p {
   color: #0c5d5e;
 }
 
@@ -199,7 +199,7 @@ h2 {
 .sucursales {
   padding: 10px;
 }
-.sucursales h2 {
+.sucursales .h2 {
   text-align: center;
   padding: 5px;
 }
@@ -269,7 +269,7 @@ h2 {
     flex-wrap: wrap;
   }
 
-  .sucursales h2 {
+  .sucursales .h2 {
     margin-bottom: 10px;
     padding: 10px;
   }
@@ -286,7 +286,7 @@ h2 {
 }
 
 @media (min-width: 1200px) {
-  main {
+  .main-container {
     font-size: 18px;
   }
 
@@ -298,7 +298,7 @@ h2 {
     padding: 60px;
   }
 
-  .descripcion-producto p {
+  .descripcion-producto .p {
     padding: 30px;
   }
 
@@ -317,7 +317,7 @@ h2 {
   }
 
   .noticias {
-    width: 50%;
+    width: 45%;
   }
 
   .news-article {

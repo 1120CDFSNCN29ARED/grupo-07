@@ -10,7 +10,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
+.header-container {
   background-color: #fccb1a;
 }
 
@@ -107,12 +107,12 @@ main,
   top: 0px;
   border: #0a3409 solid 1px;
 }
-nav li {
+.menu-container .list {
   list-style-type: none;
   padding: 5px;
   margin-top: 10px;
 }
-nav a {
+.menu-container a {
   text-decoration: none;
   color: #0a3409;
 }
@@ -180,7 +180,7 @@ nav a {
     display: initial;
   }
 
-  .header-title h2 {
+  .header-title .h2 {
     font-family: "Yusei Magic", sans-serif;
     font-size: 60px;
     font-weight: 600;
@@ -190,7 +190,7 @@ nav a {
     margin: 30px;
   }
 
-  .header-title p {
+  .header-title .p {
     position: absolute;
     top: 340px;
     left: 100px;
@@ -222,11 +222,11 @@ nav a {
     margin-top: -10px;
   }
 
-  .header-title p {
+  .header-title .p {
     top: 300px;
     margin: 40px;
   }
-  .header-title h2 {
+  .header-title .h2 {
     top: 140px;
     margin: 50px;
   }

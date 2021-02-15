@@ -10,4 +10,6 @@ router.get("/productCart", products.cart);
 
 router.get("/productsAdd", products.add);
 
+router.get("/modificationListProducts", products.modification);
+
 module.exports = router;

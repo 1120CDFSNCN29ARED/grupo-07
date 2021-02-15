@@ -1,4 +1,4 @@
-footer {
+.footer-container {
   background-color: #fef9ec;
   font-size: 14px;
   position: relative;
@@ -6,7 +6,7 @@ footer {
   flex-wrap: wrap;
 }
 
-h4 {
+.h4 {
   margin: 0px;
   padding: 10px;
   font-family: "Yusei Magic";
@@ -29,10 +29,6 @@ h4 {
   text-align: center;
   padding: 20px;
   color: #fef9ec;
-}
-
-.resenias .efecto .hide {
-  display: none;
 }
 
 .contacto {
