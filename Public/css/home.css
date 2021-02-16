@@ -227,6 +227,19 @@
   margin: auto;
 }
 
+.reseñas h1 {
+  font-family: "Yusei Magic", sans-serif;
+  margin-top: 40px;
+  color: #ec9f00;
+  font-size: 24px;
+  text-align: center;
+}
+
+.reseñas img {
+  width: 70%;
+  position: relative;
+  left: 15%;
+}
 @media (min-width: 760px) {
   .product-article {
     width: 30%;
