@@ -211,6 +211,7 @@ main,
 @media (min-width: 1200px) {
   .search {
     right: 80px;
+    width: 30%;
   }
   .logo-log {
     text-align: left;
@@ -230,4 +231,11 @@ main,
     top: 140px;
     margin: 50px;
   }
+  .heart,
+  i:hover {
+    color:#0c5d5e ;
+    transition-property: color;
+    transition-duration: 1s;
+  }
+}
 }

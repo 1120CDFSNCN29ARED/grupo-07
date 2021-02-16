@@ -70,6 +70,8 @@
   max-width: 100%;
   position: relative;
   margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .slide1 {
@@ -198,17 +200,20 @@
 /*SECCION SUCURSALES*/
 .sucursales {
   padding: 10px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 .sucursales .h2 {
   text-align: center;
   padding: 5px;
+  border-top: solid 1px;
 }
 
 .sucursal-article {
   display: flex;
   flex-wrap: wrap;
-
   border-bottom: solid 1px;
+  margin-bottom: 20px;
 }
 
 .sucursal-image {
@@ -282,6 +287,13 @@
 
   .sucursal-image {
     text-align: center;
+  }
+
+  .product-article:hover {
+    background-color: #a0daa97c;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
 }
 
