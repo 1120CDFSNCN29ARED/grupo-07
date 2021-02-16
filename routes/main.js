@@ -10,4 +10,6 @@ router.get("/logIn", main.login);
 
 router.get("/userProfile", main.profile);
 
+router.get("/help", main.help);
+
 module.exports = router;

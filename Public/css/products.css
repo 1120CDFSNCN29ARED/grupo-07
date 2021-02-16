@@ -48,22 +48,6 @@
   text-align: center;
 }
 
-.help h1 {
-  text-align: center;
-  font-size: 24px;
-  padding: 20px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  color: #ec9f00;
-}
-
-.help img {
-  width: 70%;
-  position: relative;
-  left: 15%;
-  margin-bottom: 80px;
-}
-
 @media (min-width: 760px) {
   .mas-vendidos h3 {
     margin-top: 50px;
