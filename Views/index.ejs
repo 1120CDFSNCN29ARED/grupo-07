@@ -9,18 +9,18 @@
 
 <body>
   <%- include("./partials/header.ejs") %>
-    <main>
+    <main class="main-container">
       <section class="products">
-        <h2>Productos</h2>
+        <h2 class="h2">Productos</h2>
         <div class="product-container">
           <article class="product-article">
             <img src="/img/miel-beepure.png" alt="miel-beepure" />
-            <p>Miel Líquida, Beepure. Ideal para completar tus desayunos.</p>
+            <p class="p">Miel Líquida, Beepure. Ideal para completar tus desayunos.</p>
             <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
           </article>
           <article class="product-article">
             <img src="img/icecream.jpg" alt="ice-cream" />
-            <p>
+            <p class="p">
               Helados hechos con jugos naturales. La mejor forma de combatir el
               verano.
             </p>
@@ -28,7 +28,7 @@
           </article>
           <article class="product-article">
             <img src="/img/muffins.jpeg" alt="muffins" />
-            <p>Muffins con avena y frutas. Especial para los golosos.</p>
+            <p class="p">Muffins con avena y frutas. Especial para los golosos.</p>
             <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
           </article>
         </div>
@@ -36,7 +36,7 @@
           <div class="container">
             <img src="/img/pollo.jpeg" alt="imagen de productos" />
             <div class="descripcion-producto">
-              <p>Investigá más sobre nuestros productos aquí</p>
+              <p class="p">Investigá más sobre nuestros productos aquí</p>
               <button class="search-btn"><a href="/products">Productos</a></button>
             </div>
           </div>
@@ -69,12 +69,13 @@
       </section>
 
 
-      <section class="quienes-somos">
-        <div class="us-container">
-          <h2>Quienes somos</h2>
+      <div class="us-container">
+        <section class="quienes-somos">
+
+          <h2 class="h2">Quienes somos</h2>
           <article class="us-article">
-            <h4>Nuestra misión</h4>
-            <p>
+            <h4 class="h4">Nuestra misión</h4>
+            <p class="p">
               Ofrecer alimentos saludables y nutritivos que ayuden a mejorar la
               alimentación y a conectarnos con la naturaleza desde un nuevo lugar.
               Ofrecemos un servicio que permitirá conocer alternativas para tus
@@ -82,8 +83,8 @@
             </p>
           </article>
           <article class="us-article">
-            <h4>Dedicado a</h4>
-            <p>
+            <h4 class="h4">Dedicado a</h4>
+            <p class="p">
               Personas que necesitan alimentos saludables para mejorar su calidad
               de vida o tener un estilo de vida saludable. Personas veganas,
               vegetarianas, celíacos, intolerantes a la lactosa, intolerantes al
@@ -92,38 +93,39 @@
               alimentación por enfermedades como hipertensión, obesidad y diabetes
             </p>
           </article>
+        </section>
+
+        <section class="noticias">
+          <h3 class="h3">Noticias</h3>
+          <div class="news-container">
+            <div class="news img">
+              <img src="/img/credit-card.jpg" alt="noticias" class="news-img" />
+            </div>
+            <article class="news-article">
+              <p class="p">
+                Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
+                de crédito.
+              </p>
+          </div>
+          </article>
+      </div>
       </section>
 
-      <section class="noticias">
-        <h3>Noticias</h3>
-        <div class="news-container">
-          <div class="news img">
-            <img src="/img/credit-card.jpg" alt="noticias" class="news-img" />
-          </div>
-          <article class="news-article">
-            <p>
-              Esta semana tenés descuentos de hasta el 30% comprando con tarjeta
-              de crédito.
-            </p>
-        </div>
-        </article>
-      </section>
-      </div>
 
       <section class="sucursales">
-        <h2>Sucursales</h2>
+        <h2 class="h2">Sucursales</h2>
         <div class="sucursal-container">
           <article class="sucursal-article">
             <img src="/img/sucursal.png" alt="sucursale1" class="sucursal1" />
             <div class="sucursal-item">
-              <p>Cosme 1380.</p>
-              <p>Tel. 1385782</p>
+              <p class="p">Cosme 1380.</p>
+              <p class="p">Tel. 1385782</p>
             </div>
           </article>
           <article class="sucursal-article">
             <div class="sucursal-item">
-              <p>Fulanito 125</p>
-              <p>Tel. 4892471</p>
+              <p class="p">Fulanito 125</p>
+              <p class="p">Tel. 4892471</p>
             </div>
             <div class="sucursal-image">
               <img src="/img/sucursal.png" alt="sucursal2" class="sucursal2" />
@@ -132,12 +134,13 @@
           <article class="sucursal-article">
             <img src="/img/sucursal.png" alt="sucursal3" class="sucursal1" />
             <div class="sucursal-item">
-              <p>Calle Falsa 123</p>
-              <p>Tel. 9876424</p>
+              <p class="p">Calle Falsa 123</p>
+              <p class="p">Tel. 9876424</p>
             </div>
           </article>
-        </div>
+
       </section>
+      </div>
     </main>
 
     <%- include("./partials/footer.ejs") %>
