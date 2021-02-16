@@ -4,12 +4,14 @@ https://trello.com/invite/b/0mWgSpDs/0e77cb7af7ef15a4685a4479e21e66be/retrospect
 
 # Retrospectiva grupo 7
 
+## Sprint 1:
+
 # Stop doing/ less of:
 
 - No hacer a último momento las tareas
 - No revisar el código
 
-# Start doing/ more of:
+# Start doing:
 
 - Insistir a que Matías participe en las tareas y proponga ideas para el proyecto.
 - Matías brinde feedback y lea los mensajes.
@@ -30,3 +32,38 @@ https://trello.com/invite/b/0mWgSpDs/0e77cb7af7ef15a4685a4479e21e66be/retrospect
 
 Armando la retrospectiva sobre el trabajo del sprint anterior, pudimos ver los puntos a mejorar que necesita el equipo para su buen funcionamiento.
 Por eso, creemos que nuestro equipo debe mejorar la comunicación para realizar el trabajo en equipo y utilizar Discord para todos los temas relacionados al proyecto.
+
+## Sprint 2:
+
+# Keep doing:
+
+- Trabajar continuamente con el proyecto.
+- Comunicación con el equipo.
+- Asegurarse que los requisitos del sprint se cumplen.
+- Comunicarse por Discord para todos los temas vinculados al proyecto.
+
+# Start doing:
+
+- Planear con tiempo el sprint.
+- Planear el estilo del equipo.
+- Generar un calendario semanal de reuniones para el equipo.
+- Administrar el tiempo.
+- Armar checklaps con fecha de entrega para particionar el trabajo.
+- Planear las reuniones.
+- Matias: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
+
+# More of:
+
+- Dividirse mejor las tareas. Hacer la división de tareas en el arranque del sprint y dejarlo asentando en el tablero.
+- Mejorar la revisión de codigo, proponer mejoras.
+- Organizacion en trello: Dejar bien claras los puntos a realiza cada uno.
+- Florencia: Chequear trello periodicamente .
+- Lucia: Mejorar los tiempos de realización de las tareas.
+
+# Stop doing:
+
+- No hacer a último momento las tareas porque no hay posibilidad de tener revisión.
+
+# Conclusiones:
+
+Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el equipo está mejorando en la comunicación con la utilización de Discord e implementación de daily. Además, hubo mejoría en la división de tareas ya que se planteron un calendario de fechas limites de realización y se dejaron asentados en el tablero de trabajo en trello.
