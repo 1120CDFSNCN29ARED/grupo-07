@@ -1,26 +1,65 @@
 # DAILY DEL GRUPO 07
 
+## Sprint 1
+
+# Florencia:
+
+- Creación de tablero de trabajo en trello.
+- Creación de wireframe de detalle del producto, lista de productos, home y detalle de producto.
+- Creación y desarrollo del Readme.
+- Desarrollo de paleta de colores y recursos para el sitio web.
+
+# Lucia:
+
+- Creación de wireframe de log in, formulario de registro y carrito de compras.
+- Desarrollo de paleta de colores y recursos para el sitio web.
+- Desarrolo del Readme.
+
+## Sprint 2
+
 # Florencia:
 
 - Creación de la estructura de archivos utilizando Node.js y Express
 - Propuestas de estilos, fuentes, fotos y colores que serán utilizados en el sitio web.
-- Creación y desarrollo del header y footer
-- Se encargó de la creación y desarrollo de archivos : index.html, home.css , login.html , login.css, registro.html y registro.css
-- Implementación de medias queries de los archivos.
-- Revisión de código y propuestas de mejoras en products.html, products.css , productDetail.html ,productDetail.css , productCart.html y productCart.css
-- Creación y desarrollo del tablero de retrospectiva
-- Vinculación de archivos de sitios web
+- Creación y desarrollo del header y footer.
+- Se encargó de la creación y desarrollo de archivos : index.html, home.css , login.html , login.css, registro.html y registro.css.
+- Implementación de media queries de los archivos.
+- Revisión de código y propuestas de mejoras en products.html, products.css , productDetail.html ,productDetail.css , productCart.html y productCart.css.
+- Creación y desarrollo del tablero de retrospectiva.
+- Vinculación de archivos de sitio web.
 - Utilización de github para enviar archivos
-- Utilización del tablero de trabajo
+- Desarrollo y actualización del tablero de trabajo.
 
 # Lucia:
 
 - Se encargó de la creación de diferentes logotipos para la empresa. Búsqueda de posibles nombres y colores para el sitio web.
 - Cambios que hice en readme.md y creación de nuevos archivos productDetail.html y productCart.html
-- Se encargó de la creación y desarrollo de archivos : products.html, products.css , productDetail.html ,productDetail.css , productCart.html y productCart.css
-- Revisión de código y propuestas de mejoras
-- Vinculación de archivos de sitios web
-- Utilización de github para enviar archivos
-- Desarrollo del tablero de retrospectiva
-- Utilización del tablero de trabajo
-- Desarrollo del header y footer
+- Se encargó de la creación y desarrollo de archivos : products.html, products.css , productDetail.html ,productDetail.css , productCart.html y productCart.css.
+- Revisión de código y propuestas de mejoras.
+- Vinculación de archivos de sitio web.
+- Utilización de github para enviar archivos.
+- Desarrollo del tablero de retrospectiva.
+- Desarrollo y actualización del tablero de trabajo.
+- Desarrollo del header y footer.
+
+## Sprint 3
+
+# Florencia:
+
+- Creación de wireframe de carga de productos y modificación de lista de productos.
+- Creación y desarrollo página de carga de productos.
+- Renombra views actuales con extensión .ejs
+- Creación y desarrollo de productControllers.js y products.js. Desarrollo de main.js y mainControllers.js
+- Creación de transiciones y animaciones en el sitio web.
+- Revisión de estructura y semantica html-css.
+- Desarrollo de retrospectiva y tablero de trabajo.
+- Creación de archivos partials.
+
+# Lucia:
+
+- Creación de wireframe de perfil de usuario y modificación de wireframes.
+- Creación y desarrollo de páginas perfil de usuario y de modificación de lista de productos.
+- Desarrollo de retrospectiva y tablero de trabajo.
+- Desarrollo de main.js y mainControllers.js
+- Creacion de transiciones y animaciones en el sitio web.
+- Revisión de estructura y semantica html-css.

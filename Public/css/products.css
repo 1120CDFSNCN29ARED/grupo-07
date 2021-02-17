@@ -1,4 +1,11 @@
-/*BOTONES - iconos*/
+.products .h2 {
+  text-align: center;
+  padding: 20px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  color: #ec9f00;
+  background-color: #fef9ec;
+}
 
 .h3 {
   text-align: center;
@@ -41,14 +48,37 @@
   text-align: center;
 }
 
+.help h1 {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #ec9f00;
+}
+
+.help img {
+  width: 70%;
+  position: relative;
+  left: 15%;
+  margin-bottom: 80px;
+}
+
 @media (min-width: 760px) {
+  .mas-vendidos .h3 {
+    margin-top: 50px;
+  }
+
   .contenedor-masVendidos {
     display: flex;
     border: none;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .contenedor-masVendidos img {
-    width: 45%;
+    width: 30%;
   }
 
   .contenedor-texto {
@@ -60,10 +90,22 @@
   .imagen {
     order: 2;
   }
+
+  .product-article:hover {
+    background-color: #a0daa97c;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
 }
 
 @media (min-width: 1200px) {
   .product-article {
     width: 23%;
+  }
+
+  .contenedor-masVendidos {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 }
