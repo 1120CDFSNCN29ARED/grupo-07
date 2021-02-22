@@ -16,6 +16,9 @@ const main = {
   help: (req, res) => {
     res.render("help");
   },
+  envios: (req, res) => {
+    res.render("envios");
+  },
 };
 
 module.exports = main;
