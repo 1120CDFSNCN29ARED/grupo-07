@@ -201,7 +201,6 @@
 .sucursales {
   padding: 10px;
   margin-top: 60px;
-  margin-bottom: 30px;
 }
 .sucursales .h2 {
   text-align: center;
@@ -227,6 +226,8 @@
   margin: auto;
 }
 
+/*RESEÑAS*/
+
 .reseñas h1 {
   font-family: "Yusei Magic", sans-serif;
   margin-top: 40px;
@@ -236,9 +237,10 @@
 }
 
 .reseñas img {
-  width: 70%;
+  width: 100%;
   position: relative;
-  left: 15%;
+  margin-bottom: 0px;
+  padding-bottom: 60px;
 }
 @media (min-width: 760px) {
   .product-article {
@@ -356,5 +358,11 @@
 
   .noticias img {
     width: 50%;
+  }
+
+  .reseñas img {
+    width: 70%;
+    position: relative;
+    left: 15%;
   }
 }

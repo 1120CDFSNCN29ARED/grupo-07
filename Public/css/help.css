@@ -1,0 +1,193 @@
+/*ENVIOS*/
+
+.sucursales {
+  padding: 10px;
+}
+
+.sucursales,
+.entrega,
+.form-menu h1 {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fba90a;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 24px;
+}
+
+.sucursales p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #0a3409;
+  font-family: "Poppins", sans-serif;
+  padding-top: 20px;
+}
+
+.sucursal-article {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 1px #fba90a;
+  border-bottom: solid 1px #fba90a;
+  margin-bottom: 5px;
+}
+
+.sucursal-article img {
+  width: 80%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 35px;
+  border: 2px solid #0a3409;
+}
+
+.sucursal-item p {
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.shop i {
+  font-size: 35px;
+  color: #0a3409;
+  position: relative;
+  left: 150px;
+  top: -340px;
+}
+
+.mapa img {
+  width: 100%;
+}
+
+iframe {
+  border: 1px solid black;
+  width: 100%;
+  height: 400px;
+  margin: 0px;
+}
+
+#perfil {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  color: #fba90a;
+  font-family: "Poppins", sans-serif;
+}
+
+/*AYUDA*/
+
+.help {
+  background-color: #fef9ec;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.seleccionar-productos h1 {
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+  color: #fba90a;
+  margin-top: 0px;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.seleccionar-productos img {
+  width: 95%;
+  position: relative;
+  left: 5%;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 760px) {
+  /*envios*/
+  .sucursales h1 {
+    font-size: 38px;
+  }
+
+  .sucursales p {
+    font-size: 21px;
+  }
+
+  .sucursal-article {
+    padding-top: 20px;
+  }
+
+  .sucursal-article img {
+    width: 75%;
+    margin-left: 100px;
+  }
+
+  .sucursal-article p {
+    font-size: 18px;
+  }
+
+  .shop i {
+    font-size: 55px;
+    left: 350px;
+    top: -540;
+  }
+  .shop i:hover {
+    color: #fba90a;
+    transition-property: color;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  iframe {
+    width: 60%;
+    margin-left: 155px;
+  }
+
+  /*ayuda*/
+  .seleccionar-productos img {
+    left: 2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*ayuda*/
+
+  .seleccionar-productos img {
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+
+  /*envios*/
+
+  .sucursales h1 {
+    font-size: 44px;
+  }
+
+  .sucursales p {
+    font-size: 26px;
+  }
+
+  .sucursal-article img {
+    width: 40%;
+    margin-left: 360px;
+  }
+
+  .sucursal-article p {
+    font-size: 20px;
+  }
+
+  .shop i {
+    left: 550px;
+  }
+
+  .mapa img {
+    width: 80%;
+    margin-left: 100px;
+  }
+
+  iframe {
+    width: 50%;
+    margin-left: 300px;
+    height: 600px;
+  }
+}

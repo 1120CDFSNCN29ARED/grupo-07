@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/register.css" />
+    <link rel="stylesheet" href="/css/help.css" />
+  </head>
+  <body>
+    <%- include ("./partials/header.ejs") %>
+    <main>
+      <section class="sucursales">
+        <h1>Sucursales</h1>
+        <p>
+          <i class="fas fa-thumbtack"></i>Retira gratis en nuestras sucursales:
+        </p>
+      </section>
+      <div class="sucursales-container">
+        <article class="sucursal-article">
+          <img src="/img/sucursal-1.png" alt="sucursal1" />
+          <div class="sucursal-item">
+            <p>Cosme 1380.</p>
+            <p>Telefono: 1385782</p>
+            <p>Horario de atención: Lun a Vie 9:00 a 19:00hs</p>
+          </div>
+          <div class="shop">
+            <i class="fas fa-store-alt"></i>
+          </div>
+        </article>
+        <article class="sucursal-article">
+          <img src="/img/sucursal-2.png" alt="sucursal2" />
+          <div class="sucursal-item">
+            <p>Fulanito 125</p>
+            <p>Telefono: 4892471</p>
+            <p>Horario de atención: Lun a Vie 9:00 a 19:00hs</p>
+          </div>
+          <div class="shop">
+            <i class="fas fa-store-alt"></i>
+          </div>
+        </article>
+        <article class="sucursal-article">
+          <img src="/img/sucursal-3.png" alt="sucursal3" />
+          <div class="sucursal-item">
+            <p>Calle Falsa 123</p>
+            <p>Telefono: 9876424</p>
+            <p>Horario de atención: Lun a Vie 9:00 a 19:00hs</p>
+          </div>
+          <div class="shop">
+            <i class="fas fa-store-alt"></i>
+          </div>
+        </article>
+      </div>
+      <section class="entrega">
+        <h1>Horarios y zonas de entrega</h1>
+      </section>
+      <section class="mapa">
+        <img src="/img/envio.png" />
+      </section>
+      <form action="/" method="get" class="form-menu">
+        <div class="usuario"></div>
+        <label class="perfil">Zona de repartos</label>
+        <select name="perfil" id="perfil">
+          <option value="domicilio">Agronomia(CABA)</option>
+          <option value="domicilio">Almagro(CABA)</option>
+          <option value="domicilio">Balvanera(CABA)</option>
+          <option value="domicilio">Belgrano(CABA)</option>
+          <option value="domicilio">Boedo(CABA)</option>
+          <option value="domicilio">Caballito(CABA)</option>
+          <option value="domicilio">Chacarita(CABA)</option>
+          <option value="domicilio">Colegiales(CABA)</option>
+          <option value="domicilio">Flores(CABA)</option>
+          <option value="domicilio">Floresta(CABA)</option>
+          <option value="domicilio">Martinez(CABA)</option>
+          <option value="domicilio">Monserrat(CABA)</option>
+          <option value="domicilio">Monte Castro(CABA)</option>
+          <option value="domicilio">Nuñez(CABA)</option>
+          <option value="domicilio">Palermo(CABA)</option>
+          <option value="domicilio">Paternal(CABA)</option>
+          <option value="domicilio">Parque Chas(CABA)</option>
+          <option value="domicilio">Parque Avellaneda(CABA)</option>
+        </select>
+      </form>
+      <section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d420266.8146622823!2d-58.42876119999999!3d-34.6209866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1613973350046!5m2!1ses!2sar"
+        ></iframe>
+      </section>
+      <form action="/" method="get" class="form-menu">
+        <h1>¿No llegamos a tu zona?</h1>
+        <p>Dejanos tus datos para agregar tu zona a nuestro itinerario</p>
+        <div class="form-item">
+          <label class="form-label" for="name">Nombre y Apellido</label>
+          <input type="text" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="password" class="form-label">Domicilio</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="modificar-datos">
+          <button>Enviar datos</button>
+        </div>
+      </form>
+    </main>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

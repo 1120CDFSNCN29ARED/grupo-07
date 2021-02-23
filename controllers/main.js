@@ -13,6 +13,12 @@ const main = {
   profile: (req, res) => {
     res.render("userProfile");
   },
+  help: (req, res) => {
+    res.render("help");
+  },
+  envios: (req, res) => {
+    res.render("envios");
+  },
 };
 
 module.exports = main;

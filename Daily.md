@@ -58,8 +58,8 @@
 # Lucia:
 
 - Creación de wireframe de perfil de usuario y modificación de wireframes.
-- Creación y desarrollo de páginas perfil de usuario y de modificación de lista de productos.
+- Creación y desarrollo de páginas perfil de usuario , de modificación de lista de productos y help
 - Desarrollo de retrospectiva y tablero de trabajo.
-- Desarrollo de main.js y mainControllers.js
-- Creacion de transiciones y animaciones en el sitio web.
+- creación de main.js y mainControllers.js
 - Revisión de estructura y semantica html-css.
+- Creacion de transiciones y animaciones en el sitio web.
