@@ -92,7 +92,7 @@
           <input type="text" required class="form-input" />
         </div>
         <div class="form-item">
-          <label for="email" class="form-label">E-mail</label>
+          <label for="email" required class="form-label">E-mail</label>
           <input
             type="email"
             name="email"
@@ -102,7 +102,7 @@
           />
         </div>
         <div class="form-item">
-          <label for="password" class="form-label">Domicilio</label>
+          <label for="password" required class="form-label">Domicilio</label>
           <input
             type="password"
             name="password"
@@ -111,8 +111,11 @@
             class="form-input"
           />
         </div>
-        <div class="modificar-datos">
-          <button>Enviar datos</button>
+        <label>Dejanos tu comentario</label>
+        <textarea></textarea>
+        <div class="modificar-datos"></div>
+      <button type="submit">Enviar datos</button>
+       <button type="reset">Borrar</button>
         </div>
       </form>
     </main>

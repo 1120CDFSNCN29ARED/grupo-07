@@ -4,7 +4,7 @@ https://trello.com/invite/b/0mWgSpDs/0e77cb7af7ef15a4685a4479e21e66be/retrospect
 
 # Retrospectiva grupo 7
 
-## Sprint 1:
+## Retrospectiva del Sprint 1:
 
 # Stop doing/ less of:
 
@@ -33,7 +33,7 @@ https://trello.com/invite/b/0mWgSpDs/0e77cb7af7ef15a4685a4479e21e66be/retrospect
 Armando la retrospectiva sobre el trabajo del sprint anterior, pudimos ver los puntos a mejorar que necesita el equipo para su buen funcionamiento.
 Por eso, creemos que nuestro equipo debe mejorar la comunicación para realizar el trabajo en equipo y utilizar Discord para todos los temas relacionados al proyecto.
 
-## Sprint 2:
+## Retrospectiva del Sprint 2:
 
 # Keep doing:
 
@@ -67,3 +67,5 @@ Por eso, creemos que nuestro equipo debe mejorar la comunicación para realizar 
 # Conclusiones:
 
 Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el equipo está mejorando en la comunicación con la utilización de Discord e implementación de daily. Además, hubo mejoría en la división de tareas ya que se planteron un calendario de fechas limites de realización y se dejaron asentados en el tablero de trabajo en trello.
+
+## Retrospectiva del Sprint 3
