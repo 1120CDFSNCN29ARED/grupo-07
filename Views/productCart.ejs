@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("./partials/head.ejs") %>
+
+<head>
+  <%- include("./partials/head.ejs") %>
     <link rel="stylesheet" href="/css/productCart.css" />
     <link rel="stylesheet" href="/css/help.css" />
-  </head>
-  <body>
-    <%- include ("./partials/header.ejs") %>
+</head>
 
-    <main>
+<body>
+  <%- include ("./partials/header.ejs") %>
+
+    <main class="main">
       <section id="titulo">
         <div class="contenedor-titulo">
           <h1>TU PEDIDO:</h1>
@@ -17,8 +19,7 @@
       </section>
       <section class="volver">
         <button>
-          <a href="/products"
-            ><i class="fas fa-arrow-circle-left"></i>Seguir comprando
+          <a href="/products"><i class="fas fa-arrow-circle-left"></i>Seguir comprando
           </a>
         </button>
       </section>
@@ -33,12 +34,7 @@
 
           <section class="product-list">
             <article class="contenedor-articulo">
-              <img
-                src="/img/miel-beepure.png"
-                width="120"
-                height="120"
-                alt=" Miel Beepure"
-              />
+              <img src="/img/miel-beepure.png" width="120" height="120" alt=" Miel Beepure" />
               <div class="product-item">
                 <p class="product-description">Miel líquida, Beepure. 500gr</p>
 
@@ -56,12 +52,7 @@
               </div>
             </article>
             <article class="contenedor-articulo">
-              <img
-                src="/img/mantequilla-de-coco.png"
-                width="120"
-                height="120"
-                alt="Mantequilla de coco"
-              />
+              <img src="/img/mantequilla-de-coco.png" width="120" height="120" alt="Mantequilla de coco" />
               <div class="product-item">
                 <p class="product-description">
                   Mantequilla de Coco, Byour. 185gr
@@ -81,12 +72,7 @@
               </div>
             </article>
             <article class="contenedor-articulo">
-              <img
-                src="/img/mermelada-beepure.png"
-                width="120"
-                height="120"
-                alt=" Mermelada"
-              />
+              <img src="/img/mermelada-beepure.png" width="120" height="120" alt=" Mermelada" />
               <div class="product-item">
                 <p class="product-description">
                   Mermelada de frutos del bosque, Beepure. 450gr
@@ -106,12 +92,7 @@
               </div>
             </article>
             <article class="contenedor-articulo">
-              <img
-                src="/img/veggie-burger-delitas.png"
-                width="120"
-                height="120"
-                alt=" Miel Beepure"
-              />
+              <img src="/img/veggie-burger-delitas.png" width="120" height="120" alt=" Miel Beepure" />
               <div class="product-item">
                 <p class="product-description">
                   Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr
@@ -167,5 +148,6 @@
       </section>
     </main>
     <%- include("./partials/footer.ejs") %>
-  </body>
+</body>
+
 </html>

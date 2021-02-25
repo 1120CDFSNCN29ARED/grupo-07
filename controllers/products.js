@@ -1,5 +1,3 @@
-const path = require("path");
-
 const products = {
     list : (req, res) => {
       res.render("products")
