@@ -24,10 +24,11 @@ router.get("/productsAdd", products.add);
 /*** GET ONE PRODUCT ***/
 
 /*** EDIT ONE PRODUCT ***/
-router.get("/edit/:idProduct", products.edit);
+router.get("/:id/edit", products.edit);
+router.put("/:id", products.update);
 
 /*** DELETE ONE PRODUCT ***/
-router.delete("/delete/:idProduct", products.delete);
+router.delete("/:id", products.destroy);
 
 router.get("/modificationListProducts", products.modification);
 

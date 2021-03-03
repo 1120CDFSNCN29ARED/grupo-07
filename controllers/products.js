@@ -3,6 +3,12 @@ const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 
+const toThousand = (n) => {
+  return n.toLocaleString("es-AR", {
+    minimumFractionDigits: 1,
+    maximumFractionDigits: 1,
+  });
+};
 
 const products = {
   list: (req, res) => {
@@ -23,25 +29,33 @@ const products = {
   },
 
   /*** PRODUCT EDIT*/
+
   edit: (req, res) => {
-    let idProduct = req.params.idProduct;
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    
-    /*const product = products.find((prod) => {
+    const prodId = req.params.id;
+    const product = products.find((prod) => {
       return prod.id == prodId;
-    });*/
+    });
 
-    res.send(idProduct);
-
-    /*res.render("product-edit-form", { product });
+    res.render("producstAdd");
   },
 
-  /*** PRODUCT DELETE*/
-  delete: (req, res) => {},
-  const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+  update: (req, res) =>{
 
-   fs.writeFileSync(productsFilePath, JSON.stringify(products));
-    /*res.redirect(`/`);*/
+  };
+
+  /*** PRODUCT DELETE*/
+  destroy: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+    const productIndex = products.findIndex((prod) => {
+      return prod.id == req.params.id;
+    });
+    products.splice(productIndex, 1);
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    res.redirect("modificationListProducts");
+  },
 };
 
 module.exports = products;
