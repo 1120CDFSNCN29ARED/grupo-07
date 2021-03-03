@@ -34,7 +34,9 @@
           </div>
           <div class="modificar">
             <button><i class="fas fa-clipboard-list"></i>Modificar</button>
-            <button><i class="fas fa-times-circle"></i>Eliminar</button>
+            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
+            <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
+            </form>
           </div>
         </article>
 
@@ -54,7 +56,9 @@
           </div>
           <div class="modificar">
             <button><i class="fas fa-clipboard-list"></i>Modificar</button>
-            <button><i class="fas fa-times-circle"></i>Eliminar</button>
+            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
+            <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
+            </form>
           </div>
         </article>
         <article class="contenedor-productos">
@@ -73,7 +77,9 @@
           </div>
           <div class="modificar">
             <button><i class="fas fa-clipboard-list"></i>Modificar</button>
-            <button><i class="fas fa-times-circle"></i>Eliminar</button>
+            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
+            <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
+            </form>
           </div>
         </article>
         <article class="contenedor-productos">
@@ -92,7 +98,9 @@
           </div>
           <div class="modificar">
             <button><i class="fas fa-clipboard-list"></i>Modificar</button>
-            <button><i class="fas fa-times-circle"></i>Eliminar</button>
+            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
+            <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
+            </form>
           </div>
     </main>
     <%- include("./partials/footer.ejs") %>

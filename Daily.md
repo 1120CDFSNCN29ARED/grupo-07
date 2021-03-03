@@ -58,8 +58,23 @@
 # Lucia:
 
 - Creación de wireframe de perfil de usuario y modificación de wireframes.
-- Creación y desarrollo de páginas perfil de usuario , de modificación de lista de productos y help
+- Creación y desarrollo de páginas: perfil de usuario , de modificación de lista de productos, envios y help.
 - Desarrollo de retrospectiva y tablero de trabajo.
 - creación de main.js y mainControllers.js
 - Revisión de estructura y semantica html-css.
 - Creacion de transiciones y animaciones en el sitio web.
+
+## Sprint 4
+
+# Florencia:
+
+- Creación y desarrollo de carpeta DATA, archivos: users.json y products.json
+- Desarrollo de retrospectiva y conclusion del sprint 3.
+- Revisión y mejora de estructura y semantica ejs-css.
+- Desarrollo de CRUD /products/:id , /products (post), /products/create/ (get), /products (get).
+
+# Lucia:
+
+- Desarrollo de retrospectiva y conclusión del sprint 3
+- Revisión y mejora de estructura y semantica ejs-css.
+- Desarrollo de CRUD /products/:id , /products/:id (put), /products/:id/edit .

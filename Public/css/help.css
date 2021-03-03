@@ -78,7 +78,7 @@ iframe {
 
 /*AYUDA*/
 
-.help {
+.help-container {
   background-color: #fef9ec;
   margin-left: auto;
   margin-right: auto;
@@ -167,9 +167,13 @@ iframe {
     font-size: 26px;
   }
 
+  .sucursales-container {
+    display: flex;
+  }
+
   .sucursal-article img {
-    width: 40%;
-    margin-left: 360px;
+    width: 70%;
+    margin-left: 60px;
   }
 
   .sucursal-article p {
@@ -177,7 +181,7 @@ iframe {
   }
 
   .shop i {
-    left: 550px;
+    left: 150px;
   }
 
   .mapa img {

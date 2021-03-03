@@ -1,16 +1,25 @@
+// ************ Require's ************
 const express = require("express");
 const path = require("path");
-const app = express();
-const productsRoutes = require("./routes/products");
-const mainRoutes = require("./routes/main");
+const methodOverride = require("method-override");
 
+// ************ express() ************
+const app = express();
+
+// ************ Template Engine ************
 app.set("view engine", "ejs");
 
-app.listen(3000, console.log("Escuchando en el puerto 3000"));
-
+// ************ Middlewares ************
 const staticFolder = path.resolve(__dirname, "./public");
 app.use(express.static(staticFolder));
 
-app.use("/products", productsRoutes);
+app.listen(3000, console.log("Escuchando en el puerto 3000"));
 
+app.use(methodOverride("_method"));
+
+// ************ Route System require and use() ************
+const productsRoutes = require("./routes/products"); // Rutas /products
+const mainRoutes = require("./routes/main"); // Rutas main
+
+app.use("/products", productsRoutes);
 app.use("/", mainRoutes);

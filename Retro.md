@@ -69,3 +69,36 @@ Por eso, creemos que nuestro equipo debe mejorar la comunicación para realizar 
 Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el equipo está mejorando en la comunicación con la utilización de Discord e implementación de daily. Además, hubo mejoría en la división de tareas ya que se planteron un calendario de fechas limites de realización y se dejaron asentados en el tablero de trabajo en trello.
 
 ## Retrospectiva del Sprint 3
+
+# Keep doing:
+
+- Trabajar continuamente con el proyecto.
+- Comunicación con el equipo.
+- Asegurarse que los requisitos del sprint se cumplen.
+- Comunicarse por Discord para todos los temas vinculados al proyecto.
+- Armar checklaps con fecha de entrega para particionar el trabajo.
+- Planear con tiempo el sprint.
+- Hacer la división de tareas en el arranque del sprint y dejarlo asentando en el tablero.
+
+# Start doing:
+
+- Planear el estilo del equipo.
+- Generar un calendario semanal de reuniones para el equipo.
+- Administrar el tiempo.
+- Planear las reuniones.
+- Matias: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
+
+# More of:
+
+- Organizacion en trello: Dejar bien claras los puntos a realiza cada uno.
+- Revisar en conjunto el codigo.
+
+# Stop doing:
+
+- No hacer a último momento las tareas porque no hay posibilidad de tener revisión.
+
+# Conclusiones:
+
+Creemos que debemos seguir mejorando las revisiones de codigo y planear las tareas del proyecto.
+Por otro lado, ya conocemos los estilos de cada una al desarrollar, como también sus fortalezas y debilidades, esto nos permite mejorar la división de las tareas de cada proyecto.
+Otro punto importante, es que hay buena comunicacion entre las participantes del equipo lo que ayuda a establecer facilmente objetivos comunes y que haya colaboración en la realización de los mismos.
