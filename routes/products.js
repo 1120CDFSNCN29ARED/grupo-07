@@ -23,12 +23,12 @@ router.get("/productsAdd", products.add);
 
 /*** GET ONE PRODUCT ***/
 
-/*** EDIT ONE PRODUCT ***/
+/*** EDIT ONE PRODUCT 
 router.get("/:id/edit", products.edit);
 router.put("/:id", products.update);
 
-/*** DELETE ONE PRODUCT ***/
-router.delete("/:id", products.destroy);
+/*** DELETE ONE PRODUCT 
+router.delete("/:id", products.destroy);***/
 
 router.get("/modificationListProducts", products.modification);
 

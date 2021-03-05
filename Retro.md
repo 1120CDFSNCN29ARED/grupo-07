@@ -25,7 +25,7 @@ https://trello.com/invite/b/0mWgSpDs/0e77cb7af7ef15a4685a4479e21e66be/retrospect
 
 # Keep doing:
 
-- Trabajar todos los días con el proyecto para no llegar a la fecha de entrega con muchas tareas a realizar
+- Trabajar continuamente con el proyecto para no llegar a la fecha de entrega con muchas tareas a realizar
 - Plantear dudas o temas que no salen y resolverlos en equipo.
 
 # Conclusiones:
@@ -56,8 +56,8 @@ Por eso, creemos que nuestro equipo debe mejorar la comunicación para realizar 
 
 - Dividirse mejor las tareas. Hacer la división de tareas en el arranque del sprint y dejarlo asentando en el tablero.
 - Mejorar la revisión de codigo, proponer mejoras.
-- Organizacion en trello: Dejar bien claras los puntos a realiza cada uno.
-- Florencia: Chequear trello periodicamente .
+- Organización en trello: Dejar bien claras los puntos a realiza cada uno.
+- Florencia: Chequear trello periódicamente .
 - Lucia: Mejorar los tiempos de realización de las tareas.
 
 # Stop doing:
@@ -66,7 +66,7 @@ Por eso, creemos que nuestro equipo debe mejorar la comunicación para realizar 
 
 # Conclusiones:
 
-Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el equipo está mejorando en la comunicación con la utilización de Discord e implementación de daily. Además, hubo mejoría en la división de tareas ya que se planteron un calendario de fechas limites de realización y se dejaron asentados en el tablero de trabajo en trello.
+Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el equipo está mejorando en la comunicación con la utilización de Discord e implementación de daily. Además, hubo mejoría en la división de tareas ya que se planteron un calendario de fechas límites de realización y se dejaron asentados en el tablero de trabajo en trello.
 
 ## Retrospectiva del Sprint 3
 
@@ -86,12 +86,14 @@ Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el eq
 - Generar un calendario semanal de reuniones para el equipo.
 - Administrar el tiempo.
 - Planear las reuniones.
-- Matias: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
+- Matías: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
 
 # More of:
 
 - Organizacion en trello: Dejar bien claras los puntos a realiza cada uno.
-- Revisar en conjunto el codigo.
+- Revisar en conjunto el código.
+- Florencia: Chequear trello periódicamente .
+- Lucía: Mejorar los tiempos de realización de las tareas.
 
 # Stop doing:
 
@@ -99,6 +101,6 @@ Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el eq
 
 # Conclusiones:
 
-Creemos que debemos seguir mejorando las revisiones de codigo y planear las tareas del proyecto.
+Creemos que debemos seguir mejorando las revisiones de código y planear las tareas del proyecto.
 Por otro lado, ya conocemos los estilos de cada una al desarrollar, como también sus fortalezas y debilidades, esto nos permite mejorar la división de las tareas de cada proyecto.
-Otro punto importante, es que hay buena comunicacion entre las participantes del equipo lo que ayuda a establecer facilmente objetivos comunes y que haya colaboración en la realización de los mismos.
+Otro punto importante, es que hay buena comunicación entre las participantes del equipo lo que ayuda a establecer fácilmente objetivos comunes y que haya colaboración en la realización de los mismos.

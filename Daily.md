@@ -77,4 +77,4 @@
 
 - Desarrollo de retrospectiva y conclusión del sprint 3
 - Revisión y mejora de estructura y semantica ejs-css.
-- Desarrollo de CRUD /products/:id , /products/:id (put), /products/:id/edit .
+- Desarrollo de CRUD /products/:id , /products/:id (put), /products/:id/edit.

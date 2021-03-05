@@ -1,4 +1,4 @@
-const fs = require("fs");
+/*const fs = require("fs");
 const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
@@ -8,7 +8,7 @@ const toThousand = (n) => {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
   });
-};
+},*/
 
 const products = {
   list: (req, res) => {
@@ -28,7 +28,7 @@ const products = {
     res.render("modificationListProducts");
   },
 
-  /*** PRODUCT EDIT*/
+  /*** PRODUCT EDIT
 
   edit: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -42,9 +42,9 @@ const products = {
 
   update: (req, res) =>{
 
-  };
+  },
 
-  /*** PRODUCT DELETE*/
+  /*** PRODUCT DELETE
   destroy: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
@@ -55,7 +55,7 @@ const products = {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(products));
     res.redirect("modificationListProducts");
-  },
+  },*/
 };
 
 module.exports = products;

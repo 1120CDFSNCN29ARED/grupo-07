@@ -23,3 +23,8 @@ const mainRoutes = require("./routes/main"); // Rutas main
 
 app.use("/products", productsRoutes);
 app.use("/", mainRoutes);
+
+// catch 404
+app.use((req, res, next) => {
+  res.status(404).render("error");
+});
