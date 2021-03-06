@@ -11,15 +11,15 @@ router.get("/", products.list);
 
 /***PRODUCT DETAIL */
 
-router.get("/productDetail", products.detail);
+router.get("/productDetail/:id", products.detail);
 
 /***PRODUCT CART */
 router.get("/productCart", products.cart);
 
 /***PRODUCT ADD */
 router.get("/productsAdd", products.add);
+router.post("/products", products.new);
 
-/*** CREATE ONE PRODUCT ***/
 
 /*** GET ONE PRODUCT ***/
 

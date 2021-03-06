@@ -17,6 +17,9 @@ app.listen(3000, console.log("Escuchando en el puerto 3000"));
 
 app.use(methodOverride("_method"));
 
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
+
 // ************ Route System require and use() ************
 const productsRoutes = require("./routes/products"); // Rutas /products
 const mainRoutes = require("./routes/main"); // Rutas main
