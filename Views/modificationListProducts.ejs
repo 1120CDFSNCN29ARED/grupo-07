@@ -19,28 +19,41 @@
 
       <section class="lista-productos">
         <article class="contenedor-productos">
-          <div class="producto">
-            <img src="/img/miel-beepure.png" width="160" height="160" alt=" Miel Beepure" />
-          </div>
-          <div class="detalle">
-            <h2>Nombre</h2>
-            <p> Miel líquida Multifloral</p>
-            <h2>Precio</h2>
-            <p>$560</p>
-            <h2>Descripción</h2>
-            <p>Miel líquida, Beepure. 500gr</p>
-            <h2>Categorías</h2>
-            <p>gluten free, vegano, embasados, untables </p>
-          </div>
-          <div class="modificar">
-            <button><i class="fas fa-clipboard-list"></i>Modificar</button>
-            <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
-            <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
-            </form>
-          </div>
+          <% for (let productsJson of products) {%>
+            <div class="producto">
+              <a href="<%= productsJson.id %>">
+                <img src="/images/<%= productJson.image %>" width="160" height="160" />
+            </div>
+            <div class="detalle">
+              <h2>Nombre</h2>
+              <p>
+                <%= productJson.name %>
+              </p>
+              <h2>Precio</h2>
+              <p>
+                <%= productJson.price %>
+              </p>
+              <h2>Descripción</h2>
+              <p>
+                <%= productJson.description%>
+              </p>
+              <h2>Categorías</h2>
+              <p>
+                 <%= productJson.category %>
+              </p>
+            </div>
+            <div class="modificar">
+              <button><i class="fas fa-clipboard-list"></i>Modificar</button>
+              <form method="POST" action="/modificationListProducts/<%= productsJson.id %>?_method=DELETE">
+                <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
+              </form>
+              </a>
+            </div>
+            <% } %>
         </article>
 
-        <article class="contenedor-productos">
+
+        <!--<article class="contenedor-productos">
           <div class="producto">
             <img src="/img/mantequilla-de-coco.png" width="160" height="160" alt="Mantequilla de coco" />
           </div>
@@ -84,7 +97,7 @@
         </article>
         <article class="contenedor-productos">
           <div class="producto">
-            <img src="img/icecream.jpg" width="160" height="160" alt="ice-cream" />
+            <img src="/img/icecream.jpg" width="160" height="160" alt="ice-cream" />
           </div>
           <div class="detalle">
             <h2>Nombre</h2>
@@ -101,7 +114,7 @@
             <form method="POST" action="/products/delete/<%= products[i].id %>?_method=DELETE">
             <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
             </form>
-          </div>
+          </div>-->
     </main>
     <%- include("./partials/footer.ejs") %>
 </body>

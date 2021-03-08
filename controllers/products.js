@@ -2,14 +2,12 @@ const { render } = require("ejs");
 const fs = require("fs");
 const path = require("path");
 
-
-
 const toThousand = (n) => {
   return n.toLocaleString("es-AR", {
     minimumFractionDigits: 1,
     maximumFractionDigits: 1,
   });
-}
+};
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -19,11 +17,11 @@ const products = {
     res.render("products", { products: productsJson });
   },
   detail: (req, res) => {
-    let detalle = productsJson.find(prod => prod.id == req.params.id)
+    let detalle = productsJson.find((prod) => prod.id == req.params.id);
     // if (detalle == null){
-      // res.render("error");
+    // res.render("error");
     // }else{
-      res.render("productDetail", {detalle})
+    res.render("productDetail", { detalle });
     // }
   },
   cart: (req, res) => {
@@ -32,49 +30,70 @@ const products = {
   add: (req, res) => {
     res.render("productsAdd");
   },
-  new: (req,res) =>{
+  new: (req, res) => {
     let newProduct = {
-    nombre: req.body.name,
-    foto: req.body.picture,
-    precio: req.body.price,
-    marca: req.body.brand,
-    descripcion: req.body.description,
-    categoria: req.body.category
+      nombre: req.body.name,
+      foto: req.body.picture,
+      precio: req.body.price,
+      marca: req.body.brand,
+      descripcion: req.body.description,
+      categoria: req.body.category,
     };
-  res.redirect("/");
+    res.redirect("/");
   },
+
   modification: (req, res) => {
     res.render("modificationListProducts");
   },
 
-  /*** PRODUCT EDIT
+  // Edit products of modification list products - form to edit
 
   edit: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     const prodId = req.params.id;
-    const product = products.find((prod) => {
+    const product = productsJson.find((prod) => {
       return prod.id == prodId;
     });
 
-    res.render("producstAdd");
+    res.render("productAdd", { product, toThousand });
   },
 
-  update: (req, res) =>{
+  //Update products of modification list products - method to update
 
-  },
-
-  /*** PRODUCT DELETE
-  destroy: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-    const productIndex = products.findIndex((prod) => {
-      return prod.id == req.params.id;
+  update: (req, res) => {
+    const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    const prodId = req.params.id;
+    const product = productsJson.find((prod) => {
+      return prod.id == prodId;
     });
-    products.splice(productIndex, 1);
+
+    product.nombre = req.body.name;
+    product.foto = req.body.picture;
+    product.precio = req.body.price;
+    product.marca = req.body.brand;
+    product.descripcion = req.body.description;
+    product.categoria = req.body.category;
 
     fs.writeFileSync(productsFilePath, JSON.stringify(products));
+
+    res.render("modificationListProducts", { product, toThousand });
+  },
+
+  /*** Delete product of modification list products*/
+
+  destroy: (req, res) => {
+    const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+
+    const productIndex = productsJson.findIndex((prod) => {
+      return prod.id == req.params.id;
+    });
+
+    productsJson.splice(productIndex, 1);
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
+
     res.redirect("modificationListProducts");
-  },*/
+  },
 };
 
 module.exports = products;
