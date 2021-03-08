@@ -1,14 +1,15 @@
 // ************ Require's ************
+
 const express = require("express");
 const router = express.Router();
 
 // ************ Controller Require ************
-const main = require("../controllers/main");
+const users = require("../controllers/users");
 
-router.get("/", main.home);
+router.get("/register", users.register);
 
-router.get("/help", main.help);
+router.get("/logIn", users.login);
 
-router.get("/envios", main.envios);
+router.get("/userProfile", users.profile);
 
 module.exports = router;
