@@ -15,10 +15,11 @@
 
 .title {
   font-family: "Yusei Magic", sans-serif;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 50px;
   text-align: center;
   color: #fba90a;
+  margin-top: 0%;
+  padding-top: 30px;
 }
 
 .log-title {
@@ -98,13 +99,6 @@
 }
 
 /*USER PROFILE*/
-.titulo-principal .h1 {
-  background-color: #ec9f00;
-  opacity: 0.5;
-  font-size: 28px;
-  font-weight: bold;
-  text-align: center;
-}
 
 .modificar-datos button {
   background-color: #ec9f00;
@@ -121,14 +115,14 @@
 
 .pedidos {
   margin-top: 80px;
-  margin-bottom: 60px;
 }
 
 .categorias {
   border-top: #fba90a 0.5px solid;
   border-bottom: #fba90a 0.5px solid;
   margin-top: 15px;
-  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .categorias .p {
@@ -156,7 +150,7 @@
 
   /*USER PROFILE*/
   .categorias .p {
-    margin-left: 60px;
+    margin-left: 100px;
     margin-right: 60px;
   }
 }

@@ -206,6 +206,7 @@
   text-align: center;
   padding: 5px;
   border-top: solid 1px;
+  color: #0c5d5e;
 }
 
 .sucursal-article {
@@ -228,12 +229,10 @@
 
 /*RESEÑAS*/
 
-.reseñas h1 {
-  font-family: "Yusei Magic", sans-serif;
-  margin-top: 40px;
-  color: #ec9f00;
-  font-size: 24px;
+.reseñas .h2 {
   text-align: center;
+  margin-top: 60px;
+  color: #0c5d5e;
 }
 
 .reseñas img {
