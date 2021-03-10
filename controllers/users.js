@@ -1,12 +1,12 @@
 const users = {
   register: (req, res) => {
-    res.render("register");
+    res.render("users/register");
   },
   login: (req, res) => {
-    res.render("logIn");
+    res.render("users/logIn");
   },
   profile: (req, res) => {
-    res.render("userProfile");
+    res.render("users/userProfile");
   },
 };
 

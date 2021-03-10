@@ -14,21 +14,21 @@ const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const products = {
   list: (req, res) => {
-    res.render("products", { products: productsJson });
+    res.render("products/products", { products: productsJson });
   },
   detail: (req, res) => {
     let detalle = productsJson.find((prod) => prod.id == req.params.id);
     // if (detalle == null){
     // res.render("error");
     // }else{
-    res.render("productDetail", { detalle });
+    res.render("products/productDetail", { detalle });
     // }
   },
   cart: (req, res) => {
-    res.render("productCart");
+    res.render("products/productCart");
   },
   add: (req, res) => {
-    res.render("productsAdd");
+    res.render("products/productsAdd");
   },
   new: (req, res) => {
     let newProduct = {
@@ -43,7 +43,7 @@ const products = {
   },
 
   modification: (req, res) => {
-    res.render("modificationListProducts");
+    res.render("products/modificationListProducts");
   },
 
   // Edit products of modification list products - form to edit
@@ -55,7 +55,7 @@ const products = {
       return prod.id == prodId;
     });
 
-    res.render("productAdd", { product, toThousand });
+    res.render("products/productAdd", { product, toThousand });
   },
 
   //Update products of modification list products - method to update
@@ -76,7 +76,7 @@ const products = {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(products));
 
-    res.render("modificationListProducts", { product, toThousand });
+    res.render("products/modificationListProducts", { product, toThousand });
   },
 
   /*** Delete product of modification list products*/
@@ -92,7 +92,7 @@ const products = {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
 
-    res.redirect("modificationListProducts");
+    res.redirect("products/modificationListProducts");
   },
 };
 
