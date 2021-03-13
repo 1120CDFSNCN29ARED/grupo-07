@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%- include("./partials/head.ejs") %>
-    <link rel="stylesheet" href="/css/register.css" />
+    <%- include("./../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/forms.css" />
   </head>
 
   <body>
-    <%- include("./partials/header.ejs") %>
+    <%- include("./../partials/header.ejs") %>
 
     <main class="main-container">
       <form action="/" method="GET" class="form-menu">
         <h2 class="title">Creá tu cuenta</h2>
         <p class="register-text">¿Ya tenés un cuenta?</p>
-        <p class="register-text"><a href="/logIn" class="log">ingresá</a></p>
+        <p class="register-text">
+          <a href="/users/logIn" class="log">ingresá</a>
+        </p>
 
         <div class="form-item">
           <label class="form-label" for="name">Nombre</label>
@@ -69,11 +71,11 @@
           </button>
         </div>
         <p class="register-text">
-          ¿Ya tenés cuenta? <a href="/logIn">Ingresá aquí</a>
+          ¿Ya tenés cuenta? <a href="/users/logIn">Ingresá aquí</a>
         </p>
       </form>
     </main>
 
-    <%- include("./partials/footer.ejs") %>
+    <%- include("./../partials/footer.ejs") %>
   </body>
 </html>
