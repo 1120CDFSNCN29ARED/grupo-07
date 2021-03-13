@@ -12,12 +12,17 @@
 
     <main class="main">
       <section class="product-detail">
-        <h2>Miel líquida, Beepure</h2>
+        <h2>
+          <%= detalle.name %>
+        </h2>
         <article class="articulo">
-          <img src="/img/miel-beepure.png" alt=" Miel Beepure" />
+          <img src=<%=detalle.image %> alt=" Miel Beepure" />
           <div class="detail-text">
-            <p>Miel líquida, Beepure. 500 gr.</p>
-            <p class="price">$500</p>
+            <p>
+              <%= detalle.name %>
+            </p>
+            <p class="price">$<%= detalle.price %>
+            </p>
             <div class="contar">
               <button class="plus">-</button>
               <input type="number" name="cantidad" id="cantidad" />
@@ -35,14 +40,7 @@
         <article class="descripcion">
           <h3>Descripción</h3>
           <p class="description-text">
-            Miel líquida multifloral envasada de forma especial después de ser
-            extraída de colmenares seleccionados sin distorsionar sus cualidades
-            ni sabores mediante procesos industriales. Miel liquida, cristalina
-            de fácil disolución ideal para el uso cotidiano.
-          </p>
-          <p class="description-text">
-            Valor Energético:64 kcal; Carbohidratos: 16 g; Porción: 20 g (1
-            cucharada sopera).
+            <%= detalle.description %>
           </p>
         </article>
         <section class="envios">

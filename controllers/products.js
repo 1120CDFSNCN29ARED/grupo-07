@@ -41,6 +41,9 @@ const products = {
     descripcion: req.body.description,
     categoria: req.body.category
     };
+
+    productsJson.push(newProduct);
+    fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
   res.redirect("/");
   },
   modification: (req, res) => {

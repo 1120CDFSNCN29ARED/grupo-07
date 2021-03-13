@@ -14,7 +14,7 @@
     "id": 2,
     "name": "Helados de jugo. Guapaletas",
     "description": "No tiene",
-    "image": "img/icecream.jpg",
+    "image": "/img/icecream.jpg",
     "category": [
         "Postre"
     ] ,
@@ -48,7 +48,7 @@
     "id": 5,
     "name":"Mermelada frutos del bosque., Beepure. 450gr.",
     "description":"No tiene" ,
-    "image":"img/mermelada-beepure.png",
+    "image":"/img/mermelada-beepure.png",
     "category": [
         "Apto celíaco",
         "Postre",
@@ -61,7 +61,7 @@
     "id": 6,
     "name": "Hamburguesa de lentejas y arroz, Delitas. 600gr.",
     "description": "No tiene",
-    "image": "img/veggie-burger-delitas.png",
+    "image": "/img/veggie-burger-delitas.png",
     "category": [
         "Vegetariano"
     ] ,
@@ -72,7 +72,7 @@
     "id": 7,
     "name": "Aceite neutro de coco, Chiagraal. 180gr.",
     "description":"No tiene" ,
-    "image": "img/aceite-coco.png",
+    "image": "/img/aceite-coco.png",
     "category": [
         "Apto vegano"
     ] ,
@@ -83,7 +83,7 @@
     "id": 8,
     "name": "Pasta de garbanzos, Legume. 284gr.",
     "description": "No tiene",
-    "image":"img/fideos-garbanzo.png" ,
+    "image":"/img/fideos-garbanzo.png" ,
     "category": [
         "Apto vegano",
         "Apto celíaco"
@@ -95,7 +95,7 @@
     "id": 9,
     "name":"Leche de almendras cremosa, Amande. 1lt." ,
     "description": "No tiene",
-    "image": "img/leche-almendras.png",
+    "image": "/img/leche-almendras.png",
     "category": [
         "Apto vegano",
         "Bajo en sodio"
@@ -107,7 +107,7 @@
     "id": 10,
     "name":"Cacao 80% Sin azucar, Dr Cacao. 80 gr." ,
     "description": "No tiene",
-    "image": "img/chocolate.png",
+    "image": "/img/chocolate.png",
     "category": [
         "Apto vegano",
         "Bajo en sodio",
@@ -120,7 +120,7 @@
     "id": 11,
     "name":"Crackers sabor Puerro, Crudencio. 80 gr." ,
     "description": "No tiene",
-    "image":"img/crudencio.png" ,
+    "image":"/img/crudencio.png" ,
     "category": [
         "Postre",
         "Galletas"
@@ -132,7 +132,7 @@
     "id": 12,
     "name":"Harina Integral Orgánica, Terrasana.1 Kg." ,
     "description": "No tiene",
-    "image":"img/harina-integral.png" ,
+    "image":"/img/harina-integral.png" ,
     "category": [
         "Galletas"
     ] ,

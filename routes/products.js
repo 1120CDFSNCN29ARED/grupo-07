@@ -17,8 +17,8 @@ router.get("/productDetail/:id", products.detail);
 router.get("/productCart", products.cart);
 
 /***PRODUCT ADD */
-router.get("/productsAdd", products.add);
-router.post("/products", products.new);
+router.get("/productsAdd/", products.add);
+router.post("/", products.new);
 
 
 /*** GET ONE PRODUCT ***/
