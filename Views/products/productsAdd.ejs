@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("./../partials/head.ejs") %>
-    <link rel="stylesheet" href="/css/forms.css" />
-  </head>
 
-  <body>
-    <%- include ("./../partials/header.ejs") %>
+<head>
+  <%- include("./../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/forms.css" />
+</head>
+
+<body>
+  <%- include ("./../partials/header.ejs") %>
 
     <main class="main-container">
       <h2 class="title">Agregar o modificar productos</h2>
-      <form action="/products" method="POST" class="form-menu">
+      <form action="/" method="POST" class="form-menu">
         <div class="form-item">
           <label for="name" class="fomr-label">Nombre del producto</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            class="form-input"
-            required
-          />
+          <input type="text" name="name" id="name" class="form-input" required />
         </div>
         <div class="form-item">
           <label for="picture" class="form-label">Foto</label>
@@ -27,13 +22,7 @@
         </div>
         <div class="form-item">
           <label for="price">Precio</label>
-          <input
-            type="text"
-            name="price"
-            id="price"
-            class="form-input"
-            required
-          />
+          <input type="text" name="price" id="price" class="form-input" required />
         </div>
         <div class="form-item">
           <label for="brand" class="form-label">Marca</label>
@@ -41,73 +30,33 @@
         </div>
         <div class="form-item">
           <label for="description" class="form-label">Descripción</label>
-<<<<<<< HEAD:Views/productsAdd.ejs
-          <textarea type="textarea" name="description" id="description" class="form-input description"
-            required></textarea>
-=======
-          <input
-            type="text"
-            name="description"
-            id="description"
-            class="form-input description"
-          />
->>>>>>> a839bf01577d8cfea6741a6c20bdaa3543d455d2:Views/products/productsAdd.ejs
+          <input type="text" name="description" id="description" class="form-input description" />
         </div>
         <div class="form-item">
           <p class="form-label">Categorías</p>
           <div class="check-box">
             <div class="check">
-              <input
-                type="checkbox"
-                name="category"
-                id="tacc"
-                class="form-input checkbox"
-              />
+              <input type="checkbox" name="category" id="tacc" class="form-input checkbox" />
               <label for="tacc">Sin tacc</label>
             </div>
             <div class="check">
-              <input
-                type="checkbox"
-                name="category"
-                id="sodio"
-                class="form-input checkbox"
-              />
+              <input type="checkbox" name="category" id="sodio" class="form-input checkbox" />
               <label for="sodio" class="form-label">Bajo en sodio</label>
             </div>
             <div class="check">
-              <input
-                type="checkbox"
-                name="category"
-                id="vegan"
-                class="form-input checkbox"
-              />
+              <input type="checkbox" name="category" id="vegan" class="form-input checkbox" />
               <label for="vegan" class="form-label">Apto vegano</label>
             </div>
             <div class="check">
-              <input
-                type="checkbox"
-                name="category"
-                id="vegetariano"
-                class="form-input checkbox"
-              />
+              <input type="checkbox" name="category" id="vegetariano" class="form-input checkbox" />
               <label for="vegetariano" class="form-label">Vegetariano</label>
             </div>
             <div class="check">
-              <input
-                type="checkbox"
-                name="category"
-                id="postre"
-                class="form-input checkbox"
-              />
+              <input type="checkbox" name="category" id="postre" class="form-input checkbox" />
               <label for="postre" class="form-label">Postre</label>
             </div>
             <div class="check">
-              <input
-                type="checkbox"
-                name="category"
-                id="galleta"
-                class="form-input checkbox"
-              />
+              <input type="checkbox" name="category" id="galleta" class="form-input checkbox" />
               <label for="galleta" class="form-label">Galleta</label>
             </div>
           </div>
@@ -116,5 +65,6 @@
       </form>
     </main>
     <%- include("./../partials/footer.ejs") %>
-  </body>
+</body>
+
 </html>

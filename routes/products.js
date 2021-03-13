@@ -17,7 +17,7 @@ router.get("/productCart", products.cart);
 
 /***PRODUCT create */
 router.get("/productsAdd", products.add);
-router.post("/products", products.new);
+router.post("/", products.new);
 
 /*** GET ONE PRODUCT- MODIFICATION LIST PRODUCTS */
 

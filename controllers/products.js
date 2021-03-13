@@ -46,7 +46,7 @@ const products = {
   },
 
   modification: (req, res) => {
-    res.render("products/modificationListProducts");
+    res.render("products/modificationListProducts", {products:productsJson});
   },
 
   // Edit products of modification list products - form to edit
@@ -58,7 +58,7 @@ const products = {
       return prod.id == prodId;
     });
 
-    res.render("products/productAdd", { product, toThousand });
+    res.render("products/productAdd", { products: productsJson, toThousand });
   },
 
   //Update products of modification list products - method to update
@@ -79,7 +79,7 @@ const products = {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(products));
 
-    res.render("products/modificationListProducts", { product, toThousand });
+    res.render("products/modificationListProducts", { products: productsJson, toThousand });
   },
 
   /*** Delete product of modification list products*/
