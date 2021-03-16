@@ -32,6 +32,7 @@ const products = {
   },
   new: (req, res) => {
     let newProduct = {
+      id: productsJson.lenght + 1,
       nombre: req.body.name,
       foto: req.body.picture,
       precio: req.body.price,

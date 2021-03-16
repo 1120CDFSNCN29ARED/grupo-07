@@ -201,6 +201,8 @@
 .sucursales {
   padding: 10px;
   margin-top: 60px;
+  background-image: url("/img/dots3.png");
+  background-repeat: repeat-x;
 }
 .sucursales .h2 {
   text-align: center;
