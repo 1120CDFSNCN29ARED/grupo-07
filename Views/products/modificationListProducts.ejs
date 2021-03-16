@@ -21,8 +21,8 @@
         <article class="contenedor-productos">
           <% for (let productsJson of products) {%>
             <div class="producto">
-              <a href="<%= productsJson.id %>">
-                <img src="/img/products/<%= productsJson.image %>" width="160" height="160" />
+             <!-- <a href= <%# productsJson.id %> />-->
+                <img src= <%= productsJson.image %> width="160" height="160" />
             </div>
             <div class="detalle">
               <h2>Nombre</h2>
@@ -47,7 +47,7 @@
               <form method="POST" action="/modificationListProducts/<%= productsJson.id %>?_method=DELETE">
                 <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
               </form>
-              </a>
+           <!--  </a>--> 
             </div>
             <% } %>
         </article>

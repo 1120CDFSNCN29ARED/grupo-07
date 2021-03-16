@@ -1,3 +1,4 @@
+// ************ Require's ************
 const { render } = require("ejs");
 const fs = require("fs");
 const path = require("path");
@@ -34,7 +35,7 @@ const products = {
     let newProduct = {
       id: productsJson.lenght + 1,
       nombre: req.body.name,
-      foto: req.body.picture,
+      foto: req.file.filename,
       precio: req.body.price,
       marca: req.body.brand,
       descripcion: req.body.description,
@@ -42,12 +43,14 @@ const products = {
     };
 
     productsJson.push(newProduct);
+
     fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
-  res.redirect("/");
+
+    res.redirect("/");
   },
 
   modification: (req, res) => {
-    res.render("products/modificationListProducts", {products:productsJson});
+    res.render("products/modificationListProducts", { products: productsJson });
   },
 
   // Edit products of modification list products - form to edit
@@ -80,7 +83,10 @@ const products = {
 
     fs.writeFileSync(productsFilePath, JSON.stringify(products));
 
-    res.render("products/modificationListProducts", { products: productsJson, toThousand });
+    res.render("products/modificationListProducts", {
+      products: productsJson,
+      toThousand,
+    });
   },
 
   /*** Delete product of modification list products*/
