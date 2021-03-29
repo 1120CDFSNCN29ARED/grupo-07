@@ -2,6 +2,7 @@
 const express = require("express");
 const path = require("path");
 const methodOverride = require("method-override");
+const session = require("express-session");
 
 // ************ express() ************
 const app = express();
@@ -19,6 +20,8 @@ app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+app.use(session({ secret: " huerto secreto" }));
 
 // ************ Route System require and use() ************
 const productsRoutes = require("./routes/products"); // Rutas /products

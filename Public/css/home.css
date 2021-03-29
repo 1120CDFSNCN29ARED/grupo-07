@@ -199,7 +199,7 @@
 
 /*SECCION SUCURSALES*/
 .sucursales {
-  padding: 10px;
+  /* padding: 10px;*/
   margin-top: 60px;
   background-image: url("/img/dots3.png");
   background-repeat: repeat-x;
@@ -215,7 +215,7 @@
   display: flex;
   flex-wrap: wrap;
   border-bottom: solid 1px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px;*/
 }
 
 .sucursal-image {
@@ -229,20 +229,20 @@
   margin: auto;
 }
 
+.sucursal-item .p {
+  font-weight: bold;
+}
+
 /*RESEÑAS*/
 
 .reseñas .h2 {
-  text-align: center;
-  margin-top: 60px;
-  color: #0c5d5e;
+  display: none;
 }
 
 .reseñas img {
-  width: 100%;
-  position: relative;
-  margin-bottom: 0px;
-  padding-bottom: 60px;
+  display: none;
 }
+
 @media (min-width: 760px) {
   .product-article {
     width: 30%;
@@ -310,6 +310,20 @@
     transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  .reseñas .h2 {
+    display: initial;
+    margin-top: 60px;
+    margin-left: 330px;
+    color: #0c5d5e;
+  }
+  .reseñas img {
+    display: initial;
+    width: 90%;
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+    margin-left: 50px;
   }
 }
 
