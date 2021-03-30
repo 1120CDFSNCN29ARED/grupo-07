@@ -35,6 +35,26 @@
   color: #0c5d5e;
 }
 
+.title-vendidos {
+  position: relative;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title {
+  display: block;
+  flex: 1;
+  height: 2px;
+  opacity: 0.1;
+  background-color: #0c5d5e;
+}
+
 .contenedor-masVendidos {
   padding: 10px;
   border: 2px solid #0c5d5e;
@@ -46,6 +66,7 @@
 .contenedor-masVendidos img {
   width: 100%;
   text-align: center;
+  box-shadow: 20px 30px 40px 0px rgb(0 0 0 / 20%);
 }
 
 @media (min-width: 760px) {

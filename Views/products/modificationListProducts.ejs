@@ -23,7 +23,7 @@
             <div class="producto">
              <!-- <a href= <%# productsJson.id %> />-->
                 <img src= <%= productsJson.image %> width="160" height="160" />
-            </div>
+            
             <div class="detalle">
               <h2>Nombre</h2>
               <p>
@@ -47,6 +47,7 @@
               <form method="POST" action="/modificationListProducts/<%= productsJson.id %>?_method=DELETE">
                 <button type="submit"><i class="fas fa-times-circle"></i>Eliminar</button>
               </form>
+              </div>
            <!--  </a>--> 
             </div>
             <% } %>

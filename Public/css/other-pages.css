@@ -46,7 +46,8 @@
   margin: auto;
   text-align: center;
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-size: 14px;
+  width: 55%;
 }
 
 .shop i {
@@ -137,8 +138,8 @@ iframe {
     margin-left: 100px;
   }
 
-  .sucursal-article p {
-    font-size: 18px;
+  .sucursal-item p {
+    font-size: 16px;
   }
 
   .shop i {
@@ -201,8 +202,8 @@ iframe {
     margin-left: 60px;
   }
 
-  .sucursal-article p {
-    font-size: 20px;
+  .sucursal-item p {
+    font-size: 18px;
   }
 
   .shop i {

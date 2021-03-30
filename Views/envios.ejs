@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="/css/forms.css" />
     <link rel="stylesheet" href="/css/other-pages.css" />
   </head>
+
   <body>
     <%- include ("./partials/header.ejs") %>
     <main class="main-container">
@@ -16,33 +17,48 @@
       </section>
       <div class="sucursales-container">
         <article class="sucursal-article">
-          <img src="/img/sucursal-1.png" alt="sucursal1" />
+          <img
+            src="/img/sucursal-1.png"
+            width="300"
+            height="300"
+            alt="sucursal1"
+          />
           <div class="sucursal-item">
             <p>Cosme 1380.</p>
             <p>Telefono: 1385782</p>
-            <p>Horario de atención: Lun a Vie 9:00 a 19:00hs</p>
+            <p>Horario de atención: Lunes a Viernes 9:00 a 19:00hs</p>
           </div>
           <div class="shop">
             <i class="fas fa-store-alt"></i>
           </div>
         </article>
         <article class="sucursal-article">
-          <img src="/img/sucursal-2.png" alt="sucursal2" />
+          <img
+            src="/img/sucursal-2.png"
+            width="300"
+            height="300"
+            alt="sucursal2"
+          />
           <div class="sucursal-item">
             <p>Fulanito 125</p>
             <p>Telefono: 4892471</p>
-            <p>Horario de atención: Lun a Vie 9:00 a 19:00hs</p>
+            <p>Horario de atención: Lunes a Viernes 9:00 a 19:00hs</p>
           </div>
           <div class="shop">
             <i class="fas fa-store-alt"></i>
           </div>
         </article>
         <article class="sucursal-article">
-          <img src="/img/sucursal-3.png" alt="sucursal3" />
+          <img
+            src="/img/sucursal-3.png"
+            width="300"
+            height="300"
+            alt="sucursal3"
+          />
           <div class="sucursal-item">
             <p>Calle Falsa 123</p>
             <p>Telefono: 9876424</p>
-            <p>Horario de atención: Lun a Vie 9:00 a 19:00hs</p>
+            <p>Horario de atención: Lunes a Viernes 9:00 a 19:00hs</p>
           </div>
           <div class="shop">
             <i class="fas fa-store-alt"></i>
@@ -59,24 +75,46 @@
         <div class="usuario"></div>
         <label class="perfil">Zona de repartos</label>
         <select name="perfil" id="perfil">
-          <option value="domicilio">Agronomia(CABA)</option>
-          <option value="domicilio">Almagro(CABA)</option>
-          <option value="domicilio">Balvanera(CABA)</option>
-          <option value="domicilio">Belgrano(CABA)</option>
-          <option value="domicilio">Boedo(CABA)</option>
-          <option value="domicilio">Caballito(CABA)</option>
-          <option value="domicilio">Chacarita(CABA)</option>
-          <option value="domicilio">Colegiales(CABA)</option>
-          <option value="domicilio">Flores(CABA)</option>
-          <option value="domicilio">Floresta(CABA)</option>
-          <option value="domicilio">Martinez(CABA)</option>
-          <option value="domicilio">Monserrat(CABA)</option>
-          <option value="domicilio">Monte Castro(CABA)</option>
-          <option value="domicilio">Nuñez(CABA)</option>
-          <option value="domicilio">Palermo(CABA)</option>
-          <option value="domicilio">Paternal(CABA)</option>
-          <option value="domicilio">Parque Chas(CABA)</option>
-          <option value="domicilio">Parque Avellaneda(CABA)</option>
+          <option value="domicilio">Agronomia</option>
+          <option value="domicilio">Almagro</option>
+          <option value="domicilio">Balvanera</option>
+          <option value="domicilio">Belgrano</option>
+          <option value="domicilio">Boedo</option>
+          <option value="domicilio">Caballito</option>
+          <option value="domicilio">Chacarita</option>
+          <option value="domicilio">Colegiales</option>
+          <option value="domicilio">Flores</option>
+          <option value="domicilio">Floresta</option>
+          <option value="domicilio">Martinez</option>
+          <option value="domicilio">Monserrat</option>
+          <option value="domicilio">Monte Castro</option>
+          <option value="domicilio">Nuñez</option>
+          <option value="domicilio">Palermo</option>
+          <option value="domicilio">Paternal</option>
+          <option value="domicilio">Parque Chas</option>
+          <option value="domicilio">Parque Avellaneda</option>
+          <option value="domicilio">Parque Patricios</option>
+          <option value="domicilio">Puerto Madero</option>
+          <option value="domicilio">Recoleta</option>
+          <option value="domicilio">Retiro</option>
+          <option value="domicilio">Saavedra</option>
+          <option value="domicilio">San Cristobal</option>
+          <option value="domicilio">San Telmo</option>
+          <option value="domicilio">Velez Sarsfield</option>
+          <option value="domicilio">Versalles</option>
+          <option value="domicilio">Villa Crespo</option>
+          <option value="domicilio">Villa del Parque</option>
+          <option value="domicilio">Villa Devoto</option>
+          <option value="domicilio">Villa general mitre</option>
+          <option value="domicilio">Villa Lugano</option>
+          <option value="domicilio">Villa Luro</option>
+          <option value="domicilio">Villa Ortuzar</option>
+          <option value="domicilio">Villa Pueyrredon</option>
+          <option value="domicilio">Villa Real</option>
+          <option value="domicilio">Villa Riachuelo</option>
+          <option value="domicilio">Villa Santa Rita</option>
+          <option value="domicilio">Villa Soldati</option>
+          <option value="domicilio">Villa Urquiza</option>
         </select>
       </form>
       <section>
@@ -111,13 +149,13 @@
             class="form-input"
           />
         </div>
-         <div class="form-item">
-        <label>Dejanos tu comentario</label>
-        <textarea></textarea>
+        <div class="form-item">
+          <label>Dejanos tu comentario</label>
+          <textarea class="form-input"></textarea>
         </div>
-        <div class="modificar-datos"></div>
-      <button type="submit">Enviar datos</button>
-       <button type="reset">Borrar</button>
+        <div class="modificar-datos">
+          <button type="submit">Enviar datos</button>
+          <button type="reset">Borrar</button>
         </div>
       </form>
     </main>

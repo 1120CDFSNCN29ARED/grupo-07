@@ -24,7 +24,16 @@ main {
   word-spacing: 1px;
 }
 
-.contenedor-productos {
+/*.contenedor-productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: #0c5d5e solid 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}*/
+
+.producto {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,7 +97,6 @@ main {
     border-top: #0c5d5e solid 1px;
     border-bottom: #0c5d5e solid 1px;
     width: 85%;
-    flex-direction: row;
     margin-left: 40px;
     margin-right: 10px;
     margin-top: 10px;
@@ -101,6 +109,10 @@ main {
 
   .detalle {
     display: block;
+  }
+
+  .producto {
+    flex-direction: row;
   }
 
   .producto img {
