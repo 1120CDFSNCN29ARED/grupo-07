@@ -1,5 +1,7 @@
 # DAILY DEL GRUPO 07
 
+https://trello.com/b/94ar6mBq/equipo-7
+
 ## Sprint 1
 
 # Florencia:
@@ -79,3 +81,30 @@
 - Revisión y mejora de estructura y semantica ejs-css.
 - Desarrollo página error.
 - Desarrollo de CRUD /products/:id , /products/:id (put), /products/:id/edit.
+
+## Sprint 5
+
+# Florencia:
+
+- Actualización del tablero de trabajo.
+- Desarrollo retrospectiva y conclusión del sprint 4.
+- Revisión y mejora de estructura y semantica ejs-css.
+- Restructuración de carpetas de views. Creación vistas de usuarios y productos.
+- Desarrolo del formulario de registro con los ítems solicitados.
+- Desarrollo del Log In de usuario: verificación de información enviada por el usuario y redireccionamiento a rutas determinadas.
+- Desarrollo del almacenamiento de datos de los nuevos usuarios en users.json
+- Selección y redireccionamiento de rutas de huéspedes y usuarios.
+- Desarrollo de almacenamiento de la información del usuario en el navegador con la utilización de cookie-parser.
+
+# Lucia:
+
+- Desarrollo retrospectiva y conclusión del sprint 4
+- Creación de archivos de controlador de usuario y rutas de usuario.
+- Creación del almacenamiento de imágenes de los usuarios.
+- Revisión y mejora de estructura y semantica ejs-css.
+- Restructuración de carpetas de views. Creación vistas de usuarios y productos.
+- Restrucuración de carpetas de public.
+- Encriptación de contraseña con brypt.js
+- Desarrollo del formulario de registro que permita la carga de imágenes con Multer para el perfil del usuario.
+- Selección y redireccionamiento de rutas de huéspedes y usuarios.
+- Desarrollo de almacenamiento de la información del usuario en el navegador con la utilización de cookie-parser.

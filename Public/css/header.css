@@ -58,6 +58,7 @@ body {
   top: 27px;
   right: 30px;
   font-size: 18px;
+  letter-spacing: 10px;
 }
 
 .cart-container i,
@@ -94,6 +95,7 @@ body {
 .search .lupa {
   padding: 5px;
 }
+
 /*BARRA DE NAVEGACION*/
 
 .menu-list {
@@ -107,11 +109,13 @@ body {
   top: 0px;
   border: #0a3409 solid 1px;
 }
+
 .menu-container .list {
   list-style-type: none;
   padding: 5px;
   margin-top: 10px;
 }
+
 .menu-container a {
   text-decoration: none;
   color: #0a3409;
@@ -144,19 +148,27 @@ body {
   display: none;
 }
 
-#encabezado {
+.encabezado {
   color: #0a3409;
   background-color: #a0daa9;
   text-align: center;
   font-size: 10px;
   padding: 14px;
   text-indent: 20px;
+  letter-spacing: 1px;
 }
 
+.encabezado a {
+  text-decoration: none;
+  color: #0a3409;
+}
+
+/* Media-Queries */
 @media (min-width: 760px) {
   .menu-list {
     width: 34%;
   }
+
   .search {
     position: absolute;
     top: 10px;
@@ -198,26 +210,30 @@ body {
     color: #ec9f00;
   }
 
-  #encabezado i {
+  .encabezado i {
     padding-right: 5px;
     padding-left: 10px;
   }
-  #encabezado {
+
+  .encabezado {
     font-size: 14px;
     padding: 16px;
     margin-top: -10px;
   }
 }
+
 @media (min-width: 1200px) {
   .search {
     right: 80px;
     width: 30%;
   }
+
   .logo-log {
     text-align: left;
     margin-left: 85px;
   }
-  #encabezado {
+
+  .encabezado {
     font-size: 18px;
     padding: 18px;
     margin-top: -10px;
@@ -227,15 +243,16 @@ body {
     top: 300px;
     margin: 40px;
   }
+
   .header-title .h2 {
     top: 140px;
     margin: 50px;
   }
+
   .heart,
   i:hover {
-    color:#0c5d5e ;
+    color: #0c5d5e;
     transition-property: color;
     transition-duration: 1s;
   }
-}
 }

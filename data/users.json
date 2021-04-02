@@ -1,34 +1,42 @@
 [
-    {"id":1,
-    "first_name":"Gallard",
-    "last_name":"Venediktov",
-    "email":"gvenediktov0@symantec.com",
-    "password":"4NsSJBc","category":"user"
-},{
-    "id":2,
-    "first_name":"Forbes",
-    "last_name":"Kemitt",
-    "email":"fkemitt1@state.gov",
-    "password":"pdSaTnvWLlW2",
-    "category":"user"
-},{
-    "id":3,
-    "first_name":"Caitlin",
-    "last_name":"Kell",
-    "email":"ckell2@uol.com.br",
-    "password":"pDPgbSqXUa",
-    "category":"user"
-},{
-    "id":4,
-    "first_name":"Marcellus",
-    "last_name":"Okker",
-    "email":"mokker3@reference.com",
-    "password":"ZTbcERT",
-    "category":"user"
-},{
-    "id":5,
-    "first_name":"Elly",
-    "last_name":"Mowday",
-    "email":"emowday4@hugedomains.com",
-    "password":"CQUaS8",
-    "category":"user"}]
+  {
+    "id": 1,
+    "first_name": "Gallard",
+    "last_name": "Venediktov",
+    "email": "gvenediktov0@symantec.com",
+    "password": "4NsSJBc",
+    "category": "user"
+  },
+  {
+    "id": 2,
+    "first_name": "Forbes",
+    "last_name": "Kemitt",
+    "email": "fkemitt1@state.gov",
+    "password": "pdSaTnvWLlW2",
+    "category": "user"
+  },
+  {
+    "id": 3,
+    "first_name": "Caitlin",
+    "last_name": "Kell",
+    "email": "ckell2@uol.com.br",
+    "password": "pDPgbSqXUa",
+    "category": "user"
+  },
+  {
+    "id": 4,
+    "first_name": "Marcellus",
+    "last_name": "Okker",
+    "email": "mokker3@reference.com",
+    "password": "ZTbcERT",
+    "category": "user"
+  },
+  {
+    "id": 5,
+    "first_name": "Elly",
+    "last_name": "Mowday",
+    "email": "emowday4@hugedomains.com",
+    "password": "CQUaS8",
+    "category": "user"
+  }
+]

@@ -104,3 +104,15 @@ Teniendo en cuenta los puntos a mejorar en el sprint anterior, creemos que el eq
 Creemos que debemos seguir mejorando las revisiones de código y planear las tareas del proyecto.
 Por otro lado, ya conocemos los estilos de cada una al desarrollar, como también sus fortalezas y debilidades, esto nos permite mejorar la división de las tareas de cada proyecto.
 Otro punto importante, es que hay buena comunicación entre las participantes del equipo lo que ayuda a establecer fácilmente objetivos comunes y que haya colaboración en la realización de los mismos.
+
+## Retrospectiva del Sprint 4
+
+# Keep doing:
+
+# Start doing:
+
+# More of:
+
+# Stop doing:
+
+# Conclusiones:

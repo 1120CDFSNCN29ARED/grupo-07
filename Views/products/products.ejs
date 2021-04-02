@@ -18,7 +18,7 @@
         <div class="product-container">
           <% for (let productsJson of products) {%>
             <article class="product-article">
-              <img src= <%=productsJson.image %> />
+              <img src=<%=productsJson.image %> />
               <div class="favoritos">
                 <i class="fas fa-heart"></i>
               </div>
@@ -31,6 +31,8 @@
               <button class="search-btn"><a href="/products/productDetail/<%= productsJson.id %> ">Comprar</a></button>
             </article>
             <% } %>
+             </section>
+
               <!-- 
               <article class="product-article">
                 <img src="img/icecream.jpg" alt="ice-cream" />
@@ -151,14 +153,14 @@
               </article>
         </div>
          -->
-
-
-              <section >
-                <div class= "title-vendidos">
-                <b class="title"></b>
-                <h3 class="h3">Los más vendidos</h3>
-                <b class="title"></b>
+              <section>
+                <div class="title-vendidos">
+                  <b class="title"></b>
+                  <h1> Los más vendidos</h1>
+                  <b class="title"></b>
                 </div>
+              </section>
+              <section>
                 <article class="contenedor-masVendidos">
                   <img src="/img/products/pepas.png" alt="Pepas organicas" />
                   <div class="contenedor-texto">
@@ -175,13 +177,17 @@
                     <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
                   </div>
                 </article>
-
-                <section class="seleccionar-productos">
-                  <h1>¿Cómo comprar?</h1>
-                  <img src="/img/ayuda.png" alt="help">
-                </section>
               </section>
-      </section>
+              <section>
+                <div class="title-vendidos">
+                  <b class="title "></b>
+                  <h1>¿Cómo comprar?</h1>
+                  <b class="title"></b>
+                </div>
+                <div class="seleccionar-productos">
+                  <img src="/img/ayuda.png" alt="help">
+                </div>
+              </section>
 
       <%- include ("./../partials/footer.ejs") %>
 </body>

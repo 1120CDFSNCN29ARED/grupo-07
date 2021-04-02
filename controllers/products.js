@@ -11,6 +11,7 @@ const toThousand = (n) => {
 };
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
+
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const products = {
@@ -41,7 +42,7 @@ const products = {
       descripcion: req.body.description,
       categoria: req.body.category,
     };
-
+    //faltaria agregar peso,cantidad y descuento
     productsJson.push(newProduct);
 
     fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
@@ -56,7 +57,6 @@ const products = {
   // Edit products of modification list products - form to edit
 
   edit: (req, res) => {
-    const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     const prodId = req.params.id;
     const product = productsJson.find((prod) => {
       return prod.id == prodId;
@@ -68,22 +68,24 @@ const products = {
   //Update products of modification list products - method to update
 
   update: (req, res) => {
-    const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    const prodId = req.params.id;
+    /*  const prodId = req.params.id;
     const product = productsJson.find((prod) => {
       return prod.id == prodId;
-    });
+    });*/
 
     product.nombre = req.body.name;
     product.foto = req.body.picture;
     product.precio = req.body.price;
     product.marca = req.body.brand;
     product.descripcion = req.body.description;
+    // product. = req.body.discount;
+    // product. = req.body.quantity;
+    // product. = req.body.weight;
     product.categoria = req.body.category;
 
-    fs.writeFileSync(productsFilePath, JSON.stringify(products));
+    fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
 
-    res.render("products/modificationListProducts", {
+    res.redirect("products/modificationListProducts", {
       products: productsJson,
       toThousand,
     });
@@ -92,8 +94,6 @@ const products = {
   /*** Delete product of modification list products*/
 
   destroy: (req, res) => {
-    const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
     const productIndex = productsJson.findIndex((prod) => {
       return prod.id == req.params.id;
     });

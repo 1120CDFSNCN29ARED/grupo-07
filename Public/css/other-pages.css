@@ -1,5 +1,4 @@
 /*ENVIOS*/
-
 .sucursales {
   padding: 10px;
 }
@@ -77,8 +76,7 @@ iframe {
   font-family: "Poppins", sans-serif;
 }
 
-/*AYUDA*/
-
+/*AYUDA y productCart*/
 .help-container {
   background-color: #fef9ec;
   margin-left: auto;
@@ -104,7 +102,6 @@ iframe {
 }
 
 /*ERROR*/
-
 .error-container {
   display: flex;
   flex-direction: column;
@@ -119,6 +116,7 @@ iframe {
   width: 100%;
 }
 
+/* Media-Queries */
 @media (min-width: 760px) {
   /*envios*/
   .sucursales h1 {
@@ -159,7 +157,7 @@ iframe {
     margin-left: 155px;
   }
 
-  /*ayuda*/
+  /*ayuda Y productCart*/
   .seleccionar-productos img {
     left: 2%;
   }
@@ -175,7 +173,7 @@ iframe {
 }
 
 @media (min-width: 1200px) {
-  /*ayuda*/
+  /*ayuda y productCart*/
 
   .seleccionar-productos img {
     width: 80%;

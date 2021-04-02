@@ -12,6 +12,16 @@
   font-family: "Yusei Magic";
 }
 
+.icon-up {
+  position: fixed;
+  top: 1070px;
+  left: 1130px;
+}
+
+.icon-up img {
+  width: 50px;
+}
+
 /*BOTONES*/
 .search-btn {
   background-color: #ec9f00;
@@ -78,6 +88,7 @@
   font-size: 20px;
 }
 
+/* Media-Queries */
 @media (min-width: 760px) {
   .resenias {
     margin-top: 65px;
@@ -85,6 +96,7 @@
     padding-bottom: 40px;
     width: 50%;
     height: 190px;
+    letter-spacing: 1px;
   }
 
   .resenias .envio {
@@ -96,6 +108,7 @@
     padding-right: 0px;
     margin-top: 20px;
     width: 40%;
+    letter-spacing: 1px;
   }
 
   .registro {
@@ -103,6 +116,7 @@
     top: 173px;
     right: 20px;
     width: 48%;
+    letter-spacing: 1px;
   }
 }
 

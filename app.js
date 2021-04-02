@@ -3,6 +3,8 @@ const express = require("express");
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
+//const cookieParser = require("cookie-parser");
+//const createError = require("http-errors");
 
 // ************ express() ************
 const app = express();
@@ -21,6 +23,8 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+//app.use(cookieParser());
+
 app.use(session({ secret: " huerto secreto" }));
 
 // ************ Route System require and use() ************
@@ -32,7 +36,7 @@ app.use("/products", productsRoutes);
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 
-// catch 404
+// error 404
 app.use((req, res, next) => {
   res.status(404).render("error");
 });
