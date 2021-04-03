@@ -88,6 +88,12 @@
   font-size: 20px;
 }
 
+.icon-up {
+  position: fixed;
+  top: 490px;
+  left: 290px;
+}
+
 /* Media-Queries */
 @media (min-width: 760px) {
   .resenias {
@@ -108,7 +114,6 @@
     padding-right: 0px;
     margin-top: 20px;
     width: 40%;
-    letter-spacing: 1px;
   }
 
   .registro {
@@ -117,6 +122,11 @@
     right: 20px;
     width: 48%;
     letter-spacing: 1px;
+  }
+
+  .icon-up {
+    top: 960px;
+    left: 700px;
   }
 }
 
@@ -133,6 +143,7 @@
 
   .contacto {
     width: 35%;
+    letter-spacing: 1px;
   }
 
   .registro {
@@ -143,11 +154,18 @@
   .redes {
     padding: 25px;
   }
+
   .redes-container {
     padding: 5px;
     display: inline-flex;
   }
+
   .search-btn:hover {
     box-shadow: 2px 2px 5px #0c5d5e;
+  }
+
+  .icon-up {
+    top: 970px;
+    left: 1130px;
   }
 }

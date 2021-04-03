@@ -31,9 +31,9 @@
               <button class="search-btn"><a href="/products/productDetail/<%= productsJson.id %> ">Comprar</a></button>
             </article>
             <% } %>
-             </section>
+      </section>
 
-              <!-- 
+      <!-- 
               <article class="product-article">
                 <img src="img/icecream.jpg" alt="ice-cream" />
                 <div class="favoritos">
@@ -153,41 +153,44 @@
               </article>
         </div>
          -->
-              <section>
-                <div class="title-vendidos">
-                  <b class="title"></b>
-                  <h1> Los más vendidos</h1>
-                  <b class="title"></b>
-                </div>
-              </section>
-              <section>
-                <article class="contenedor-masVendidos">
-                  <img src="/img/products/pepas.png" alt="Pepas organicas" />
-                  <div class="contenedor-texto">
-                    <p class="p">Pepas Organicas, Grun. 160g.</p>
-                    <p class="price">$120</p>
-                    <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-                  </div>
-                </article>
-                <article class="contenedor-masVendidos">
-                  <img src="/img/products/barrita-arroz.png" alt="Barritas de arroz" class="imagen" />
-                  <div class="contenedor-texto">
-                    <p class="p">Barritas de arroz con sabor a coco. Crowie.</p>
-                    <p class="price">$25</p>
-                    <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-                  </div>
-                </article>
-              </section>
-              <section>
-                <div class="title-vendidos">
-                  <b class="title "></b>
-                  <h1>¿Cómo comprar?</h1>
-                  <b class="title"></b>
-                </div>
-                <div class="seleccionar-productos">
-                  <img src="/img/ayuda.png" alt="help">
-                </div>
-              </section>
+      <section class="vegan">
+        <img src="/img/healthy.png" alt="healthy">
+      </section>
+      <section>
+        <div class="title-vendidos">
+          <b class="title"></b>
+          <h1> Los más vendidos</h1>
+          <b class="title"></b>
+        </div>
+      </section>
+      <section>
+        <article class="contenedor-masVendidos">
+          <img src="/img/products/pepas.png" alt="Pepas organicas" />
+          <div class="contenedor-texto">
+            <p class="p">Pepas Organicas, Grun. 160g.</p>
+            <p class="price">$120</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </div>
+        </article>
+        <article class="contenedor-masVendidos">
+          <img src="/img/products/barrita-arroz.png" alt="Barritas de arroz" class="imagen" />
+          <div class="contenedor-texto">
+            <p class="p">Barritas de arroz con sabor a coco. Crowie.</p>
+            <p class="price">$25</p>
+            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
+          </div>
+        </article>
+      </section>
+      <section>
+        <div class="title-vendidos">
+          <b class="title "></b>
+          <h1>¿Cómo comprar?</h1>
+          <b class="title"></b>
+        </div>
+        <div class="seleccionar-productos">
+          <img src="/img/ayuda.png" alt="help">
+        </div>
+      </section>
 
       <%- include ("./../partials/footer.ejs") %>
 </body>

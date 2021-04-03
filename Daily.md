@@ -92,6 +92,7 @@ https://trello.com/b/94ar6mBq/equipo-7
 - Restructuración de carpetas de views. Creación vistas de usuarios y productos.
 - Desarrolo del formulario de registro con los ítems solicitados.
 - Desarrollo del Log In de usuario: verificación de información enviada por el usuario y redireccionamiento a rutas determinadas.
+- Desarrollo del formulario de registro que permita la carga de imágenes con Multer para el perfil del usuario.
 - Desarrollo del almacenamiento de datos de los nuevos usuarios en users.json
 - Selección y redireccionamiento de rutas de huéspedes y usuarios.
 - Desarrollo de almacenamiento de la información del usuario en el navegador con la utilización de cookie-parser.

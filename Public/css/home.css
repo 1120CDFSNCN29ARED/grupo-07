@@ -2,6 +2,7 @@
   background-color: #fef9ec;
   font-size: 14px;
 }
+
 .h2 {
   font-family: "Yusei Magic", sans-serif;
   margin: 0px;
@@ -65,7 +66,7 @@
   color: #fef9ec;
 }
 
-/*SECCION CARROUSEL*/
+/*SECCION CARROUSEL
 .carrousel-conteiner {
   max-width: 100%;
   position: relative;
@@ -85,7 +86,7 @@
 .slide img,
 .slide1 img {
   width: 100%;
-}
+}*/
 
 .pre,
 .sig {
@@ -136,6 +137,10 @@
 
 .dot {
   padding: 5px;
+}
+
+.vegan img {
+  display: none;
 }
 
 /*SECCION QUIENES SOMOS*/
@@ -276,10 +281,17 @@
     top: 50%;
   }
 
+  .vegan img {
+    display: initial;
+    width: 85%;
+    margin-left: 60px;
+  }
+
   .news-article {
     margin-left: 181px;
     margin-right: 181px;
   }
+
   .news-img {
     left: 215px;
   }
@@ -359,6 +371,11 @@
 
   .dot-container {
     left: 45%;
+  }
+
+  .vegan img {
+    width: 75%;
+    margin-left: 130px;
   }
 
   .quienes-somos {

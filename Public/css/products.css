@@ -35,6 +35,10 @@
   color: #0c5d5e;
 }
 
+.vegan img {
+  display: none;
+}
+
 .title-vendidos {
   position: relative;
   display: flex;
@@ -78,6 +82,12 @@
 
 /* Media-Queries */
 @media (min-width: 760px) {
+  .vegan img {
+    display: initial;
+    width: 85%;
+    margin-left: 60px;
+  }
+
   .mas-vendidos .h3 {
     margin-top: 50px;
   }
@@ -115,6 +125,11 @@
 @media (min-width: 1200px) {
   .product-article {
     width: 23%;
+  }
+
+  .vegan img {
+    width: 75%;
+    margin-left: 130px;
   }
 
   .contenedor-masVendidos {

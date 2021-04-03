@@ -29,8 +29,8 @@ body {
 
 .header-logo img,
 .logo-log img {
-  width: 200px;
-  height: 150px;
+  width: 220px;
+  height: 190px;
   text-align: center;
   margin-top: 60px;
   border-radius: 50%;
@@ -46,6 +46,10 @@ body {
   margin: 0px;
 }
 
+.logo-log {
+  padding-bottom: 80px;
+}
+
 .account-container {
   position: absolute;
   top: 30px;
@@ -58,7 +62,6 @@ body {
   top: 27px;
   right: 30px;
   font-size: 18px;
-  letter-spacing: 10px;
 }
 
 .cart-container i,
@@ -107,7 +110,7 @@ body {
   z-index: 10;
   text-align: center;
   top: 0px;
-  border: #0a3409 solid 1px;
+  border: #0c5d5e solid 1px;
 }
 
 .menu-container .list {
@@ -198,7 +201,7 @@ body {
     font-weight: 600;
     color: #0c5d5e;
     position: absolute;
-    top: 165px;
+    top: 230px;
     margin: 30px;
   }
 
@@ -245,8 +248,12 @@ body {
   }
 
   .header-title .h2 {
-    top: 140px;
+    top: 210px;
     margin: 50px;
+  }
+
+  .cart-container {
+    letter-spacing: 10px;
   }
 
   .heart,
