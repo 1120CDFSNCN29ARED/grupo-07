@@ -27,7 +27,7 @@ const products = require("../controllers/products");
 router.get("/", products.list);
 
 /***GET ONE PRODUCT - detail */
-router.get("/productDetail/:id", products.detail);
+router.get("/productDetail/:id/", products.detail);
 
 /***PRODUCT CART */
 router.get("/productCart", products.cart);
@@ -38,7 +38,7 @@ router.post("/", upload.single("picture"), products.new);
 
 /*** GET ONE PRODUCT- MODIFICATION LIST PRODUCTS */
 
-router.get("/modificationListProducts", products.modification);
+router.get("/modificationListProducts", products.modificationList);
 
 /*** EDIT ONE PRODUCT */
 router.get("/modificationListProducts/:id/edit", products.edit);
