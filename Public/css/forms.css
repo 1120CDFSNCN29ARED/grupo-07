@@ -1,3 +1,4 @@
+/* Register y LogIn*/
 .main-container {
   background-color: #fef9ec;
 }
@@ -88,7 +89,7 @@
   color: #0c5d5e;
 }
 
-/* PRODUCT CHARGE */
+/* PRODUCT ADD */
 .check {
   display: inline-flex;
   width: 49%;
@@ -97,6 +98,16 @@
 .check .form-input {
   width: 10%;
   margin-right: 5px;
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /*USER PROFILE*/

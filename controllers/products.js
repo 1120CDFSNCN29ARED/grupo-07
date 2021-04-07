@@ -19,12 +19,12 @@ const products = {
     res.render("products/products", { products: productsJson });
   },
   detail: (req, res) => {
-    let detalle = productsJson.find((prod) => prod.id == req.params.id);
-    // if (detalle == null){
-    // res.render("error");
-    // }else{
-    res.render("products/productDetail", { detalle });
-    // }
+    const detalle = productsJson.find((prod) => prod.id == req.params.id);
+    if (detalle == null) {
+      res.render("error");
+    } else {
+      res.render("products/productDetail", { detalle });
+    }
   },
   cart: (req, res) => {
     res.render("products/productCart");
@@ -50,7 +50,7 @@ const products = {
     res.redirect("/");
   },
 
-  modification: (req, res) => {
+  modificationList: (req, res) => {
     res.render("products/modificationListProducts", { products: productsJson });
   },
 

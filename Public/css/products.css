@@ -80,6 +80,36 @@
   box-shadow: 20px 30px 40px 0px rgb(0 0 0 / 20%);
 }
 
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.share-title {
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+.share ul li {
+  background-color: rgba(12, 93, 94, 0.4);
+  padding: 15px;
+  width: 70%;
+}
+
+.share ul li {
+  display: inline-block;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
 /* Media-Queries */
 @media (min-width: 760px) {
   .vegan img {
