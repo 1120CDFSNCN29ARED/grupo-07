@@ -23,6 +23,9 @@ const upload = multer({ storage });
 // ************ Controller Require ************
 const products = require("../controllers/products");
 
+// Middelware Required
+const usuarioMiddleware = require("../middleware/middelwareUsuario");
+
 /*** GET ALL PRODUCTS ***/
 router.get("/", products.list);
 
@@ -30,7 +33,7 @@ router.get("/", products.list);
 router.get("/productDetail/:id/", products.detail);
 
 /***PRODUCT CART */
-router.get("/productCart", products.cart);
+router.get("/productCart", usuarioMiddleware, products.cart);
 
 /***PRODUCT CREATE - form creation and processing form */
 router.get("/productsAdd", products.add);
