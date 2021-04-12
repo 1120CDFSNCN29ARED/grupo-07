@@ -108,30 +108,28 @@
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="lactosa"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label">Sin lactosa</label>
+              <label for="lactosa" class="form-label">Sin lactosa</label>
             </div>
             <div class="check">
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="azucar"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label"
-                >Sin azúcar agregada</label
-              >
+              <label for="azucar" class="form-label">Sin azúcar agregada</label>
             </div>
             <div class="check">
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="organico"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label">Orgánico</label>
+              <label for="organico" class="form-label">Orgánico</label>
             </div>
             <div class="check">
               <input
@@ -165,19 +163,19 @@
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="snacks"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label">Snacks</label>
+              <label for="snacks" class="form-label">Snacks</label>
             </div>
             <div class="check">
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="untables"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label"
+              <label for="untables" class="form-label"
                 >Untables y Conservas</label
               >
             </div>
@@ -185,19 +183,19 @@
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="pasta"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label">Pastas y Harinas</label>
+              <label for="pasta" class="form-label">Pastas y Harinas</label>
             </div>
             <div class="check">
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="bebibles"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label"
+              <label for="bebibles" class="form-label"
                 >Bebibles e Infusiones</label
               >
             </div>
@@ -205,10 +203,10 @@
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="cereales"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label"
+              <label for="cereales" class="form-label"
                 >Cereales, Granolas y Frutos secos</label
               >
             </div>
@@ -216,10 +214,10 @@
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="legumbres"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label"
+              <label for="legumbres" class="form-label"
                 >Legumbres y Semillas</label
               >
             </div>
@@ -227,18 +225,20 @@
               <input
                 type="checkbox"
                 name="category"
-                id="galleta"
+                id="congelados"
                 class="form-input checkbox"
               />
-              <label for="galleta" class="form-label">Congelados</label>
+              <label for="congelados" class="form-label">Congelados</label>
             </div>
           </div>
         </div>
         <button type="submit" class="search-btn">Guardar</button>
-        <button class="search-btn" type="button" disabled>
-          <span class="spinner-grow" role="status" aria-hidden="true"></span>
-          Guardando...
-        </button>
+        <div>
+          <button class="search-btn" type="button" disabled>
+            <span class="spinner-grow" role="status" aria-hidden="true"></span>
+            Guardando...
+          </button>
+        </div>
       </form>
     </main>
     <%- include("./../partials/footer.ejs") %>

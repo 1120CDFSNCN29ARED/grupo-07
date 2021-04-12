@@ -34,7 +34,7 @@ const users = require("../controllers/users");
 
 router.get("/register", middlewareHuesped, users.register);
 
-router.post("/register", upload.single("picture"), users.newUser);
+router.post("/register", upload.single("picture"), users.processRegister);
 
 router.get("/logIn", users.login);
 

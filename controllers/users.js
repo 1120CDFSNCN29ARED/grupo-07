@@ -1,18 +1,29 @@
 const { render } = require("ejs");
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 // const { delete } = require("../routes/main");
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
-
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const UserModels = require("../models/users");
+const upload = require("../middlewares/multerMiddleware");
 
 const users = {
   register: (req, res) => {
     res.render("users/register");
   },
-  newUser: (req, res) => {
+
+  processRegister: (req, res) => {
+    /* const resultValidation = validationResult(req);
+
+     if (resultValidation.errors.lenght > 0) {
+       return.res.render("users/register")
+     }*/
+
+    let userInData = UserModels.findByField("email", req.body.email);
+
     let newRegister = {
       nombre: req.body.name,
       apellido: req.body.surname,
@@ -33,6 +44,7 @@ const users = {
 
     res.redirect("/");
   },
+
   login: (req, res) => {
     res.render("users/logIn");
   },
@@ -56,6 +68,10 @@ if (usuarioALoguearse == null){
   profile: (req, res) => {
     res.render("users/userProfile", {usuario: req.session.usuarioLogueado});
   },
+
+  modificationProfle: (req, res) => {},
 };
+
+//console.log(usersJson);
 
 module.exports = users;

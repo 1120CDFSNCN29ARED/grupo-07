@@ -48,6 +48,6 @@ router.get("/modificationListProducts/:id/edit", products.edit);
 router.put("/modificationListProducts/:id", products.update);
 
 /*** DELETE ONE PRODUCT */
-router.delete("/modificationListProducts/:id", products.destroy);
+router.delete("/modificationListProducts/:id/", products.destroy);
 
 module.exports = router;
