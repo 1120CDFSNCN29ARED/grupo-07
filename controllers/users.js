@@ -2,6 +2,7 @@ const { render } = require("ejs");
 const fs = require("fs");
 const path = require("path");
 const { validationResult } = require("express-validator");
+// const { delete } = require("../routes/main");
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
 
@@ -17,7 +18,7 @@ const users = {
       apellido: req.body.surname,
       foto: req.body.picture.filename,
       email: req.body.email,
-      contraseña: bcryptjs.hashSync(req.body.password, 10),
+      contraseña: bcrypt.hashSync(req.body.password, 10),
       calle: req.body.street,
       piso: req.body.floor,
       entreCalles: req.body.between - street,
@@ -36,39 +37,24 @@ const users = {
     res.render("users/logIn");
   },
   processLogIn: (req, res) => {
-    let errors = validationResult(req);
-    if (error.isEmpty()) {
-      let userJson = fs.readFileSync(usersJson);
-      let user;
-      if (userJson == "") {
-        user = [];
-      } else {
-        user = JSON.Parese(userJson);
-      }
-      for (i = 0; i > user.lenght; i++) {
-        if (
-          user[i].email == req.body.email &&
-          bcrypt.compareSync(req.body.password, user[i].password)
-        ) {
-          let usuarioALoguearse = user[i];
-        } else if (usuarioALoguearse == undefined) {
-          return res.render("users/logIn", {
-            errors: [{ msg: "credenciales inválidas" }],
-          });
-        }
-        req.session.usuarioLogueado = usuarioALoguearse;
-        //cookie
-        if (req.body.recordame != undefined) {
-          res.cookie("recordame", usuarioLogueado.email, { maxAge: 180000 });
-        }
-        res.render("/");
-      }
-    } else {
-      return res.render("login", { errors: errors.errors });
-    }
+let usuarioALoguearse = await User.findOne({where: {email: req.body.email}});
+if (usuarioALoguearse) {
+  let passwordOK = bcrypt.compareSync(req.body.password, usuarioALoguearse.password);
+  if (passwordOK){
+    // delete usuarioALoguearse.password;
+    req.session.usuarioLogueado = usuarioALoguearse;
+    res.redirect("/", {usuario: req.session.usuarioLogueado})
+  }
+}
+if (usuarioALoguearse == null){
+  return res.render("users/logIn", {
+    errors: {
+    msg: "Emial o contraseña incorrectos"
+  }});
+}
   },
   profile: (req, res) => {
-    res.render("users/userProfile");
+    res.render("users/userProfile", {usuario: req.session.usuarioLogueado});
   },
 };
 

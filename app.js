@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 //const createError = require("http-errors");
+require("dotenv").config();
 
 // ************ express() ************
 const app = express();
@@ -26,7 +27,13 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(session({ secret: " huerto secreto" }));
+app.use(
+  session({
+    secret: " huerto secreto",
+    resave: false,
+    saveUninitialized: false,
+  })
+);
 
 // ************ Route System require and use() ************
 const productsRoutes = require("./routes/products"); // Rutas /products

@@ -5,6 +5,8 @@ const router = express.Router();
 const path = require("path");
 const multer = require("multer");
 const userValidation = require("../middleware/userValidation");
+const middlewareHuesped = require("../middleware/middlewarehuesped");
+const usuarioMiddleware = require("../middleware/middelwareUsuario");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -30,7 +32,7 @@ console.log(check);
 // ************ Controller Require ************
 const users = require("../controllers/users");
 
-router.get("/register", users.register);
+router.get("/register", middlewareHuesped, users.register);
 
 router.post("/register", upload.single("picture"), users.newUser);
 
@@ -38,6 +40,6 @@ router.get("/logIn", users.login);
 
 router.post("/logIn", userValidation, users.processLogIn);
 
-router.get("/userProfile", users.profile);
+router.get("/userProfile", usuarioMiddleware, users.profile);
 
 module.exports = router;
