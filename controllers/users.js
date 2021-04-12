@@ -55,6 +55,9 @@ if (usuarioALoguearse) {
   if (passwordOK){
     // delete usuarioALoguearse.password;
     req.session.usuarioLogueado = usuarioALoguearse;
+    if (req.body.recordame != undefined) {
+      res.cookie("recordame", usuarioLogueado.email, { maxAge: 1200000 });
+    }
     res.redirect("/", {usuario: req.session.usuarioLogueado})
   }
 }
