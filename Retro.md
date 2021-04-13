@@ -109,10 +109,66 @@ Otro punto importante, es que hay buena comunicación entre las participantes de
 
 # Keep doing:
 
+- Trabajar continuamente con el proyecto.
+- Comunicación con el equipo.
+- Asegurarse que los requisitos del sprint se cumplen.
+- Comunicarse por Discord para todos los temas vinculados al proyecto.
+- Armar checklaps con fecha de entrega para particionar el trabajo.
+- Planear con tiempo el sprint.
+- Hacer la división de tareas en el arranque del sprint y dejarlo asentando en el tablero.
+
 # Start doing:
+
+- Planear el estilo del equipo.
+- Generar un calendario semanal de reuniones para el equipo.
+- Administrar el tiempo.
+- Planear las reuniones.
+- Matías: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
 
 # More of:
 
+- Organizacion en trello: Dejar bien claras los puntos a realiza cada uno.
+- Revisar en conjunto el código.
+- Florencia: Chequear trello periódicamente .
+- Lucía: Mejorar los tiempos de realización de las tareas.
+
 # Stop doing:
 
+- No hacer a último momento las tareas porque no hay posibilidad de tener revisión.
+
 # Conclusiones:
+
+Creemos que no tuvimos muchas modificaciones de las categorias stop doing, more of, start doing y keep doing en cuanto al sprint anterior (sprint 3). Si destacamos que necesitamos seguir mejorando las revisiones de código y planeamiento de las tareas del proyecto.
+
+## Retrospectiva del Sprint 5
+
+# Keep doing:
+
+- Asegurarse que todos los requisitos del sprint se cumplan antes de entregar el proyecto.
+- Armar checklaps con fecha de entrega para particionar el trabajo.
+- Planear con tiempo el sprint para mejorar con el desarrollo en conjunto.
+- Hacer la división de tareas en el arranque del sprint y dejarlo asentando en el tablero.
+- Planear las reuniones.
+
+# Start doing:
+
+- Crear una sección en el tablero con tareas para mejorar aspectos del proyecto que no sean del sprint vigente y con tiempos de realización.
+- Planear el estilo del equipo.
+- Matías: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
+
+# More of:
+
+- Organizacion en trello: Dejar bien claras los puntos a realiza cada uno.
+- Trabajar continuamente con el proyecto.
+- Mejorar la comunicación del equipo.
+- Revisar en conjunto el código.
+- Generar un calendario semanal de reuniones para el equipo.
+- Mejorar el tiempo de realización de las tareas.
+
+# Stop doing:
+
+- No hacer a último momento las tareas porque no hay posibilidad de tener revisión.
+
+# Conclusiones:
+
+llegamos a la conclusión de que debemos seguir mejorando en la comunicación en el equipo y realizar un calendario semanal de las reuniones del equipo para poder agilizar en el desarrollo del proyecto. Además, creemos que tenemos que mejorar en los tiempos de entrega de las tareas y trabajar continuamente en el proyecto.
