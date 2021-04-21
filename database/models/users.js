@@ -39,3 +39,10 @@ module.exports = (sequelize, datatype) => {
   const User = sequelize.define(alias, col, config);
   return User;
 };
+
+User.associate = function (models) {
+  User.belongsTo(models.Cart, {
+    foreingKey: "user_id",
+    as: "cart",
+  });
+};
