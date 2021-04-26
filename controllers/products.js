@@ -1,7 +1,9 @@
 // ************ Require's ************
-const { render } = require("ejs");
+const { render, promiseImpl } = require("ejs");
 const fs = require("fs");
 const path = require("path");
+//const db= require("../../database/models");
+//const Product = db.Product;
 
 const toThousand = (n) => {
   return n.toLocaleString("es-AR", {
@@ -16,7 +18,10 @@ const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const products = {
   list: (req, res) => {
+    //  const products = product.findAll();
+    //  promise.then((products) => {
     res.render("products/products", { products: productsJson });
+    //  });
   },
   detail: (req, res) => {
     const detalle = productsJson.find((prod) => prod.id == req.params.id);
@@ -57,7 +62,7 @@ const products = {
     res.render("products/modificationListProducts");
   },
 
-  //Edit products of modification list products - form to edit -------FALTA REVISAR
+  //Edit products of modification list products - form to edit
 
   edit: (req, res) => {
     const prodId = req.params.id;
@@ -106,8 +111,5 @@ const products = {
     res.redirect("products/modificationListProducts");
   },
 };
-
-//console.log(products.update);
-//console.log(products.edit(2)); NO ME TRAE EL PRODUCTO
 
 module.exports = products;

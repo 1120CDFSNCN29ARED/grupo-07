@@ -7,8 +7,6 @@ const { validationResult } = require("express-validator");
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-const UserModels = require("../models/users");
-const upload = require("../middleware/multerMiddleware");
 
 const users = {
   register: (req, res) => {
@@ -81,6 +79,11 @@ const users = {
       });
     }
   },
+
+  userProfile: (req, res) => {
+    res.render("users/user");
+  },
+
   profile: (req, res) => {
     res.render("users/userProfile", { usuario: req.session.usuarioLogueado });
   },
@@ -105,11 +108,7 @@ const users = {
     fs.writeFileSync(usersFilePath, JSON.stringify(usersJson));
 
     res.redirect("/");
-
-    //falta agregar para eliminar usuario
   },
 };
-
-//console.log(usersJson);
 
 module.exports = users;

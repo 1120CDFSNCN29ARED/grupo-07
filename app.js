@@ -38,7 +38,7 @@ app.use(
 // ************ Route System require and use() ************
 const productsRoutes = require("./routes/products"); // Rutas /products
 const mainRoutes = require("./routes/main"); // Rutas main
-const usersRoutes = require("./routes/users"); // Rutas users
+const usersRoutes = require("./routes/users"); // Rutas /users
 
 app.use("/products", productsRoutes);
 app.use("/", mainRoutes);

@@ -7,7 +7,7 @@ const router = express.Router();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const folder = path.join(__dirname, "../../public/img/products");
-    if (file.mimetype != "image/jpeg") {
+    if (file.mimetype != "image/jpeg" || file.mimetype != "image/png") {
       return cb(new Error("Solo se aceptan imagenes en jpg o png"));
     }
     cb(null, folder);

@@ -109,3 +109,20 @@ https://trello.com/b/94ar6mBq/equipo-7
 - Desarrollo del formulario de registro que permita la carga de imágenes con Multer para el perfil del usuario.
 - Selección y redireccionamiento de rutas de huéspedes y usuarios.
 - Desarrollo de almacenamiento de la información del usuario en el navegador con la utilización de cookie-parser.
+
+## Sprint 6
+
+# Florencia
+
+- Diseño diagrama de tablas.
+- CRUD usuario - editar y CRUD usuario - crear
+- Creación modelo de carrito y de usuario
+- Formación de relaciones entre tablas
+- Creación de las tablas en la estructura
+- Creación de los campos de las tablas
+
+# Lucia
+
+- Diseño diagrama de tablas
+- Creación view de perfil de usuario
+- Creación modelo de productos

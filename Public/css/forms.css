@@ -125,6 +125,22 @@
   word-spacing: 1px;
 }
 
+/*USER*/
+
+.information-container {
+  text-align: justify;
+  width: 80%;
+  margin-left: 30px;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(12, 93, 94, 0.4);
+}
+
+.gif-fruit img {
+  display: none;
+}
+
 .pedidos {
   margin-top: 80px;
 }
@@ -161,7 +177,21 @@
     margin-bottom: 10px;
   }
 
-  /*USER PROFILE*/
+  /*USER*/
+
+  .information-container {
+    margin-left: 65px;
+    padding-left: 100px;
+  }
+
+  .gif-fruit img {
+    display: initial;
+    width: 13%;
+    padding: 10px;
+    padding-top: 30px;
+    margin-left: 50px;
+  }
+
   .categorias .p {
     margin-left: 100px;
     margin-right: 60px;
@@ -170,7 +200,6 @@
 @media (min-width: 1200px) {
   .form-menu {
     width: 50%;
-    /* height: 30vh;*/
   }
 
   .check {
@@ -181,8 +210,32 @@
     left: 270px;
   }
 
-  /*USER PROFILE*/
+  /*USER*/
+  .gif-fruit img {
+    display: initial;
+    width: 16%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 25px;
+  }
+
+  .information-container {
+    text-align: justify;
+    width: 60%;
+    margin-left: 250px;
+    padding-left: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(12, 93, 94, 0.4);
+  }
+
+  .information {
+    font-size: 16px;
+  }
+
   .categorias .p {
     margin-left: 150px;
+    font-size: 16px;
   }
 }
