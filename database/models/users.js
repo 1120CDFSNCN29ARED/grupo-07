@@ -1,10 +1,10 @@
 const { Sequelize } = require("sequelize");
 
-module.exports = (sequelize, datatype) => {
+module.exports = (sequelize, datatypes) => {
   const alias = "User";
   const col = {
     id: {
-      type: datatype.INTEGRER,
+      type: datatypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -12,24 +12,22 @@ module.exports = (sequelize, datatype) => {
     surname: Sequelize.STRING(30),
     picture: Sequelize.STRING(500),
     email: {
-      type: datatype.STRING(100),
+      type: datatypes.STRING(100),
       allowNull: false,
     },
     pass: {
-      type: datatype.STRING(50),
+      type: datatypes.STRING(50),
       allowNull: false,
     },
     street: Sequelize.STRING(20),
-    floorLevel: Sequelize.INTEGRER,
+    floorLevel: Sequelize.INTEGER,
     betweenStreet: Sequelize.STRING(100),
     locality: Sequelize.STRING(20),
     cp: Sequelize.TINYINT(4),
-    phone: Sequelize.INTEGRER,
+    phone: Sequelize.INTEGER,
     birthday: Sequelize.DATE,
     usercategory_id: {
-      type: datatype.TINYINT(2),
-      reference: Usercategory,
-      key: id,
+      type: datatypes.TINYINT(2),
     },
   };
   const config = {
@@ -37,12 +35,12 @@ module.exports = (sequelize, datatype) => {
     timestamps: false,
   };
   const User = sequelize.define(alias, col, config);
-  return User;
-};
 
-User.associate = function (models) {
-  User.belongsTo(models.Cart, {
-    foreingKey: "user_id",
-    as: "cart",
-  });
+  User.associate = function (models) {
+    User.belongsTo(models.Cart, {
+      foreingKey: "user_id",
+      as: "cart",
+    });
+  };
+  return User;
 };

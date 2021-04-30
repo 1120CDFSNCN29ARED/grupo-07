@@ -6,19 +6,15 @@ module.exports = (sequelize, dataType) => {
   const alias = "Cart";
   const col = {
     id: {
-      type: dataType.INTEGRER,
+      type: dataType.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     user_id: {
-      type: dataType.INTEGRER,
-      reference: users,
-      key: id,
+      type: dataType.INTEGER,
     },
     productCart_id: {
-      type: dataType.INTEGRER,
-      reference: productCart,
-      key: id,
+      type: dataType.INTEGER,
     },
   };
   const config = {
@@ -26,19 +22,19 @@ module.exports = (sequelize, dataType) => {
     timestamps: false,
   };
   const Cart = sequelize.define(alias, col, config);
-  return Cart;
-};
 
-Cart.associate = function (models) {
-  Cart.hasMany(models.User, {
-    foreignKey: "user_id",
-    as: "user",
-  });
-  Cart.belongsToMany(models.Product, {
-    as: "products",
-    through: "productCart",
-    foreignKey: "cart_id",
-    otherKey: "product_id",
-    timestamps: false,
-  });
+  Cart.associate = function (models) {
+    Cart.hasMany(models.User, {
+      foreignKey: "user_id",
+      as: "user",
+    });
+    Cart.belongsToMany(models.Product, {
+      as: "products",
+      through: "productCart",
+      foreignKey: "cart_id",
+      otherKey: "product_id",
+      timestamps: false,
+    });
+  };
+  return Cart;
 };

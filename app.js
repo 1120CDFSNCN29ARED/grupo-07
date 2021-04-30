@@ -6,6 +6,18 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 //const createError = require("http-errors");
 require("dotenv").config();
+const models = require("./database/models/index");
+
+/*inicia la conexion con la base de datos
+const connectServer = async () => {
+  try {
+    await models.sequelize.authenticate();
+    console.log("conectadok");
+  } catch (error) {
+    console.error("error DB", error);
+  }
+};
+connectServer();*/
 
 // ************ express() ************
 const app = express();

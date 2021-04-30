@@ -1,9 +1,8 @@
-const sequelize = require("sequelize");
 const { Sequelize } = require("sequelize");
 
 module.exports = (sequelize, dataTypes) => {
   const alias = "Product";
-  const cols = {
+  const col = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
@@ -12,52 +11,32 @@ module.exports = (sequelize, dataTypes) => {
     },
 
     name: {
-      type: dataTypes.STRING(100),
-      allowNull: false,
-      unique: true,
-    },
-
-    image: {
-      type: dataTypes.VARCHAR(1000),
+      type: dataTypes.STRING(200),
       allowNull: false,
     },
+    price: Sequelize.DECIMAL(3, 2),
 
-    description: {
-      type: dataTypes.TEXT(200),
-      allowNull: false,
-    },
+    description: Sequelize.TEXT,
 
-    price: {
-      type: dataTypes.VARCHAR(100),
-      allowNull: false,
-    },
+    discount: Sequelize.INTEGER,
 
-    discount: {
-      type: dataTypes.VARCHAR(100),
-      allowNull: false,
-    },
+    picture: Sequelize.STRING(500),
 
-    weight: {
-      type: dataTypes.VARCHAR(100),
-      allowNull: false,
-    },
+    weight: Sequelize.DECIMAL(4, 2),
 
-    quantity: {
-      type: dataTypes.VARCHAR(100),
-      allowNull: false,
-    },
+    quantity: Sequelize.INTEGER,
 
-    category_id: dataTypes.BIGINT(10).UNSIGNED,
+    brand_id: Sequelize.INTEGER(10),
+
+    category_id: Sequelize.INTEGER(10),
   };
 
   const config = {
     timestamps: false,
-    createdAt: "created_at",
-    updateAt: "update_at",
     tableName: "products",
   };
 
-  const Product = sequelize.define(alias, cols, config);
+  const Product = sequelize.define(alias, col, config);
 
   Product.associate = function (models) {
     Product.belongsToMany(models.Category, {

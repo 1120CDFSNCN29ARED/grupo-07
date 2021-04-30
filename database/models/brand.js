@@ -1,3 +1,5 @@
+const { Sequelize } = require("sequelize");
+
 module.exports = (sequelize, dataTypes) => {
   let alias = "Brand";
   let cols = {
@@ -6,18 +8,17 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: dataTypes.STRING,
+    kind: {
+      type: dataTypes.STRING(30),
       allowNull: false,
-      unique: true,
     },
   };
+
   const config = {
     tableName: "brands",
     timestamps: false,
-    createdAt: "created_at",
-    updateAt: "update_at",
   };
+
   const Brand = sequelize.define(alias, cols, config);
 
   Brand.associate = function (models) {
