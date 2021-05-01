@@ -96,6 +96,7 @@ https://trello.com/b/94ar6mBq/equipo-7
 - Desarrollo del almacenamiento de datos de los nuevos usuarios en users.json
 - Selección y redireccionamiento de rutas de huéspedes y usuarios.
 - Desarrollo de almacenamiento de la información del usuario en el navegador con la utilización de cookie-parser.
+- Encriptación de contraseña con brypt.js
 
 # Lucia:
 
@@ -107,22 +108,27 @@ https://trello.com/b/94ar6mBq/equipo-7
 - Restrucuración de carpetas de public.
 - Encriptación de contraseña con brypt.js
 - Desarrollo del formulario de registro que permita la carga de imágenes con Multer para el perfil del usuario.
-- Selección y redireccionamiento de rutas de huéspedes y usuarios.
 - Desarrollo de almacenamiento de la información del usuario en el navegador con la utilización de cookie-parser.
 
 ## Sprint 6
 
 # Florencia
 
-- Diseño diagrama de tablas.
-- CRUD usuario - editar y CRUD usuario - crear
-- Creación modelo de carrito y de usuario
-- Formación de relaciones entre tablas
-- Creación de las tablas en la estructura
-- Creación de los campos de las tablas
+- Desarrollo retrospectiva y conclusión del sprint 5
+- Planificación y actualización de tablero de trabajo.
+- Diseño de Diagrama de Entidades y Relaciones.
+- Creación de carpeta Database con Archivos de configuración y modelos.
+- Creación y desarrollo del modelo de carrito y de usuario.
+- Creación de archivo structure y del diseño de script de base de datos.
+- Desarrollo de las relaciones entre las diferentes tablas.
+- CRUD usuario y products.
 
 # Lucia
 
-- Diseño diagrama de tablas
-- Creación view de perfil de usuario
-- Creación modelo de productos
+- Desarrollo retrospectiva y conclusión del sprint 5
+- Diseño de Diagrama de Entidades y Relaciones.
+- Creación view de perfil de usuario.
+- Creación y desarrollo modelo de productos y modelos de tablas secundarias.
+- Desarrollo de las relaciones entre las diferentes tablas.
+- Creación de script data que permita poblar la base con datos.
+- CRUD products .
