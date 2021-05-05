@@ -121,7 +121,6 @@ https://trello.com/b/94ar6mBq/equipo-7
 - Creación y desarrollo del modelo de carrito y de usuario.
 - Creación de archivo structure y del diseño de script de base de datos.
 - Desarrollo de las relaciones entre las diferentes tablas.
-- CRUD usuario y products.
 
 # Lucia
 
@@ -131,4 +130,3 @@ https://trello.com/b/94ar6mBq/equipo-7
 - Creación y desarrollo modelo de productos y modelos de tablas secundarias.
 - Desarrollo de las relaciones entre las diferentes tablas.
 - Creación de script data que permita poblar la base con datos.
-- CRUD products .
