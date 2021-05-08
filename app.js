@@ -8,7 +8,7 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const models = require("./database/models/index");
 
-/*inicia la conexion con la base de datos
+//inicia la conexion con la base de datos
 const connectServer = async () => {
   try {
     await models.sequelize.authenticate();
@@ -17,7 +17,7 @@ const connectServer = async () => {
     console.error("error DB", error);
   }
 };
-connectServer();*/
+connectServer();
 
 // ************ express() ************
 const app = express();
