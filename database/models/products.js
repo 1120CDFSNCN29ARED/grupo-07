@@ -1,4 +1,4 @@
-const { Sequelize } = require("sequelize");
+const Sequelize = require("sequelize");
 
 module.exports = (sequelize, dataTypes) => {
   const alias = "Product";
@@ -46,8 +46,8 @@ module.exports = (sequelize, dataTypes) => {
       through: "CategoryProduct",
     });
     Product.belongsTo(models.Brand, {
-      as: "brand",
       foreignKey: "brand_id",
+      as: "brand",
     });
     Product.belongsToMany(models.Cart, {
       as: "cart",

@@ -11,17 +11,18 @@
     <main class="main-container">
       <h2 class="title">Agregar o modificar productos</h2>
       <form
-        action="/"
+        action="products/<%= productsAdd.id %>?_method=PUT"
         method="POST"
         enctype="multipart/form-data"
         class="form-menu"
       >
         <div class="form-item">
-          <label for="name" class="fomr-label">Nombre del producto</label>
+          <label for="name" class="fomr-label"><%= productsAdd.name %></label>
           <input
             type="text"
             name="name"
             id="name"
+            value="<%= productsAdd.name %>"
             class="form-input"
             required
           />
@@ -36,6 +37,7 @@
             type="text"
             name="price"
             id="price"
+            value="<%= productsAdd.price %>"
             class="form-input"
             required
           />
@@ -46,6 +48,7 @@
             type="text"
             name="discount"
             id="discount"
+            value="<%= productsAdd.discount %>"
             class="form-input"
             required
           />
@@ -56,6 +59,7 @@
             type="text"
             name="quantity"
             id="quantity"
+            value="<%= productsAdd.quantity %>"
             class="form-input"
             required
           />
@@ -66,6 +70,7 @@
             type="text"
             name="weight"
             id="weight"
+            value="<%= productsAdd.weight %>"
             class="form-input"
             required
           />
@@ -80,6 +85,7 @@
             type="text"
             name="description"
             id="description"
+            value="<%= productsAdd.description %>"
             class="form-input description"
           />
         </div>
@@ -234,9 +240,16 @@
         </div>
         <button type="submit" class="search-btn">Guardar</button>
         <div>
-          <button class="search-btn" type="button" disabled>
-            <span class="spinner-grow" role="status" aria-hidden="true"></span>
+          <!--    <button class="search-btn" type="button" disabled>
+        <span class="spinner-grow" role="status" aria-hidden="true"></span>
             Guardando...
+          </button>-->
+        </div>
+        <div>
+          <button>
+            <a href="/products/modificationListProducts"
+              >Listado de productos</a
+            >
           </button>
         </div>
       </form>

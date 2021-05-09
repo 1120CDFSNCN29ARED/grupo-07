@@ -16,143 +16,41 @@
       <section class="products">
         <h2 class="h2">Productos</h2>
         <div class="product-container">
-          <% for (let productsJson of products) {%>
+          <% for (let i=0; i < products.length; i++) { %>
             <article class="product-article">
-              <img src=<%=productsJson.image %> />
+              <img src=<%=products[i].picture %> />
               <div class="favoritos">
                 <i class="fas fa-heart"></i>
               </div>
               <p class="p">
-                <%= productsJson.name %>
+                <%= products[i].name %>
               </p>
               <p class="price"> $
-                <%= productsJson.price %>
+                <%= products[i].price %>
               </p>
-              <button class="search-btn"><a href="/products/productDetail/<%= productsJson.id %> ">Comprar</a></button>
+              <button class="search-btn"><a href="/products/productDetail/<%= products[i].id %> ">Ver detalle</a></button>
+              <button class="search-btn"><a href="/products/productCart/<%= products[i].id %> ">Comprar</a></button>
             </article>
             <% } %>
+        </div>
+
+        <div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Siguiente</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
 
-      <!-- 
-              <article class="product-article">
-                <img src="img/icecream.jpg" alt="ice-cream" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">
-                  Helados de jugo. Guapaletas.
-                </p>
-                <p class="price">$260</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="/img/muffins.jpeg" alt="muffins" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">Muffins con avena y frutas.</p>
-                <p class="price">$160</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="/img/mantequilla-de-coco.png" alt="manteca de coco" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">Manteca de coco Byour. 185gr.</p>
-                <p class="price">$400</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/mermelada-beepure.png" alt="mermelada" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">
-                  Mermelada frutos del bosque., Beepure. 450gr.
-                </p>
-                <p class="price">$245</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/veggie-burger-delitas.png" alt="burger" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">
-                  Hamburguesa de lentejas y arroz, Delitas. 600gr.
-                </p>
-                <p class="price">$300</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/aceite-coco.png" alt="aceite de coco" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">
-                  Aceite neutro de coco, Chiagraal. 180gr.
-                </p>
-                <p class="price">$380</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/fideos-garbanzo.png" alt="fideos-garbanzo" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">
-                  Pasta de garbanzos, Legume. 284gr
-                </p>
-                <p class="price">$120</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/leche-almendras.png" alt="leche almendras" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p class="p">
-                  Leche de almendras cremosa, Amande. 1lt.
-                </p>
-                <p class="price">$160</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/chocolate.png" alt="Chocolate amargo" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p>
-                  Cacao 80% Sin azucar, Dr Cacao. 80 gr.
-                </p>
-                <p class="price">$360</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/crudencio.png" alt="Crackers" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p>
-                  Crackers sabor Puerro, Crudencio. 80 gr.
-                </p>
-                <p class="price">$120</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-              <article class="product-article">
-                <img src="img/harina-integral.png" alt="Harina integral" />
-                <div class="favoritos">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <p>
-                  Harina Integral Orgánica, Terrasana.1 Kg.
-                </p>
-                <p class="price">$160</p>
-                <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-              </article>
-        </div>
-         -->
       <section class="vegan">
         <img src="/img/healthy.png" alt="healthy">
       </section>
@@ -163,6 +61,7 @@
           <b class="title"></b>
         </div>
       </section>
+
       <section>
         <article class="contenedor-masVendidos">
           <img src="/img/products/pepas.png" alt="Pepas organicas" />

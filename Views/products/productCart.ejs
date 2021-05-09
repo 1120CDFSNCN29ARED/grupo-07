@@ -18,7 +18,7 @@
       </section>
       <section class="volver">
         <button>
-          <a href="/products"
+          <a href="/products/products"
             ><i class="fas fa-arrow-circle-left"></i>Seguir comprando
           </a>
         </button>
@@ -34,16 +34,18 @@
 
           <section class="product-list">
             <article class="contenedor-articulo">
+              <% for (let i=0; i < productsCart.length; i++) { %>
               <img
-                src="/img/products/miel-beepure.png"
+                src="<%=productsCart[i].picture %>"
                 width="120"
                 height="120"
-                alt=" Miel Beepure"
               />
               <div class="product-item">
-                <p class="product-description">Miel líquida, Beepure. 500gr</p>
+                <p class="product-description">
+                  <%= productsCart[i].description %
+                </p>
 
-                <p class="product-price">$560</p>
+                <p class="product-price">$ <%= productsCart[i].price %></p>
                 <div class="contar">
                   <button class="plus">-</button>
                   <input type="number" name="cantidad" id="cantidad" />
@@ -51,12 +53,13 @@
                 </div>
                 <div class="product-total">
                   <p class="total-price">TOTAL</p>
-                  <p>$560</p>
+                  <p>$<%= productsCart[i].price %></p>
                   <i class="fas fa-trash-alt"></i>
                 </div>
               </div>
+              <% } %>
             </article>
-            <article class="contenedor-articulo">
+            <!--  <article class="contenedor-articulo">
               <img
                 src="/img/products/mantequilla-de-coco.png"
                 width="120"
@@ -130,7 +133,7 @@
                   <i class="fas fa-trash-alt"></i>
                 </div>
               </div>
-            </article>
+            </article>-->
           </section>
           <section class="actualizar">
             <button type="reset">

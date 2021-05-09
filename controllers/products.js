@@ -1,9 +1,13 @@
 // ************ Require's ************
-const { render, promiseImpl } = require("ejs");
+
 const fs = require("fs");
 const path = require("path");
-//const db= require("../../database/models");
-//const Product = db.Product;
+const db = require("./../database/models");
+
+const allProducts = db.Product;
+//const allUsers = db.User;
+const carts = db.Cart;
+//const category = db.category;
 
 const toThousand = (n) => {
   return n.toLocaleString("es-AR", {
@@ -12,103 +16,74 @@ const toThousand = (n) => {
   });
 };
 
-const productsFilePath = path.join(__dirname, "../data/products.json");
-
-const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+//const productsFilePath = path.join(__dirname, "../data/products.json");
+//const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const products = {
   list: (req, res) => {
-    //  const products = product.findAll();
-    //  promise.then((products) => {
-    res.render("products/products", { products: productsJson });
-    //  });
+    allProducts
+      .findAll({
+        limit: 8,
+        offset: 6,
+      })
+      .then((products) => {
+        res.render("products/products", { products: products });
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
   },
+
   detail: (req, res) => {
-    const detalle = productsJson.find((prod) => prod.id == req.params.id);
-    if (detalle == null) {
-      res.render("error");
-    } else {
-      res.render("products/productDetail", { detalle });
-    }
+    allProducts
+      .findByPk(req.params.id, {
+        include: ["category"],
+      })
+      .then((productsDetail) => {
+        res.render("products/productDetail", { productsDetail });
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
   },
+
   cart: (req, res) => {
-    res.render("products/productCart");
+    carts
+      .findByPk(req.params.id, {
+        include: ["product"],
+      })
+      .then((productsCart) => {
+        res.render("products/productCart", { productsCart });
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
   },
+
   add: (req, res) => {
-    res.render("products/productsAdd");
-  },
-  new: (req, res) => {
-    let newProduct = {
-      id: productsJson.lenght + 1,
-      nombre: req.body.name,
-      foto: req.file.filename,
-      precio: req.body.price,
-      descuento: req.body.discount,
-      marca: req.body.brand,
-      descripcion: req.body.description,
-      categoria: req.body.category,
-      cantidad: req.body.quantity,
-      peso: req.body.weight,
-    };
-
-    productsJson.push(newProduct);
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
-
-    res.redirect("/products");
+    allProducts
+      .findAll(req.params.id, {
+        include: ["category", "brand"],
+      })
+      .then((productsAdd) => {
+        res.render("products/productsAdd", { productsAdd });
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
   },
 
   modificationList: (req, res) => {
-    res.render("products/modificationListProducts");
-  },
-
-  //Edit products of modification list products - form to edit
-
-  edit: (req, res) => {
-    const prodId = req.params.id;
-    const product = productsJson.find((prod) => {
-      return prod.id == prodId;
-    });
-
-    res.render("products/productAdd", { products: productsJson, toThousand });
-  },
-
-  //Update products of modification list products - method to update
-
-  update: (req, res) => {
-    const id = req.params.id;
-    const product = productsJson.find((prod) => {
-      return prod.id == id;
-    });
-
-    product.nombre = req.body.name;
-    product.foto = req.file.filename;
-    product.precio = req.body.price;
-    product.marca = req.body.brand;
-    product.descripcion = req.body.description;
-    product.descuento = req.body.discount;
-    product.cantidad = req.body.quantity;
-    product.peso = req.body.weight;
-    product.categoria = req.body.category;
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
-
-    res.redirect("products/modificationListProducts", { product });
-  },
-
-  /*** Delete product of modification list products*/
-
-  destroy: (req, res) => {
-    const id = req.params.id;
-    const productDestroy = productsJson.find((prod) => {
-      return prod.id == id;
-    });
-
-    productsJson.splice(productDestroy, 1);
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(productsJson));
-
-    res.redirect("products/modificationListProducts");
+    allProducts
+      .findAll({
+        include: ["category"],
+      })
+      .then((productsList) => {
+        res.render("products/modificationListProducts", { productsList });
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
   },
 };
 

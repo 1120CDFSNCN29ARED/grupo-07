@@ -30,24 +30,24 @@ const usuarioMiddleware = require("../middleware/middelwareUsuario");
 router.get("/", products.list);
 
 /***GET ONE PRODUCT - detail */
-router.get("/productDetail/:id/", products.detail);
+router.get("/productDetail/:id", products.detail);
 
 /***PRODUCT CART */
 router.get("/productCart", usuarioMiddleware, products.cart);
 
 /***PRODUCT CREATE - form creation and processing form */
 router.get("/productsAdd", products.add);
-router.post("/", upload.single("picture"), products.new);
+//router.post("/productsAdd/:id", upload.single("picture"), products.new);
 
 /*** GET ONE PRODUCT- MODIFICATION LIST PRODUCTS */
 
 router.get("/modificationListProducts", products.modificationList);
 
 /*** EDIT ONE PRODUCT */
-router.get("/modificationListProducts/:id/edit", products.edit);
-router.put("/modificationListProducts/:id", products.update);
+//router.get("/modificationListProducts/:id/edit", products.edit);
+//router.put("/modificationListProducts/:id", products.update);
 
 /*** DELETE ONE PRODUCT */
-router.delete("/modificationListProducts/:id/", products.destroy);
+//router.delete("/modificationListProducts/:id/", products.destroy);
 
 module.exports = router;

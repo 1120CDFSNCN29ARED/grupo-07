@@ -12,15 +12,15 @@
     <main class="main">
       <section class="product-detail">
         <h2>
-          <%= detalle.name %>
+          <%= productsDetail.name %>
         </h2>
         <article class="articulo">
-          <img src="<%= detalle.image %>" />
+          <img src="<%= productsDetail.picture %>" />
           <div class="detail-text">
             <p>
-              <%= detalle.name %>
+              <%= productsDetail.name %>
             </p>
-            <p class="price">$<%= detalle.price %>
+            <p class="price">$<%= productsDetail.price %>
             </p>
             <div class="contar">
               <button class="plus">-</button>
@@ -42,7 +42,7 @@
         <article class="descripcion">
           <h3>Descripción</h3>
           <p class="description-text">
-            <%= detalle.description %>
+            <%= productsDetail.description %>
           </p>
         </article>
         <section class="envios">
