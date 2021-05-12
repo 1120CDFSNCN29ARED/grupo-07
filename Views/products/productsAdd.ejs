@@ -11,7 +11,7 @@
     <main class="main-container">
       <h2 class="title">Agregar productos</h2>
       <form
-        action="/prducts/productsAdd"
+        action="/products/productsAdd"
         method="POST"
         enctype="multipart/form-data"
         class="form-menu"
@@ -29,7 +29,13 @@
         </div>
         <div class="form-item">
           <label for="picture" class="form-label">Foto</label>
-          <input type="file" name="picture" id="picture" class="form-input" />
+          <input
+            type="file"
+            name="picture"
+            id="picture"
+            value="<%= productsAdd.picture %>"
+            class="form-input"
+          />
         </div>
         <div class="form-item">
           <label for="price">Precio</label>
@@ -248,7 +254,9 @@
       </form>
       <div>
         <button>
-          <a href="/products/modificationListProducts">Listado de productos</a>
+          <a href="/products/modificationListProducts">
+            Volver al Listado de productos</a
+          >
         </button>
       </div>
     </main>

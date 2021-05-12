@@ -98,13 +98,14 @@ const products = {
     const newProducts = {
       ...req.body,
     };
-    allProducts.create(newProducts).then((newProducts) => {
-      res.json(req.body);
-      // res.redirect("/products/modificationListProducts");
-    });
-    /* .catch(() => {
+    allProducts
+      .create(newProducts)
+      .then((newProducts) => {
+        res.redirect("/products/modificationListProducts");
+      })
+      .catch(() => {
         res.redirect("error");
-      });*/
+      });
   },
 
   /*editar prodcutos existentes en productUpdate*/
