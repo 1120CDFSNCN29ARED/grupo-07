@@ -9,9 +9,9 @@
     <%- include ("./../partials/header.ejs") %>
 
     <main class="main-container">
-      <h2 class="title">Agregar productos</h2>
+      <h2 class="title">Modificar productos</h2>
       <form
-        action="/prducts/productsAdd"
+        action="/products/<%= productsUpdate.id %>?_method=PUT"
         method="POST"
         enctype="multipart/form-data"
         class="form-menu"
@@ -22,7 +22,7 @@
             type="text"
             name="name"
             id="name"
-            value="<%= productsAdd.name %>"
+            value="<%= productsUpdate.name %>"
             class="form-input"
             required
           />
@@ -37,7 +37,7 @@
             type="text"
             name="price"
             id="price"
-            value="<%= productsAdd.price %>"
+            value="<%= productsUpdate.price %>"
             class="form-input"
             required
           />
@@ -48,7 +48,7 @@
             type="text"
             name="discount"
             id="discount"
-            value="<%= productsAdd.discount %>"
+            value="<%= productsUpdate.discount %>"
             class="form-input"
             required
           />
@@ -59,7 +59,7 @@
             type="text"
             name="quantity"
             id="quantity"
-            value="<%= productsAdd.quantity %>"
+            value="<%= productsUpdate.quantity %>"
             class="form-input"
             required
           />
@@ -70,7 +70,7 @@
             type="text"
             name="weight"
             id="weight"
-            value="<%= productsAdd.weight %>"
+            value="<%= productsUpdate.weight %>"
             class="form-input"
             required
           />
@@ -85,7 +85,7 @@
             type="text"
             name="description"
             id="description"
-            value="<%= productsAdd.description %>"
+            value="<%= productsUpdate.description %>"
             class="form-input description"
           />
         </div>
@@ -238,19 +238,21 @@
             </div>
           </div>
         </div>
-        <button type="submit" class="search-btn">Guardar</button>
+        <button type="submit" class="search-btn">Acualizar</button>
         <div>
           <!--    <button class="search-btn" type="button" disabled>
         <span class="spinner-grow" role="status" aria-hidden="true"></span>
             Guardando...
           </button>-->
         </div>
+        <div>
+          <button>
+            <a href="/products/modificationListProducts"
+              >Listado de productos</a
+            >
+          </button>
+        </div>
       </form>
-      <div>
-        <button>
-          <a href="/products/modificationListProducts">Listado de productos</a>
-        </button>
-      </div>
     </main>
     <%- include("./../partials/footer.ejs") %>
   </body>

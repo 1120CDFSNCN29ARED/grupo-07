@@ -37,17 +37,18 @@ router.get("/productCart", usuarioMiddleware, products.cart);
 
 /***PRODUCT CREATE - form creation and processing form */
 router.get("/productsAdd", products.add);
-//router.post("/productsAdd/:id", upload.single("picture"), products.new);
+router.post("/products/productsAdd", upload.single("picture"), products.create);
 
 /*** GET ONE PRODUCT- MODIFICATION LIST PRODUCTS */
 
 router.get("/modificationListProducts", products.modificationList);
 
 /*** EDIT ONE PRODUCT */
-//router.get("/modificationListProducts/:id/edit", products.edit);
-//router.put("/modificationListProducts/:id", products.update);
+router.get("/productsUpdate/:id", products.edit);
+//router.put("/productsUpdate/:id", products.update); -->VER
 
 /*** DELETE ONE PRODUCT */
-//router.delete("/modificationListProducts/:id/", products.destroy);
+router.get("/productsDelete/:id", products.delete);
+//router.delete("/prouctsDelete/:id/", products.destroy);
 
 module.exports = router;
