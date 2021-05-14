@@ -92,7 +92,7 @@ const products = {
       });
   },
 
-  /*agregar prodcutos nuevos en productsAdd*/
+  /*agregar productos nuevos en productsAdd*/
 
   create: (req, res) => {
     const newProducts = {
@@ -134,14 +134,18 @@ const products = {
 
   delete: function (req, res) {
     allProducts.findByPk(req.params.id).then((products) => {
-      res.render("products/productsDelete", { products });
+      return res.render("products/productsDelete", { products });
     });
   },
 
   destroy: function (req, res) {
+    console.log("id", req.params.id);
     allProducts
-      .destroy({ where: { id: req.params.id } })
-      .then((products) => res.redirect("/products"))
+      .destroy({ where: { id: req.params.id }, force: true })
+      .then((products) => {
+        console.log("prto", products);
+        return res.redirect("/products");
+      })
       .catch(() => res.send(error));
   },
 };

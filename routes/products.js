@@ -6,7 +6,7 @@ const router = express.Router();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const folder = path.join(__dirname, "../../public/img/products");
+    const folder = path.join(__dirname, "../public/img/products");
     console.log(file.mimetype);
     if (file.mimetype != "image/jpeg" && file.mimetype != "image/png") {
       return cb(new Error("Solo se aceptan imagenes en jpg o png"));
@@ -34,7 +34,7 @@ router.get("/", products.list);
 router.get("/productDetail/:id", products.detail);
 
 /***PRODUCT CART */
-router.get("/productCart", usuarioMiddleware, products.cart);
+router.get("/productCart", /*usuarioMiddleware*/ products.cart);
 
 /***PRODUCT CREATE - form creation and processing form */
 router.get("/productsAdd", products.add);
@@ -50,6 +50,6 @@ router.put("/productsUpdate/:id", products.update);
 
 /*** DELETE ONE PRODUCT */
 router.get("/productsDelete/:id", products.delete);
-//router.delete("/prouctsDelete/:id/", products.destroy);
+router.delete("/productsDelete/:id", products.destroy);
 
 module.exports = router;

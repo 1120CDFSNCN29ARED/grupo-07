@@ -52,6 +52,26 @@ p {
   padding: 15px;
 }
 
+.description {
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  bottom: 30%;
+}
+
+.envios {
+  text-align: center;
+  margin: auto;
+  bottom: 30%;
+  left: 5%;
+  right: 5%;
+}
+
+.envios h3 {
+  padding-bottom: 0px;
+  padding-top: 40px;
+}
+
 .share {
   display: flex;
   align-items: center;
@@ -82,18 +102,9 @@ p {
   padding: 10px;
 }
 
-.envios {
-  text-align: center;
-  padding: 15px;
-  margin: auto;
-  bottom: 30%;
-  left: 5%;
-  right: 5%;
-}
-
-.envios h3 {
-  padding-bottom: 0px;
-  padding-top: 40px;
+.share ul li:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: #fbab0a96;
 }
 
 .products-carousel {
@@ -205,14 +216,25 @@ p {
     font-size: 20px;
   }
 
-  .detalle p {
+  .description-text {
     font-size: 18px;
   }
 
   .articulo {
-    margin-left: 200px;
-    margin-right: 100px;
+    margin-left: 300px;
+    padding-top: 15px;
   }
+
+  .volver {
+    margin-left: 185px;
+  }
+
+  .description {
+    width: 45%;
+    left: 15%;
+    right: 15%;
+  }
+
   .envios {
     width: 45%;
     left: 15%;

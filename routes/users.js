@@ -12,7 +12,7 @@ const users = require("../controllers/users");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const folder = path.resolve(__dirname, "../../public/img/users");
+    const folder = path.resolve(__dirname, "../public/img/users");
     if (file.mimetype != "image/jpeg" && file.mimetype != "image/png") {
       return cb(new Error("Solo se aceptan archivos jpeg o png"));
     }

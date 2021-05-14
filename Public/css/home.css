@@ -227,6 +227,10 @@
     width: 40%;
   }
 
+  .noticias img:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
+
   .sucursal-container {
     display: flex;
     flex-wrap: wrap;

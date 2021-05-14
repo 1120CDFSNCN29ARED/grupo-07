@@ -1,6 +1,4 @@
-const sequelize = require("sequelize");
 const { Sequelize } = require("sequelize");
-const users = require("./users");
 
 module.exports = (sequelize, dataType) => {
   const alias = "Cart";
@@ -25,8 +23,8 @@ module.exports = (sequelize, dataType) => {
 
   Cart.associate = function (models) {
     Cart.hasMany(models.User, {
-      foreignKey: "user_id",
       as: "user",
+      foreignKey: "user_id",
     });
     Cart.belongsToMany(models.Product, {
       as: "products",

@@ -150,6 +150,15 @@
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   }
+
+  .share ul li:hover {
+    transform: translateY(-3px) scale(1.05);
+    background-color: #fbab0a96;
+  }
+
+  .contenedor-masVendidos img:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
 }
 
 @media (min-width: 1200px) {
