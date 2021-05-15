@@ -5,6 +5,7 @@
     "last_name": "Venediktov",
     "email": "gvenediktov0@symantec.com",
     "password": "4NsSJBc",
+    "picture": "/img/users/kevin.png",
     "category": "user"
   },
   {
@@ -13,6 +14,7 @@
     "last_name": "Kemitt",
     "email": "fkemitt1@state.gov",
     "password": "pdSaTnvWLlW2",
+    "picture": "/img/users/dwight.jpg",
     "category": "user"
   },
   {
@@ -21,6 +23,7 @@
     "last_name": "Kell",
     "email": "ckell2@uol.com.br",
     "password": "pDPgbSqXUa",
+    "picture": "/img/users/stanley.jpg",
     "category": "user"
   },
   {
@@ -29,7 +32,8 @@
     "last_name": "Okker",
     "email": "mokker3@reference.com",
     "password": "ZTbcERT",
-    "category": "user"
+    "picture": "/img/users/michael.jpeg",
+    "category": "adm"
   },
   {
     "id": 5,
@@ -37,6 +41,7 @@
     "last_name": "Mowday",
     "email": "emowday4@hugedomains.com",
     "password": "CQUaS8",
+    "picture": "/img/users/jim.jpg",
     "category": "user"
   }
 ]

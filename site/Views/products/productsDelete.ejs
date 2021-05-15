@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/forms.css" />
+  </head>
+
+  <body>
+    <%- include ("./../partials/header.ejs") %>
+
+    <main class="main-container">
+      <form
+        action="/products/productsDelete/<%= products.id %>?_method=DELETE"
+        method="POST"
+        class="form-menu"
+      >
+        <div class="title">
+          <h1>
+            ¿ Estás seguro de querer borrar este producto: <%= products.name %>?
+          </h1>
+        </div>
+
+        <section class="buttons">
+          <div>
+            <button class="borrar-productos" type="submit">
+              <i class="fas fa-trash"></i>
+              Borrar el producto
+            </button>
+          </div>
+          <div>
+            <button class="borrar-productos">
+              <a href="/products/modificationListProducts"
+                ><i class="fas fa-arrow-circle-left"></i> Volver al Listado de
+                productos</a
+              >
+            </button>
+          </div>
+        </section>
+      </form>
+    </main>
+    <%- include("./../partials/footer.ejs") %>
+  </body>
+</html>

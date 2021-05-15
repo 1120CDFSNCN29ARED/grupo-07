@@ -27,24 +27,24 @@ const products = require("../controllers/products");
 // Middelware Required
 const usuarioMiddleware = require("../middleware/middelwareUsuario");
 
-/*** GET ALL PRODUCTS ***/
+/* GET ALL PRODUCTS */
 router.get("/", products.list);
 
-/***GET ONE PRODUCT - detail */
+/***GET ONE PRODUCT - Detail */
 router.get("/productDetail/:id", products.detail);
 
 /***PRODUCT CART */
-router.get("/productCart", /*usuarioMiddleware*/ products.cart);
+router.get("/productCart", usuarioMiddleware, products.cart);
 
-/***PRODUCT CREATE - form creation and processing form */
+/***PRODUCT CREATE - Form creation and processing form */
 router.get("/productsAdd", products.add);
 router.post("/productsAdd", upload.single("picture"), products.create);
 
-/*** GET ONE PRODUCT- MODIFICATION LIST PRODUCTS */
+/*** GET LIST PRODUCTS- MODIFICATION LIST PRODUCTS */
 
 router.get("/modificationListProducts", products.modificationList);
 
-/*** EDIT ONE PRODUCT */
+/*** EDIT ONE PRODUCT  - Form update product and processing form*/
 router.get("/productsUpdate/:id", products.edit);
 router.put("/productsUpdate/:id", products.update);
 

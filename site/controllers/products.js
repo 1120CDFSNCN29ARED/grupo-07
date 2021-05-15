@@ -2,8 +2,6 @@
 
 const fs = require("fs");
 const path = require("path");
-//const { UPDATE } = require("sequelize/types/lib/query-types");
-//const { delete } = require("../routes/products");
 const db = require("./../database/models");
 
 const allProducts = db.Product;
@@ -123,14 +121,16 @@ const products = {
       });
   },
 
-  /*buscar:  function (req,res) {}*/
-
   update: function (req, res) {
     allProducts
       .update({ ...req.body }, { where: { id: req.params.id } })
       .then((products) => res.redirect("/products"))
       .catch(() => res.send(error));
   },
+
+  /*buscar:  function (req,res) {}                   FALTA HACER*/
+
+  /*borrar productos existentes de modificationListProducts*/
 
   delete: function (req, res) {
     allProducts.findByPk(req.params.id).then((products) => {

@@ -172,3 +172,15 @@ Creemos que no tuvimos muchas modificaciones de las categorias stop doing, more 
 # Conclusiones:
 
 llegamos a la conclusión de que debemos seguir mejorando en la comunicación en el equipo y realizar un calendario semanal de las reuniones del equipo para poder agilizar en el desarrollo del proyecto. Además, creemos que tenemos que mejorar en los tiempos de entrega de las tareas y trabajar continuamente en el proyecto.
+
+## Retrospectiva del Sprint 6
+
+# Keep doing:
+
+# Start doing:
+
+# More of:
+
+# Stop doing:
+
+# Conclusiones:

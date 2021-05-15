@@ -160,6 +160,21 @@
   font-weight: bold;
 }
 
+/*PRODUCTS DELETE*/
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.borrar-productos {
+  background-color: #0c5d5e;
+  padding: 9px;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
+  color: white;
+  letter-spacing: 1px;
+}
+
 /* Media-Queries */
 @media (min-width: 760px) {
   .form-menu {
