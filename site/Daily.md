@@ -135,7 +135,12 @@ https://trello.com/b/94ar6mBq/equipo-7
 
 # Florencia
 
+- validaciones back-end
+
 # Lucia
 
 - Planificación y actualización de tablero de trabajo.
 - CRUD products
+- Validaciones front-end y back-end
+- Desarrollo de la retrospectiva del sprint 5
+- Modificaciones modelos

@@ -179,8 +179,16 @@ llegamos a la conclusión de que debemos seguir mejorando en la comunicación en
 
 # Start doing:
 
+- Matías: tiene que comunicarse con el equipo y participar en el desarrollo del proyecto.
+
 # More of:
+
+- Generar un calendario semanal de reuniones para el equipo.
+- Administrar el tiempo.
+- Mejorar la comunicación del equipo
+- Plantear dudas y buscar resoluciones
+- lucia: mejorar tiempos de entrega organización de las tareas
 
 # Stop doing:
 
-# Conclusiones:
+- No hacer a último momento las tareas porque no hay posibilidad de tener revisión.

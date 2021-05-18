@@ -13,7 +13,7 @@ formulario.addEvenetListener("submit", function (e) {
     errores.push("el campo de nombre debe tener al menos 4 caracteres");
   }
 
-  let inputPicture = document.querySelector("input.name");
+  let inputPicture = document.querySelector("input.picture");
 
   if (inputPicture.value == "") {
     errores.push("Es necesario insertar imagen");
@@ -33,6 +33,22 @@ formulario.addEvenetListener("submit", function (e) {
     errores.push("El campo de descuento debe estar completo");
   } else if (inputDiscount.value.lenght < 0) {
     errores.push("la cantidad debe ser más igual o grande que cero");
+  }
+
+  let inputWeight = document.querySelector("input.weight");
+
+  if (inputWeight.value == "") {
+    errores.push("El campo de peso debe estar completo");
+  } else if (inputWeight.value.lenght < 0) {
+    errores.push("la cantidad debe ser más grande que cero");
+  }
+
+  let inputDescription = document.querySelector("input.description");
+
+  if (inputDescription.value == "") {
+    errores.push("El campo de peso debe estar completo");
+  } else if (inputDescription.value.lenght < 10) {
+    errores.push("el campo de descripción debe tener al menos 10 caracteres");
   }
 
   if (errores.length > 0) {

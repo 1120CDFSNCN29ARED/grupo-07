@@ -38,23 +38,23 @@ insert into brand (kind) values ('aajrtiom9');
 
 
 --
--- Dumping data for table `category`
+-- Dumping data for table `categoryProduct`
 --
 
-insert into category (kind) values ('jmorot0');
-insert into category (kind) values ('vagastina1');
-insert into category (kind) values ('mlawrenceson2');
-insert into category (kind) values ('dgamble3');
-insert into category (kind) values ('cchurchley4');
-insert into category (kind) values ('ehillen5');
-insert into category (kind) values ('mbuckeridge6');
-insert into category (kind) values ('bbroodes7');
-insert into category (kind) values ('zhatherleigh8');
-insert into category (kind) values ('apennini9');
-insert into category (kind) values ('mbujuanitge6');
-insert into category (kind) values ('bpepitdes7');
-insert into category (kind) values ('zolptermeigh8');
-insert into category (kind) values ('appertoi9');
+insert into categoryProduct (kind) values ('jmorot0');
+insert into categoryProduct (kind) values ('vagastina1');
+insert into categoryProduct (kind) values ('mlawrenceson2');
+insert into categoryProduct (kind) values ('dgamble3');
+insert into categoryProduct (kind) values ('cchurchley4');
+insert into categoryProduct (kind) values ('ehillen5');
+insert into categoryProduct (kind) values ('mbuckeridge6');
+insert into categoryProduct (kind) values ('bbroodes7');
+insert into categoryProduct (kind) values ('zhatherleigh8');
+insert into categoryProduct (kind) values ('apennini9');
+insert into categoryProduct (kind) values ('mbujuanitge6');
+insert into categoryProduct (kind) values ('bpepitdes7');
+insert into categoryProduct (kind) values ('zolptermeigh8');
+insert into categoryProduct (kind) values ('appertoi9');
 
 
 --

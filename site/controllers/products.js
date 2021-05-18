@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const category = require("../database/models/categoryProduct");
 const db = require("./../database/models");
 
 const allProducts = db.Product;
@@ -37,7 +38,7 @@ const products = {
   detail: (req, res) => {
     allProducts
       .findByPk(req.params.id, {
-        include: ["category"],
+        include: ["categoryProduct"],
       })
       .then((productsDetail) => {
         res.render("products/productDetail", { productsDetail });
@@ -68,9 +69,7 @@ const products = {
 
   modificationList: (req, res) => {
     allProducts
-      .findAll({
-        include: ["category"],
-      })
+      .findAll()
       .then((productsList) => {
         res.render("products/modificationListProducts", { productsList });
       })
@@ -95,6 +94,7 @@ const products = {
   create: (req, res) => {
     const newProducts = {
       ...req.body,
+      include: [{ model: "categoryProduct" }, { model: "brand" }],
     };
     allProducts
       .create(newProducts)
@@ -144,7 +144,7 @@ const products = {
       .destroy({ where: { id: req.params.id }, force: true })
       .then((products) => {
         console.log("prto", products);
-        return res.redirect("/products");
+        return res.redirect("/products/modificationListProducts");
       })
       .catch(() => res.send(error));
   },

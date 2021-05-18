@@ -1,62 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <%- include("./../partials/head.ejs") %>
+  <head>
+    <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
-</head>
+    <script src="login.js"></script>
+  </head>
 
-<body>
-  <header class="header-log">
-    <div class="logo-log">
-      <h1>
-        <a href="/"><img src="/img/Huerto-market.png" alt="logo" /></a>
-      </h1>
-    </div>
-  </header>
-  <main class="main-container">
-    <form action="/" method="get" class="form-menu">
-      <div class="user">
-        <i class="fas fa-user"></i>
+  <body>
+    <header class="header-log">
+      <div class="logo-log">
+        <h1>
+          <a href="/"><img src="/img/Huerto-market.png" alt="logo" /></a>
+        </h1>
       </div>
-      <h2 class="log-title">Ingresá</h2>
+    </header>
+    <main class="main-container">
+      <div class="errores">
+        <ul></ul>
+      </div>
+      <form action="/" method="get" class="form-menu">
+        <div class="user">
+          <i class="fas fa-user"></i>
+        </div>
+        <h2 class="log-title">Ingresá</h2>
 
-      <div class="log-item">
-        <label for="user-name" class="form-label"><i class="fas fa-user"></i></label>
-        <!-- incluir mensaje de error -->
-        <input type="text" name="user-name" id="user-name" class="log form-input" placeholder="Usuario" required />
+        <div class="log-item">
+          <label for="user-name" class="form-label"
+            ><i class="fas fa-user"></i
+          ></label>
+          <!-- incluir mensaje de error -->
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            class="log form-input"
+            placeholder="Usuario"
+            required
+          />
+        </div>
+        <div class="log-item">
+          <label for="password"><i class="fas fa-lock"></i></label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="log form-input"
+            placeholder="Contraseña"
+            required
+          />
+        </div>
+        <p class="register-text"></p>
+        <div class="form-item btn-container">
+          <button type="submit" class="search-btn register-btn">
+            Inicia Sesión
+          </button>
+        </div>
+      </form>
+      <div class="forget-pass">
+        <a href="#">¿Olvidaste tu contraseña?</a>
       </div>
-      <div class="log-item">
-        <label for="password"><i class="fas fa-lock"></i></label>
-        <input type="password" name="password" id="password" class="log form-input" placeholder="Contraseña" required />
-      </div>
-      <p class="register-text"></p>
+      <p class="register-text">¿No sos miembro?</p>
       <div class="form-item btn-container">
         <button type="submit" class="search-btn register-btn">
-          Inicia Sesión
+          <a href="/users/register">Registrate</a>
         </button>
       </div>
-    </form>
-    <div class="forget-pass">
-      <a href="#">¿Olvidaste tu contraseña?</a>
-    </div>
-    <p class="register-text">¿No sos miembro?</p>
-    <div class="form-item btn-container">
-      <button type="submit" class="search-btn register-btn">
-        <a href="/users/register">Registrate</a>
-      </button>
-    </div>
-  </main>
-  <footer>
-    <section class="redes">
-      <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
-      <h4>Seguinos</h4>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-google"></i></a>
-    </section>
-  </footer>
-</body>
-
+    </main>
+    <footer>
+      <section class="redes">
+        <img src="/img/fiscal.jpg" weight="70px" height="70px" alt="fiscal" />
+        <h4>Seguinos</h4>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+      </section>
+    </footer>
+  </body>
 </html>

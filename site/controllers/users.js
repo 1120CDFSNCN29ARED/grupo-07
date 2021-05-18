@@ -109,6 +109,9 @@ const users = {
 
     res.redirect("/");
   },
+  list: (req, res) => {
+    res.render("users/usersList");
+  },
 };
 
 module.exports = users;

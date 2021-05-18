@@ -40,4 +40,6 @@ router.get("/user", users.userProfile);
 
 router.get("/userProfile", usuarioMiddleware, users.profile);
 
+router.get("/usersList", users.list);
+
 module.exports = router;
