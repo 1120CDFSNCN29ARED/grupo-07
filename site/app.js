@@ -37,6 +37,9 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+const userLogs = require("./middleware/userLogs");
+app.use(userLogs);
+
 app.use(cookieParser());
 
 app.use(
@@ -59,4 +62,5 @@ app.use("/users", usersRoutes);
 // error 404
 app.use((req, res, next) => {
   res.status(404).render("error");
+  next();
 });

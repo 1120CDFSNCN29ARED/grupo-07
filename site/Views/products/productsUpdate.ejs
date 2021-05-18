@@ -9,7 +9,14 @@
     <%- include ("./../partials/header.ejs") %>
 
     <main class="main-container">
+      <div class="errores">
+        <ul>
+
+        </ul>
+      </div>
+      <div>
       <h2 class="title">Modificar productos</h2>
+      </div>
       <form
         action="/products/productsUpdate/<%= productsUpdate.id %>?_method=PUT"
         method="POST"

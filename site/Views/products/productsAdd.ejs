@@ -3,13 +3,22 @@
   <head>
     <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
+    <script src="productsAdd.js"></script>
   </head>
 
   <body>
     <%- include ("./../partials/header.ejs") %>
 
     <main class="main-container">
-      <h2 class="title">Agregar productos</h2>
+          <main class="main-container">
+      <div class="errores">
+        <ul>
+
+        </ul>
+      </div>
+      <div>
+        <h2 class="title">Agregar productos</h2>
+      </div>
       <form
         action="/products/productsAdd"
         method="POST"
