@@ -166,6 +166,10 @@ body {
   color: #0a3409;
 }
 
+.dropdown {
+  position: relative;
+}
+
 /* Media-Queries */
 @media (min-width: 760px) {
   .menu-list {

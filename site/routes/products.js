@@ -27,6 +27,9 @@ const products = require("../controllers/products");
 // Middelware Required
 const usuarioMiddleware = require("../middleware/middelwareUsuario");
 
+/*BUSCADOR PRODUCTS*/
+//router.get("/searchProduct", products.buscar);
+
 /* GET ALL PRODUCTS */
 router.get("/", products.list);
 

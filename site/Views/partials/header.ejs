@@ -1,10 +1,18 @@
 <header class="header-container" id="section-header">
   <div class="header-logo">
     <a href="/"><img src="/img/Huerto-market.png" alt="Logo" class="logo" /></a>
-    <div class="account-container">
-      <i class="fas fa-user"></i>
-      <a href="/users/logIn" class="account">Mi cuenta</a>
-    </div>
+    
+    <article class="account-container">
+      <div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+  <i class="fas fa-user"></i>  Mi cuenta
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item" type="button"><a href="/users/logIn" class="account">Ingresar</a></button></li>
+    <li><button class="dropdown-item" type="button"><a href="/users/register" class="account">Crear cuenta</a></button></li>
+  </ul>
+</div>
+    </article>
     <div class="cart-container">
       <button type="submit" class="heart"><i class="fas fa-heart"></i></i></button>
       <a href="/products/productCart" class="cart"><i class="fas fa-shopping-cart"></i></a>

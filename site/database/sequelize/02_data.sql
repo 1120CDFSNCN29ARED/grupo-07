@@ -38,23 +38,23 @@ insert into brand (kind) values ('aajrtiom9');
 
 
 --
--- Dumping data for table `categoryProduct`
+-- Dumping data for table `category`
 --
 
-insert into categoryProduct (kind) values ('jmorot0');
-insert into categoryProduct (kind) values ('vagastina1');
-insert into categoryProduct (kind) values ('mlawrenceson2');
-insert into categoryProduct (kind) values ('dgamble3');
-insert into categoryProduct (kind) values ('cchurchley4');
-insert into categoryProduct (kind) values ('ehillen5');
-insert into categoryProduct (kind) values ('mbuckeridge6');
-insert into categoryProduct (kind) values ('bbroodes7');
-insert into categoryProduct (kind) values ('zhatherleigh8');
-insert into categoryProduct (kind) values ('apennini9');
-insert into categoryProduct (kind) values ('mbujuanitge6');
-insert into categoryProduct (kind) values ('bpepitdes7');
-insert into categoryProduct (kind) values ('zolptermeigh8');
-insert into categoryProduct (kind) values ('appertoi9');
+insert into category (kind) values ('postre');
+insert into category (kind) values ('snacks');
+insert into category (kind) values ('mlawrenceson2');
+insert into category (kind) values ('untables y conservas');
+insert into category (kind) values ('pastas y harinas');
+insert into category (kind) values ('Bebibles e Infusiones');
+insert into category (kind) values ('Cereales, Granolas y Frutos secos');
+insert into category (kind) values ('Legumbres y Semillas');
+insert into category (kind) values ('Congelados');
+insert into category (kind) values ('Sin tacc');
+insert into category (kind) values ('Sin lactosa');
+insert into category (kind) values ('Bajo en sodio');
+insert into category (kind) values ('Apto vegano');
+insert into category (kind) values ('Orgánico');
 
 
 --

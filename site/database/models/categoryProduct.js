@@ -1,7 +1,7 @@
 const { Sequelize } = require("sequelize");
 
 module.exports = (sequelize, dataTypes) => {
-  let alias = "CategoryProduct";
+  let alias = "Category";
   let col = {
     id: {
       type: dataTypes.INTEGER,
@@ -16,13 +16,13 @@ module.exports = (sequelize, dataTypes) => {
   };
 
   const config = {
-    tableName: "categoryProduct",
+    tableName: "category",
     timestamps: false,
   };
-  const CategoryProduct = sequelize.define(alias, col, config);
+  const Category = sequelize.define(alias, col, config);
 
-  CategoryProduct.associate = function (models) {
-    CategoryProduct.belongsToMany(models.Product, {
+  Category.associate = function (models) {
+    Category.belongsToMany(models.Product, {
       as: "product",
       foreignKey: "category_id",
       other: "product_id",
@@ -30,5 +30,5 @@ module.exports = (sequelize, dataTypes) => {
     });
   };
 
-  return CategoryProduct;
+  return Category;
 };

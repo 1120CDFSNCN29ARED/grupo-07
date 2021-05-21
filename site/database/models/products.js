@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(200),
       allowNull: false,
     },
-    price: Sequelize.DECIMAL(3, 2),
+    price: Sequelize.INTEGER,
 
     description: Sequelize.TEXT,
 
@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
 
     picture: Sequelize.STRING(500),
 
-    weight: Sequelize.DECIMAL(4, 2),
+    weight: Sequelize.INTEGER,
 
     quantity: Sequelize.INTEGER,
 
@@ -39,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
   const Product = sequelize.define(alias, col, config);
 
   Product.associate = function (models) {
-    Product.belongsToMany(models.CategoryProduct, {
+    Product.belongsToMany(models.Category, {
       as: "category",
       foreignKey: "product_id",
       other: "category_id",

@@ -94,7 +94,7 @@ const products = {
   create: (req, res) => {
     const newProducts = {
       ...req.body,
-      include: [{ model: "categoryProduct" }, { model: "brand" }],
+      include: [{ model: "category" }, { model: "brands" }],
     };
     allProducts
       .create(newProducts)
@@ -109,26 +109,37 @@ const products = {
   /*editar prodcutos existentes en productUpdate*/
 
   edit: (req, res) => {
+    console.log("req de edit", req.params.id);
     allProducts
-      .findByPk(req.params.id, {
-        include: ["category"],
-      })
+      .findByPk(req.params.id)
       .then((productsUpdate) => {
-        res.render("products/productsUpdate", { productsUpdate });
+        console.log("return prod", productsUpdate);
+        return res.render("products/productsUpdate", { productsUpdate });
       })
-      .catch(() => {
-        res.redirect("error");
+      .catch((error) => {
+        console.log(error);
+        return res.redirect("error");
       });
   },
 
   update: function (req, res) {
+    console.log(...req.body);
     allProducts
       .update({ ...req.body }, { where: { id: req.params.id } })
-      .then((products) => res.redirect("/products"))
+      .then((productsUpdate) => res.redirect("/products"))
       .catch(() => res.send(error));
   },
 
-  /*buscar:  function (req,res) {}                   FALTA HACER*/
+  /*buscador de productos segun nombre - FALTA HACER
+  buscar:  function (req,res) {
+      allProducts.findAll()
+      .then() => {
+        res.render("products/searchProduct");
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
+  },      */
 
   /*borrar productos existentes de modificationListProducts*/
 

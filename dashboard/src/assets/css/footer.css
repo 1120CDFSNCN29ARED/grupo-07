@@ -1,0 +1,24 @@
+.redes {
+  background-color: #fccb1a;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.redes-container {
+  padding: 5px;
+}
+
+.redes i {
+  color: #0c5d5e;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.icon-up {
+  position: fixed;
+  top: 490px;
+  left: 290px;
+}
