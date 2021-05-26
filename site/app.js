@@ -8,11 +8,11 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const models = require("./database/models/index");
 
-//inicia la conexion con la base de datos
+//Testing the connection database
 const connectServer = async () => {
   try {
     await models.sequelize.authenticate();
-    console.log("conectadok");
+    console.log("conectado DB ok");
   } catch (error) {
     console.error("error DB", error);
   }
