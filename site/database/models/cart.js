@@ -1,18 +1,18 @@
 const { Sequelize } = require("sequelize");
 
-module.exports = (sequelize, dataType) => {
+module.exports = (sequelize, dataTypes) => {
   const alias = "Cart";
   const col = {
     id: {
-      type: dataType.INTEGER,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     user_id: {
-      type: dataType.INTEGER,
+      type: dataTypes.INTEGER,
     },
     productCart_id: {
-      type: dataType.INTEGER,
+      type: dataTypes.INTEGER,
     },
   };
   const config = {

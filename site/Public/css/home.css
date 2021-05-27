@@ -3,14 +3,14 @@
   font-size: 14px;
 }
 
-.h2 {
+.main-title {
   font-family: "Yusei Magic", sans-serif;
   margin: 0px;
 }
 
 /*SECCION PRODUCTOS*/
 
-.products .h2 {
+.products .main-title {
   text-align: center;
   padding: 20px;
   color: #0c5d5e;
@@ -100,7 +100,7 @@
   margin: 10px;
 }
 
-.quienes-somos .h2 {
+.quienes-somos .main-title {
   color: #ec9f00;
 }
 
@@ -151,12 +151,11 @@
 
 /*SECCION SUCURSALES*/
 .sucursales {
-  /* padding: 10px;*/
   margin-top: 60px;
   background-image: url("/img/dots3.png");
   background-repeat: repeat-x;
 }
-.sucursales .h2 {
+.sucursales .main-title {
   text-align: center;
   padding: 5px;
   border-top: solid 1px;
@@ -167,7 +166,6 @@
   display: flex;
   flex-wrap: wrap;
   border-bottom: solid 1px;
-  /* margin-bottom: 20px;*/
 }
 
 .sucursal-image {
@@ -186,7 +184,7 @@
 }
 
 /*RESEÑAS*/
-.reseñas .h2 {
+.reseñas .main-title {
   display: none;
 }
 
@@ -236,7 +234,7 @@
     flex-wrap: wrap;
   }
 
-  .sucursales .h2 {
+  .sucursales .main-title {
     margin-bottom: 10px;
     padding: 10px;
   }
@@ -262,7 +260,7 @@
     padding-top: 50px;
   }
 
-  .reseñas .h2 {
+  .reseñas .main-title {
     display: initial;
     margin-top: 60px;
     margin-left: 330px;
@@ -283,6 +281,10 @@
     font-size: 18px;
   }
 
+  .products .main-title {
+    padding-top: 100px;
+  }
+
   .product-article img {
     height: 300px;
   }
@@ -298,6 +300,12 @@
   .vegan img {
     width: 75%;
     margin-left: 130px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .product-section {
+    padding-bottom: 40px;
   }
 
   .quienes-somos {
@@ -322,7 +330,7 @@
     width: 50%;
   }
 
-  .reseñas .h2 {
+  .reseñas .main-title {
     margin-left: 550px;
   }
 

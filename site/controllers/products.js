@@ -2,20 +2,13 @@
 
 const fs = require("fs");
 const path = require("path");
-const category = require("../database/models/categoryProduct");
+//const category = require("../database/models/categoryProduct");
 const db = require("./../database/models");
 
 const allProducts = db.Product;
 //const allUsers = db.User;
 const carts = db.Cart;
 //const category = db.category;
-
-/*const toThousand = (n) => {
-  return n.toLocaleString("es-AR", {
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
-  });
-};*/
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -37,9 +30,7 @@ const products = {
 
   detail: (req, res) => {
     allProducts
-      .findByPk(req.params.id, {
-        include: ["categoryProduct"],
-      })
+      .findByPk(req.params.id)
       .then((productsDetail) => {
         res.render("products/productDetail", { productsDetail });
         /*return res
@@ -82,7 +73,7 @@ const products = {
     allProducts
       .findAll()
       .then((productsAdd) => {
-        res.render("products/productsAdd", { productsAdd });
+        return res.render("products/productsAdd", { productsAdd });
       })
       .catch(() => {
         res.redirect("error");
@@ -99,7 +90,7 @@ const products = {
     allProducts
       .create(newProducts)
       .then((newProducts) => {
-        res.redirect("/products/modificationListProducts");
+        return res.redirect("/products/modificationListProducts");
       })
       .catch(() => {
         res.redirect("error");
@@ -113,11 +104,9 @@ const products = {
     allProducts
       .findByPk(req.params.id)
       .then((productsUpdate) => {
-        console.log("return prod", productsUpdate);
         return res.render("products/productsUpdate", { productsUpdate });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
         return res.redirect("error");
       });
   },
@@ -126,8 +115,10 @@ const products = {
     console.log(...req.body);
     allProducts
       .update({ ...req.body }, { where: { id: req.params.id } })
-      .then((productsUpdate) => res.redirect("/products"))
-      .catch(() => res.send(error));
+      .then((productsUpdate) => {
+        return res.redirect("/products");
+      })
+      .catch(() => res.redirect("error"));
   },
 
   /*buscador de productos segun nombre - FALTA HACER

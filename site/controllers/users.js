@@ -1,4 +1,3 @@
-const { render } = require("ejs");
 const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
@@ -7,6 +6,8 @@ const { validationResult } = require("express-validator");
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+const db = require("./../database/models");
+const allUsers = db.User;
 
 const users = {
   register: (req, res) => {
@@ -81,7 +82,14 @@ const users = {
   },
 
   userProfile: (req, res) => {
-    res.render("users/user");
+    allUsers
+      .findByPk(req.params.id)
+      .then((oneUser) => {
+        res.render("users/user", { oneUser });
+      })
+      .catch(() => {
+        res.redirect("error");
+      });
   },
 
   profile: (req, res) => {

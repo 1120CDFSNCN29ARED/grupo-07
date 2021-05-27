@@ -25,7 +25,7 @@ module.exports = (sequelize, datatypes) => {
     locality: Sequelize.STRING(20),
     cp: Sequelize.TINYINT(4),
     phone: Sequelize.INTEGER,
-    birthday: Sequelize.DATE,
+    birthday: Sequelize.DATEONLY,
     usercategory_id: {
       type: datatypes.TINYINT(2),
     },
