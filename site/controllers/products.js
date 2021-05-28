@@ -2,8 +2,8 @@
 
 const fs = require("fs");
 const path = require("path");
-//const category = require("../database/models/categoryProduct");
 const db = require("./../database/models");
+const { validationResult } = require("express-validator");
 
 const allProducts = db.Product;
 //const allUsers = db.User;
@@ -83,18 +83,22 @@ const products = {
   /*agregar productos nuevos en productsAdd*/
 
   create: (req, res) => {
-    const newProducts = {
-      ...req.body,
-      include: [{ model: "category" }, { model: "brands" }],
-    };
-    allProducts
-      .create(newProducts)
-      .then((newProducts) => {
-        return res.redirect("/products/modificationListProducts");
-      })
-      .catch(() => {
-        res.redirect("error");
-      });
+    const errors = validationResult(req);
+    if (errors.isEmpty()) {
+      const newProducts = {
+        ...req.body,
+      };
+      allProducts
+        .create(newProducts)
+        .then((newProducts) => {
+          return res.redirect("/products/modificationListProducts");
+        })
+        .catch(() => {
+          res.redirect("error");
+        });
+    } else {
+      res.render("products/productsAdd", { errors: errors.array() });
+    }
   },
 
   /*editar prodcutos existentes en productUpdate*/
@@ -112,7 +116,6 @@ const products = {
   },
 
   update: function (req, res) {
-    console.log(...req.body);
     allProducts
       .update({ ...req.body }, { where: { id: req.params.id } })
       .then((productsUpdate) => {

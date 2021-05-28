@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-// const { delete } = require("../routes/main");
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));

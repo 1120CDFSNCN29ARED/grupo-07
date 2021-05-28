@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <%- include("./../partials/head.ejs") %>
+  <head>
+    <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
     <script src="register.js"></script>
-</head>
+  </head>
 
-<body>
-  <%- include("./../partials/header.ejs") %>
+  <body>
+    <%- include("./../partials/header.ejs") %>
 
     <main class="main-container">
-      <div class="errores">
+      <!-- <div class="errores">
         <ul>
-
+COMPLETAR ERROR
         </ul>
-      </div>
-      <form action="/" method="POST" enctype="multipart/form-data" class="form-menu">
+      </div>-->
+      <form
+        action="/"
+        method="POST"
+        enctype="multipart/form-data"
+        class="form-menu"
+      >
         <h2 class="title">Creá tu cuenta</h2>
         <p class="register-text">¿Ya tenés un cuenta?</p>
         <p class="register-text">
@@ -25,15 +29,33 @@
 
         <div class="form-item">
           <label class="form-label" for="name">Nombre</label>
-          <input type="text" name="name" id="name" required class="form-input" />
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="form-input"
+          />
         </div>
         <div class="form-item">
           <label for="name" class="form-label">Apellido</label>
-          <input type="text" name="surname" id="surname" required class="form-input" />
+          <input
+            type="text"
+            name="surname"
+            id="surname"
+            required
+            class="form-input"
+          />
         </div>
         <div class="form-item">
           <label for="picture" class="form-label">Imagen de perfil</label>
-          <input type="file" name="picture" id="picture" required class="form-input" />
+          <input
+            type="file"
+            name="picture"
+            id="picture"
+            required
+            class="form-input"
+          />
         </div>
         <div class="form-item">
           <label for="name" class="fomr-label">Calle y n°:</label>
@@ -41,11 +63,21 @@
         </div>
         <div class="form-item">
           <label for="name" class="form-label">Piso y depto:</label>
-          <input type="text" name="floor" id="floor" class="form-input" />
+          <input
+            type="text"
+            name="floorLevel"
+            id="floorLevel"
+            class="form-input"
+          />
         </div>
         <div class="form-item">
           <label for="name" class="form-label">Entre calles:</label>
-          <input type="text" name="between-street" id="between-street" class="form-input" />
+          <input
+            type="text"
+            name="betweenStreet"
+            id="betweenStreet"
+            class="form-input"
+          />
         </div>
         <div class="form-item">
           <label for="name" class="form-label">Localidad:</label>
@@ -62,38 +94,59 @@
         <div class="form-item">
           <label for="name" class="form-label">Fecha de nacimiento:</label>
           <input type="text" name="birthday" class="form-input" />
-          <div class="form-item">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" name="email" id="email" required class="form-input" />
-          </div>
-          <div class="form-item">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" name="password" id="password" required class="form-input" />
-          </div>
-          <div class="form-item">
-            <label for="repeat password" class="form-label">Repetir contraseña</label>
-            <input type="password" name="repeat-password" id="repeat-password" class="form-input" />
-          </div>
-          <div class="form-item">
-            <input type="checkbox" name="checkbox" id="checkbox" />
-            <label class="form-label checkbox-label">Quiero recibir novedades y promociones de Huerta Market</label>
-          </div>
-          <div class="form-item btn-container">
-            <button type="submit" class="search-btn register-btn">
-              Registrate
-            </button>
-            <p class="alternativo">o</p>
-            <button type="submit" class="search-btn register-btn">
-              Registrate con Google
-            </button>
-          </div>
-          <p class="register-text">
-            ¿Ya tenés cuenta? <a href="/users/logIn">Ingresá aquí</a>
-          </p>
+        </div>
+        <div class="form-item">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="repeat password" class="form-label"
+            >Repetir contraseña</label
+          >
+          <input
+            type="password"
+            name="repeatPassword"
+            id="repeatPassword"
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <label class="form-label checkbox-label"
+            >Quiero recibir novedades y promociones de Huerta Market</label
+          >
+        </div>
+        <div class="form-item btn-container">
+          <button type="submit" class="search-btn register-btn">
+            Registrate
+          </button>
+          <p class="alternativo">o</p>
+          <button type="submit" class="search-btn register-btn">
+            Registrate con Google
+          </button>
+        </div>
+        <p class="register-text">
+          ¿Ya tenés cuenta? <a href="/users/logIn">Ingresá aquí</a>
+        </p>
       </form>
     </main>
 
     <%- include("./../partials/footer.ejs") %>
-</body>
-
+  </body>
 </html>

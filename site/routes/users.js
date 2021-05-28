@@ -5,7 +5,8 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
-const userValidation = require("../middleware/userValidation");
+const loginValidation = require("../middleware/loginValidation");
+const registerValidation = require("../middleware/registerValidation");
 const middlewareHuesped = require("../middleware/middlewarehuesped");
 const usuarioMiddleware = require("../middleware/middelwareUsuario");
 const users = require("../controllers/users");
@@ -34,7 +35,7 @@ router.post("/register", upload.single("picture"), users.processRegister);
 
 router.get("/logIn", users.login);
 
-router.post("/logIn", userValidation, users.processLogIn);
+router.post("/logIn", loginValidation, users.processLogIn);
 
 router.get("/user", users.userProfile);
 

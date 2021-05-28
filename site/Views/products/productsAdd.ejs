@@ -20,6 +20,9 @@
         <div>
           <h2 class="title">Agregar productos</h2>
         </div>
+        <% errors.forEach(error => { %>
+<p class="errores"> <%= error.msg %> </p>
+       <% })%>
         <form action="/products/productsAdd" method="POST" enctype="multipart/form-data" class="form-menu">
           <div class="form-item">
             <label for="name" class="fomr-label">Nombre</label>

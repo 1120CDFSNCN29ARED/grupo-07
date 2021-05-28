@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 
-const userValidation = [
-  body("email").isEmail().notEmpty(),
+const loginValidation = [
+  body("user-name").notEmpty().withMessage("Debes completar el nombre"),
   body("password")
     .isLength({ min: 6 })
     .withMessage("La contraseña debe tener al menos 6 caracteres.")
@@ -9,4 +9,4 @@ const userValidation = [
     .notEmpty(),
 ];
 
-module.exports = userValidation;
+module.exports = loginValidation;

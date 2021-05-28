@@ -16,8 +16,8 @@ formulario.addEvenetListener("submit", function (e) {
   let inputSurname = document.querySelector("input.surname");
 
   if (inputSurname.value == "") {
-    errores.push("El campo de precio debe estar completo");
-  } else if (inputSurname.value.lenght < 4) {
+    errores.push("El campo de apellido debe estar completo");
+  } else if (inputSurname.value.lenght < 3) {
     errores.push("el apellido debe tener al menos 3 caracteres");
   }
 
@@ -27,23 +27,25 @@ formulario.addEvenetListener("submit", function (e) {
     errores.push("Es necesario insertar imagen");
   }
 
-  let inputStreet = document.querySelector("input.street");
+  let inputEmail = document.querySelector("input.email");
 
-  if (inputStreet.value == "") {
-    errores.push("El campo de calle y n° debe estar completo");
-  } else if (inputStreet.value.lenght < 6) {
-    errores.push("la dirección debe tener al menos 6 caracteres");
+  if (inputEmail.value == "") {
+    errores.push("El campo de email debe estar completo");
   }
 
-  let inputFloor = document.querySelector("input.flat");
+  let inputPass = document.querySelector("input.pass");
 
-  if (inputFloor.value == "") {
-    errores.push("El campo de piso y departamento debe estar completo");
-  } else if (inputFloor.value.lenght < 2) {
-    errores.push("El Piso y depto debe tener al menos 2 caracteres");
+  if (inputPass.value == "") {
+    errores.push("El campo de contraseña debe estar completo");
+  } else if (inputPass.value.lenght < 6) {
+    errores.push("La contraseña debe tener al menos 6 caracteres");
   }
 
-  //FALTA ENTRECALLES, LOCALIDAD, CP, TELEFONO, FECHA DE NACIMIENTO, EMAIL, CONTRASEÑA, REPETIR CONTRASEÑA
+  let inputRepeatPassword = document.querySelector("input.repeatPassword");
+
+  if (inputRepeatPassword.value == "") {
+    errores.push("El campo de contraseña debe estar completo");
+  }
 
   if (errores.length > 0) {
     e.preventDefault();

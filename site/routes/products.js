@@ -3,6 +3,8 @@ const express = require("express");
 const path = require("path");
 const multer = require("multer");
 const router = express.Router();
+const addValidation = require("../middleware/addValidation");
+const updateValidation = require("../middleware/updateValidation");
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -40,7 +42,7 @@ router.get("/productDetail/:id", products.detail);
 router.get("/productCart", usuarioMiddleware, products.cart);
 
 /***PRODUCT CREATE - Form creation and processing form */
-router.get("/productsAdd", products.add);
+router.get("/productsAdd", addValidation, products.add);
 router.post("/productsAdd", upload.single("picture"), products.create);
 
 /*** GET LIST PRODUCTS- MODIFICATION LIST PRODUCTS */

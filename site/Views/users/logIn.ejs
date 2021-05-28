@@ -15,26 +15,28 @@
       </div>
     </header>
     <main class="main-container">
-      <div class="errores">
-        <ul></ul>
-      </div>
+      <!--    <div class="errores">
+        <ul>
+         incluir mensaje de error 
+        </ul>
+      </div>-->
       <form action="/" method="get" class="form-menu">
         <div class="user">
           <i class="fas fa-user"></i>
         </div>
-        <h2 class="log-title">Ingresá</h2>
-
+        <div>
+          <h2 class="log-title">Ingresá</h2>
+        </div>
         <div class="log-item">
-          <label for="user-name" class="form-label"
+          <label for="email" class="form-label"
             ><i class="fas fa-user"></i
           ></label>
-          <!-- incluir mensaje de error -->
           <input
-            type="text"
-            name="user-name"
-            id="user-name"
+            type="email"
+            name="email"
+            id="email"
             class="log form-input"
-            placeholder="Usuario"
+            placeholder="Email"
             required
           />
         </div>
@@ -42,8 +44,8 @@
           <label for="password"><i class="fas fa-lock"></i></label>
           <input
             type="password"
-            name="password"
-            id="password"
+            name="pass"
+            id="pass"
             class="log form-input"
             placeholder="Contraseña"
             required
