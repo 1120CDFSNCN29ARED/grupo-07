@@ -3,13 +3,12 @@ const express = require("express");
 const path = require("path");
 const multer = require("multer");
 const router = express.Router();
-const addValidation = require("../middleware/addValidation");
-const updateValidation = require("../middleware/updateValidation");
 
+//* Middleware Multer*//
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const folder = path.join(__dirname, "../public/img/products");
-    console.log(file.mimetype);
+    // console.log(file.mimetype);
     if (file.mimetype != "image/jpeg" && file.mimetype != "image/png") {
       return cb(new Error("Solo se aceptan imagenes en jpg o png"));
     }
@@ -28,6 +27,8 @@ const products = require("../controllers/products");
 
 // Middelware Required
 const middlewareUsuario = require("../middleware/middlewareUsuario");
+const addValidation = require("../middleware/addValidation");
+const updateValidation = require("../middleware/updateValidation");
 
 /*BUSCADOR PRODUCTS*/
 router.get("/searchProduct", products.buscar);

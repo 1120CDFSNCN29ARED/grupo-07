@@ -9,6 +9,7 @@ const db = require("./../database/models");
 const allUsers = db.User;
 
 const users = {
+  /* CREAR USUARIO - REGISTER*/
   register: (req, res) => {
     res.render("users/register");
   },
@@ -50,6 +51,7 @@ const users = {
     res.redirect("/");
   },
 
+  /* PROCESO LOGIN  */
   login: (req, res) => {
     res.render("users/logIn");
   },
@@ -80,6 +82,7 @@ const users = {
     }
   },
 
+  /*USER PROFILE - VISUALIZACION usuario DETALLE*/
   userProfile: (req, res) => {
     allUsers
       .findByPk(req.params.id)
@@ -91,6 +94,7 @@ const users = {
       });
   },
 
+  /* USER PROFILE - MODIFICACION Usuario DETALLE*/
   profile: (req, res) => {
     res.render("users/userProfile", { usuario: req.session.usuarioLogueado });
   },
@@ -115,9 +119,6 @@ const users = {
     fs.writeFileSync(usersFilePath, JSON.stringify(usersJson));
 
     res.redirect("/");
-  },
-  list: (req, res) => {
-    res.render("users/usersList");
   },
 };
 
