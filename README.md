@@ -36,5 +36,5 @@ Nuestra empresa ofrece alimentos saludables y nutritivos que ayudan a mejorar la
 
 ## Canales de comunicación
 
-- https://trello.com/b/GxSsuu0F/grupo-07-digital-house (trello)
+- https://trello.com/b/94ar6mBq/equipo-7 (trello)
 - Discord

@@ -8,7 +8,7 @@ const multer = require("multer");
 const loginValidation = require("../middleware/loginValidation");
 const registerValidation = require("../middleware/registerValidation");
 const middlewareHuesped = require("../middleware/middlewarehuesped");
-const usuarioMiddleware = require("../middleware/middelwareUsuario");
+const middlewareUsuario = require("../middleware/middlewareUsuario");
 const users = require("../controllers/users");
 
 const storage = multer.diskStorage({
@@ -39,7 +39,7 @@ router.post("/logIn", loginValidation, users.processLogIn);
 
 router.get("/user", users.userProfile);
 
-router.get("/userProfile", /*usuarioMiddleware,*/ users.profile);
+router.get("/userProfile", middlewareUsuario, users.profile);
 
 router.get("/usersList", users.list);
 

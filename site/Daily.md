@@ -137,7 +137,8 @@ https://trello.com/b/94ar6mBq/equipo-7
 
 - Planificación y actualización de tablero de trabajo.
 - Desarrollo de la retrospectiva del sprint 5.
-- CRUD products y CRUD users.
+- CRUD products
+- Creación view products delete, products update y search product
 - Validaciones front-end y back-end de products y users.
 - Modificaciones models.
 - Modificaciones views.

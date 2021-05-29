@@ -1,4 +1,4 @@
-const usuarioMiddleware = (req, res, next) => {
+const middlewareUsuario = (req, res, next) => {
   if (req.session.usuarioLogueado != undefined) {
     next();
   } else {
@@ -6,4 +6,4 @@ const usuarioMiddleware = (req, res, next) => {
   }
 };
 
-module.exports = usuarioMiddleware;
+module.exports = middlewareUsuario;

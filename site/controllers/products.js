@@ -14,6 +14,7 @@ const productsFilePath = path.join(__dirname, "../data/products.json");
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
 const products = {
+  /*Listado de productos*/
   list: (req, res) => {
     allProducts
       .findAll({
@@ -21,18 +22,19 @@ const products = {
         offset: 6,
       })
       .then((products) => {
-        res.render("products/products", { products: products });
+        return res.render("products/products", { products: products });
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
   },
 
+  /* Detalle de un producto*/
   detail: (req, res) => {
     allProducts
       .findByPk(req.params.id)
       .then((productsDetail) => {
-        res.render("products/productDetail", { productsDetail });
+        return res.render("products/productDetail", { productsDetail });
         /*return res
           .status(200)
           .json({
@@ -41,33 +43,38 @@ const products = {
             status: 200,*/
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
   },
+
+  /*Carrito de compra*/
 
   cart: (req, res) => {
     carts
-      .findByPk(req.params.id, {
-        include: ["product"],
-      })
+      .findByPk(req.params.id)
       .then((productsCart) => {
-        res.render("products/productCart", { productsCart });
+        return res.render("products/productCart", { productsCart });
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
   },
 
+  /* Lista de productos para actualizar/modificar , agregar o eliminar*/
   modificationList: (req, res) => {
     allProducts
       .findAll()
       .then((productsList) => {
-        res.render("products/modificationListProducts", { productsList });
+        return res.render("products/modificationListProducts", {
+          productsList,
+        });
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
   },
+
+  /*agregar productos nuevos en productsAdd*/
 
   add: (req, res) => {
     allProducts
@@ -76,11 +83,9 @@ const products = {
         return res.render("products/productsAdd", { productsAdd });
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
   },
-
-  /*agregar productos nuevos en productsAdd*/
 
   create: (req, res) => {
     const errors = validationResult(req);
@@ -94,14 +99,14 @@ const products = {
           return res.redirect("/products/modificationListProducts");
         })
         .catch(() => {
-          res.redirect("error");
+          return res.redirect("error");
         });
     } else {
       res.render("products/productsAdd", { errors: errors.array() });
     }
   },
 
-  /*editar prodcutos existentes en productUpdate*/
+  /*Editar producto existente en ModificationList*/
 
   edit: (req, res) => {
     console.log("req de edit", req.params.id);
@@ -121,21 +126,24 @@ const products = {
       .then((productsUpdate) => {
         return res.redirect("/products");
       })
-      .catch(() => res.redirect("error"));
+      .catch(() => {
+        return res.redirect("error");
+      });
   },
 
-  /*buscador de productos segun nombre - FALTA HACER
-  buscar:  function (req,res) {
-      allProducts.findAll()
-      .then() => {
-        res.render("products/searchProduct");
+  /*Buscador de productos segun nombre -            FALTA HACER */
+  buscar: function (req, res) {
+    allProducts
+      .findAll()
+      .then(() => {
+        return res.render("products/searchProduct");
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
-  },      */
+  },
 
-  /*borrar productos existentes de modificationListProducts*/
+  /*Borrar producto existente de modificationListProducts*/
 
   delete: function (req, res) {
     allProducts.findByPk(req.params.id).then((products) => {
@@ -151,7 +159,9 @@ const products = {
         console.log("prto", products);
         return res.redirect("/products/modificationListProducts");
       })
-      .catch(() => res.send(error));
+      .catch(() => {
+        return res.send(error);
+      });
   },
 };
 

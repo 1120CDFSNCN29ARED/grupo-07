@@ -27,10 +27,10 @@ const upload = multer({ storage });
 const products = require("../controllers/products");
 
 // Middelware Required
-const usuarioMiddleware = require("../middleware/middelwareUsuario");
+const middlewareUsuario = require("../middleware/middlewareUsuario");
 
 /*BUSCADOR PRODUCTS*/
-//router.get("/searchProduct", products.buscar);
+router.get("/searchProduct", products.buscar);
 
 /* GET ALL PRODUCTS */
 router.get("/", products.list);
@@ -39,7 +39,7 @@ router.get("/", products.list);
 router.get("/productDetail/:id", products.detail);
 
 /***PRODUCT CART */
-router.get("/productCart", usuarioMiddleware, products.cart);
+router.get("/productCart", middlewareUsuario, products.cart);
 
 /***PRODUCT CREATE - Form creation and processing form */
 router.get("/productsAdd", addValidation, products.add);
