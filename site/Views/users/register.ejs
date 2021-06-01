@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/forms.css" />
+    <script src="register.js"></script>
+  </head>
+
+  <body>
+    <%- include("./../partials/header.ejs") %>
+
+    <main class="main-container">
+      <!-- <div class="errores">
+        <ul>
+COMPLETAR ERROR
+        </ul>
+      </div>-->
+      <form
+        action="/"
+        method="POST"
+        enctype="multipart/form-data"
+        class="form-menu"
+      >
+        <h2 class="title">Creá tu cuenta</h2>
+        <p class="register-text">¿Ya tenés un cuenta?</p>
+        <p class="register-text">
+          <a href="/users/logIn" class="log">ingresá</a>
+        </p>
+
+        <div class="form-item">
+          <label class="form-label" for="name">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Apellido</label>
+          <input
+            type="text"
+            name="surname"
+            id="surname"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="picture" class="form-label">Imagen de perfil</label>
+          <input
+            type="file"
+            name="picture"
+            id="picture"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="name" class="fomr-label">Calle y n°:</label>
+          <input type="text" name="street" id="street" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Piso y depto:</label>
+          <input
+            type="text"
+            name="floorLevel"
+            id="floorLevel"
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Entre calles:</label>
+          <input
+            type="text"
+            name="betweenStreet"
+            id="betweenStreet"
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Localidad:</label>
+          <input type="text" name="locality" id="locality" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">CP:</label>
+          <input type="text" name="cp" id="cp" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Telefono:</label>
+          <input type="text" name="phone" id="phone" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="name" class="form-label">Fecha de nacimiento:</label>
+          <input type="text" name="birthday" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="email" class="form-label">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="password" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            name="pass"
+            id="pass"
+            required
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <label for="repeat password" class="form-label"
+            >Repetir contraseña</label
+          >
+          <input
+            type="password"
+            name="repeatPassword"
+            id="repeatPassword"
+            class="form-input"
+          />
+        </div>
+        <div class="form-item">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <label class="form-label checkbox-label"
+            >Quiero recibir novedades y promociones de Huerta Market</label
+          >
+        </div>
+        <div class="form-item btn-container">
+          <button type="submit" class="search-btn register-btn">
+            Registrate
+          </button>
+          <p class="alternativo">o</p>
+          <button type="submit" class="search-btn register-btn">
+            Registrate con Google
+          </button>
+        </div>
+        <p class="register-text">
+          ¿Ya tenés cuenta? <a href="/users/logIn">Ingresá aquí</a>
+        </p>
+      </form>
+    </main>
+
+    <%- include("./../partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+/* Register y LogIn*/
+.main-container {
+  background-color: #fef9ec;
+}
+
+.form-menu {
+  width: 100%;
+  height: auto;
+  font-size: 14px;
+  margin: auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  position: relative;
+  padding-top: 40px;
+}
+
+.title {
+  font-family: "Yusei Magic", sans-serif;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #fba90a;
+  margin-top: 0%;
+  padding-top: 30px;
+}
+
+.log-title {
+  color: #0c5d5e;
+  margin-left: 30px;
+}
+
+.user {
+  text-align: center;
+  font-size: 30px;
+  background-color: #fba90a;
+  color: #0c5d5e;
+  width: 80px;
+  height: 80px;
+  line-height: 70px;
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  top: -28px;
+  left: 150px;
+  position: absolute;
+}
+
+.register-text {
+  text-align: center;
+}
+
+.form-item,
+.log-item {
+  padding: 10px;
+}
+
+.form-input {
+  padding: 4px;
+  border-radius: 5%;
+  border: #fba90a 0.5px solid;
+  display: block;
+  width: 100%;
+}
+
+.log-item .form-input {
+  display: inline;
+  width: initial;
+}
+
+.log-item {
+  text-align: center;
+  padding: 10px;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.checkbox-label {
+  display: inline;
+}
+
+.forget-pass {
+  text-align: center;
+  padding: 20px;
+}
+
+.forget-pass a {
+  color: #0c5d5e;
+}
+
+/* PRODUCT ADD */
+.check {
+  display: inline-flex;
+  width: 49%;
+}
+
+.check .form-input {
+  width: 10%;
+  margin-right: 5px;
+}
+
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*USER PROFILE*/
+
+.modificar-datos button {
+  background-color: #ec9f00;
+  color: #0c5d5e;
+  border-bottom: #0c5d5e solid 3px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  padding: 5px;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+
+/*USER*/
+
+.information-container {
+  text-align: justify;
+  width: 80%;
+  margin-left: 30px;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(12, 93, 94, 0.4);
+}
+
+.gif-fruit img {
+  display: none;
+}
+
+.pedidos {
+  margin-top: 80px;
+}
+
+.categorias {
+  border-top: #fba90a 0.5px solid;
+  border-bottom: #fba90a 0.5px solid;
+  margin-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.categorias .p {
+  padding: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/*PRODUCTS DELETE*/
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.borrar-productos {
+  background-color: #0c5d5e;
+  padding: 9px;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Media-Queries */
+@media (min-width: 760px) {
+  .form-menu {
+    width: 60%;
+  }
+
+  .user {
+    left: 200px;
+  }
+
+  .forget-pass {
+    border-bottom: 1px solid #0c5d5e;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 10px;
+  }
+
+  /*USER*/
+
+  .information-container {
+    margin-left: 65px;
+    padding-left: 100px;
+  }
+
+  .gif-fruit img {
+    display: initial;
+    width: 13%;
+    padding: 10px;
+    padding-top: 30px;
+    margin-left: 50px;
+  }
+
+  .categorias .p {
+    margin-left: 100px;
+    margin-right: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-menu {
+    width: 50%;
+  }
+
+  .check {
+    width: 30%;
+  }
+
+  .user {
+    left: 270px;
+  }
+
+  /*USER*/
+  .gif-fruit img {
+    display: initial;
+    width: 16%;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 25px;
+  }
+
+  .information-container {
+    text-align: justify;
+    width: 60%;
+    margin-left: 250px;
+    padding-left: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgba(12, 93, 94, 0.4);
+  }
+
+  .information {
+    font-size: 16px;
+  }
+
+  .categorias .p {
+    margin-left: 150px;
+    font-size: 16px;
+  }
+}

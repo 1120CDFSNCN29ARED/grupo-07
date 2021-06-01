@@ -1,0 +1,256 @@
+h2 {
+  text-align: center;
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 18px;
+  color: #fba90a;
+  padding-bottom: 25px;
+  padding-top: 60px;
+  margin-top: 0px;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+  color: #0c5d5e;
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 13px;
+  text-align: center;
+  padding-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.articulo {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.articulo img {
+  width: 90%;
+}
+
+.detail-text .price {
+  font-weight: bold;
+  color: #0c5d5e;
+  padding: 15px;
+}
+
+.description {
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  bottom: 30%;
+}
+
+.envios {
+  text-align: center;
+  margin: auto;
+  bottom: 30%;
+  left: 5%;
+  right: 5%;
+}
+
+.envios h3 {
+  padding-bottom: 0px;
+  padding-top: 40px;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.share-title {
+  font-weight: bold;
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+.share ul li {
+  background-color: rgba(12, 93, 94, 0.4);
+  padding: 15px;
+  width: 70%;
+}
+
+.share ul li {
+  display: inline-block;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.share ul li:hover {
+  transform: translateY(-3px) scale(1.05);
+  background-color: #fbab0a96;
+}
+
+.products-carousel {
+  width: 55%;
+  height: auto;
+  margin-left: 85px;
+  padding-bottom: 70px;
+  padding-top: 20px;
+}
+
+.title-carousel {
+  font-family: "Yusei Magic", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #fba90a;
+}
+
+.search-carousel {
+  background-color: #0c5d5e;
+  padding: 8px;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
+  color: white;
+  position: relative;
+  top: -50px;
+  left: 70px;
+}
+
+.search-carousel a {
+  text-decoration: none;
+  color: white;
+}
+
+/*Button*/
+.cantidad button {
+  padding: 5px;
+  text-align: center;
+  margin: 20px;
+  font-size: 14px;
+  color: grey;
+}
+
+.carrito {
+  padding: 10px;
+  margin: 10px;
+}
+
+.carrito .search-btn {
+  padding: 10px;
+}
+
+.carrito .search-btn i {
+  padding-right: 5px;
+}
+
+.contar input {
+  width: 30px;
+  height: 30px;
+}
+
+.volver {
+  padding-top: 40px;
+  padding-left: 80px;
+}
+
+.volver .back-btn {
+  background-color: #0c5d5e;
+  padding: 10px;
+  box-shadow: 2px 2px 5px black(102, 66, 0);
+  color: white;
+  letter-spacing: 2px;
+}
+
+.volver .back-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Media-Queries */
+@media (min-width: 760px) {
+  .carrito button {
+    top: 1200px;
+  }
+
+  .articulo img {
+    width: 40%;
+  }
+
+  .detail-text {
+    align-self: center;
+  }
+
+  .products-carousel {
+    width: 35%;
+    margin-left: 250px;
+  }
+
+  .search-carousel {
+    top: -70px;
+    left: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .description-text {
+    font-size: 18px;
+  }
+
+  .articulo {
+    margin-left: 300px;
+    padding-top: 15px;
+  }
+
+  .volver {
+    margin-left: 185px;
+  }
+
+  .description {
+    width: 45%;
+    left: 15%;
+    right: 15%;
+  }
+
+  .envios {
+    width: 45%;
+    left: 15%;
+    right: 15%;
+  }
+
+  .carrito .search-btn {
+    font-size: 16px;
+  }
+
+  .products-carousel {
+    width: 30%;
+    margin-left: 450px;
+  }
+
+  .search-carousel {
+    left: 150px;
+  }
+}

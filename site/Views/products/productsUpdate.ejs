@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./../partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/forms.css" />
+    <script src="productsUpdate.js"></script>
+  </head>
+
+  <body>
+    <%- include ("./../partials/header.ejs") %>
+
+    <main class="main-container">
+    <!-- <div class="errores">
+        <ul>
+
+        </ul>
+      </div>--> 
+      <div>
+      <h2 class="title">Modificar productos</h2>
+      </div>
+      <form
+        action="/products/productsUpdate/<%= productsUpdate.id %>?_method=PUT"
+        method="POST"
+        enctype="multipart/form-data"
+        class="form-menu"
+      >
+      <input type="hidden" name="_method" value="PUT">
+        <div class="form-item">
+          <label for="name" class="fomr-label">Nombre</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value="<%= productsUpdate.name %>"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="picture" class="form-label">Foto</label>
+          <input type="file" name="picture" id="picture" value="<%= productsUpdate.picture %>" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="price">Precio</label>
+          <input
+            type="text"
+            name="price"
+            id="price"
+            value="<%= productsUpdate.price %>"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="price">Descuento</label>
+          <input
+            type="text"
+            name="discount"
+            id="discount"
+            value="<%= productsUpdate.discount %>"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="price">Cantidad</label>
+          <input
+            type="text"
+            name="quantity"
+            id="quantity"
+            value="<%= productsUpdate.quantity %>"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="price">Peso</label>
+          <input
+            type="text"
+            name="weight"
+            id="weight"
+            value="<%= productsUpdate.weight %>"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="brand" class="form-label">Marca</label>
+          <input type="text" name="brand" id="brand" value="<%= productsUpdate.description %>" class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="description" class="form-label">Descripción</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            value="<%= productsUpdate.description %>"
+            class="form-input description"
+          />
+        </div>
+        <div class="form-item">
+          <p class="form-label">Categorías de estilos de alimentación</p>
+          <div class="check-box">
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="tacc"
+                class="form-input checkbox"
+              />
+              <label for="tacc">Sin tacc</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="sodio"
+                class="form-input checkbox"
+              />
+              <label for="sodio" class="form-label">Bajo en sodio</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="lactosa"
+                class="form-input checkbox"
+              />
+              <label for="lactosa" class="form-label">Sin lactosa</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="azucar"
+                class="form-input checkbox"
+              />
+              <label for="azucar" class="form-label">Sin azúcar agregada</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="organico"
+                class="form-input checkbox"
+              />
+              <label for="organico" class="form-label">Orgánico</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="vegan"
+                class="form-input checkbox"
+              />
+              <label for="vegan" class="form-label">Apto vegano</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="vegetariano"
+                class="form-input checkbox"
+              />
+              <label for="vegetariano" class="form-label">Vegetariano</label>
+            </div>
+            <p class="form-label">Categorías de alimentos</p>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="postre"
+                class="form-input checkbox"
+              />
+              <label for="postre" class="form-label">Postre</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="snacks"
+                class="form-input checkbox"
+              />
+              <label for="snacks" class="form-label">Snacks</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="untables"
+                class="form-input checkbox"
+              />
+              <label for="untables" class="form-label"
+                >Untables y Conservas</label
+              >
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="pasta"
+                class="form-input checkbox"
+              />
+              <label for="pasta" class="form-label">Pastas y Harinas</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="bebibles"
+                class="form-input checkbox"
+              />
+              <label for="bebibles" class="form-label"
+                >Bebibles e Infusiones</label
+              >
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="cereales"
+                class="form-input checkbox"
+              />
+              <label for="cereales" class="form-label"
+                >Cereales, Granolas y Frutos secos</label
+              >
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="legumbres"
+                class="form-input checkbox"
+              />
+              <label for="legumbres" class="form-label"
+                >Legumbres y Semillas</label
+              >
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="category"
+                id="congelados"
+                class="form-input checkbox"
+              />
+              <label for="congelados" class="form-label">Congelados</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="search-btn">Actualizar</button>
+        <div>
+          <!--    <button class="search-btn" type="button" disabled>
+        <span class="spinner-grow" role="status" aria-hidden="true"></span>
+            Guardando...
+          </button>-->
+        </div>
+        <div>
+          <button>
+            <a href="/products/modificationListProducts"></a>
+              Volver al Listado de productos</a
+            >
+          </button>
+        </div>
+      </form>
+    </main>
+    <%- include("./../partials/footer.ejs") %>
+  </body>
+</html>
