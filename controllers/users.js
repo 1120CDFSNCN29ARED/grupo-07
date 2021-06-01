@@ -4,6 +4,8 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 // const { delete } = require("../routes/main");
+const db = require("../database/models/users");
+const User = User.db;
 
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
@@ -31,7 +33,7 @@ const users = {
 
     let userInData = Users.findByField("email", req.body.email);*/
 
-    let newRegister = {
+    User.create({
       nombre: req.body.name,
       apellido: req.body.surname,
       foto: req.body.picture.filename,
@@ -44,12 +46,9 @@ const users = {
       cp: req.body.cp,
       telefono: req.body.phone,
       fechaDeNacimiento: req.body.birthday,
-    };
-    usersJson.push(newRegister);
-
-    fs.writeFileSync(usersFilePath, JSON.stringify(usersJson));
-
-    res.redirect("/");
+    }).then(() => {
+      res.redirect("/userProfile");
+    });
   },
 
   login: (req, res) => {
@@ -86,7 +85,26 @@ const users = {
   },
 
   modificationProfle: (req, res) => {
-    const id = req.params.id;
+    db.User.update({
+    nombre = req.body.name,
+    apellido = req.body.surname,
+    email = req.body.email,
+    calle = req.body.street,
+    piso = req.body.floor,
+    entreCalles = req.body.between - street,
+    localidad = req.body.locality,
+    cp = req.body.cp,
+    telefono = req.body.phone,
+    fechaDeNacimiento = req.body.birthday
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    })
+    res.redirect("/userProfile"+ req.params.id);
+    
+    /*const id = req.params.id;
     const users = usersJson.find((user) => {
       return user.id == id;
     });
@@ -104,7 +122,7 @@ const users = {
 
     fs.writeFileSync(usersFilePath, JSON.stringify(usersJson));
 
-    res.redirect("/");
+    res.redirect("/");*/
 
     //falta agregar para eliminar usuario
   },
