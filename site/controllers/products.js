@@ -88,32 +88,32 @@ const products = {
   },
 
   create: (req, res) => {
-    const errors = validationResult(req);
-    if (errors.isEmpty()) {
-      const newProducts = {
-        ...req.body,
-      };
-      allProducts
-        .create(newProducts)
-        .then((newProducts) => {
-          return res.redirect("/products/modificationListProducts");
-        })
-        .catch(() => {
-          return res.redirect("error");
-        });
-    } else {
-      res.render("products/productsAdd", { errors: errors.array() });
-    }
+    /* const errors = validationResult(req);
+    if (errors.isEmpty()) {*/
+    const newProducts = {
+      ...req.body,
+    };
+    allProducts
+      .create(newProducts)
+      .then((newProducts) => {
+        return res.redirect("/products/modificationListProducts");
+      })
+      .catch(() => {
+        return res.redirect("error");
+      });
+    /*} else {
+      res.render("products/productsAdd", { errors: errors.array() });*/
   },
+  /*},*/
 
   /*Editar producto existente en ModificationList*/
 
   edit: function (req, res) {
-    console.log("req de edit", req.params.id);
+    //  console.log("req de edit", req.params.id);
     allProducts
       .findByPk(req.params.id)
       .then((products) => {
-        console.log("ahora", products);
+        //    console.log("ahora", products);
         return res.render("products/productsEdit", { products });
       })
       .catch(() => {
@@ -153,11 +153,11 @@ const products = {
   },
 
   destroy: function (req, res) {
-    console.log("id", req.params.id);
+    //  console.log("id", req.params.id);
     allProducts
       .destroy({ where: { id: req.params.id }, force: true })
       .then((products) => {
-        console.log("prto", products);
+        //     console.log("prto", products);
         return res.redirect("/products/modificationListProducts");
       })
       .catch(() => {

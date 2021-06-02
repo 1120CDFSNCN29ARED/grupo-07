@@ -3,7 +3,7 @@
   <head>
     <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
-    <!--<script src="productsUpdate.js"></script>-->
+    <!--<script src="/js/productsUpdate.js"></script>-->
   </head>
 
   <body>
@@ -21,6 +21,7 @@
       <form
         action="/products/productsUpdate/<%= products.id %>?_method=PUT"
         method="POST"
+        enctype="multipart/form-data"
         class="form-menu"
       >
     

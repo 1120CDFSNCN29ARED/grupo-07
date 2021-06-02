@@ -1,8 +1,8 @@
-window.addEvenetListener("load", function () {
+window.addEventListener("load", function () {
   let formulario = document.querySelector("form.form-menu");
 });
 
-formulario.addEvenetListener("submit", function (e) {
+formulario.addEventListener("submit", function (e) {
   let errores = [];
 
   let inputName = document.querySelector("input.name");
@@ -56,7 +56,7 @@ formulario.addEvenetListener("submit", function (e) {
 
     let ulErrores = document.querySelector("div.erorres ul");
     for (let i = 0; i < errores.length; i++) {
-      ulErrores.innerHTML += "<li>" + errores[i] + "</li>";
+      ulErrores.innerHTML += "<ul>" + errores[i] + "</ul>";
     }
   }
 });

@@ -3,7 +3,6 @@
   <head>
     <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
-    <script src="login.js"></script>
   </head>
 
   <body>
@@ -15,11 +14,9 @@
       </div>
     </header>
     <main class="main-container">
-      <!--    <div class="errores">
-        <ul>
-         incluir mensaje de error 
-        </ul>
-      </div>-->
+      <div class="errores">
+        <ul></ul>
+      </div>
       <form action="/" method="get" class="form-menu">
         <div class="user">
           <i class="fas fa-user"></i>
@@ -35,10 +32,10 @@
             type="email"
             name="email"
             id="email"
-            class="log form-input"
+            class="log form-input email"
             placeholder="Email"
-            required
           />
+          <p></p>
         </div>
         <div class="log-item">
           <label for="pass"><i class="fas fa-lock"></i></label>
@@ -46,10 +43,10 @@
             type="password"
             name="pass"
             id="pass"
-            class="log form-input"
+            class="log form-input pass"
             placeholder="Contraseña"
-            required
           />
+          <p></p>
         </div>
         <p class="register-text"></p>
         <div class="form-item btn-container">
@@ -78,5 +75,6 @@
         <a href="#"><i class="fab fa-google"></i></a>
       </section>
     </footer>
+    <script src="/js/login.js"></script>
   </body>
 </html>
