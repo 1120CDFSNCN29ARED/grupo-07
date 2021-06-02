@@ -29,8 +29,7 @@ const users = {
     }
 
     let userInData = Users.findByField("email", req.body.email);*/
-
-    User.create({
+    const newUser = {
       nombre: req.body.name,
       apellido: req.body.surname,
       foto: req.body.picture.filename,
@@ -43,8 +42,9 @@ const users = {
       cp: req.body.cp,
       telefono: req.body.phone,
       fechaDeNacimiento: req.body.birthday,
-    }).then(() => {
-      res.redirect("/userProfile");
+    };
+    allUsers.create(newUser).then(() => {
+      res.redirect("/userProfile", { newUser });
     });
   },
 
@@ -53,7 +53,7 @@ const users = {
     res.render("users/logIn");
   },
   processLogIn: (req, res) => {
-    let usuarioALoguearse = /*await*/ User.findOne({
+    let usuarioALoguearse = allUsers.findOne({
       where: { email: req.body.email },
     });
     if (usuarioALoguearse) {
@@ -73,7 +73,7 @@ const users = {
     if (usuarioALoguearse == null) {
       return res.render("users/logIn", {
         errors: {
-          msg: "Emial o contraseña incorrectos",
+          msg: "Email o contraseña incorrectos",
         },
       });
     }
@@ -97,21 +97,17 @@ const users = {
   },
 
   modificationProfle: (req, res) => {
-    db.User.update({
-    nombre = req.body.name,
-    apellido = req.body.surname,
-    email = req.body.email,
-    calle = req.body.street,
-    piso = req.body.floor,
-    entreCalles = req.body.between - street,
-    localidad = req.body.locality,
-    cp = req.body.cp,
-    telefono = req.body.phone,
-    fechaDeNacimiento = req.body.birthday
-    },
-    {
-      where: {
-        id: req.params.id
-      }
-    })
-    res.redirect("/userProfile"+ req.params.id);}}
+    allUsers
+      .update(
+        { ...req.params },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      )
+      .then(res.redirect("/userProfile" + req.params.id));
+  },
+};
+
+module.exports = users;
