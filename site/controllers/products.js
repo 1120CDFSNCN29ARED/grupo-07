@@ -108,12 +108,13 @@ const products = {
 
   /*Editar producto existente en ModificationList*/
 
-  edit: (req, res) => {
+  edit: function (req, res) {
     console.log("req de edit", req.params.id);
     allProducts
       .findByPk(req.params.id)
-      .then((productsUpdate) => {
-        return res.render("products/productsUpdate", { productsUpdate });
+      .then((products) => {
+        console.log("ahora", products);
+        return res.render("products/productsEdit", { products });
       })
       .catch(() => {
         return res.redirect("error");
@@ -122,8 +123,8 @@ const products = {
 
   update: function (req, res) {
     allProducts
-      .update({ ...req.body }, { where: { id: req.params.id } })
-      .then((productsUpdate) => {
+      .update({ ...req.body }, { where: { id: req.params.id } }) //el id me llega por URL
+      .then(() => {
         return res.redirect("/products");
       })
       .catch(() => {

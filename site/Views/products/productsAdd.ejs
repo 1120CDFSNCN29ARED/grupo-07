@@ -12,17 +12,11 @@
 
     <main class="main-container">
       <main class="main-container">
-    <!-- <div class="errores">
-        <ul>
-
-        </ul>
-      </div>--> 
+    <div class="errores">
+      </div>
         <div>
           <h2 class="title">Agregar productos</h2>
         </div>
-        <% errors.forEach(error => { %>
-<p class="errores"> <%= error.msg %> </p>
-       <% })%>
         <form action="/products/productsAdd" method="POST" enctype="multipart/form-data" class="form-menu">
           <div class="form-item">
             <label for="name" class="fomr-label">Nombre</label>
@@ -37,17 +31,17 @@
             <input type="text" name="price" id="price" value="<%= productsAdd.price %>" class="form-input" required />
           </div>
           <div class="form-item">
-            <label for="price">Descuento</label>
+            <label for="discount">Descuento</label>
             <input type="text" name="discount" id="discount" value="<%= productsAdd.discount %>" class="form-input"
               required />
           </div>
           <div class="form-item">
-            <label for="price">Cantidad</label>
+            <label for="quantity">Cantidad</label>
             <input type="text" name="quantity" id="quantity" value="<%= productsAdd.quantity %>" class="form-input"
               required />
           </div>
           <div class="form-item">
-            <label for="price">Peso</label>
+            <label for="weight">Peso</label>
             <input type="text" name="weight" id="weight" value="<%= productsAdd.weight %>" class="form-input"
               required />
           </div>
