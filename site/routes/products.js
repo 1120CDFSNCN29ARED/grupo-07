@@ -9,8 +9,13 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const folder = path.join(__dirname, "../public/img/products");
     // console.log(file.mimetype);
-    if (file.mimetype != "image/jpeg" && file.mimetype != "image/png") {
-      return cb(new Error("Solo se aceptan imagenes en jpg o png"));
+    if (
+      file.mimetype != "image/jpeg" &&
+      file.mimetype != "image/png" &&
+      file.mimetype != "image/jpg" &&
+      file.mimetype != "image/gif"
+    ) {
+      return cb(new Error("Solo se aceptan archivos JPEG , PNG , JPG o GIF"));
     }
     cb(null, folder);
   },
@@ -51,7 +56,7 @@ router.post("/productsAdd", upload.single("picture"), products.create);
 router.get("/modificationListProducts", products.modificationList);
 
 /*** EDIT ONE PRODUCT  - Form update product and processing form*/
-router.get("/productsUpdate/:id", products.edit);
+router.get("/productsEdit/:id", products.edit);
 router.put("/productsUpdate/:id", products.update);
 
 /*** DELETE ONE PRODUCT */

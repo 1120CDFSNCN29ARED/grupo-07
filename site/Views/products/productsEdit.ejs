@@ -3,7 +3,7 @@
   <head>
     <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
-    <script src="productsUpdate.js"></script>
+    <!--<script src="productsUpdate.js"></script>-->
   </head>
 
   <body>
@@ -19,26 +19,25 @@
       <h2 class="title">Modificar productos</h2>
       </div>
       <form
-        action="/products/productsUpdate/<%= productsUpdate.id %>?_method=PUT"
+        action="/products/productsUpdate/<%= products.id %>?_method=PUT"
         method="POST"
-        enctype="multipart/form-data"
         class="form-menu"
       >
-      <input type="hidden" name="_method" value="PUT">
+    
         <div class="form-item">
           <label for="name" class="fomr-label">Nombre</label>
           <input
             type="text"
             name="name"
             id="name"
-            value="<%= productsUpdate.name %>"
+            value="<%= products.name %>"
             class="form-input"
             required
           />
         </div>
         <div class="form-item">
           <label for="picture" class="form-label">Foto</label>
-          <input type="file" name="picture" id="picture" value="<%= productsUpdate.picture %>" class="form-input" />
+          <input type="file" name="picture" id="picture" value="<%= products.picture %>" class="form-input" />
         </div>
         <div class="form-item">
           <label for="price">Precio</label>
@@ -46,47 +45,47 @@
             type="text"
             name="price"
             id="price"
-            value="<%= productsUpdate.price %>"
+            value="<%= products.price %>"
             class="form-input"
             required
           />
         </div>
         <div class="form-item">
-          <label for="price">Descuento</label>
+          <label for="discount">Descuento</label>
           <input
             type="text"
             name="discount"
             id="discount"
-            value="<%= productsUpdate.discount %>"
+            value="<%= products.discount %>"
             class="form-input"
             required
           />
         </div>
         <div class="form-item">
-          <label for="price">Cantidad</label>
+          <label for="quantity">Cantidad</label>
           <input
             type="text"
             name="quantity"
             id="quantity"
-            value="<%= productsUpdate.quantity %>"
+            value="<%= products.quantity %>"
             class="form-input"
             required
           />
         </div>
         <div class="form-item">
-          <label for="price">Peso</label>
+          <label for="weight">Peso</label>
           <input
             type="text"
             name="weight"
             id="weight"
-            value="<%= productsUpdate.weight %>"
+            value="<%= products.weight %>"
             class="form-input"
             required
           />
         </div>
         <div class="form-item">
           <label for="brand" class="form-label">Marca</label>
-          <input type="text" name="brand" id="brand" value="<%= productsUpdate.description %>" class="form-input" />
+          <input type="text" name="brand" id="brand" value="<%= products.description %>" class="form-input" />
         </div>
         <div class="form-item">
           <label for="description" class="form-label">Descripción</label>
@@ -94,7 +93,7 @@
             type="text"
             name="description"
             id="description"
-            value="<%= productsUpdate.description %>"
+            value="<%= products.description %>"
             class="form-input description"
           />
         </div>
