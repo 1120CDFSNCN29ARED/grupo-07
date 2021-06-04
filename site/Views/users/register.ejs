@@ -3,18 +3,12 @@
   <head>
     <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
-    <!--<script src="/js/register.js"></script>-->
   </head>
 
   <body>
     <%- include("./../partials/header.ejs") %>
 
     <main class="main-container">
-      <!-- <div class="errores">
-        <ul>
-COMPLETAR ERROR
-        </ul>
-      </div>-->
       <form
         action="/"
         method="POST"
@@ -29,33 +23,18 @@ COMPLETAR ERROR
 
         <div class="form-item">
           <label class="form-label" for="name">Nombre</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            class="form-input"
-          />
+          <input type="text" name="name" id="name" class="form-input" />
+          <small class="nameError" id="errores"></small>
         </div>
         <div class="form-item">
           <label for="surname" class="form-label">Apellido</label>
-          <input
-            type="text"
-            name="surname"
-            id="surname"
-            required
-            class="form-input"
-          />
+          <input type="text" name="surname" id="surname" class="form-input" />
+          <small class="surnameError" id="errores"></small>
         </div>
         <div class="form-item">
           <label for="picture" class="form-label">Imagen de perfil</label>
-          <input
-            type="file"
-            name="picture"
-            id="picture"
-            required
-            class="form-input"
-          />
+          <input type="file" name="picture" id="picture" class="form-input" />
+          <small class="pictureError" id="errores"></small>
         </div>
         <div class="form-item">
           <label for="street" class="fomr-label">Calle y n°:</label>
@@ -97,23 +76,13 @@ COMPLETAR ERROR
         </div>
         <div class="form-item">
           <label for="email" class="form-label">E-mail</label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            class="form-input"
-          />
+          <input type="email" name="email" id="email" class="form-input" />
+          <small class="errorEmail" id="errores"></small>
         </div>
         <div class="form-item">
           <label for="pass" class="form-label">Contraseña</label>
-          <input
-            type="password"
-            name="pass"
-            id="pass"
-            required
-            class="form-input"
-          />
+          <input type="password" name="pass" id="pass" class="form-input" />
+          <small class="passError" id="errores"></small>
         </div>
         <div class="form-item">
           <label for="repeatPassword" class="form-label"
@@ -148,5 +117,6 @@ COMPLETAR ERROR
     </main>
 
     <%- include("./../partials/footer.ejs") %>
+    <script src="/js/register.js"></script>
   </body>
 </html>

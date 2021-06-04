@@ -3,18 +3,18 @@
   <head>
     <%- include("./../partials/head.ejs") %>
     <link rel="stylesheet" href="/css/forms.css" />
-    <!--<script src="/js/productsUpdate.js"></script>-->
+
   </head>
 
   <body>
     <%- include ("./../partials/header.ejs") %>
 
     <main class="main-container">
-    <!-- <div class="errores">
+     <div id="errores">
         <ul>
 
         </ul>
-      </div>--> 
+      </div>
       <div>
       <h2 class="title">Modificar productos</h2>
       </div>
@@ -33,7 +33,7 @@
             id="name"
             value="<%= products.name %>"
             class="form-input"
-            required
+           
           />
         </div>
         <div class="form-item">
@@ -48,7 +48,7 @@
             id="price"
             value="<%= products.price %>"
             class="form-input"
-            required
+            
           />
         </div>
         <div class="form-item">
@@ -59,7 +59,7 @@
             id="discount"
             value="<%= products.discount %>"
             class="form-input"
-            required
+            
           />
         </div>
         <div class="form-item">
@@ -70,7 +70,7 @@
             id="quantity"
             value="<%= products.quantity %>"
             class="form-input"
-            required
+            
           />
         </div>
         <div class="form-item">
@@ -81,7 +81,7 @@
             id="weight"
             value="<%= products.weight %>"
             class="form-input"
-            required
+            
           />
         </div>
         <div class="form-item">
@@ -263,6 +263,7 @@
         </div>
       </form>
     </main>
+        <script src="/js/productsUpdate.js"></script>
     <%- include("./../partials/footer.ejs") %>
   </body>
 </html>

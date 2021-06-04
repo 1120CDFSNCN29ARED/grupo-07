@@ -1,39 +1,31 @@
 window.addEventListener("load", function () {
-  let formulario = document.querySelector("form.form-menu");
+  const email = document.getElementById("email");
+  const contraseña = document.getElementById("pass");
+  const form = document.querySelector(".form-menu");
+  const erroresElement = document.getElementById("errores");
 
-  formulario.addEventListener("submit", function (e) {
-    let errores = [];
+  form.addEventListener("submit", function (e) {
+    let mensajes = [];
 
-    let inputEmail = document.querySelector("input.email");
-
-    if (inputEmail.value == "") {
-      errores.push("El campo de email debe estar completo");
+    if (email.value === "" || email.value == null) {
+      mensajes.push("El campo de email debe estar completo");
     }
 
-    let inputPass = document.querySelector("input.pass");
-
-    if (inputPass.value == "") {
-      errores.push("El campo de contraseña debe estar completo");
+    if (contraseña.value == "" || contraseña.value == null) {
+      mensajes.push("El campo de contraseña debe estar completo");
     }
 
-    if (errores.length > 0) {
+    if (contraseña.value.length <= 8) {
+      mensajes.push("La contraseña debe ser más larga que 8 caracteres");
+    }
+
+    if (contraseña.value.length >= 20) {
+      mensajes.push("La contraseña debe ser menos que 20 caracteres");
+    }
+
+    if (mensajes.length > 0) {
       e.preventDefault();
-
-      let ulErrores = document.querySelector("div.erorres ul");
-      for (let i = 0; i < errores.length; i++) {
-        ulErrores.innerHTML += "<ul>" + errores[i] + "</ul>";
-      }
+      erroresElement.innerText = mensajes.join(", ");
     }
   });
 });
-/*const formulario = document.querySelector(".form-menu");
-const email = document.getElementById("email");
-const contraseña = document.getElementById("pass");
-const pepe = document.querySelector("p");
-
-formulario.onsubmit = function (e) {
-  if (email.value === "" || contraseña.value === "") {
-    e.preventDefault();
-    pepe.textContent = "llena el campo";
-  }
-};*/

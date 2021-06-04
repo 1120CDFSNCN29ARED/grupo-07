@@ -36,7 +36,7 @@ const addValidation = require("../middleware/addValidation");
 const updateValidation = require("../middleware/updateValidation");
 
 /*BUSCADOR PRODUCTS*/
-router.get("/searchProduct", products.buscar);
+router.get("/buscar", products.buscar);
 
 /* GET ALL PRODUCTS */
 router.get("/", products.list);

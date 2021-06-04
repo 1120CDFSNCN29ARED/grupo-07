@@ -14,7 +14,7 @@
       </div>
     </header>
     <main class="main-container">
-      <div class="errores">
+      <div id="errores">
         <ul></ul>
       </div>
       <form action="/" method="get" class="form-menu">
@@ -32,10 +32,10 @@
             type="email"
             name="email"
             id="email"
-            class="log form-input email"
+            class="log form-input"
             placeholder="Email"
           />
-          <p></p>
+          <small class="errorEmail"></small>
         </div>
         <div class="log-item">
           <label for="pass"><i class="fas fa-lock"></i></label>
@@ -43,10 +43,9 @@
             type="password"
             name="pass"
             id="pass"
-            class="log form-input pass"
+            class="log form-input"
             placeholder="Contraseña"
           />
-          <p></p>
         </div>
         <p class="register-text"></p>
         <div class="form-item btn-container">

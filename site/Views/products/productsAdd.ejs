@@ -11,18 +11,16 @@
 
     <main class="main-container">
       <main class="main-container">
-     <!--<div class="errores">
-          <ul>
+     <div id="errores">
 
-          </ul>
-        </div>-->   
+        </div>
         <div>
           <h2 class="title">Agregar productos</h2>
         </div>
         <form action="/products/productsAdd" method="POST" enctype="multipart/form-data" class="form-menu">
           <div class="form-item">
             <label for="name" class="fomr-label">Nombre</label>
-            <input type="text" name="name" id="name" value="<%= productsAdd.name %>" class="form-input" required />
+            <input type="text" name="name" id="name" value="<%= productsAdd.name %>" class="form-input"  />
           </div>
           <div class="form-item">
             <label for="picture" class="form-label">Foto</label>
@@ -30,22 +28,22 @@
           </div>
           <div class="form-item">
             <label for="price">Precio</label>
-            <input type="text" name="price" id="price" value="<%= productsAdd.price %>" class="form-input" required />
+            <input type="text" name="price" id="price" value="<%= productsAdd.price %>" class="form-input"  />
           </div>
           <div class="form-item">
             <label for="discount">Descuento</label>
             <input type="text" name="discount" id="discount" value="<%= productsAdd.discount %>" class="form-input"
-              required />
+               />
           </div>
           <div class="form-item">
             <label for="quantity">Cantidad</label>
             <input type="text" name="quantity" id="quantity" value="<%= productsAdd.quantity %>" class="form-input"
-              required />
+               />
           </div>
           <div class="form-item">
             <label for="weight">Peso</label>
             <input type="text" name="weight" id="weight" value="<%= productsAdd.weight %>" class="form-input"
-              required />
+               />
           </div>
           <div class="form-item">
             <label for="brand" class="form-label">Marca</label>

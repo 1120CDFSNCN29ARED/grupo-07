@@ -2,9 +2,11 @@ const fs = require("fs");
 const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+//const fetch = require("node-fetch");
+
+/*MODELOS*/
 const db = require("./../database/models");
 const allUsers = db.User;
 

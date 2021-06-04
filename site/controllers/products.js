@@ -4,7 +4,11 @@ const fs = require("fs");
 const path = require("path");
 const db = require("./../database/models");
 const { validationResult } = require("express-validator");
+const sequelize = db.sequelize;
+const { Op } = db.Sequelize;
+//const fetch = require("node-fetch");
 
+/*MODELOS*/
 const allProducts = db.Product;
 //const allUsers = db.User;
 const carts = db.Cart;
@@ -132,10 +136,17 @@ const products = {
       });
   },
 
-  /*Buscador de productos segun nombre -            FALTA HACER */
+  /*Buscador de productos segun nombre -  FALTA HACER CON API */
   buscar: function (req, res) {
+    console.log("hey", req.query);
+    let { word } = req.query;
+    word = word.toLowerCase; //palabras en minusculas
     allProducts
-      .findAll()
+      .findAll({
+        where: {
+          name: { [Op.startsWith]: `%${word}%` },
+        },
+      })
       .then(() => {
         return res.render("products/searchProduct");
       })

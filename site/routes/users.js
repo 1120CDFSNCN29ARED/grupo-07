@@ -39,7 +39,7 @@ const users = require("../controllers/users");
 
 /* Register and processing form*/
 
-router.get("/register", middlewareHuesped, users.register);
+router.get("/register", /*middlewareHuesped,*/ users.register);
 
 router.post("/register", upload.single("picture"), users.processRegister);
 
@@ -47,7 +47,7 @@ router.post("/register", upload.single("picture"), users.processRegister);
 
 router.get("/logIn", users.login);
 
-router.post("/logIn", loginValidation, users.processLogIn);
+router.post("/logIn", /*loginValidation, */ users.processLogIn);
 
 /*USER PROFILE - VISUALIZACION DETALLE*/
 
@@ -55,7 +55,7 @@ router.get("/user", users.userProfile);
 
 /* USER PROFILE - MODIFICACION DETALLE and processing form*/
 
-router.get("/userProfile", middlewareUsuario, users.profile);
+router.get("/userProfile", /*middlewareUsuario,*/ users.profile);
 
 router.post("/userProfile"); //falta controller para post
 
