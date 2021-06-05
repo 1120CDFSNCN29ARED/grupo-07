@@ -4,16 +4,28 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const usersFilePath = path.join(__dirname, "../data/users.json");
 const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+
 //const fetch = require("node-fetch");
 
 /*MODELOS*/
 const db = require("./../database/models");
-const allUsers = db.User;
+const { User } = require("./../database/models");
+const allUsers = User.db;
+
+const sequelize = db.sequelize;
+const { Op } = db.Sequelize;
 
 const users = {
   /* CREAR USUARIO - REGISTER*/
   register: (req, res) => {
-    res.render("users/register");
+    allUsers
+      .findAll()
+      .then((allUsers) => {
+        return res.render("user/register");
+      })
+      .catch(() => {
+        return res.redirect("error");
+      });
   },
 
   processRegister: (req, res) => {
@@ -23,31 +35,30 @@ const users = {
        return.res.render("users/register")
      }*/
 
-    //falta crear un ID y agregarlo al array de users.
-
-    /*let lastUser = users.pop();
-    if (lastUser) {
-      return lastUser.id + 1;
-    }
-
-    let userInData = Users.findByField("email", req.body.email);*/
     const newUser = {
-      nombre: req.body.name,
-      apellido: req.body.surname,
-      foto: req.body.picture.filename,
+      name: req.body.name,
+      surname: req.body.surname,
+      picture: req.body.picture,
       email: req.body.email,
-      contraseña: bcrypt.hashSync(req.body.password, 10),
-      calle: req.body.street,
-      piso: req.body.floor,
-      entreCalles: req.body.between - street,
-      localidad: req.body.locality,
+      pass: bcrypt.hashSync(req.body.pass, 10),
+      street: req.body.street,
+      floorLevel: req.body.floorLevel,
+      betweenStreet: req.body.betweenStreet,
+      locality: req.body.locality,
       cp: req.body.cp,
-      telefono: req.body.phone,
-      fechaDeNacimiento: req.body.birthday,
+      phone: req.body.phone,
+      birthday: req.body.birthday,
     };
-    allUsers.create(newUser).then(() => {
-      res.redirect("/userProfile", { newUser });
-    });
+
+    allUsers
+      .create(newUser)
+      .then(() => {
+        console.log("hola", newUser);
+        return res.redirect("users/user");
+      })
+      .catch(() => {
+        return res.redirect("error");
+      });
   },
 
   /* PROCESO LOGIN  */

@@ -1,22 +1,23 @@
-const { Sequelize } = require("sequelize");
+const Sequelize = require("sequelize");
 
-module.exports = (sequelize, datatypes) => {
+module.exports = (sequelize, dataTypes) => {
   const alias = "User";
   const col = {
     id: {
-      type: datatypes.INTEGER,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false,
     },
     name: Sequelize.STRING(12),
     surname: Sequelize.STRING(30),
     picture: Sequelize.STRING(500),
     email: {
-      type: datatypes.STRING(100),
+      type: dataTypes.STRING(100),
       allowNull: false,
     },
     pass: {
-      type: datatypes.STRING(50),
+      type: dataTypes.STRING(50),
       allowNull: false,
     },
     street: Sequelize.STRING(20),
@@ -27,7 +28,7 @@ module.exports = (sequelize, datatypes) => {
     phone: Sequelize.INTEGER,
     birthday: Sequelize.DATEONLY,
     usercategory_id: {
-      type: datatypes.TINYINT(2),
+      type: dataTypes.TINYINT(2),
     },
   };
   const config = {

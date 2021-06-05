@@ -5,6 +5,7 @@ const path = require("path");
 const multer = require("multer");
 
 //* Middleware Multer*//
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const folder = path.resolve(__dirname, "../public/img/users");

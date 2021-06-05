@@ -5,7 +5,7 @@ module.exports = {
     database: process.env.DB_NAME,
     host: process.env.DB_HOST,
     dialect: "mysql",
-    operatorsAliases: "false", //SACAR SI NO FUNCIONA LA DB!!
+    // operatorsAliases: "false", //SACAR SI NO FUNCIONA LA DB!!
   },
   test: {
     username: "root",
