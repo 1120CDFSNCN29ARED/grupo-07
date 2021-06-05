@@ -199,7 +199,7 @@ body {
     display: initial;
   }
 
-  .header-title .h2 {
+  .header-title .title {
     font-family: "Yusei Magic", sans-serif;
     font-size: 60px;
     font-weight: 600;
@@ -209,7 +209,7 @@ body {
     margin: 30px;
   }
 
-  .header-title .p {
+  .header-title .text {
     position: absolute;
     top: 340px;
     left: 100px;
@@ -246,12 +246,12 @@ body {
     margin-top: -10px;
   }
 
-  .header-title .p {
+  .header-title .text {
     top: 300px;
     margin: 40px;
   }
 
-  .header-title .h2 {
+  .header-title .title {
     top: 210px;
     margin: 50px;
   }

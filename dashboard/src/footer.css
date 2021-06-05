@@ -1,0 +1,28 @@
+.footer-container {
+    background-color: #fef9ec;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-footer {
+    margin: 0px;
+    padding: 10px;
+    font-family: 'Yusei Magic';
+}
+
+.redes {
+    background-color: #fccb1a;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.redes i {
+    color: #0c5d5e;
+    padding: 10px;
+    font-size: 20px;
+}

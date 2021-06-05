@@ -4,7 +4,6 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-//const createError = require("http-errors");
 require("dotenv").config();
 const models = require("./database/models/index");
 
@@ -54,10 +53,14 @@ app.use(
 const productsRoutes = require("./routes/products"); // Rutas /products
 const mainRoutes = require("./routes/main"); // Rutas main
 const usersRoutes = require("./routes/users"); // Rutas /users
+const apiProductsRoutes = require("./routes/APIroutes/products");
+const apiUsersRoutes = require("./routes/APIroutes/users");
 
 app.use("/products", productsRoutes);
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
+app.use("/api", apiProductsRoutes);
+//app.use("/api", apiUsersRoutes);
 
 // error 404
 /*app.use((req, res, next) => {

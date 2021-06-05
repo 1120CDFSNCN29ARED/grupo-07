@@ -11,7 +11,7 @@ const { Op } = db.Sequelize;
 /*MODELOS*/
 const allProducts = db.Product;
 //const allUsers = db.User;
-const carts = db.Cart;
+// carts = db.Cart;
 //const category = db.category;
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
@@ -39,12 +39,6 @@ const products = {
       .findByPk(req.params.id)
       .then((productsDetail) => {
         return res.render("products/productDetail", { productsDetail });
-        /*return res
-          .status(200)
-          .json({
-            total: productsDetail.lenght,
-            data: productsDetail,
-            status: 200,*/
       })
       .catch(() => {
         return res.redirect("error");
@@ -54,14 +48,14 @@ const products = {
   /*Carrito de compra*/
 
   cart: (req, res) => {
-    carts
-      .findByPk(req.params.id)
-      .then((productsCart) => {
-        return res.render("products/productCart", { productsCart });
-      })
-      .catch(() => {
-        return res.redirect("error");
-      });
+    // carts
+    // .findByPk(req.params.id)
+    //.then((productsCart) => {
+    return res.render("products/productCart", { productsCart });
+    //})
+    // .catch(() => {
+    // return res.redirect("error");
+    // });
   },
 
   /* Lista de productos para actualizar/modificar , agregar o eliminar*/

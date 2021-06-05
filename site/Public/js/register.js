@@ -103,15 +103,13 @@ window.addEventListener("load", function () {
 
     if (contraseña.value == "" || contraseña.value == null) {
       mensajesError.push("El campo de contraseña debe estar completo");
-    }
-
-    if (contraseña.value.length <= 8) {
+    } else if (contraseña.value.length <= 8) {
       mensajesError.push("La contraseña debe ser más larga que 8 caracteres");
     }
 
-    if (contraseña.value.length >= 20) {
-      mensajesError.push("La contraseña debe ser menos que 20 caracteres");
-    }
+    //  if (contraseña.value.length >= 20) {
+    //   mensajesError.push("La contraseña debe ser menos que 20 caracteres");
+    // }
 
     if (mensajesError.length > 0) {
       e.preventDefault();
