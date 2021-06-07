@@ -9,38 +9,60 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
       allowNull: false,
     },
-    name: Sequelize.STRING(12),
+
+    name: Sequelize.STRING(30),
+
     surname: Sequelize.STRING(30),
-    picture: Sequelize.STRING(500),
+
+    picture: Sequelize.STRING(200),
+
     email: {
       type: dataTypes.STRING(100),
       allowNull: false,
     },
+
     pass: {
       type: dataTypes.STRING(50),
       allowNull: false,
     },
-    street: Sequelize.STRING(20),
+
+    street: Sequelize.STRING(200),
+
     floorLevel: Sequelize.INTEGER,
+
     betweenStreet: Sequelize.STRING(100),
-    locality: Sequelize.STRING(20),
-    cp: Sequelize.TINYINT(4),
+
+    locality: Sequelize.STRING(30),
+
+    cp: Sequelize.INTEGER,
+
     phone: Sequelize.INTEGER,
+
     birthday: Sequelize.DATEONLY,
+
     usercategory_id: {
-      type: dataTypes.TINYINT(2),
+      type: dataTypes.INTEGER,
     },
+
   };
   const config = {
     tableName: "users",
     timestamps: false,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
+  // underscored: true para que no sea por default camelcase
   };
+  
   const User = sequelize.define(alias, col, config);
 
   User.associate = function (models) {
-    User.belongsTo(models.Cart, {
-      foreingKey: "user_id",
-      as: "cart",
+  //  User.belongsTo(models.Cart, {
+   //   foreignKey: "user_id",//
+  //    as: "carts",//
+   // });
+    User.belongsTo(models.UserCategory,{
+      as: 'userCategorias', 
+      foreignKey: 'usercategory_id', 
     });
   };
   return User;

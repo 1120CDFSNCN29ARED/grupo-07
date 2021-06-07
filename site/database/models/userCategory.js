@@ -9,21 +9,21 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     kind: {
-      type: dataTypes.STRING(5),
+      type: dataTypes.STRING(60),
       allowNull: false,
     },
   };
   const config = {
-    tableName: "UserCategory",
+    tableName: "usersCategory",
     timestamps: false,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   };
+  
   const UserCategory = sequelize.define(alias, col, config);
 
-  UserCategory.associate = function (models) {
-    UserCategory.belongsTo(models.User, {
-      as: "userCategory",
-      foreignKey: "user_id",
-    });
-  };
+ // UserCategory.associate = function (models) {
+  //  UserCategory.hasOne(models.User);
+  //};
   return UserCategory;
 };

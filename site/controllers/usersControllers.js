@@ -8,25 +8,19 @@ const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 //const fetch = require("node-fetch");
 
 /*MODELOS*/
-const db = require("./../database/models");
-const { User } = require("./../database/models");
+const db = require("../database/models");
+const { User } = require("../database/models");
 const allUsers = User.db;
 
 const sequelize = db.sequelize;
 const { Op } = db.Sequelize;
 
-const users = {
+const usersControllers = {
   /* CREAR USUARIO - REGISTER*/
   register: (req, res) => {
-    allUsers
-      .findAll()
-      .then((allUsers) => {
-        return res.render("user/register");
-      })
-      .catch(() => {
-        return res.redirect("error");
-      });
-  },
+        return res.render("users/register");
+      },
+    
 
   processRegister: (req, res) => {
     /* const resultValidation = validationResult(req);
@@ -80,7 +74,7 @@ const users = {
         if (req.body.recordame != undefined) {
           res.cookie("recordame", usuarioLogueado.email, { maxAge: 1200000 });
         }
-        res.redirect("/", { usuario: req.session.usuarioLogueado });
+       return res.redirect("/", { usuario: req.session.usuarioLogueado });
       }
     }
     if (usuarioALoguearse == null) {
@@ -97,16 +91,16 @@ const users = {
     allUsers
       .findByPk(req.params.id)
       .then((oneUser) => {
-        res.render("users/user", { oneUser });
+        return res.render("users/user", { oneUser });
       })
       .catch(() => {
-        res.redirect("error");
+        return res.redirect("error");
       });
   },
 
   /* USER PROFILE - MODIFICACION Usuario DETALLE*/
   profile: (req, res) => {
-    res.render("users/userProfile", { usuario: req.session.usuarioLogueado });
+    return res.render("users/userProfile", { usuario: req.session.usuarioLogueado });
   },
 
   modificationProfle: (req, res) => {
@@ -119,8 +113,13 @@ const users = {
           },
         }
       )
-      .then(res.redirect("/userProfile" + req.params.id));
+      .then(() => {
+        return res.redirect("/userProfile" + req.params.id)
+      })
+      .catch(() => {
+        return res.redirect("error");
+      });
   },
 };
 
-module.exports = users;
+module.exports = usersControllers;

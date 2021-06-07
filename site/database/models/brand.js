@@ -1,15 +1,15 @@
-const { Sequelize } = require("sequelize");
+const Sequelize = require("sequelize");
 
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Brand";
-  let cols = {
+  const alias = "Brand";
+  const col = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
     kind: {
-      type: dataTypes.STRING(30),
+      type: dataTypes.STRING(60),
       allowNull: false,
     },
   };
@@ -17,15 +17,12 @@ module.exports = (sequelize, dataTypes) => {
   const config = {
     tableName: "brands",
     timestamps: false,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   };
 
-  const Brand = sequelize.define(alias, cols, config);
+  const Brand = sequelize.define(alias, col, config);
 
-  Brand.associate = function (models) {
-    Brand.belongsTo(models.Product, {
-      as: "product",
-      foreignKey: "product_id",
-    });
-  };
+  
   return Brand;
 };

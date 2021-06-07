@@ -36,27 +36,27 @@ const middlewareUsuario = require("../middleware/middlewareUsuario");
 
 // ************ Controller Require ************
 
-const users = require("../controllers/users");
+const usersControllers = require("../controllers/usersControllers");
 
 /* Register and processing form*/
 
-router.get("/register", /*middlewareHuesped,*/ users.register);
+router.get("/register", /*middlewareHuesped,*/ usersControllers.register);
 
-router.post("/register", upload.single("picture"), users.processRegister);
+router.post("/register", upload.single("picture"), usersControllers.processRegister);
 
 /*LOGIN and processing form*/
 
-router.get("/logIn", users.login);
+router.get("/logIn", usersControllers.login);
 
-router.post("/logIn", /*loginValidation, */ users.processLogIn);
+router.post("/logIn", /*loginValidation, */ usersControllers.processLogIn);
 
 /*USER PROFILE - VISUALIZACION DETALLE*/
 
-router.get("/user", users.userProfile);
+router.get("/user", usersControllers.userProfile);
 
 /* USER PROFILE - MODIFICACION DETALLE and processing form*/
 
-router.get("/userProfile", /*middlewareUsuario,*/ users.profile);
+router.get("/userProfile", /*middlewareUsuario,*/ usersControllers.profile);
 
 router.post("/userProfile"); //falta controller para post
 

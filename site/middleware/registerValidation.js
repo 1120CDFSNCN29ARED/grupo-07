@@ -11,7 +11,6 @@ const registerValidation = [
     .withMessage("El apellido debe tener al menos 2 caracteres.")
     .notEmpty()
     .withMessage("Debes completar tu apellido."),
-  //body("picture").notEmpty().withMessage("Debes adjuntar una foto de usuario."),
   body("email").isEmail().notEmpty().withMessage("Debes completar el e-mail."),
   body("pass")
     .isLength({ min: 8 })

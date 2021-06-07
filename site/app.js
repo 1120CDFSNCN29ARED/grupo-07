@@ -18,6 +18,14 @@ const connectServer = async () => {
 };
 connectServer();
 
+//sincroniza el modelo con la tabla de datos -> Synchronizing all models at once
+const alter = false; // false para que no haga sincronizacion
+//const force = true;  //elimina los modelos
+models.sequelize.sync({alter}) ;
+console.log("All models were synchronized successfully.");
+
+
+
 // ************ express() ************
 const app = express();
 
@@ -33,8 +41,8 @@ app.listen(4000, console.log("Escuchando en el puerto 4000"));
 
 app.use(methodOverride("_method"));
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+app.use(express.urlencoded({ extended: false })); //->MIDDLEWERE PARA API (BODY-> X-WWW-FORM-URLENCODED)
+app.use(express.json()); //->MIDDLEWERE PARA API  (BODY-> RAW)
 
 const userLogs = require("./middleware/userLogs");
 app.use(userLogs);
@@ -61,6 +69,19 @@ app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/api", apiProductsRoutes);
 //app.use("/api", apiUsersRoutes);
+
+/* app.post("/api/products", (req, res) =>{
+  res.status(201).json(req.body);
+})
+
+app.post("/api/products", (req, res) =>{
+  res.status(201).json({
+    meta:{
+      status:201,
+      id:"nuevo id" - permite hacer nuevas referencias sobre el objeto creado
+    },
+  });
+  });
 
 // error 404
 /*app.use((req, res, next) => {

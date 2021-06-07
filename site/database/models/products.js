@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
     },
 
     name: {
-      type: dataTypes.STRING(200),
+      type: dataTypes.STRING(60),
       allowNull: false,
     },
     price: Sequelize.INTEGER,
@@ -20,41 +20,37 @@ module.exports = (sequelize, dataTypes) => {
 
     discount: Sequelize.INTEGER,
 
-    picture: Sequelize.STRING(500),
+    picture: Sequelize.STRING(200),
 
     weight: Sequelize.INTEGER,
 
     quantity: Sequelize.INTEGER,
 
-    brand_id: Sequelize.INTEGER(10),
-
-    category_id: Sequelize.INTEGER(10),
+    brand_id:{
+      type: dataTypes.INTEGER,
+    },
   };
 
   const config = {
     timestamps: false,
     tableName: "products",
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   };
 
   const Product = sequelize.define(alias, col, config);
 
   Product.associate = function (models) {
     Product.belongsToMany(models.Category, {
-      as: "category",
-      foreignKey: "product_id",
-      other: "category_id",
-      through: "CategoryProduct",
+      as: "categorias",
+      through: "categoryProduct",
+    //  timestamps: false,
     });
     Product.belongsTo(models.Brand, {
       foreignKey: "brand_id",
-      as: "brand",
+     as: "brand",
     });
-    Product.belongsToMany(models.Cart, {
-      as: "cart",
-      foreignKey: "product_id",
-      other: "cart_id",
-      through: "CartProduct",
-    });
+
   };
   return Product;
 };

@@ -7,7 +7,6 @@ const updateValidation = [
     .bail()
     .isLength({ min: 5 })
     .withMessage("Debe tener al menos 5 caracteres el nombre del producto"),
-  //body("picture").notEmpty().withMessage("Debes cargar la foto del producto"),
   body("price")
     .notEmpty()
     .withMessage("Debes completar el precio del producto"),

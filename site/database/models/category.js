@@ -1,4 +1,4 @@
-const { Sequelize } = require("sequelize");
+const Sequelize = require("sequelize");
 
 module.exports = (sequelize, dataTypes) => {
   let alias = "Category";
@@ -10,23 +10,25 @@ module.exports = (sequelize, dataTypes) => {
     },
 
     kind: {
-      type: dataTypes.STRING(20),
+      type: dataTypes.STRING(60),
       allowNull: false,
     },
   };
 
   const config = {
-    tableName: "category",
+    tableName: "categories",
     timestamps: false,
+    createdAt: "created_at",
+    updatedAt: "updated_at",
   };
+  
   const Category = sequelize.define(alias, col, config);
 
   Category.associate = function (models) {
     Category.belongsToMany(models.Product, {
-      as: "product",
-      foreignKey: "category_id",
-      other: "product_id",
-      through: "CategoryProduct",
+      as: "productos",
+      through: "categoryProduct",
+      //timestamps: false,
     });
   };
 
