@@ -8,13 +8,13 @@ id int unsigned primary key auto_increment,
 kind varchar(60)
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Table `brand` --
+-- Table `brands` --
 create table brands (
 id int unsigned primary key auto_increment,
 kind varchar(60)
 )  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Table `category` --
+-- Table `categories` --
 create table categories(
 id int unsigned primary key auto_increment,
 kind varchar(60)
