@@ -8,7 +8,7 @@ const router = express.Router();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     const folder = path.join(__dirname, "../public/img/products");
-    // console.log(file.mimetype);
+
     if (
       file.mimetype != "image/jpeg" &&
       file.mimetype != "image/png" &&
@@ -20,12 +20,13 @@ const storage = multer.diskStorage({
     cb(null, folder);
   },
   filename: (req, file, cb) => {
-    const newFilename = Date.now() + path.extname(file.originalname);
-    cb(null, newFilename);
+    const newFilename = Date.now() + "_" + file.originalname;
+    cb(null, newFilename); //primer parametro no permitimos error en upload y el 2° agregamos el nombre
+    return file;
   },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage }).single("picture");
 
 // ************ Controller Require ************
 const products = require("../controllers/products");
@@ -45,11 +46,12 @@ router.get("/", products.list);
 router.get("/productDetail/:id", products.detail);
 
 /***PRODUCT CART */
-router.get("/productCart", middlewareUsuario, products.cart);
+router.get("/productCart/:id", products.cart);
+//router.get("/productCart", middlewareUsuario);
 
 /***PRODUCT CREATE - Form creation and processing form */
-router.get("/productsAdd", /*addValidation,*/ products.add);
-router.post("/productsAdd", upload.single("picture"), products.create);
+router.get("/productsAdd", addValidation, products.add);
+router.post("/productsAdd", upload, products.create);
 
 /*** GET LIST PRODUCTS- MODIFICATION LIST PRODUCTS */
 

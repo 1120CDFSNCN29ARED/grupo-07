@@ -3,10 +3,10 @@
 
 <head>
   <%- include("./../partials/head.ejs") %>
-
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/products.css">
     <link rel="stylesheet" href="/css/other-pages.css" />
+
 </head>
 
 <body>
@@ -28,13 +28,25 @@
               <p class="price"> $
                 <%= products[i].price %>
               </p>
-              <button class="search-btn"><a href="/products/productDetail/<%= products[i].id %> ">Ver detalle</a></button>
+              <button class="search-btn"><a href="/products/productDetail/<%= products[i].id %> ">Ver
+                  detalle</a></button>
               <button class="search-btn"><a href="/products/productCart/<%= products[i].id %> ">Comprar</a></button>
             </article>
             <% } %>
         </div>
-
-        <div>
+        <section class="share">
+          <p class="share-title">Compartí en redes sociales</p>
+          <ul>
+            <li><i class="fab fa-twitter"></i></li>
+            <li><i class="fab fa-facebook-f"></i></li>
+            <li><i class="fab fa-google"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+            <li><i class="fab fa-pinterest-p"></i></li>
+            <li><i class="fab fa-whatsapp"></i></li>
+          </ul>
+        </section>
+      </section>
+      <!-- <div>
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
@@ -48,20 +60,18 @@
               </li>
             </ul>
           </nav>
-        </div>
-      </section>
-
+        </div>-->
       <section class="vegan">
         <img src="/img/healthy.png" alt="healthy">
       </section>
-      <section>
+      <!-- <section>
         <div class="title-vendidos">
           <b class="title"></b>
           <h1> Los más vendidos</h1>
           <b class="title"></b>
         </div>
       </section>
-<!--
+
       <section>
         <article class="contenedor-masVendidos">
           <img src="/img/products/pepas.png" alt="Pepas organicas" />
@@ -82,17 +92,6 @@
           </div>
         </article>
       </section>-->
-      <section class="share">
-        <p class="share-title">Compartí en redes sociales</p>
-        <ul>
-          <li><i class="fab fa-twitter"></i></li>
-          <li><i class="fab fa-facebook-f"></i></li>
-          <li><i class="fab fa-google"></i></li>
-          <li><i class="fab fa-instagram"></i></li>
-          <li><i class="fab fa-pinterest-p"></i></li>
-          <li><i class="fab fa-whatsapp"></i></li>
-        </ul>
-      </section>
       <section>
         <div class="title-vendidos">
           <b class="title "></b>

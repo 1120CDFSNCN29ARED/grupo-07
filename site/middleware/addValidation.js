@@ -4,7 +4,6 @@ const addValidation = [
   body("name")
     .notEmpty()
     .withMessage("Debes completar el nombre")
-    .bail()
     .isLength({ min: 5 })
     .withMessage("Debe tener al menos 5 caracteres el nombre del producto"),
   body("price")
@@ -13,8 +12,7 @@ const addValidation = [
   body("discount")
     .notEmpty()
     .isInt()
-    .withMessage("Debes completar el descuento del producto")
-    .bail(),
+    .withMessage("Debes completar el descuento del producto"),
   body("quantity")
     .notEmpty()
     .withMessage("Debes completar la cantidad del producto"),
@@ -26,14 +24,22 @@ const addValidation = [
   body("description")
     .notEmpty()
     .withMessage("Debes completar la descripción")
-    .bail()
     .isLength({ min: 20 })
     .withMessage(
       "Debe tener al menos 20 caracteres la descripción del producto"
     ),
   body("picture").custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = [".JPG", ".JPEG", ".PNG", ".GIF"];
+    let acceptedExtensions = [
+      ".JPG",
+      ".jpg",
+      ".jpeg",
+      ".JPEG",
+      ".png",
+      ".PNG",
+      ".GIF",
+      ".gif",
+    ];
 
     if (!file) {
       throw new Error("Tienes que subir una imagen");

@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
     if (descuento.value === "" || descuento.value == null) {
       //document.querySelector("small.nameError").innerHTML +=
       mensajesError.push("El campo de descuento debe estar completo");
-    } else if (descuento.value.lenght < 0) {
+    } else if (descuento.value.lenght <= 0) {
       mensajesError.push("la cantidad debe ser más igual o grande que cero");
     }
 
@@ -39,7 +39,10 @@ window.addEventListener("load", function () {
       mensajesError.push("la cantidad debe ser más igual o grande que cero");
     }
 
-    if (
+    if (imagen.value === "" || imagen.value == null) {
+      //document.querySelector("small.nameError").innerHTML +=
+      mensajesError.push("Debes insertar imagen");
+    } else if (
       imagen.value != ".JPG" &&
       imagen.value != ".JPEG" &&
       imagen.value != ".PNG" &&
@@ -55,7 +58,7 @@ window.addEventListener("load", function () {
       mensajesError.push("El campo de descripcion debe estar completo");
     } else if (descripcion.value.lenght < 20) {
       mensajesError.push(
-        "el campo de descripción debe tener al menos 20 caracteres"
+        "El campo de descripción debe tener al menos 20 caracteres"
       );
     }
 

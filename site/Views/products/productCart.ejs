@@ -13,12 +13,13 @@
       <section id="titulo">
         <div class="contenedor-titulo">
           <h1>TU PEDIDO:</h1>
-          <h3>Te estás llevando 4 productos.</h3>
+          <h3>Te estás llevando:</h3>
+          <h3><%=productsCart.name %></h3>
         </div>
       </section>
       <section class="volver">
         <button>
-          <a href="/products/products"
+          <a href="/products"
             ><i class="fas fa-arrow-circle-left"></i>Seguir comprando
           </a>
         </button>
@@ -34,18 +35,13 @@
 
           <section class="product-list">
             <article class="contenedor-articulo">
-              <% for (let i=0; i < productsCart.length; i++) { %>
-              <img
-                src="<%=productsCart[i].picture %>"
-                width="120"
-                height="120"
-              />
+              <img src="<%=productsCart.picture %>" width="120" height="120" />
               <div class="product-item">
                 <p class="product-description">
-                  <%= productsCart[i].description %
+                  <%= productsCart.description %>
                 </p>
 
-                <p class="product-price">$ <%= productsCart[i].price %></p>
+                <p class="product-price">$ <%= productsCart.price %></p>
                 <div class="contar">
                   <button class="plus">-</button>
                   <input type="number" name="cantidad" id="cantidad" />
@@ -53,87 +49,11 @@
                 </div>
                 <div class="product-total">
                   <p class="total-price">TOTAL</p>
-                  <p>$<%= productsCart[i].price %></p>
-                  <i class="fas fa-trash-alt"></i>
-                </div>
-              </div>
-              <% } %>
-            </article>
-            <!--  <article class="contenedor-articulo">
-              <img
-                src="/img/products/mantequilla-de-coco.png"
-                width="120"
-                height="120"
-                alt="Mantequilla de coco"
-              />
-              <div class="product-item">
-                <p class="product-description">
-                  Mantequilla de Coco, Byour. 185gr
-                </p>
-
-                <p class="product-price">$400</p>
-                <div class="contar">
-                  <button class="plus">-</button>
-                  <input type="number" name="cantidad" id="cantidad" />
-                  <button class="less">+</button>
-                </div>
-                <div class="product-total">
-                  <p class="total-price">TOTAL</p>
-                  <p>$400</p>
+                  <p>$<%= productsCart.price %></p>
                   <i class="fas fa-trash-alt"></i>
                 </div>
               </div>
             </article>
-            <article class="contenedor-articulo">
-              <img
-                src="/img/products/mermelada-beepure.png"
-                width="120"
-                height="120"
-                alt=" Mermelada"
-              />
-              <div class="product-item">
-                <p class="product-description">
-                  Mermelada de frutos del bosque, Beepure. 450gr
-                </p>
-
-                <p class="product-price">$600</p>
-                <div class="contar">
-                  <button class="plus">-</button>
-                  <input type="number" name="cantidad" id="cantidad" />
-                  <button class="less">+</button>
-                </div>
-                <div class="product-total">
-                  <p class="total-price">TOTAL</p>
-                  <p>$600</p>
-                  <i class="fas fa-trash-alt"></i>
-                </div>
-              </div>
-            </article>
-            <article class="contenedor-articulo">
-              <img
-                src="/img/products/veggie-burger-delitas.png"
-                width="120"
-                height="120"
-                alt=" Miel Beepure"
-              />
-              <div class="product-item">
-                <p class="product-description">
-                  Hamburguesa veggie de lentejas y arroz yamani, Delitas. 600gr
-                </p>
-
-                <p class="product-price">$300</p>
-                <div class="contar">
-                  <button class="plus">-</button>
-                  <input type="number" name="cantidad" id="cantidad" />
-                  <button class="less">+</button>
-                </div>
-                <div class="product-total">
-                  <p class="total-price">TOTAL</p>
-                  <p>$300</p>
-                  <i class="fas fa-trash-alt"></i>
-                </div>
-              </div>
-            </article>-->
           </section>
           <section class="actualizar">
             <button type="reset">
@@ -145,11 +65,21 @@
           <section class="finalizar-compra">
             <div class="contenedor-compra">
               <h2>Resumen de compra</h2>
-              <p>Subtotal</p>
-              <p>Costo del envío</p>
-              <p class="total-compra">TOTAL</p>
+              <p>Subtotal: $ <%= productsCart.price %></p>
+              <p>Descuento: % <%= productsCart.discount %></p>
+              <div class="total-compra">
+                <p>TOTAL:</p>
+                <%if(productsCart.discount> 0) { %>
+                <p>
+                  $ <%=
+                  toThousand(productsCart.price-(productsCart.price/productsCart.discount))
+                  %>
+                </p>
+                <% }else{ %>
+                <p>$ <%= toThousand(productsCart.price) %></p>
+                <%} %>
+              </div>
             </div>
-
             <div class="compra">
               <button type="submit" class="search-btn">FINALIZAR COMPRA</button>
             </div>

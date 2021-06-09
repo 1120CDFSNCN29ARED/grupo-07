@@ -5,9 +5,6 @@ const { Op } = db.Sequelize;
 
 /*MODELOS*/
 const allProducts = db.Product;
-//const allUsers = db.User;
-//const carts = db.Cart;
-//const category = db.category;
 
 const APIProductsControllers = {
   /*listar productos*/
@@ -18,6 +15,8 @@ const APIProductsControllers = {
         return res.status(200).json({
           meta: {
             status: 200,
+            total: products.lenght,
+            url: "api/products/:id",
           },
           data: products,
         });
@@ -27,23 +26,17 @@ const APIProductsControllers = {
       });
   },
 
-  //res.status(201).json(req.body)   para crear desde postman
-  /*   res.send({
-         meta:{},
-      data:
-       })
-      res.json();
-      });*/
-
   /*detalle de productos*/
   detailProduct: (req, res) => {
     allProducts
       .findByPk(req.params.id)
       .then(() => {
         return res.status(200).json({
-          total: productsDetail.lenght,
+          meta: {
+            status: 200,
+            //url: "api/products/",
+          },
           data: productsDetail,
-          status: 200,
         });
       })
       .catch(() => {

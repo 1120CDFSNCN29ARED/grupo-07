@@ -10,15 +10,10 @@
   <%- include ("./../partials/header.ejs") %>
     <main class="main-container">
 
-            <form
-        action="/"
-        method="POST"
-        enctype="multipart/form-data"
-        class="form-menu"
-      >
-              <section>
-          <h1 class = "title">Mi Perfil</h1>
-      </section>
+      <form action="/" method="POST" enctype="multipart/form-data" class="form-menu">
+        <section>
+          <h1 class="title">Mi Perfil</h1>
+        </section>
         <div>
           <h2 class="log-title">Datos de registración</h2>
         </div>
@@ -35,7 +30,7 @@
         </div>
         <div class="form-item">
           <label for="name" class="form-label">Apellido:</label>
-          <input type="text" value="<%= oneUser.surname %>"required class="form-input" />
+          <input type="text" value="<%= oneUser.surname %>" required class="form-input" />
         </div>
         <div class="form-item">
           <label for="name" class="fomr-label">Calle y n°:</label>
@@ -64,6 +59,10 @@
         <div class="form-item">
           <label for="name" class="form-label">Fecha de nacimiento:</label>
           <input type="text" value="<%= oneUser.birthday %>" required class="form-input" />
+        </div>
+        <div class="form-item">
+          <label for="picture" class="form-label">Foto</label>
+          <input type="file" name="picture" id="picture" value="<%= oneUser.birthday %>" class="form-input" />
         </div>
         <div class="modificar-datos">
           <button type="submit">Enviar datos</button>

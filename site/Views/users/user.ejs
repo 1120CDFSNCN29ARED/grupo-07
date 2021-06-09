@@ -14,14 +14,15 @@
       </div>
       <section class="information-container">
         <div class="information">
-          <p>Nombre:</p>
-          <p>Apellido:</p>
-          <p>Calle y n°:</p>
-          <p>Piso y depto:</p>
-          <p>Entre calles:</p>
-          <p>Localidad:</p>
-          <p>CP:</p>
-          <p>Fecha de nacimiento:</p>
+          <p>Nombre: <%= oneUser.name %></p>
+          <p>Apellido: <%= oneUser.surname %></p>
+          <p>Calle y n°: <%= oneUser.street %></p>
+          <p>Piso y depto: <%= oneUser.floorLevel %></p>
+          <p>Entre calles: <%= oneUser.betweenStreet %></p>
+          <p>Localidad: <%= oneUser.locality %></p>
+          <p>CP: <%= oneUser.cp %></p>
+          <p>Fecha de nacimiento: <%= oneUser.birthday %></p>
+          <img src="<%=oneUser.picture %>"/>
         </div>
         <div class="modificar-datos">
           <button><a href="/users/userProfile">Modificar perfil </a></button>

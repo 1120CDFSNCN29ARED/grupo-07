@@ -4,7 +4,27 @@ const sequelize = db.sequelize;
 const { Op } = db.Sequelize;
 
 /*MODELOS*/
-//const allProducts = db.Product;
+
 //const allUsers = db.User;
-//const carts = db.Cart;
-//const category = db.category;
+
+//const APIProductsControllers = {
+/*lista de usuarios
+
+  userList: (req, res) => {
+      allUsers.count().then((users =>{
+          return res.status(200).json({
+              meta:{
+                  status: 200,
+                  total: users.lenght,
+                  url:"api/users/:id",
+              },
+              data: users,
+              })
+                    .catch(() => {
+        return res.send(error);
+      })
+    }
+},
+}
+
+userDetail: (req, res) => {}*/

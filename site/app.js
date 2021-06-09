@@ -20,11 +20,9 @@ connectServer();
 
 //sincroniza el modelo con la tabla de datos -> Synchronizing all models at once
 const alter = false; // false para que no haga sincronizacion
-//const force = true;  //elimina los modelos
-models.sequelize.sync({alter}) ;
-console.log("All models were synchronized successfully.");
-
-
+const force = true; //elimina los modelos
+//models.sequelize.sync({alter}) ;
+//console.log("All models were synchronized successfully.");
 
 // ************ express() ************
 const app = express();

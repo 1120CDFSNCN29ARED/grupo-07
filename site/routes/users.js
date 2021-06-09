@@ -20,12 +20,13 @@ const storage = multer.diskStorage({
     cb(null, folder);
   },
   filename: (req, file, cb) => {
-    const newFilename = Date.now() + path.extname(file.originalname);
+    const newFilename = Date.now() + "_" + file.originalname;
     cb(null, newFilename);
+    return file;
   },
 });
 
-const upload = multer({ storage });
+const upload = multer({ storage }).single("picture");
 
 // Middelware Required
 
@@ -42,7 +43,7 @@ const usersControllers = require("../controllers/usersControllers");
 
 router.get("/register", /*middlewareHuesped,*/ usersControllers.register);
 
-router.post("/register", upload.single("picture"), usersControllers.processRegister);
+router.post("/register", upload, usersControllers.processRegister);
 
 /*LOGIN and processing form*/
 
@@ -58,6 +59,6 @@ router.get("/user", usersControllers.userProfile);
 
 router.get("/userProfile", /*middlewareUsuario,*/ usersControllers.profile);
 
-router.post("/userProfile"); //falta controller para post
+//router.post("/userProfile"); //falta controller para post
 
 module.exports = router;

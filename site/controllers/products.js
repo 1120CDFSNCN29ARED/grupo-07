@@ -1,18 +1,14 @@
 // ************ Require's ************
-
 const fs = require("fs");
 const path = require("path");
-const db = require("./../database/models");
 const { validationResult } = require("express-validator");
-const sequelize = db.sequelize;
-const { Op } = db.Sequelize;
 //const fetch = require("node-fetch");
 
 /*MODELOS*/
+const db = require("./../database/models");
 const allProducts = db.Product;
-//const allUsers = db.User;
-// carts = db.Cart;
-//const category = db.category;
+const sequelize = db.sequelize;
+const { Op } = db.Sequelize;
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 const productsJson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
@@ -22,11 +18,10 @@ const products = {
   list: (req, res) => {
     allProducts
       .findAll({
-        limit: 9,
-        offset: 6,
+        limit: 11,
       })
       .then((products) => {
-        return res.render("products/products", { products: products });
+        return res.render("products/products", { products });
       })
       .catch(() => {
         return res.redirect("error");
@@ -48,14 +43,20 @@ const products = {
   /*Carrito de compra*/
 
   cart: (req, res) => {
-    // carts
-    // .findByPk(req.params.id)
-    //.then((productsCart) => {
-    return res.render("products/productCart", { productsCart });
-    //})
-    // .catch(() => {
-    // return res.redirect("error");
-    // });
+    const toThousand = (n) => {
+      return n.toLocaleString("es-AR", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      });
+    };
+    allProducts
+      .findByPk(req.params.id)
+      .then((productsCart) => {
+        return res.render("products/productCart", { productsCart, toThousand });
+      })
+      .catch(() => {
+        return res.redirect("error");
+      });
   },
 
   /* Lista de productos para actualizar/modificar , agregar o eliminar*/
@@ -90,7 +91,10 @@ const products = {
     if (errors.isEmpty()) {*/
     const newProducts = {
       ...req.body,
+      picture: "/img/products/" + req.file.filename,
+      brand_id: req.body.brand_id,
     };
+    // console.log("sapo", req.file);
     allProducts
       .create(newProducts)
       .then((newProducts) => {
@@ -107,11 +111,9 @@ const products = {
   /*Editar producto existente en ModificationList*/
 
   edit: function (req, res) {
-    //  console.log("req de edit", req.params.id);
     allProducts
       .findByPk(req.params.id)
       .then((products) => {
-        //    console.log("ahora", products);
         return res.render("products/productsEdit", { products });
       })
       .catch(() => {
@@ -121,9 +123,10 @@ const products = {
 
   update: function (req, res) {
     allProducts
-      .update({ ...req.body }, { where: { id: req.params.id } }) //el id me llega por URL
+      .update(req.body, { where: { id: req.params.id } }) //el id me llega por URL
       .then(() => {
-        return res.redirect("/products");
+        console.log("sale", req.body);
+        return res.redirect("/products/modificationListProducts");
       })
       .catch(() => {
         return res.redirect("error");
@@ -132,9 +135,9 @@ const products = {
 
   /*Buscador de productos segun nombre -  FALTA HACER CON API */
   buscar: function (req, res) {
-    console.log("hey", req.query);
+    //console.log("hey", req.query);
     let { word } = req.query;
-    word = word.toLowerCase; //palabras en minusculas
+    // word = word.toLowerCase; //palabras en minusculas
     allProducts
       .findAll({
         where: {
@@ -158,11 +161,9 @@ const products = {
   },
 
   destroy: function (req, res) {
-    //  console.log("id", req.params.id);
     allProducts
       .destroy({ where: { id: req.params.id }, force: true })
       .then((products) => {
-        //     console.log("prto", products);
         return res.redirect("/products/modificationListProducts");
       })
       .catch(() => {

@@ -12,24 +12,13 @@
       <section class="products">
         <h2 class="main-title">Productos</h2>
         <div class="product-container">
+          <% for (let i=0; i < products.length; i++) { %>
           <article class="product-article">
-            <img src="/img/products/miel-beepure.png" alt="miel-beepure" />
-            <p class="p">Miel Líquida, Beepure. Ideal para completar tus desayunos.</p>
-            <button class="search-btn"><a href="/products/productDetail/:id">Comprar</a></button>
+            <img src="<%=products[i].picture %>"  />
+            <p class="p"><%= products[i].name %></p>
+            <button class="search-btn"><a href="/products/productDetail/<%= products[i].id %>">Ver detalle</a></button>
           </article>
-          <article class="product-article">
-            <img src="img/products/icecream.jpg" alt="ice-cream" />
-            <p class="p">
-              Helados hechos con jugos naturales. La mejor forma de combatir el
-              verano.
-            </p>
-            <button class="search-btn"><a href="/products/productDetail/">Comprar</a></button>
-          </article>
-          <article class="product-article">
-            <img src="/img/products/muffins.jpeg" alt="muffins" />
-            <p class="p">Muffins con avena y frutas. Especial para los golosos.</p>
-            <button class="search-btn"><a href="/products/productDetail">Comprar</a></button>
-          </article>
+          <% } %>
         </div>
         <section class="vegan">
           <img src="/img/healthy.png" alt="healthy">

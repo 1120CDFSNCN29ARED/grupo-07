@@ -136,13 +136,22 @@ https://trello.com/b/94ar6mBq/equipo-7
 # Lucia
 
 - Planificación y actualización de tablero de trabajo.
-- Desarrollo de la retrospectiva del sprint 5.
+- Desarrollo de la retrospectiva del sprint 6.
 - CRUD products
 - Creación view products delete, products update y search product
-- Validaciones front-end y back-end de products y users.
+- Validaciones front-end y back-end.
 - Modificaciones models.
 - Modificaciones views.
 
 ## Sprint 8
 
 ## Lucia
+
+- Planificación y actualización de tablero de trabajo.
+- Desarrollo de CRUD users: registro y perfil de usuario
+- Modificación de base de datos, modelos, relaciones de las tablas, script.sql y data.sql
+- Modificacion CRUD products
+- Validaciones front-end y back-end (modificacion multer)
+- Creación de carpeta Dashboard con Archivos de configuración y componentes
+- Comienzo de desarrollo de API products y users
+- Modificacion views
