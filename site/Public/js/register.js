@@ -23,17 +23,21 @@ window.addEventListener("load", function () {
     if (imagen.value === "" || imagen.value == null) {
       //document.querySelector("small.pictureError").innerHTML +=
       mensajesError.push("Se debe insertar imagen");
-    } else if (
+    } /* else if (
       imagen.value != ".JPG" &&
+      imagen.value != ".jpg" &&
       imagen.value != ".JPEG" &&
+      imagen.value != ".jpeg" &&
       imagen.value != ".PNG" &&
-      imagen.value != ".GIF"
+      imagen.value != ".png" &&
+      imagen.value != ".GIF" &&
+      imagen.value != ".gif"
     ) {
       //document.querySelector("small.pictureError").innerHTML +=
       mensajesError.push(
         "No es la extension correcta, solo archivos JPG, JPEG, PNG, GIF"
       );
-    }
+    }*/
 
     if (email.value === "" || email.value == null) {
       // document.querySelector("small.emailError").innerHTML +=
@@ -55,14 +59,5 @@ window.addEventListener("load", function () {
       erroresElement.style.display = "flex";
       erroresElement.style.margin = "5px";
     }
-
-    /*  if (errores.length > 0) {
-        e.preventDefault();
-
-        let ulErrores = document.querySelector("div.erorres ul");
-        for (let i = 0; i < errores.length; i++) {
-          ulErrores.innerHTML += "<ul>" + errores[i] + "</ul>";
-        }
-      }*/
   });
 });

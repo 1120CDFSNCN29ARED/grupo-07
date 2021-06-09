@@ -5,7 +5,7 @@ const APIUsersControllers = require("../../controllers/APIcontrollers/APIUsersCo
 /*RUTAS*/
 
 /*listar usuarios*/
-//router.get("/users", APIUsersControllers.userList);
+router.get("/users", APIUsersControllers.userList);
 
 /*detalle de usuarios*/
 //router.get("/users/:id", APIUsersControllers.userDetail);

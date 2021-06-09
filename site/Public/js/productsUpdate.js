@@ -42,11 +42,15 @@ window.addEventListener("load", function () {
     if (imagen.value === "" || imagen.value == null) {
       //document.querySelector("small.nameError").innerHTML +=
       mensajesError.push("Debes insertar imagen");
-    } else if (
+    } /* else if (
       imagen.value != ".JPG" &&
+      imagen.value != ".jpg" &&
       imagen.value != ".JPEG" &&
+      imagen.value != ".jpeg" &&
       imagen.value != ".PNG" &&
-      imagen.value != ".GIF"
+      imagen.value != ".png" &&
+      imagen.value != ".GIF" &&
+      imagen.value != ".gif"
     ) {
       //document.querySelector("small.pictureError").innerHTML +=
       mensajesError.push(
@@ -60,7 +64,7 @@ window.addEventListener("load", function () {
       mensajesError.push(
         "el campo de descripción debe tener al menos 20 caracteres"
       );
-    }
+    }*/
 
     if (mensajesError.length > 0) {
       e.preventDefault();

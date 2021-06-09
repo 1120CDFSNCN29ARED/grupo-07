@@ -21,9 +21,18 @@ const registerValidation = [
   body("repeatPassword")
     .notEmpty()
     .withMessage("La contraseña debe ser completada."),
-  /* body("picture").custom((value, { req }) => {
-     let file = req.file;
-     let acceptedExtensions = [".JPG", ".JPEG", ".PNG", ".GIF"];
+  body("picture").custom((value, { req }) => {
+    let file = req.file;
+    let acceptedExtensions = [
+      ".JPG",
+      ".jpg",
+      ".jpeg",
+      ".JPEG",
+      ".png",
+      ".PNG",
+      ".GIF",
+      ".gif",
+    ];
 
     if (!file) {
       throw new Error("Tienes que subir una imagen");
@@ -38,7 +47,7 @@ const registerValidation = [
       }
     }
     return true;
-  }),*/
+  }),
 ];
 
 module.exports = registerValidation;

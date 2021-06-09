@@ -42,17 +42,21 @@ window.addEventListener("load", function () {
     if (imagen.value === "" || imagen.value == null) {
       //document.querySelector("small.nameError").innerHTML +=
       mensajesError.push("Debes insertar imagen");
-    } else if (
+    } /* else if (
       imagen.value != ".JPG" &&
+      imagen.value != ".jpg" &&
       imagen.value != ".JPEG" &&
+      imagen.value != ".jpeg" &&
       imagen.value != ".PNG" &&
-      imagen.value != ".GIF"
+      imagen.value != ".png" &&
+      imagen.value != ".GIF" &&
+      imagen.value != ".gif"
     ) {
       //document.querySelector("small.pictureError").innerHTML +=
       mensajesError.push(
         "No es la extension correcta, solo archivos JPG, JPEG, PNG, GIF"
       );
-    }
+    }*/
 
     if (descripcion.value == " " || descripcion.value == null) {
       mensajesError.push("El campo de descripcion debe estar completo");

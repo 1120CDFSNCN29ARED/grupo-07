@@ -21,14 +21,13 @@ module.exports = (sequelize, dataTypes) => {
     createdAt: "created_at",
     updatedAt: "updated_at",
   };
-  
+
   const Category = sequelize.define(alias, col, config);
 
   Category.associate = function (models) {
     Category.belongsToMany(models.Product, {
       as: "productos",
       through: "categoryProduct",
-      //timestamps: false,
     });
   };
 

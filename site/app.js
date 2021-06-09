@@ -18,7 +18,7 @@ const connectServer = async () => {
 };
 connectServer();
 
-//sincroniza el modelo con la tabla de datos -> Synchronizing all models at once
+// Synchronizing all models at once
 const alter = false; // false para que no haga sincronizacion
 const force = true; //elimina los modelos
 //models.sequelize.sync({alter}) ;
@@ -66,7 +66,7 @@ app.use("/products", productsRoutes);
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/api", apiProductsRoutes);
-//app.use("/api", apiUsersRoutes);
+app.use("/api", apiUsersRoutes);
 
 /* app.post("/api/products", (req, res) =>{
   res.status(201).json(req.body);
@@ -79,10 +79,10 @@ app.post("/api/products", (req, res) =>{
       id:"nuevo id" - permite hacer nuevas referencias sobre el objeto creado
     },
   });
-  });
+  });*/
 
 // error 404
-/*app.use((req, res, next) => {
+app.use((req, res, next) => {
   res.status(404).render("error");
   next();
-});*/
+});

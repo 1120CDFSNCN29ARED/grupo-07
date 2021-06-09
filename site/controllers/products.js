@@ -87,14 +87,13 @@ const products = {
   },
 
   create: (req, res) => {
-    /* const errors = validationResult(req);
-    if (errors.isEmpty()) {*/
+    //const errors = validationResult(req);
+    //if (errors.isEmpty()) {
     const newProducts = {
       ...req.body,
       picture: "/img/products/" + req.file.filename,
       brand_id: req.body.brand_id,
     };
-    // console.log("sapo", req.file);
     allProducts
       .create(newProducts)
       .then((newProducts) => {
@@ -103,10 +102,10 @@ const products = {
       .catch(() => {
         return res.redirect("error");
       });
-    /*} else {
-      res.render("products/productsAdd", { errors: errors.array() });*/
+    //} else {
+    // res.render("products/productsAdd", { errors: errors.array() });
   },
-  /*},*/
+  //},
 
   /*Editar producto existente en ModificationList*/
 
@@ -123,10 +122,9 @@ const products = {
 
   update: function (req, res) {
     allProducts
-      .update(req.body, { where: { id: req.params.id } }) //el id me llega por URL
+      .update(req.body, { where: { id: req.params.id } })
       .then(() => {
-        console.log("sale", req.body);
-        return res.redirect("/products/modificationListProducts");
+        return res.redirect("products/modificationListProducts");
       })
       .catch(() => {
         return res.redirect("error");
@@ -135,7 +133,6 @@ const products = {
 
   /*Buscador de productos segun nombre -  FALTA HACER CON API */
   buscar: function (req, res) {
-    //console.log("hey", req.query);
     let { word } = req.query;
     // word = word.toLowerCase; //palabras en minusculas
     allProducts

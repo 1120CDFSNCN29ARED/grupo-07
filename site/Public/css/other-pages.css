@@ -116,6 +116,18 @@ iframe {
   width: 100%;
 }
 
+.errores-productos {
+  background-color: #fef9ec;
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+#title-error {
+  color: #fba90a;
+}
+
 /* Media-Queries */
 @media (min-width: 760px) {
   /*envios*/
@@ -169,6 +181,21 @@ iframe {
 
   .error img {
     margin-bottom: 30px;
+  }
+
+  .errores-productos {
+    margin-left: 200px;
+    margin-right: 300px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
+
+  #title-error {
+    font-size: 30px;
+  }
+
+  #subtitle-error {
+    font-size: 25px;
   }
 }
 

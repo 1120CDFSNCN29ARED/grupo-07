@@ -33,7 +33,16 @@ const updateValidation = [
     ),
   body("picture").custom((value, { req }) => {
     let file = req.file;
-    let acceptedExtensions = [".JPG", ".JPEG", ".PNG", ".GIF"];
+    let acceptedExtensions = [
+      ".JPG",
+      ".jpg",
+      ".jpeg",
+      ".JPEG",
+      ".png",
+      ".PNG",
+      ".GIF",
+      ".gif",
+    ];
 
     if (!file) {
       throw new Error("Tienes que subir una imagen");

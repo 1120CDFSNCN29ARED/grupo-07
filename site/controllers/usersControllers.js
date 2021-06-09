@@ -16,7 +16,6 @@ const usersJson = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
 const usersControllers = {
   /* CREAR USUARIO - REGISTER*/
   register: (req, res) => {
-    //console.log("vamos", req.body);
     return res.render("users/register");
   },
 
@@ -51,12 +50,10 @@ const usersControllers = {
       repeatPassword: bcrypt.hashSync(req.body.repeatPassword, 10),
       picture: "/img/users/" + req.file.filename,
     };
-    // console.log("papa", req.body, req.file);
-    // console.log("welcome", newUser);
+
     allUsers
       .create(newUser)
       .then(() => {
-        //   console.log("hola", newUser);
         return res.render("users/login");
       })
       .catch(() => {
@@ -71,16 +68,17 @@ const usersControllers = {
   },
 
   processLogIn: (req, res) => {
-    //console.log("palta", req.body);
-
     allUsers
       .findOne({
         where: { email: req.body.email },
       })
       .then((oneUser) => {
-        if (bcrypt.compareSync(req.body.password)) {
-          return res.redirect("users/user", { oneUser });
+        if (bcrypt.compareSync(req.body.pass)) {
+          return res.render("users/user", { oneUser });
         }
+      })
+      .catch(() => {
+        return res.redirect("error");
       });
   },
 
@@ -114,24 +112,18 @@ const usersControllers = {
 
   /*USER PROFILE - VISUALIZACION usuario DETALLE*/
   userProfile: (req, res) => {
-    return res.render("users/user", {
-      oneUser: req.session.usuarioLogueado,
-    });
-
-    // allUsers.findByPk(req.params.id);
-    // console
-    //  .log("negru", req.params.id)
-    //  .then((oneUser) => {
-    //  console.log("basta", oneUser);
-    //return res.render("users/user", { oneUser });
-    //})
-    //.catch(() => {
-    // return res.redirect("error");
-    //});
+    allUsers
+      .findByPk(req.params.id)
+      .then((oneUser) => {
+        return res.render("users/user", { oneUser });
+      })
+      .catch(() => {
+        return res.redirect("error");
+      });
   },
 
   logout: (req, res) => {
-    res.clearCookie("userEmail");
+    //  res.clearCookie("userEmail");
     req.session.destroy();
     return res.redirect("/");
   },

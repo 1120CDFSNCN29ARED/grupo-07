@@ -43,26 +43,20 @@ module.exports = (sequelize, dataTypes) => {
     usercategory_id: {
       type: dataTypes.INTEGER,
     },
-
   };
   const config = {
     tableName: "users",
     timestamps: false,
     createdAt: "created_at",
     updatedAt: "updated_at",
-  // underscored: true para que no sea por default camelcase
   };
-  
+
   const User = sequelize.define(alias, col, config);
 
   User.associate = function (models) {
-  //  User.belongsTo(models.Cart, {
-   //   foreignKey: "user_id",//
-  //    as: "carts",//
-   // });
-    User.belongsTo(models.UserCategory,{
-      as: 'userCategorias', 
-      foreignKey: 'usercategory_id', 
+    User.belongsTo(models.UserCategory, {
+      as: "userCategorias",
+      foreignKey: "usercategory_id",
     });
   };
   return User;

@@ -19,11 +19,8 @@ module.exports = (sequelize, dataTypes) => {
     createdAt: "created_at",
     updatedAt: "updated_at",
   };
-  
+
   const UserCategory = sequelize.define(alias, col, config);
 
- // UserCategory.associate = function (models) {
-  //  UserCategory.hasOne(models.User);
-  //};
   return UserCategory;
 };

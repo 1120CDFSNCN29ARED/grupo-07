@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
 
     quantity: Sequelize.INTEGER,
 
-    brand_id:{
+    brand_id: {
       type: dataTypes.INTEGER,
     },
   };
@@ -44,13 +44,11 @@ module.exports = (sequelize, dataTypes) => {
     Product.belongsToMany(models.Category, {
       as: "categorias",
       through: "categoryProduct",
-    //  timestamps: false,
     });
     Product.belongsTo(models.Brand, {
       foreignKey: "brand_id",
-     as: "brand",
+      as: "brand",
     });
-
   };
   return Product;
 };

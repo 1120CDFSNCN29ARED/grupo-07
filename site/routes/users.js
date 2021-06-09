@@ -53,11 +53,11 @@ router.post("/logIn", /*loginValidation, */ usersControllers.processLogIn);
 
 /*USER PROFILE - VISUALIZACION DETALLE*/
 
-router.get("/user", usersControllers.userProfile);
+router.get("/user/:id", usersControllers.userProfile);
 
 /* USER PROFILE - MODIFICACION DETALLE and processing form*/
 
-router.get("/userProfile", /*middlewareUsuario,*/ usersControllers.profile);
+router.get("/userProfile/:id", /*middlewareUsuario,*/ usersControllers.profile);
 
 //router.post("/userProfile"); //falta controller para post
 
